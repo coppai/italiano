@@ -1,0 +1,7 @@
+# Ignore local README that contains sensitive credentials
+README.md
+
+# Node modules and logs
+node_modules/
+npm-debug.log*
+*.log

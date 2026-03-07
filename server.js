@@ -6,6 +6,7 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
+const bcrypt = require('bcryptjs');
 
 const PORT = process.env.PORT || 3000;
 
@@ -16,7 +17,46 @@ const MIME_TYPES = {
     '.css': 'text/css'
 };
 
+// Very basic admin authentication (HTTP Basic Auth)
+const ADMIN_USER = process.env.ADMIN_USER || 'admin';
+// Prefer a hashed password from env; fall back to a hash of the default
+const ADMIN_PASS_HASH = process.env.ADMIN_PASS_HASH || bcrypt.hashSync('password123', 10);
+
+function requireAdminAuth(req, res) {
+    const authHeader = req.headers['authorization'];
+
+    if (!authHeader || !authHeader.startsWith('Basic ')) {
+        res.writeHead(401, { 'WWW-Authenticate': 'Basic realm="Admin Area"' });
+        res.end('Authentication required');
+        return false;
+    }
+
+    const base64Credentials = authHeader.split(' ')[1];
+    const credentials = Buffer.from(base64Credentials, 'base64').toString('utf8');
+    const [username, password] = credentials.split(':');
+
+    if (username !== ADMIN_USER || !bcrypt.compareSync(password, ADMIN_PASS_HASH)) {
+        res.writeHead(401, { 'WWW-Authenticate': 'Basic realm="Admin Area"' });
+        res.end('Access denied');
+        return false;
+    }
+
+    return true;
+}
+
 const server = http.createServer((req, res) => {
+    // Protect admin page and admin APIs with basic auth
+    const isAdminRoute =
+        req.url === '/admin.html' ||
+        req.url === '/admin' ||
+        (req.method === 'POST' && req.url === '/api/add-flashcard') ||
+        (req.method === 'PUT' && req.url === '/api/edit-flashcard') ||
+        (req.method === 'DELETE' && req.url === '/api/delete-flashcard');
+
+    if (isAdminRoute && !requireAdminAuth(req, res)) {
+        return;
+    }
+
     // Handle POST request for adding flashcards
     if (req.method === 'POST' && req.url === '/api/add-flashcard') {
         let body = '';
