@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Italian Verb Conjugation Flashcards</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="flashcards-page verbs-page">
+
+<div class="container">
+    <div class="header">
+        <h1>Italian Verb Conjugation</h1>
+        <p>Flip the card to see full present-tense conjugations of common Italian verbs, with English meanings and pronunciation help.</p>
+    </div>
+
+    <div id="noVerbs" class="no-cards" style="display: none;">
+        <h2>No Verbs Found</h2>
+        <p>Make sure verbs.json exists and contains verb data.</p>
+        <a href="/">Back to Home</a>
+    </div>
+
+    <div id="verbArea" style="display: none;">
+        <div class="progress">
+            Verb <span id="currentVerb">1</span> / <span id="totalVerbs">0</span>
+        </div>
+
+        <div class="flashcard-container">
+            <div class="flashcard" id="verbCard">
+                <div class="flashcard-face flashcard-front">
+                    <div class="flashcard-label">English Verb</div>
+                    <div class="flashcard-content" id="verbEnglish"></div>
+                </div>
+                <div class="flashcard-face flashcard-back">
+                    <div class="flashcard-label">Present Tense Conjugation</div>
+                    <div class="verb-meta" id="verbTitle"></div>
+                    <div class="verb-table-wrapper">
+                        <table class="verb-table">
+                            <thead>
+                                <tr>
+                                    <th>Subject</th>
+                                    <th>Italian</th>
+                                    <th>Pronunciation</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody id="verbTableBody"></tbody>
+                        </table>
+                    </div>
+                    <div class="verb-pronunciation-line" id="verbPronunciation"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tap-hint">👆 Tap card to flip</div>
+
+        <div class="controls">
+            <button id="prevVerbBtn" class="btn-secondary">
+                <span>← Previous</span>
+            </button>
+            <button id="shuffleVerbsBtn" class="btn-secondary">
+                <span>🔀 Shuffle</span>
+            </button>
+            <button id="nextVerbBtn" class="btn-primary">
+                <span>Next →</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="back-link">
+        <a href="/">← Back to Home</a>
+    </div>
+</div>
+
+<script>
+    let verbs = [];
+    let currentIndex = 0;
+    let isFlipped = false;
+
+    const verbArea = document.getElementById('verbArea');
+    const noVerbs = document.getElementById('noVerbs');
+    const verbCard = document.getElementById('verbCard');
+    const verbEnglishEl = document.getElementById('verbEnglish');
+    const verbTitleEl = document.getElementById('verbTitle');
+    const verbPronunciationEl = document.getElementById('verbPronunciation');
+    const verbTableBody = document.getElementById('verbTableBody');
+    const currentVerbEl = document.getElementById('currentVerb');
+    const totalVerbsEl = document.getElementById('totalVerbs');
+    const prevVerbBtn = document.getElementById('prevVerbBtn');
+    const nextVerbBtn = document.getElementById('nextVerbBtn');
+    const shuffleVerbsBtn = document.getElementById('shuffleVerbsBtn');
+
+    async function loadVerbs() {
+        try {
+            const response = await fetch('verbs.json');
+            if (!response.ok) {
+                throw new Error('verbs.json not found');
+            }
+            verbs = await response.json();
+
+            if (!Array.isArray(verbs) || verbs.length === 0) {
+                throw new Error('verbs.json is empty or invalid');
+            }
+
+            // Shuffle initially for variety
+            shuffleVerbs();
+
+            totalVerbsEl.textContent = verbs.length;
+            noVerbs.style.display = 'none';
+            verbArea.style.display = 'block';
+            showVerb(0);
+        } catch (err) {
+            console.error('Error loading verbs:', err);
+            noVerbs.style.display = 'block';
+            verbArea.style.display = 'none';
+        }
+    }
+
+    function shuffleVerbs() {
+        for (let i = verbs.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [verbs[i], verbs[j]] = [verbs[j], verbs[i]];
+        }
+        currentIndex = 0;
+    }
+
+    function showVerb(index) {
+        if (verbs.length === 0) return;
+
+        currentIndex = index;
+        const verb = verbs[currentIndex];
+
+        verbEnglishEl.textContent = verb.english || '';
+
+        verbTitleEl.textContent = verb.infinitive && verb.english
+            ? `${verb.infinitive} → ${verb.english}`
+            : verb.infinitive || '';
+
+        // Build table rows
+        verbTableBody.innerHTML = '';
+        if (Array.isArray(verb.forms)) {
+            verb.forms.forEach(form => {
+                const tr = document.createElement('tr');
+
+                const tdSubject = document.createElement('td');
+                tdSubject.textContent = form.subject || '';
+                tdSubject.className = 'verb-table-subject';
+
+                const tdItalian = document.createElement('td');
+                tdItalian.textContent = form.italian || '';
+
+                const tdPronounceText = document.createElement('td');
+                tdPronounceText.textContent = form.pronunciation || '';
+
+                const tdPlay = document.createElement('td');
+                const playBtn = document.createElement('button');
+                playBtn.className = 'btn-play';
+                playBtn.textContent = '🔊';
+                playBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    pronounceForm(verb, form);
+                });
+                tdPlay.appendChild(playBtn);
+
+                tr.appendChild(tdSubject);
+                tr.appendChild(tdItalian);
+                tr.appendChild(tdPronounceText);
+                tr.appendChild(tdPlay);
+                verbTableBody.appendChild(tr);
+            });
+        }
+
+        verbPronunciationEl.textContent = verb.pronunciation
+            ? `Pronunciation: ${verb.pronunciation}`
+            : '';
+
+        currentVerbEl.textContent = currentIndex + 1;
+
+        if (isFlipped) {
+            verbCard.classList.remove('flipped');
+            isFlipped = false;
+        }
+
+        prevVerbBtn.disabled = currentIndex === 0;
+        nextVerbBtn.disabled = currentIndex === verbs.length - 1;
+    }
+
+    verbCard.addEventListener('click', (e) => {
+        if (e.target.tagName === 'BUTTON') return;
+        verbCard.classList.toggle('flipped');
+        isFlipped = !isFlipped;
+    });
+
+    prevVerbBtn.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            showVerb(currentIndex - 1);
+        }
+    });
+
+    nextVerbBtn.addEventListener('click', () => {
+        if (currentIndex < verbs.length - 1) {
+            showVerb(currentIndex + 1);
+        }
+    });
+
+    shuffleVerbsBtn.addEventListener('click', () => {
+        shuffleVerbs();
+        showVerb(0);
+    });
+
+    function pronounceForm(verb, form) {
+        if (!('speechSynthesis' in window)) {
+            alert('Text-to-speech is not supported in your browser.');
+            return;
+        }
+
+        if (!form || !form.italian) return;
+
+        const parts = [];
+        if (form.subject) {
+            parts.push(form.subject);
+        }
+        parts.push(form.italian);
+
+        const textToSpeak = parts.join(' ');
+        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+        utterance.lang = 'it-IT';
+        utterance.rate = 0.9;
+        speechSynthesis.speak(utterance);
+    }
+
+    loadVerbs();
+</script>
+
+</body>
+</html>

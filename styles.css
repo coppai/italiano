@@ -680,6 +680,87 @@ body.article-page {
     margin-bottom: 1.5rem;
 }
 
+/* ============================================
+   VERBS PAGE (conjugation flashcards)
+   ============================================ */
+
+.verbs-page .header h1 {
+    font-size: 2.3rem;
+}
+
+.verbs-page .header p {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.verb-meta {
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.verb-table-wrapper {
+    width: 100%;
+    max-height: none;
+    overflow-y: visible;
+    margin-top: 1rem;
+}
+
+.verb-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    background: rgba(255, 255, 255, 0.9);
+    color: #2c3e50;
+}
+
+.verb-table thead {
+    position: sticky;
+    top: 0;
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.verb-table th,
+.verb-table td {
+    padding: 6px 8px;
+    text-align: left;
+}
+
+.verb-table th {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(44, 62, 80, 0.2);
+}
+
+.verb-table tr:nth-child(even) td {
+    background: rgba(236, 240, 241, 0.5);
+}
+
+.verb-table-subject {
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.verb-pronunciation-line {
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+    opacity: 0.95;
+}
+
+.verbs-page .flashcard-back {
+    background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
+    color: #2c3e50;
+}
+
+.verbs-page .flashcard-front {
+    background: linear-gradient(135deg, #0984e3 0%, #6c5ce7 100%);
+}
+
+.verbs-page .flashcard {
+    height: 480px;
+}
+
 .icon {
     width: 20px;
     height: 20px;
