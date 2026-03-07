@@ -1,0 +1,1318 @@
+[
+  {
+    "id": "1",
+    "question": "I like (something singular)",
+    "answer": "mi piace",
+    "notes": "(PYA-cheh) Mi piace un gelato.",
+    "categories": [],
+    "correct": 2,
+    "incorrect": 3
+  },
+  {
+    "id": "1772208909105xuxopi3xk",
+    "question": "The bill",
+    "answer": "il conto",
+    "categories": [],
+    "correct": 1,
+    "incorrect": 3
+  },
+  {
+    "id": "1772208939182kr1wzcsto",
+    "question": "Monday",
+    "answer": "Lunedì",
+    "categories": [
+      "days"
+    ],
+    "correct": 2,
+    "incorrect": 0
+  },
+  {
+    "id": "1772209001001",
+    "question": "Tuesday",
+    "answer": "Martedì",
+    "notes": "(mar-teh-DEE)",
+    "categories": [
+      "days"
+    ],
+    "correct": 2,
+    "incorrect": 2
+  },
+  {
+    "id": "1772209001002",
+    "question": "Wednesday",
+    "answer": "Mercoledì",
+    "categories": [
+      "days"
+    ],
+    "correct": 2,
+    "incorrect": 0
+  },
+  {
+    "id": "1772209001003",
+    "question": "Thursday",
+    "answer": "Giovedì",
+    "notes": "(joh-veh-DEE)",
+    "categories": [
+      "days"
+    ],
+    "correct": 2,
+    "incorrect": 2
+  },
+  {
+    "id": "1772209001004",
+    "question": "Friday",
+    "answer": "Venerdì",
+    "notes": "(veh-nehr-DEE)",
+    "categories": [
+      "days"
+    ],
+    "correct": 0,
+    "incorrect": 2
+  },
+  {
+    "id": "1772209001005",
+    "question": "Saturday",
+    "answer": "Sabato",
+    "categories": [
+      "days"
+    ],
+    "correct": 1,
+    "incorrect": 0
+  },
+  {
+    "id": "1772209001006",
+    "question": "Sunday",
+    "answer": "Domenica",
+    "categories": [
+      "days"
+    ],
+    "correct": 1,
+    "incorrect": 2
+  },
+  {
+    "id": "1772209370075duxsznlz1",
+    "question": "i would like a glass of wine",
+    "answer": "vorrei un bicchiere di vino",
+    "categories": [
+      "ordering"
+    ],
+    "correct": 1,
+    "incorrect": 1
+  },
+  {
+    "id": "1772211852023u6ou9rwy6",
+    "question": "a bottle",
+    "answer": "una bottiglia ",
+    "notes": "(boo-TEE-lyah)\n\nvorrei una bottiglia di vino rosa ",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 2
+  },
+  {
+    "id": "1772211961825xx92aeijz",
+    "question": "do you have",
+    "answer": "Avete",
+    "notes": "(ah-VEH-teh)\n\nAvete un tavolo",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 2
+  },
+  {
+    "id": "17722119755683vrpwmsdw",
+    "question": "here is ",
+    "answer": "ecco qui",
+    "notes": "",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 3
+  },
+  {
+    "id": "1772212036135ocidws8jc",
+    "question": "the meat",
+    "answer": "la carne",
+    "notes": "",
+    "categories": [],
+    "correct": 1,
+    "incorrect": 3
+  },
+  {
+    "id": "1772212052188v2ty3448d",
+    "question": "i speak",
+    "answer": "parlo",
+    "notes": "",
+    "categories": [
+      "parlare",
+      "verbs"
+    ],
+    "correct": 4,
+    "incorrect": 0
+  },
+  {
+    "id": "177221207242440n6u7qrb",
+    "question": "you speak?",
+    "answer": "parli",
+    "notes": "",
+    "categories": [
+      "parlare",
+      "verbs"
+    ],
+    "correct": 2,
+    "incorrect": 0
+  },
+  {
+    "id": "1772212104901eged3nqo5",
+    "question": "he speaks",
+    "answer": "parlara",
+    "notes": "",
+    "categories": [
+      "parlare",
+      "verbs"
+    ],
+    "correct": 2,
+    "incorrect": 5
+  },
+  {
+    "id": "1772212115717g9f58go6s",
+    "question": "we speak",
+    "answer": "parliamo",
+    "notes": "",
+    "categories": [
+      "parlare",
+      "verbs"
+    ],
+    "correct": 2,
+    "incorrect": 2
+  },
+  {
+    "id": "1772212125212zpu3qbqu1",
+    "question": "they speak",
+    "answer": "parlano",
+    "notes": "",
+    "categories": [
+      "parlare"
+    ],
+    "correct": 2,
+    "incorrect": 1
+  },
+  {
+    "id": "1772212148206j223monei",
+    "question": "you (plural) speak",
+    "answer": "parlate",
+    "notes": "",
+    "categories": [
+      "parlare"
+    ],
+    "correct": 4,
+    "incorrect": 0
+  },
+  {
+    "id": "1772212161003a92qqnkxi",
+    "question": "they speak",
+    "answer": "parlano",
+    "notes": "",
+    "categories": [
+      "parlare"
+    ],
+    "correct": 2,
+    "incorrect": 1
+  },
+  {
+    "id": "1772212184029guqj87ncv",
+    "question": "on the right",
+    "answer": "sulla destra",
+    "notes": "",
+    "categories": [
+      "directions"
+    ],
+    "correct": 0,
+    "incorrect": 5
+  },
+  {
+    "id": "1772212282115khdckak63",
+    "question": "left",
+    "answer": "Sinistra",
+    "notes": "",
+    "categories": [
+      "directions"
+    ],
+    "correct": 1,
+    "incorrect": 1
+  },
+  {
+    "id": "17722123474415upaazt4s",
+    "question": "can you help me",
+    "answer": "puoi aiutare",
+    "notes": "(PWAW-ee ah-yoo-TAH-reh)",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 2
+  },
+  {
+    "id": "1772212371622s9mia0yu6",
+    "question": "is it far away",
+    "answer": "e lontano",
+    "notes": "",
+    "categories": [
+      "directions"
+    ],
+    "correct": 0,
+    "incorrect": 1
+  },
+  {
+    "id": "1772212408448ig7ji4i67",
+    "question": "is it close by",
+    "answer": "e vicino",
+    "notes": "(vee-CHEE-no)",
+    "categories": [
+      "directions"
+    ],
+    "correct": 1,
+    "incorrect": 1
+  },
+  {
+    "id": "1772212422173g87fswvm2",
+    "question": "where is",
+    "answer": "dove",
+    "notes": "",
+    "categories": [],
+    "correct": 2,
+    "incorrect": 0
+  },
+  {
+    "id": "17722124324798jqsljj3c",
+    "question": "it is here",
+    "answer": "e qui",
+    "notes": "",
+    "categories": [],
+    "correct": 1,
+    "incorrect": 0
+  },
+  {
+    "id": "1772212480301nzn61dl0h",
+    "question": "i have two daughters",
+    "answer": "ho dua figlie",
+    "notes": "",
+    "categories": [],
+    "correct": 1,
+    "incorrect": 0
+  },
+  {
+    "id": "1772212489450ko3zhps9w",
+    "question": "our",
+    "answer": "nostro",
+    "notes": "",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 2
+  },
+  {
+    "id": "1772212504961wl1820nte",
+    "question": "month",
+    "answer": "mese",
+    "notes": "",
+    "categories": [
+      "days"
+    ],
+    "correct": 0,
+    "incorrect": 1
+  },
+  {
+    "id": "1772212513754uusarwkyq",
+    "question": "a dog",
+    "answer": "un cane",
+    "notes": "",
+    "categories": [],
+    "correct": 3,
+    "incorrect": 0
+  },
+  {
+    "id": "1772212597679mxbgawysl",
+    "question": "this is my wife",
+    "answer": "questa e mia moglie",
+    "notes": "(MO-lyeh)\n\nnote the ending of question and mio would change based on the noun",
+    "categories": [],
+    "correct": 3,
+    "incorrect": 0
+  },
+  {
+    "id": "1772212612367euylagzfh",
+    "question": "this is my dad",
+    "answer": "questo e mio padre",
+    "notes": "",
+    "categories": [],
+    "correct": 2,
+    "incorrect": 0
+  },
+  {
+    "id": "1772212626990p8hwzkzrv",
+    "question": "where do you live?",
+    "answer": "dove abiti?",
+    "notes": "",
+    "categories": [],
+    "correct": 2,
+    "incorrect": 0
+  },
+  {
+    "id": "1772212783667zkrpjyxov",
+    "question": "I live",
+    "answer": "abito",
+    "notes": "",
+    "categories": [
+      "abitare"
+    ],
+    "correct": 4,
+    "incorrect": 0
+  },
+  {
+    "id": "1772213001001",
+    "question": "you live",
+    "answer": "abiti",
+    "notes": "",
+    "categories": [
+      "abitare"
+    ],
+    "correct": 6,
+    "incorrect": 0
+  },
+  {
+    "id": "1772213001002",
+    "question": "he/she lives",
+    "answer": "abita",
+    "notes": "",
+    "categories": [
+      "abitare"
+    ],
+    "correct": 6,
+    "incorrect": 0
+  },
+  {
+    "id": "1772213001003",
+    "question": "we live",
+    "answer": "abitiamo",
+    "notes": "",
+    "categories": [
+      "abitare"
+    ],
+    "correct": 4,
+    "incorrect": 0
+  },
+  {
+    "id": "1772213001004",
+    "question": "you (plural) live",
+    "answer": "abitate",
+    "notes": "",
+    "categories": [
+      "abitare"
+    ],
+    "correct": 4,
+    "incorrect": 1
+  },
+  {
+    "id": "1772213001005",
+    "question": "they live",
+    "answer": "abitano",
+    "notes": "",
+    "categories": [
+      "abitare"
+    ],
+    "correct": 3,
+    "incorrect": 3
+  },
+  {
+    "id": "1772214001001",
+    "question": "I am",
+    "answer": "sono",
+    "notes": "",
+    "categories": [
+      "essere"
+    ],
+    "correct": 3,
+    "incorrect": 0
+  },
+  {
+    "id": "1772214001002",
+    "question": "you are",
+    "answer": "sei",
+    "notes": "",
+    "categories": [
+      "essere"
+    ],
+    "correct": 2,
+    "incorrect": 1
+  },
+  {
+    "id": "1772214001003",
+    "question": "he/she is",
+    "answer": "è",
+    "notes": "",
+    "categories": [
+      "essere"
+    ],
+    "correct": 3,
+    "incorrect": 0
+  },
+  {
+    "id": "1772214001004",
+    "question": "we are",
+    "answer": "siamo",
+    "notes": "",
+    "categories": [
+      "essere"
+    ],
+    "correct": 2,
+    "incorrect": 2
+  },
+  {
+    "id": "1772214001005",
+    "question": "you (plural) are",
+    "answer": "siete",
+    "notes": "",
+    "categories": [
+      "essere"
+    ],
+    "correct": 3,
+    "incorrect": 0
+  },
+  {
+    "id": "1772214001006",
+    "question": "they are",
+    "answer": "sono",
+    "notes": "",
+    "categories": [
+      "essere"
+    ],
+    "correct": 2,
+    "incorrect": 0
+  },
+  {
+    "id": "17722129328494rxue98cs",
+    "question": "the apple",
+    "answer": "la mela",
+    "notes": "",
+    "categories": [],
+    "correct": 1,
+    "incorrect": 0
+  },
+  {
+    "id": "17722129441086jxpdsxiq",
+    "question": "the appleS",
+    "answer": "le mele",
+    "notes": "",
+    "categories": [],
+    "correct": 1,
+    "incorrect": 1
+  },
+  {
+    "id": "1772215001005",
+    "question": "5",
+    "answer": "cinque",
+    "notes": "",
+    "categories": [
+      "numbers"
+    ],
+    "correct": 3,
+    "incorrect": 0
+  },
+  {
+    "id": "1772215001008",
+    "question": "8",
+    "answer": "otto",
+    "notes": "",
+    "categories": [
+      "numbers"
+    ],
+    "correct": 2,
+    "incorrect": 0
+  },
+  {
+    "id": "1772215001009",
+    "question": "9",
+    "answer": "nove",
+    "notes": "",
+    "categories": [
+      "numbers"
+    ],
+    "correct": 2,
+    "incorrect": 0
+  },
+  {
+    "id": "1772215001010",
+    "question": "10",
+    "answer": "dieci",
+    "notes": "",
+    "categories": [
+      "numbers"
+    ],
+    "correct": 1,
+    "incorrect": 0
+  },
+  {
+    "id": "1772216001001",
+    "question": "backwards",
+    "answer": "indietro",
+    "notes": "",
+    "categories": [
+      "directions"
+    ],
+    "correct": 0,
+    "incorrect": 3
+  },
+  {
+    "id": "1772216001002",
+    "question": "straight",
+    "answer": "dritto",
+    "notes": "",
+    "categories": [
+      "directions"
+    ],
+    "correct": 0,
+    "incorrect": 2
+  },
+  {
+    "id": "1772216001003",
+    "question": "next to",
+    "answer": "accanto a",
+    "notes": "",
+    "categories": [
+      "directions"
+    ],
+    "correct": 0,
+    "incorrect": 3
+  },
+  {
+    "id": "1772216001004",
+    "question": "across from",
+    "answer": "di fronte a",
+    "notes": "",
+    "categories": [
+      "directions"
+    ],
+    "correct": 0,
+    "incorrect": 3
+  },
+  {
+    "id": "1772216001005",
+    "question": "across the street",
+    "answer": "dall'altra parte della strada",
+    "notes": "",
+    "categories": [
+      "directions"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1772213305534rohlsw9c4",
+    "question": "there is",
+    "answer": "C’è",
+    "notes": "(cheh)",
+    "categories": [],
+    "correct": 2,
+    "incorrect": 1
+  },
+  {
+    "id": "17722133533543m80hoah7",
+    "question": "is there a phamacy near here",
+    "answer": "C’è una farmicia qui vicinio",
+    "notes": "",
+    "categories": [],
+    "correct": 1,
+    "incorrect": 1
+  },
+  {
+    "id": "1772213646537cndwsf30x",
+    "question": "can i pay",
+    "answer": "posso pagare",
+    "notes": "",
+    "categories": [],
+    "correct": 2,
+    "incorrect": 0
+  },
+  {
+    "id": "1772213927222zcu91n1hj",
+    "question": "I like (something plural)",
+    "answer": "mi piacciono ",
+    "notes": "( pyat-choh-noh)\n\nmi piacciono i funghi\n",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 1
+  },
+  {
+    "id": "1772214179379ggqia8t3a",
+    "question": "dinner",
+    "answer": "cena",
+    "notes": "( SHEH-nah )\n\nfeminine\n",
+    "categories": [],
+    "correct": 1,
+    "incorrect": 0
+  },
+  {
+    "id": "1772214215409j1p3babpw",
+    "question": "a newspaper",
+    "answer": "un giornale",
+    "notes": "",
+    "categories": [],
+    "correct": 1,
+    "incorrect": 0
+  },
+  {
+    "id": "1772214256872tcp7ap98w",
+    "question": "a car",
+    "answer": "una macchina",
+    "notes": "",
+    "categories": [],
+    "correct": 1,
+    "incorrect": 1
+  },
+  {
+    "id": "1772214281309me7i45ulh",
+    "question": "a packback",
+    "answer": "uno zaino",
+    "notes": "TSAI-NOH",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 1
+  },
+  {
+    "id": "1772214307983dusbctgvw",
+    "question": "a room/bedroom",
+    "answer": "una camera",
+    "notes": "",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 1
+  },
+  {
+    "id": "17722143520833ixxe29wm",
+    "question": "a summer",
+    "answer": "un'estate",
+    "notes": "",
+    "categories": [],
+    "correct": 1,
+    "incorrect": 0
+  },
+  {
+    "id": "1772214380735atrq81xss",
+    "question": "a airplane",
+    "answer": "un aereo",
+    "notes": "",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 1
+  },
+  {
+    "id": "1772214512633af23xihkc",
+    "question": "a chair",
+    "answer": "una sedia",
+    "notes": "",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1772214594101d5h4bb3y5",
+    "question": "a bread",
+    "answer": "un pane",
+    "notes": "",
+    "categories": [],
+    "correct": 1,
+    "incorrect": 0
+  },
+  {
+    "id": "1772214620024airfk4dud",
+    "question": "pen",
+    "answer": "una penna ",
+    "notes": "",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 1
+  },
+  {
+    "id": "1772214673797ee2a5unt2",
+    "question": "breakfast",
+    "answer": "colazione",
+    "notes": "(koh-lah-TSYOH-neh)",
+    "categories": [
+      "meals"
+    ],
+    "correct": 0,
+    "incorrect": 3
+  },
+  {
+    "id": "1772214709680drde1i0zd",
+    "question": "a sea",
+    "answer": "un mare",
+    "notes": "",
+    "categories": [],
+    "correct": 2,
+    "incorrect": 0
+  },
+  {
+    "id": "1740787200001",
+    "question": "Is there a table available?",
+    "answer": "C'è un tavolo?",
+    "notes": "",
+    "categories": [
+      "restaurant"
+    ],
+    "correct": 8,
+    "incorrect": 2
+  },
+  {
+    "id": "1740787200002",
+    "question": "Do you have a menu?",
+    "answer": "Avete un menù?",
+    "notes": "",
+    "categories": [
+      "restaurant"
+    ],
+    "correct": 6,
+    "incorrect": 1
+  },
+  {
+    "id": "1740787200003",
+    "question": "Do you have a menu in English?",
+    "answer": "Avete un menù in inglese?",
+    "notes": "",
+    "categories": [
+      "restaurant"
+    ],
+    "correct": 5,
+    "incorrect": 0
+  },
+  {
+    "id": "1740787200004",
+    "question": "Do you have a children's menu?",
+    "answer": "Avete un menù per bambini?",
+    "notes": "",
+    "categories": [
+      "restaurant"
+    ],
+    "correct": 6,
+    "incorrect": 2
+  },
+  {
+    "id": "1740787200005",
+    "question": "The menu",
+    "answer": "Il menù",
+    "notes": "",
+    "categories": [
+      "restaurant"
+    ],
+    "correct": 6,
+    "incorrect": 1
+  },
+  {
+    "id": "1740787200006",
+    "question": "The food",
+    "answer": "Il cibo",
+    "notes": "(chee bo)",
+    "categories": [
+      "restaurant"
+    ],
+    "correct": 3,
+    "incorrect": 6
+  },
+  {
+    "id": "1740787200007",
+    "question": "A table for me",
+    "answer": "Un tavolo per me",
+    "notes": "",
+    "categories": [
+      "restaurant"
+    ],
+    "correct": 6,
+    "incorrect": 0
+  },
+  {
+    "id": "1740787200008",
+    "question": "For how many people?",
+    "answer": "Per quante persone?",
+    "notes": "",
+    "categories": [
+      "restaurant"
+    ],
+    "correct": 3,
+    "incorrect": 5
+  },
+  {
+    "id": "1740787200009",
+    "question": "For four people",
+    "answer": "Per quattro persone",
+    "notes": "",
+    "categories": [
+      "restaurant"
+    ],
+    "correct": 4,
+    "incorrect": 1
+  },
+  {
+    "id": "1740787200010",
+    "question": "Sorry, we're full / no tables available",
+    "answer": "Scusi, siamo al completo",
+    "notes": "",
+    "categories": [
+      "restaurant"
+    ],
+    "correct": 2,
+    "incorrect": 7
+  },
+  {
+    "id": "1740787200011",
+    "question": "What do you recommend?",
+    "answer": "Cosa consiglia?",
+    "notes": "(kohn-SEEL-yah)",
+    "categories": [
+      "restaurant"
+    ],
+    "correct": 1,
+    "incorrect": 5
+  },
+  {
+    "id": "1740787200014",
+    "question": "A ham sandwich",
+    "answer": "Un panino al prosciutto",
+    "notes": "",
+    "categories": [
+      "restaurant"
+    ],
+    "correct": 4,
+    "incorrect": 3
+  },
+  {
+    "id": "1740787200015",
+    "question": "A cheese sandwich",
+    "answer": "Un panino al formaggio",
+    "notes": "",
+    "categories": [
+      "restaurant"
+    ],
+    "correct": 8,
+    "incorrect": 0
+  },
+  {
+    "id": "1740787200016",
+    "question": "A sandwich with tomato & mozzarella",
+    "answer": "Un panino con pomodoro e mozzarella",
+    "notes": "",
+    "categories": [
+      "restaurant"
+    ],
+    "correct": 9,
+    "incorrect": 0
+  },
+  {
+    "id": "1740787200019",
+    "question": "What are you having?",
+    "answer": "Cosa prendete?",
+    "notes": "prehn-DEHN-teh",
+    "categories": [
+      "restaurant"
+    ],
+    "correct": 2,
+    "incorrect": 4
+  },
+  {
+    "id": "1740787200020",
+    "question": "Can I have…?",
+    "answer": "Posso avere…?",
+    "notes": "",
+    "categories": [
+      "restaurant"
+    ],
+    "correct": 2,
+    "incorrect": 2
+  },
+  {
+    "id": "1740787200021",
+    "question": "Can I have a menu?",
+    "answer": "Posso avere un menù?",
+    "notes": "",
+    "categories": [
+      "restaurant"
+    ],
+    "correct": 4,
+    "incorrect": 0
+  },
+  {
+    "id": "1740787200022",
+    "question": "Can I have a fork?",
+    "answer": "Posso avere una forchetta?",
+    "notes": "for-KET-tah",
+    "categories": [
+      "restaurant"
+    ],
+    "correct": 2,
+    "incorrect": 4
+  },
+  {
+    "id": "1740787200023",
+    "question": "Can I have a knife?",
+    "answer": "Posso avere un coltello?",
+    "notes": "",
+    "categories": [
+      "restaurant"
+    ],
+    "correct": 1,
+    "incorrect": 3
+  },
+  {
+    "id": "1740787200024",
+    "question": "Can I have a spoon?",
+    "answer": "Posso avere un cucchiaio?",
+    "notes": "koo-kee-AYE-oh",
+    "categories": [
+      "restaurant"
+    ],
+    "correct": 2,
+    "incorrect": 4
+  },
+  {
+    "id": "1740787200025",
+    "question": "Can I have a napkin?",
+    "answer": "Posso avere un tovagliolo?",
+    "notes": "toh-vahl-yoh-loh.",
+    "categories": [
+      "restaurant"
+    ],
+    "correct": 0,
+    "incorrect": 2
+  },
+  {
+    "id": "1740787200027",
+    "question": "Can you give me…? (informal)",
+    "answer": "Mi puoi dare…?",
+    "notes": "",
+    "categories": [
+      "restaurant"
+    ],
+    "correct": 0,
+    "incorrect": 4
+  },
+  {
+    "id": "1740787200028",
+    "question": "Can you give me a hand? (informal)",
+    "answer": "Mi puoi dare una mano?",
+    "notes": "",
+    "categories": [
+      "restaurant"
+    ],
+    "correct": 0,
+    "incorrect": 1
+  },
+  {
+    "id": "1740787200029",
+    "question": "Salt",
+    "answer": "Il sale",
+    "notes": "",
+    "categories": [
+      "restaurant"
+    ],
+    "correct": 1,
+    "incorrect": 2
+  },
+  {
+    "id": "1740787200030",
+    "question": "Pepper",
+    "answer": "Il pepe",
+    "notes": "",
+    "categories": [
+      "restaurant"
+    ],
+    "correct": 2,
+    "incorrect": 2
+  },
+  {
+    "id": "1772555652984df86ldt6o",
+    "question": "a fork",
+    "answer": "una forchetta",
+    "notes": "(for-KET-tah)",
+    "categories": [
+      "restaurant"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1772555683570h0hohxkj1",
+    "question": "a knife",
+    "answer": "un coltello",
+    "notes": "",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "17725557218806m9ra0zy9",
+    "question": "a spoon",
+    "answer": "cucchiaio",
+    "notes": "koo-kee-AYE-oh",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1772596283911c2r8rglzn",
+    "question": "avere",
+    "answer": "have",
+    "notes": "",
+    "categories": [
+      "verb"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "17725963118258h9lpxlx7",
+    "question": "avete",
+    "answer": "you have",
+    "notes": "",
+    "categories": [
+      "verb"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1772596378695tr473f3dz",
+    "question": "napkin",
+    "answer": "tovagliolo",
+    "notes": "toh-vah-LYOH-loh",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "17726528426037qoq2ofuk",
+    "question": "I have",
+    "answer": "ho",
+    "notes": "ho un cane ",
+    "categories": [
+      "avere"
+    ],
+    "correct": 3,
+    "incorrect": 0
+  },
+  {
+    "id": "1772652896483x2lajm1ea",
+    "question": "you have (singular)",
+    "answer": "hai",
+    "notes": "(eye)",
+    "categories": [
+      "avere"
+    ],
+    "correct": 3,
+    "incorrect": 0
+  },
+  {
+    "id": "1772652912235v53euaqll",
+    "question": "he/she has",
+    "answer": "ha",
+    "notes": "ah",
+    "categories": [
+      "avere"
+    ],
+    "correct": 1,
+    "incorrect": 2
+  },
+  {
+    "id": "177265293005675vlhvj3w",
+    "question": "we have",
+    "answer": "abbiamo",
+    "notes": "ahb-BYAH-mo",
+    "categories": [
+      "avere"
+    ],
+    "correct": 1,
+    "incorrect": 1
+  },
+  {
+    "id": "1772652944444pf71aj8mq",
+    "question": "you all have",
+    "answer": "avete",
+    "notes": "ah-VEH-teh",
+    "categories": [
+      "avere"
+    ],
+    "correct": 1,
+    "incorrect": 2
+  },
+  {
+    "id": "1772652958645o0af7p560",
+    "question": "they have",
+    "answer": "hanno",
+    "notes": "AHN-no",
+    "categories": [
+      "avere"
+    ],
+    "correct": 1,
+    "incorrect": 2
+  },
+  {
+    "id": "1772700000001",
+    "question": "Month",
+    "answer": "il mese",
+    "notes": "eel MEH-zeh",
+    "categories": [
+      "months",
+      "dates"
+    ],
+    "correct": 1,
+    "incorrect": 0
+  },
+  {
+    "id": "1772700000002",
+    "question": "January",
+    "answer": "Gennaio",
+    "notes": "jen-NAH-yo",
+    "categories": [
+      "months",
+      "dates"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1772700000003",
+    "question": "February",
+    "answer": "Febbraio",
+    "notes": "feb-BRAH-yo",
+    "categories": [
+      "months",
+      "dates"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1772700000004",
+    "question": "March",
+    "answer": "Marzo",
+    "notes": "MAR-tso",
+    "categories": [
+      "months",
+      "dates"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1772700000005",
+    "question": "April",
+    "answer": "Aprile",
+    "notes": "ah-PREE-leh",
+    "categories": [
+      "months",
+      "dates"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1772700000006",
+    "question": "May",
+    "answer": "Maggio",
+    "notes": "MAH-jee-oh",
+    "categories": [
+      "months",
+      "dates"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1772700000007",
+    "question": "June",
+    "answer": "Giugno",
+    "notes": "JOO-nyoh",
+    "categories": [
+      "months",
+      "dates"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1772700000008",
+    "question": "July",
+    "answer": "Luglio",
+    "notes": "LOO-lyoh",
+    "categories": [
+      "months",
+      "dates"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1772700000009",
+    "question": "August",
+    "answer": "Agosto",
+    "notes": "ah-GO-sto",
+    "categories": [
+      "months",
+      "dates"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1772700000010",
+    "question": "September",
+    "answer": "Settembre",
+    "notes": "set-TEM-breh",
+    "categories": [
+      "months",
+      "dates"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1772700000011",
+    "question": "October",
+    "answer": "Ottobre",
+    "notes": "oh-TOH-breh",
+    "categories": [
+      "months",
+      "dates"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1772700000012",
+    "question": "November",
+    "answer": "Novembre",
+    "notes": "no-VEM-breh",
+    "categories": [
+      "months",
+      "dates"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1772700000013",
+    "question": "December",
+    "answer": "Dicembre",
+    "notes": "dee-CHEM-breh",
+    "categories": [
+      "months",
+      "dates"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1772814070271f1vqjz9h1",
+    "question": "napkin",
+    "answer": "tovagliolo",
+    "notes": "toh-vahl-yoh-loh.",
+    "categories": [
+      "restaraunt"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  }
+]

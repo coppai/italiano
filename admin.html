@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Add Vocabulary</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="admin-page">
+    <div class="container">
+        <div class="header">
+            <h1>Flashcard Admin</h1>
+        </div>
+        
+        <div id="message" class="message"></div>
+
+        <div class="content-grid">
+            <div class="column">
+                <div class="section">
+            <h2 id="formTitle">Add New Flashcard</h2>
+            <div id="formMode" class="form-mode">Editing flashcard - click Cancel to return to add mode</div>
+
+            <form id="flashcardForm">
+            <div class="form-group">
+                <label for="question">Question *</label>
+                <input type="text" id="question" name="question" required placeholder="Enter your question">
+            </div>
+
+            <div class="form-group">
+                <label for="answer">Answer *</label>
+                <input type="text" id="answer" name="answer" required placeholder="Enter the answer">
+            </div>
+
+            <div class="form-group">
+                <label for="notes">Notes</label>
+                <textarea id="notes" name="notes" placeholder="Add any helpful notes, mnemonics, or context..."></textarea>
+                <div class="helper-text">Optional: Add explanations, examples, or memory aids</div>
+            </div>
+
+            <div class="form-group">
+                <label for="tagsInput">Categories (Press Enter to add)</label>
+                <div class="tags-container" id="tagsContainer">
+                    <input type="text" id="tagsInput" class="tags-input" placeholder="Add a category...">
+                </div>
+                <div class="helper-text">e.g., verbs, greetings, food, travel</div>
+            </div>
+
+            <button type="submit" id="submitBtn">Add Flashcard</button>
+            <button type="button" id="cancelEditBtn" class="btn-cancel" style="display: none;">Cancel Edit</button>
+        </form>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="section">
+            <h2>Manage Existing Flashcards</h2>
+            <div class="search-filter">
+                <input type="text" id="searchInput" placeholder="🔍 Search flashcards...">
+                <select id="categoryFilterAdmin">
+                    <option value="all">All Categories</option>
+                </select>
+            </div>
+            <div id="flashcardsList" class="flashcards-list">
+                <p style="text-align: center; color: #7f8c8d;">Loading flashcards...</p>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="back-link" style="text-align: center;">
+            <a href="/">← Back to Home</a>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('flashcardForm');
+        const messageDiv = document.getElementById('message');
+        const submitBtn = document.getElementById('submitBtn');
+        const tagsInput = document.getElementById('tagsInput');
+        const tagsContainer = document.getElementById('tagsContainer');
+        const flashcardsList = document.getElementById('flashcardsList');
+        const formTitle = document.getElementById('formTitle');
+        const formMode = document.getElementById('formMode');
+        const cancelEditBtn = document.getElementById('cancelEditBtn');
+        const searchInput = document.getElementById('searchInput');
+        const categoryFilterAdmin = document.getElementById('categoryFilterAdmin');
+        let tags = [];
+        let editingId = null;
+        let allFlashcards = [];
+        let searchQuery = '';
+        let selectedCategory = 'all';
+
+        // Tag management
+        function addTag(tagText) {
+            const trimmedTag = tagText.trim();
+            if (trimmedTag && !tags.includes(trimmedTag)) {
+                tags.push(trimmedTag);
+                renderTags();
+            }
+            tagsInput.value = '';
+        }
+
+        function removeTag(tagToRemove) {
+            tags = tags.filter(tag => tag !== tagToRemove);
+            renderTags();
+        }
+
+        function renderTags() {
+            // Remove all existing pills
+            const existingPills = tagsContainer.querySelectorAll('.tag-pill');
+            existingPills.forEach(pill => pill.remove());
+
+            // Add pills for each tag
+            tags.forEach(tag => {
+                const pill = document.createElement('div');
+                pill.className = 'tag-pill';
+                pill.innerHTML = `
+                    <span>${tag}</span>
+                    <span class="remove-tag">&times;</span>
+                `;
+                pill.querySelector('.remove-tag').addEventListener('click', () => removeTag(tag));
+                tagsContainer.insertBefore(pill, tagsInput);
+            });
+        }
+
+        // Handle Enter key to add tag
+        tagsInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                addTag(tagsInput.value);
+            }
+        });
+
+        // Focus input when clicking container
+        tagsContainer.addEventListener('click', () => {
+            tagsInput.focus();
+        });
+
+        function showMessage(text, type) {
+            messageDiv.textContent = text;
+            messageDiv.className = `message ${type} show`;
+            setTimeout(() => {
+                messageDiv.className = 'message';
+            }, 5000);
+        }
+
+        // Load flashcards
+        async function loadFlashcards() {
+            try {
+                const response = await fetch('flashcards.json');
+                allFlashcards = await response.json();
+                populateCategoryFilter();
+                renderFlashcardsList();
+            } catch (error) {
+                flashcardsList.innerHTML = '<p style="text-align: center; color: #e74c3c;">Error loading flashcards</p>';
+                console.error('Error:', error);
+            }
+        }
+
+        // Populate category filter dropdown
+        function populateCategoryFilter() {
+            const categories = new Set();
+            allFlashcards.forEach(card => {
+                if (card.categories && card.categories.length > 0) {
+                    card.categories.forEach(cat => categories.add(cat));
+                }
+            });
+            
+            // Clear existing options except "All Categories"
+            categoryFilterAdmin.innerHTML = '<option value="all">All Categories</option>';
+            
+            // Add category options sorted alphabetically
+            Array.from(categories).sort().forEach(category => {
+                const option = document.createElement('option');
+                option.value = category;
+                option.textContent = category;
+                categoryFilterAdmin.appendChild(option);
+            });
+        }
+
+        function renderFlashcardsList() {
+            // Filter flashcards based on search query and category
+            const filteredCards = allFlashcards.filter(card => {
+                // Category filter
+                const matchesCategory = selectedCategory === 'all' || 
+                    (card.categories && card.categories.includes(selectedCategory));
+                
+                // Search filter
+                const matchesSearch = !searchQuery || (() => {
+                    const query = searchQuery.toLowerCase();
+                    return (
+                        card.question.toLowerCase().includes(query) ||
+                        card.answer.toLowerCase().includes(query) ||
+                        (card.notes && card.notes.toLowerCase().includes(query)) ||
+                        (card.categories && card.categories.some(cat => cat.toLowerCase().includes(query)))
+                    );
+                })();
+                
+                return matchesCategory && matchesSearch;
+            });
+
+            if (allFlashcards.length === 0) {
+                flashcardsList.innerHTML = '<p style="text-align: center; color: #7f8c8d;">No flashcards yet. Add your first one above!</p>';
+                return;
+            }
+
+            if (filteredCards.length === 0) {
+                flashcardsList.innerHTML = '<p style="text-align: center; color: #7f8c8d;">No flashcards match your search.</p>';
+                return;
+            }
+
+            flashcardsList.innerHTML = filteredCards.map(card => `
+                <div class="flashcard-item">
+                    <div class="flashcard-info">
+                        <div class="flashcard-question">${card.question}</div>
+                        <div class="flashcard-answer">${card.answer}</div>
+                        ${card.categories && card.categories.length > 0 ? `
+                            <div class="flashcard-categories">
+                                ${card.categories.map(cat => `<span class="category-badge">${cat}</span>`).join('')}
+                            </div>
+                        ` : ''}
+                    </div>
+                    <div class="flashcard-actions">
+                        <button class="btn-small btn-edit" onclick="editFlashcard('${card.id}')">Edit</button>
+                        <button class="btn-small btn-delete" onclick="deleteFlashcard('${card.id}')">Delete</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function editFlashcard(id) {
+            const card = allFlashcards.find(c => c.id === id);
+            if (!card) return;
+
+            editingId = id;
+            document.getElementById('question').value = card.question;
+            document.getElementById('answer').value = card.answer;
+            document.getElementById('notes').value = card.notes || '';
+            tags = card.categories || [];
+            renderTags();
+
+            formTitle.textContent = 'Edit Flashcard';
+            formMode.classList.add('show');
+            submitBtn.textContent = 'Save Changes';
+            cancelEditBtn.style.display = 'block';
+
+            // Scroll to form
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function cancelEdit() {
+            editingId = null;
+            form.reset();
+            tags = [];
+            renderTags();
+            formTitle.textContent = 'Add New Flashcard';
+            formMode.classList.remove('show');
+            submitBtn.textContent = 'Add Flashcard';
+            cancelEditBtn.style.display = 'none';
+        }
+
+        async function deleteFlashcard(id) {
+            if (!confirm('Are you sure you want to delete this flashcard?')) return;
+
+            try {
+                const response = await fetch('/api/delete-flashcard', {
+                    method: 'DELETE',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ id })
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    showMessage('Flashcard deleted successfully!', 'success');
+                    loadFlashcards();
+                    if (editingId === id) {
+                        cancelEdit();
+                    }
+                } else {
+                    showMessage(result.error || 'Failed to delete flashcard', 'error');
+                }
+            } catch (error) {
+                showMessage('Error connecting to server', 'error');
+                console.error('Error:', error);
+            }
+        }
+
+        // Make functions available globally
+        window.editFlashcard = editFlashcard;
+        window.deleteFlashcard = deleteFlashcard;
+
+        // Search filter
+        searchInput.addEventListener('input', (e) => {
+            searchQuery = e.target.value;
+            renderFlashcardsList();
+        });
+
+        // Category filter
+        categoryFilterAdmin.addEventListener('change', (e) => {
+            selectedCategory = e.target.value;
+            renderFlashcardsList();
+        });
+
+        cancelEditBtn.addEventListener('click', cancelEdit);
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const isEditing = editingId !== null;
+            
+            const formData = {
+                id: isEditing ? editingId : Date.now().toString() + Math.random().toString(36).substr(2, 9),
+                question: document.getElementById('question').value,
+                answer: document.getElementById('answer').value,
+                notes: document.getElementById('notes').value,
+                categories: tags,
+                correct: isEditing ? (allFlashcards.find(c => c.id === editingId)?.correct || 0) : 0,
+                incorrect: isEditing ? (allFlashcards.find(c => c.id === editingId)?.incorrect || 0) : 0
+            };
+
+            submitBtn.disabled = true;
+            submitBtn.textContent = isEditing ? 'Saving...' : 'Adding...';
+
+            try {
+                const endpoint = isEditing ? '/api/edit-flashcard' : '/api/add-flashcard';
+                const response = await fetch(endpoint, {
+                    method: isEditing ? 'PUT' : 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(isEditing ? { id: editingId, flashcard: formData } : formData)
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    showMessage(isEditing ? 'Flashcard updated successfully!' : 'Flashcard added successfully!', 'success');
+                    form.reset();
+                    tags = [];
+                    renderTags();
+                    loadFlashcards();
+                    if (isEditing) {
+                        cancelEdit();
+                    }
+                } else {
+                    showMessage(result.error || `Failed to ${isEditing ? 'update' : 'add'} flashcard`, 'error');
+                }
+            } catch (error) {
+                showMessage('Error connecting to server', 'error');
+                console.error('Error:', error);
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = isEditing ? 'Save Changes' : 'Add Flashcard';
+            }
+        });
+
+        // Load flashcards on page load
+        loadFlashcards();
+    </script>
+</body>
+</html>
