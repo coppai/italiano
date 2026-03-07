@@ -77,10 +77,11 @@
 
 <script>
     let allFlashcards = [];  // Store all cards
-    let flashcards = [];  // Currently displayed cards
+    let flashcards = [];  // Currently displayed cards (shuffled/filtered view)
     let currentIndex = 0;
     let isFlipped = false;
-    let completedCards = new Set();  // Track cards marked as correct
+    let completedCards = new Set();  // Track cards marked as correct (by card.id)
+    let currentFilter = 'all';       // Track which category is currently selected
 
     const flashcardEl = document.getElementById('flashcard');
     const questionEl = document.getElementById('question');
@@ -162,6 +163,8 @@
 
     // Filter flashcards by category
     function filterByCategory(category) {
+        currentFilter = category;
+
         if (category === 'all') {
             flashcards = [...allFlashcards];
         } else {
@@ -201,12 +204,19 @@
         answerEl.textContent = card.answer;
         cardNotesEl.textContent = card.notes || '';
         
-        // Show completed count vs total cards in current view (respecting filters)
-        const totalCardsInView = flashcards.length;
-        const completedInView = flashcards.reduce((count, c) =>
+        // Show completed count vs total cards in current view (respecting filters).
+        // Use allFlashcards so that cards you've already completed (and removed
+        // from the current deck) still count toward the completed total.
+        const relevantCards = currentFilter === 'all'
+            ? allFlashcards
+            : allFlashcards.filter(c => c.categories && c.categories.includes(currentFilter));
+
+        const totalCardsInView = relevantCards.length;
+        const completedInView = relevantCards.reduce((count, c) =>
             completedCards.has(c.id) ? count + 1 : count,
             0
         );
+
         currentCardEl.textContent = completedInView;
         totalCardsEl.textContent = totalCardsInView;
         

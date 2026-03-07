@@ -14,7 +14,7 @@
     "answer": "il conto",
     "categories": [],
     "correct": 1,
-    "incorrect": 3
+    "incorrect": 4
   },
   {
     "id": "1772208939182kr1wzcsto",
@@ -35,7 +35,7 @@
       "days"
     ],
     "correct": 2,
-    "incorrect": 2
+    "incorrect": 3
   },
   {
     "id": "1772209001002",
@@ -67,7 +67,7 @@
       "days"
     ],
     "correct": 0,
-    "incorrect": 2
+    "incorrect": 3
   },
   {
     "id": "1772209001005",
@@ -76,7 +76,7 @@
     "categories": [
       "days"
     ],
-    "correct": 1,
+    "correct": 2,
     "incorrect": 0
   },
   {
@@ -87,7 +87,7 @@
       "days"
     ],
     "correct": 1,
-    "incorrect": 2
+    "incorrect": 3
   },
   {
     "id": "1772209370075duxsznlz1",
@@ -133,7 +133,7 @@
     "notes": "",
     "categories": [],
     "correct": 1,
-    "incorrect": 3
+    "incorrect": 4
   },
   {
     "id": "1772212052188v2ty3448d",
@@ -191,7 +191,7 @@
     "categories": [
       "parlare"
     ],
-    "correct": 2,
+    "correct": 3,
     "incorrect": 1
   },
   {
@@ -214,7 +214,7 @@
       "parlare"
     ],
     "correct": 2,
-    "incorrect": 1
+    "incorrect": 2
   },
   {
     "id": "1772212184029guqj87ncv",
@@ -225,7 +225,7 @@
       "directions"
     ],
     "correct": 0,
-    "incorrect": 5
+    "incorrect": 6
   },
   {
     "id": "1772212282115khdckak63",
@@ -437,7 +437,7 @@
     "categories": [
       "essere"
     ],
-    "correct": 2,
+    "correct": 3,
     "incorrect": 1
   },
   {
@@ -470,7 +470,7 @@
     "categories": [
       "essere"
     ],
-    "correct": 3,
+    "correct": 5,
     "incorrect": 0
   },
   {
@@ -555,7 +555,7 @@
       "directions"
     ],
     "correct": 0,
-    "incorrect": 3
+    "incorrect": 4
   },
   {
     "id": "1772216001002",
@@ -706,8 +706,8 @@
     "answer": "una sedia",
     "notes": "",
     "categories": [],
-    "correct": 0,
-    "incorrect": 0
+    "correct": 1,
+    "incorrect": 1
   },
   {
     "id": "1772214594101d5h4bb3y5",
@@ -720,11 +720,11 @@
   },
   {
     "id": "1772214620024airfk4dud",
-    "question": "pen",
-    "answer": "una penna ",
+    "question": "a/the pen",
+    "answer": "una/la penna ",
     "notes": "",
     "categories": [],
-    "correct": 0,
+    "correct": 1,
     "incorrect": 1
   },
   {
@@ -745,7 +745,7 @@
     "notes": "",
     "categories": [],
     "correct": 2,
-    "incorrect": 0
+    "incorrect": 1
   },
   {
     "id": "1740787200001",
@@ -887,7 +887,7 @@
     "categories": [
       "restaurant"
     ],
-    "correct": 8,
+    "correct": 9,
     "incorrect": 0
   },
   {
@@ -953,7 +953,7 @@
     "categories": [
       "restaurant"
     ],
-    "correct": 1,
+    "correct": 2,
     "incorrect": 3
   },
   {
@@ -997,8 +997,8 @@
     "categories": [
       "restaurant"
     ],
-    "correct": 0,
-    "incorrect": 1
+    "correct": 1,
+    "incorrect": 2
   },
   {
     "id": "1740787200029",
@@ -1039,7 +1039,7 @@
     "answer": "un coltello",
     "notes": "",
     "categories": [],
-    "correct": 0,
+    "correct": 1,
     "incorrect": 0
   },
   {
@@ -1113,7 +1113,7 @@
       "avere"
     ],
     "correct": 1,
-    "incorrect": 2
+    "incorrect": 3
   },
   {
     "id": "177265293005675vlhvj3w",
@@ -1145,7 +1145,7 @@
     "categories": [
       "avere"
     ],
-    "correct": 1,
+    "correct": 2,
     "incorrect": 2
   },
   {
@@ -1157,8 +1157,8 @@
       "months",
       "dates"
     ],
-    "correct": 1,
-    "incorrect": 0
+    "correct": 2,
+    "incorrect": 1
   },
   {
     "id": "1772700000002",
@@ -1193,7 +1193,7 @@
       "months",
       "dates"
     ],
-    "correct": 0,
+    "correct": 1,
     "incorrect": 0
   },
   {
@@ -1229,8 +1229,8 @@
       "months",
       "dates"
     ],
-    "correct": 0,
-    "incorrect": 0
+    "correct": 1,
+    "incorrect": 1
   },
   {
     "id": "1772700000008",
@@ -1289,7 +1289,7 @@
       "months",
       "dates"
     ],
-    "correct": 0,
+    "correct": 1,
     "incorrect": 0
   },
   {

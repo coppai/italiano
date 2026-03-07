@@ -349,7 +349,7 @@ hr {
    ARTICLE PRACTICE PAGES (indefinite & definite)
    ============================================ */
 
-.article-page body {
+body.article-page {
     height: 100vh;
     padding: 0;
 }
@@ -456,6 +456,53 @@ hr {
     font-size: 2rem;
     color: var(--success);
     margin: 2rem 0;
+}
+
+/* Mobile layout for article practice pages */
+@media (max-width: 768px) {
+    body.article-page {
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .article-page .container {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .main-content {
+        justify-content: flex-start;
+    }
+
+    .article-page .card {
+        max-width: 100%;
+        padding: 1.75rem 1.25rem;
+        box-sizing: border-box;
+    }
+
+    .article-page .word {
+        font-size: 2.2rem;
+        word-wrap: break-word;
+    }
+
+    .article-page input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .article-page .btn-submit {
+        width: 100%;
+    }
+
+    .article-page .btn-group {
+        flex-wrap: wrap;
+    }
+
+    .sidebar {
+        width: 100%;
+        max-height: 40vh;
+    }
 }
 
 /* ============================================

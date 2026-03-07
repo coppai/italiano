@@ -175,18 +175,38 @@
         sidebarList.prepend(item);
     }
 
+    // Normalize input/articles to handle smart quotes and spacing around apostrophes
+    function normalizeArticleInput(str) {
+        return str
+            .trim()
+            .toLowerCase()
+            // Normalize smart quotes to plain apostrophe
+            .replace(/[’‘]/g, "'")
+            // Collapse multiple spaces
+            .replace(/\s+/g, ' ')
+            // Remove spaces immediately after an apostrophe (un' amica -> un'amica)
+            .replace(/'\s+/g, "'");
+    }
+
     // 5. Validate the user input
     function checkAnswer() {
         const inputField = document.getElementById('article-input');
         const feedback = document.getElementById('feedback');
         const extraInfo = document.getElementById('extra-info');
-        const input = inputField.value.trim().toLowerCase();
-        const correct = deck[currentWordIndex].IndefiniteArticle.toLowerCase();
-        const word = deck[currentWordIndex].word.toLowerCase();
-        const correctWithNoun = correct + " " + word;
+
+        const rawInput = inputField.value;
+        const input = normalizeArticleInput(rawInput);
+
+        const correctArticle = normalizeArticleInput(deck[currentWordIndex].IndefiniteArticle);
+        const word = normalizeArticleInput(deck[currentWordIndex].word);
+
+        // Build accepted correct forms
+        const correctOnly = correctArticle; // e.g., "un'"
+        const correctWithSpace = normalizeArticleInput(deck[currentWordIndex].IndefiniteArticle + " " + deck[currentWordIndex].word); // "un' amica"
+        const correctWithoutSpace = normalizeArticleInput(deck[currentWordIndex].IndefiniteArticle + deck[currentWordIndex].word); // "un'amica"
         
-        // Accept either just the article or article + noun
-        if (input === correct || input === correctWithNoun) {
+        // Accept just the article, article + noun with space, or article+noun without space
+        if (input === correctOnly || input === correctWithSpace || input === correctWithoutSpace) {
             feedback.style.color = "var(--success)";
             feedback.innerText = "Bravo! Correct.";
             
