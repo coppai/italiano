@@ -25,11 +25,26 @@
             Verb <span id="currentVerb">1</span> / <span id="totalVerbs">0</span>
         </div>
 
+        <div class="filter-section">
+            <label for="packageSelect">Verb package:</label>
+            <select id="packageSelect">
+                <option value="all">All Verbs</option>
+            </select>
+        </div>
+
         <div class="flashcard-container">
             <div class="flashcard" id="verbCard">
                 <div class="flashcard-face flashcard-front">
                     <div class="flashcard-label">English Verb</div>
                     <div class="flashcard-content" id="verbEnglish"></div>
+                    <div class="verb-pronoun-list">
+                        <div>I</div>
+                        <div>you</div>
+                        <div>he/she</div>
+                        <div>we</div>
+                        <div>you (pl)</div>
+                        <div>they</div>
+                    </div>
                 </div>
                 <div class="flashcard-face flashcard-back">
                     <div class="flashcard-label">Present Tense Conjugation</div>
@@ -74,6 +89,7 @@
 
 <script>
     let verbs = [];
+    let allVerbs = [];
     let currentIndex = 0;
     let isFlipped = false;
 
@@ -86,6 +102,7 @@
     const verbTableBody = document.getElementById('verbTableBody');
     const currentVerbEl = document.getElementById('currentVerb');
     const totalVerbsEl = document.getElementById('totalVerbs');
+    const packageSelect = document.getElementById('packageSelect');
     const prevVerbBtn = document.getElementById('prevVerbBtn');
     const nextVerbBtn = document.getElementById('nextVerbBtn');
     const shuffleVerbsBtn = document.getElementById('shuffleVerbsBtn');
@@ -102,7 +119,14 @@
                 throw new Error('verbs.json is empty or invalid');
             }
 
-            // Shuffle initially for variety
+            // Keep a copy of the full verb list so we can select subsets
+            allVerbs = verbs.slice();
+
+            // Populate package dropdown based on package tags in the data
+            populatePackages();
+
+            // Start with all verbs as the active deck
+            verbs = allVerbs.slice();
             shuffleVerbs();
 
             totalVerbsEl.textContent = verbs.length;
@@ -122,6 +146,27 @@
             [verbs[i], verbs[j]] = [verbs[j], verbs[i]];
         }
         currentIndex = 0;
+    }
+
+    function populatePackages() {
+        if (!Array.isArray(allVerbs) || allVerbs.length === 0) return;
+
+        const packages = new Set();
+        allVerbs.forEach(v => {
+            if (typeof v.package === 'number') {
+                packages.add(v.package);
+            }
+        });
+
+        const sorted = Array.from(packages).sort((a, b) => a - b);
+
+        packageSelect.innerHTML = '<option value="all">All Verbs</option>';
+        sorted.forEach(pkg => {
+            const option = document.createElement('option');
+            option.value = String(pkg);
+            option.textContent = `Package ${pkg}`;
+            packageSelect.appendChild(option);
+        });
     }
 
     function showVerb(index) {
@@ -208,6 +253,23 @@
         showVerb(0);
     });
 
+    packageSelect.addEventListener('change', (e) => {
+        const value = e.target.value;
+
+        if (value === 'all') {
+            verbs = allVerbs.slice();
+        } else {
+            const pkg = parseInt(value, 10);
+            verbs = allVerbs.filter(v => v.package === pkg);
+        }
+
+        if (verbs.length === 0) return;
+
+        currentIndex = 0;
+        totalVerbsEl.textContent = verbs.length;
+        showVerb(0);
+    });
+
     function pronounceForm(verb, form) {
         if (!('speechSynthesis' in window)) {
             alert('Text-to-speech is not supported in your browser.');
@@ -215,14 +277,7 @@
         }
 
         if (!form || !form.italian) return;
-
-        const parts = [];
-        if (form.subject) {
-            parts.push(form.subject);
-        }
-        parts.push(form.italian);
-
-        const textToSpeak = parts.join(' ');
+        const textToSpeak = form.italian;
         const utterance = new SpeechSynthesisUtterance(textToSpeak);
         utterance.lang = 'it-IT';
         utterance.rate = 0.9;

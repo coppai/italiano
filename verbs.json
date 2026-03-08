@@ -4,6 +4,7 @@
     "infinitive": "essere",
     "english": "to be",
     "pronunciation": "(EH-seh-reh)",
+    "package": 1,
     "forms": [
       { "subject": "io", "italian": "sono", "english": "I am", "pronunciation": "SOH-noh" },
       { "subject": "tu", "italian": "sei", "english": "you are (informal)", "pronunciation": "SEY" },
@@ -18,6 +19,7 @@
     "infinitive": "avere",
     "english": "to have",
     "pronunciation": "(ah-VEH-reh)",
+    "package": 1,
     "forms": [
       { "subject": "io", "italian": "ho", "english": "I have", "pronunciation": "OH" },
       { "subject": "tu", "italian": "hai", "english": "you have (informal)", "pronunciation": "EYE" },
@@ -32,6 +34,7 @@
     "infinitive": "fare",
     "english": "to do / to make",
     "pronunciation": "(FAH-reh)",
+    "package": 1,
     "forms": [
       { "subject": "io", "italian": "faccio", "english": "I do / I make", "pronunciation": "FAH-choh" },
       { "subject": "tu", "italian": "fai", "english": "you do (informal)", "pronunciation": "FYE" },
@@ -46,13 +49,14 @@
     "infinitive": "dire",
     "english": "to say / to tell",
     "pronunciation": "(DEE-reh)",
+    "package": 1,
     "forms": [
-      { "subject": "io", "italian": "dico", "english": "I say" },
-      { "subject": "tu", "italian": "dici", "english": "you say (informal)" },
-      { "subject": "lui/lei", "italian": "dice", "english": "he/she says" },
-      { "subject": "noi", "italian": "diciamo", "english": "we say" },
-      { "subject": "voi", "italian": "dite", "english": "you say (plural)" },
-      { "subject": "loro", "italian": "dicono", "english": "they say" }
+      { "subject": "io", "italian": "dico", "english": "I say", "pronunciation": "DEE-koh" },
+      { "subject": "tu", "italian": "dici", "english": "you say (informal)", "pronunciation": "DEE-chee" },
+      { "subject": "lui/lei", "italian": "dice", "english": "he/she says", "pronunciation": "DEE-cheh" },
+      { "subject": "noi", "italian": "diciamo", "english": "we say", "pronunciation": "dee-CHYAH-moh" },
+      { "subject": "voi", "italian": "dite", "english": "you say (plural)", "pronunciation": "DEE-teh" },
+      { "subject": "loro", "italian": "dicono", "english": "they say", "pronunciation": "DEE-koh-noh" }
     ]
   },
   {
@@ -60,13 +64,14 @@
     "infinitive": "potere",
     "english": "to be able to / can",
     "pronunciation": "(poh-TEH-reh)",
+    "package": 1,
     "forms": [
-      { "subject": "io", "italian": "posso", "english": "I can" },
-      { "subject": "tu", "italian": "puoi", "english": "you can (informal)" },
-      { "subject": "lui/lei", "italian": "può", "english": "he/she can" },
-      { "subject": "noi", "italian": "possiamo", "english": "we can" },
-      { "subject": "voi", "italian": "potete", "english": "you can (plural)" },
-      { "subject": "loro", "italian": "possono", "english": "they can" }
+      { "subject": "io", "italian": "posso", "english": "I can", "pronunciation": "POHS-soh" },
+      { "subject": "tu", "italian": "puoi", "english": "you can (informal)", "pronunciation": "PWAW-ee" },
+      { "subject": "lui/lei", "italian": "può", "english": "he/she can", "pronunciation": "PWOH" },
+      { "subject": "noi", "italian": "possiamo", "english": "we can", "pronunciation": "pohs-SYAH-moh" },
+      { "subject": "voi", "italian": "potete", "english": "you can (plural)", "pronunciation": "poh-TEH-teh" },
+      { "subject": "loro", "italian": "possono", "english": "they can", "pronunciation": "POHS-soh-noh" }
     ]
   },
   {
@@ -74,13 +79,14 @@
     "infinitive": "andare",
     "english": "to go",
     "pronunciation": "(ahn-DAH-reh)",
+    "package": 2,
     "forms": [
-      { "subject": "io", "italian": "vado", "english": "I go" },
-      { "subject": "tu", "italian": "vai", "english": "you go (informal)" },
-      { "subject": "lui/lei", "italian": "va", "english": "he/she goes" },
-      { "subject": "noi", "italian": "andiamo", "english": "we go" },
-      { "subject": "voi", "italian": "andate", "english": "you go (plural)" },
-      { "subject": "loro", "italian": "vanno", "english": "they go" }
+      { "subject": "io", "italian": "vado", "english": "I go", "pronunciation": "VAH-doh" },
+      { "subject": "tu", "italian": "vai", "english": "you go (informal)", "pronunciation": "VYE" },
+      { "subject": "lui/lei", "italian": "va", "english": "he/she goes", "pronunciation": "VAH" },
+      { "subject": "noi", "italian": "andiamo", "english": "we go", "pronunciation": "ahn-DYAH-moh" },
+      { "subject": "voi", "italian": "andate", "english": "you go (plural)", "pronunciation": "ahn-DAH-teh" },
+      { "subject": "loro", "italian": "vanno", "english": "they go", "pronunciation": "VAHN-noh" }
     ]
   },
   {
@@ -88,13 +94,14 @@
     "infinitive": "vedere",
     "english": "to see",
     "pronunciation": "(veh-DEH-reh)",
+    "package": 2,
     "forms": [
-      { "subject": "io", "italian": "vedo", "english": "I see" },
-      { "subject": "tu", "italian": "vedi", "english": "you see (informal)" },
-      { "subject": "lui/lei", "italian": "vede", "english": "he/she sees" },
-      { "subject": "noi", "italian": "vediamo", "english": "we see" },
-      { "subject": "voi", "italian": "vedete", "english": "you see (plural)" },
-      { "subject": "loro", "italian": "vedono", "english": "they see" }
+      { "subject": "io", "italian": "vedo", "english": "I see", "pronunciation": "VEH-doh" },
+      { "subject": "tu", "italian": "vedi", "english": "you see (informal)", "pronunciation": "VEH-dee" },
+      { "subject": "lui/lei", "italian": "vede", "english": "he/she sees", "pronunciation": "VEH-deh" },
+      { "subject": "noi", "italian": "vediamo", "english": "we see", "pronunciation": "veh-DYAH-moh" },
+      { "subject": "voi", "italian": "vedete", "english": "you see (plural)", "pronunciation": "veh-TEH-teh" },
+      { "subject": "loro", "italian": "vedono", "english": "they see", "pronunciation": "VEH-doh-noh" }
     ]
   },
   {
@@ -102,13 +109,14 @@
     "infinitive": "dare",
     "english": "to give",
     "pronunciation": "(DAH-reh)",
+    "package": 2,
     "forms": [
-      { "subject": "io", "italian": "do", "english": "I give" },
-      { "subject": "tu", "italian": "dai", "english": "you give (informal)" },
-      { "subject": "lui/lei", "italian": "dà", "english": "he/she gives" },
-      { "subject": "noi", "italian": "diamo", "english": "we give" },
-      { "subject": "voi", "italian": "date", "english": "you give (plural)" },
-      { "subject": "loro", "italian": "danno", "english": "they give" }
+      { "subject": "io", "italian": "do", "english": "I give", "pronunciation": "DOH" },
+      { "subject": "tu", "italian": "dai", "english": "you give (informal)", "pronunciation": "DYE" },
+      { "subject": "lui/lei", "italian": "dà", "english": "he/she gives", "pronunciation": "DAH" },
+      { "subject": "noi", "italian": "diamo", "english": "we give", "pronunciation": "DYAH-moh" },
+      { "subject": "voi", "italian": "date", "english": "you give (plural)", "pronunciation": "DAH-teh" },
+      { "subject": "loro", "italian": "danno", "english": "they give", "pronunciation": "DAHN-noh" }
     ]
   },
   {
@@ -116,13 +124,14 @@
     "infinitive": "volere",
     "english": "to want",
     "pronunciation": "(voh-LEH-reh)",
+    "package": 2,
     "forms": [
-      { "subject": "io", "italian": "voglio", "english": "I want" },
-      { "subject": "tu", "italian": "vuoi", "english": "you want (informal)" },
-      { "subject": "lui/lei", "italian": "vuole", "english": "he/she wants" },
-      { "subject": "noi", "italian": "vogliamo", "english": "we want" },
-      { "subject": "voi", "italian": "volete", "english": "you want (plural)" },
-      { "subject": "loro", "italian": "vogliono", "english": "they want" }
+      { "subject": "io", "italian": "voglio", "english": "I want", "pronunciation": "VOHL-lyoh" },
+      { "subject": "tu", "italian": "vuoi", "english": "you want (informal)", "pronunciation": "VWOY" },
+      { "subject": "lui/lei", "italian": "vuole", "english": "he/she wants", "pronunciation": "VWAW-leh" },
+      { "subject": "noi", "italian": "vogliamo", "english": "we want", "pronunciation": "vohl-YAH-moh" },
+      { "subject": "voi", "italian": "volete", "english": "you want (plural)", "pronunciation": "voh-LEH-teh" },
+      { "subject": "loro", "italian": "vogliono", "english": "they want", "pronunciation": "VOHL-lyoh-noh" }
     ]
   },
   {
@@ -130,13 +139,14 @@
     "infinitive": "sapere",
     "english": "to know (a fact)",
     "pronunciation": "(sah-PEH-reh)",
+    "package": 2,
     "forms": [
-      { "subject": "io", "italian": "so", "english": "I know" },
-      { "subject": "tu", "italian": "sai", "english": "you know (informal)" },
-      { "subject": "lui/lei", "italian": "sa", "english": "he/she knows" },
-      { "subject": "noi", "italian": "sappiamo", "english": "we know" },
-      { "subject": "voi", "italian": "sapete", "english": "you know (plural)" },
-      { "subject": "loro", "italian": "sanno", "english": "they know" }
+      { "subject": "io", "italian": "so", "english": "I know", "pronunciation": "SOH" },
+      { "subject": "tu", "italian": "sai", "english": "you know (informal)", "pronunciation": "SIGH" },
+      { "subject": "lui/lei", "italian": "sa", "english": "he/she knows", "pronunciation": "SAH" },
+      { "subject": "noi", "italian": "sappiamo", "english": "we know", "pronunciation": "sap-PYAH-moh" },
+      { "subject": "voi", "italian": "sapete", "english": "you know (plural)", "pronunciation": "sah-PEH-teh" },
+      { "subject": "loro", "italian": "sanno", "english": "they know", "pronunciation": "SAHN-noh" }
     ]
   },
   {
@@ -144,13 +154,14 @@
     "infinitive": "stare",
     "english": "to stay / to be",
     "pronunciation": "(STAH-reh)",
+    "package": 3,
     "forms": [
-      { "subject": "io", "italian": "sto", "english": "I stay / I am" },
-      { "subject": "tu", "italian": "stai", "english": "you stay (informal)" },
-      { "subject": "lui/lei", "italian": "sta", "english": "he/she stays" },
-      { "subject": "noi", "italian": "stiamo", "english": "we stay" },
-      { "subject": "voi", "italian": "state", "english": "you stay (plural)" },
-      { "subject": "loro", "italian": "stanno", "english": "they stay" }
+      { "subject": "io", "italian": "sto", "english": "I stay / I am", "pronunciation": "STOH" },
+      { "subject": "tu", "italian": "stai", "english": "you stay (informal)", "pronunciation": "STY" },
+      { "subject": "lui/lei", "italian": "sta", "english": "he/she stays", "pronunciation": "STAH" },
+      { "subject": "noi", "italian": "stiamo", "english": "we stay", "pronunciation": "STYAH-moh" },
+      { "subject": "voi", "italian": "state", "english": "you stay (plural)", "pronunciation": "STAH-teh" },
+      { "subject": "loro", "italian": "stanno", "english": "they stay", "pronunciation": "STAHN-noh" }
     ]
   },
   {
@@ -158,13 +169,14 @@
     "infinitive": "dovere",
     "english": "to have to / must",
     "pronunciation": "(doh-VEH-reh)",
+    "package": 3,
     "forms": [
-      { "subject": "io", "italian": "devo", "english": "I must / I have to" },
-      { "subject": "tu", "italian": "devi", "english": "you must (informal)" },
-      { "subject": "lui/lei", "italian": "deve", "english": "he/she must" },
-      { "subject": "noi", "italian": "dobbiamo", "english": "we must" },
-      { "subject": "voi", "italian": "dovete", "english": "you must (plural)" },
-      { "subject": "loro", "italian": "devono", "english": "they must" }
+      { "subject": "io", "italian": "devo", "english": "I must / I have to", "pronunciation": "DEH-voh" },
+      { "subject": "tu", "italian": "devi", "english": "you must (informal)", "pronunciation": "DEH-vee" },
+      { "subject": "lui/lei", "italian": "deve", "english": "he/she must", "pronunciation": "DEH-veh" },
+      { "subject": "noi", "italian": "dobbiamo", "english": "we must", "pronunciation": "dob-BYAH-moh" },
+      { "subject": "voi", "italian": "dovete", "english": "you must (plural)", "pronunciation": "doh-VEH-teh" },
+      { "subject": "loro", "italian": "devono", "english": "they must", "pronunciation": "DEH-voh-noh" }
     ]
   },
   {
@@ -172,6 +184,7 @@
     "infinitive": "prendere",
     "english": "to take",
     "pronunciation": "(PREHN-deh-reh)",
+    "package": 3,
     "forms": [
       { "subject": "io", "italian": "prendo", "english": "I take", "pronunciation": "PREHN-doh" },
       { "subject": "tu", "italian": "prendi", "english": "you take (informal)", "pronunciation": "PREHN-dee" },
@@ -186,13 +199,14 @@
     "infinitive": "parlare",
     "english": "to speak / to talk",
     "pronunciation": "(par-LAH-reh)",
+    "package": 3,
     "forms": [
-      { "subject": "io", "italian": "parlo", "english": "I speak" },
-      { "subject": "tu", "italian": "parli", "english": "you speak (informal)" },
-      { "subject": "lui/lei", "italian": "parla", "english": "he/she speaks" },
-      { "subject": "noi", "italian": "parliamo", "english": "we speak" },
-      { "subject": "voi", "italian": "parlate", "english": "you speak (plural)" },
-      { "subject": "loro", "italian": "parlano", "english": "they speak" }
+      { "subject": "io", "italian": "parlo", "english": "I speak", "pronunciation": "PAR-loh" },
+      { "subject": "tu", "italian": "parli", "english": "you speak (informal)", "pronunciation": "PAR-lee" },
+      { "subject": "lui/lei", "italian": "parla", "english": "he/she speaks", "pronunciation": "PAR-lah" },
+      { "subject": "noi", "italian": "parliamo", "english": "we speak", "pronunciation": "par-LYAH-moh" },
+      { "subject": "voi", "italian": "parlate", "english": "you speak (plural)", "pronunciation": "par-LAH-teh" },
+      { "subject": "loro", "italian": "parlano", "english": "they speak", "pronunciation": "PAR-lah-noh" }
     ]
   },
   {
@@ -200,13 +214,14 @@
     "infinitive": "mettere",
     "english": "to put",
     "pronunciation": "(MEHT-teh-reh)",
+    "package": 3,
     "forms": [
-      { "subject": "io", "italian": "metto", "english": "I put" },
-      { "subject": "tu", "italian": "metti", "english": "you put (informal)" },
-      { "subject": "lui/lei", "italian": "mette", "english": "he/she puts" },
-      { "subject": "noi", "italian": "mettiamo", "english": "we put" },
-      { "subject": "voi", "italian": "mettete", "english": "you put (plural)" },
-      { "subject": "loro", "italian": "mettono", "english": "they put" }
+      { "subject": "io", "italian": "metto", "english": "I put", "pronunciation": "MET-toh" },
+      { "subject": "tu", "italian": "metti", "english": "you put (informal)", "pronunciation": "MET-tee" },
+      { "subject": "lui/lei", "italian": "mette", "english": "he/she puts", "pronunciation": "MET-teh" },
+      { "subject": "noi", "italian": "mettiamo", "english": "we put", "pronunciation": "met-TYAH-moh" },
+      { "subject": "voi", "italian": "mettete", "english": "you put (plural)", "pronunciation": "met-TEH-teh" },
+      { "subject": "loro", "italian": "mettono", "english": "they put", "pronunciation": "MET-toh-noh" }
     ]
   },
   {
@@ -214,13 +229,14 @@
     "infinitive": "trovare",
     "english": "to find",
     "pronunciation": "(troh-VAH-reh)",
+    "package": 4,
     "forms": [
-      { "subject": "io", "italian": "trovo", "english": "I find" },
-      { "subject": "tu", "italian": "trovi", "english": "you find (informal)" },
-      { "subject": "lui/lei", "italian": "trova", "english": "he/she finds" },
-      { "subject": "noi", "italian": "troviamo", "english": "we find" },
-      { "subject": "voi", "italian": "trovate", "english": "you find (plural)" },
-      { "subject": "loro", "italian": "trovano", "english": "they find" }
+      { "subject": "io", "italian": "trovo", "english": "I find", "pronunciation": "TROH-voh" },
+      { "subject": "tu", "italian": "trovi", "english": "you find (informal)", "pronunciation": "TROH-vee" },
+      { "subject": "lui/lei", "italian": "trova", "english": "he/she finds", "pronunciation": "TROH-vah" },
+      { "subject": "noi", "italian": "troviamo", "english": "we find", "pronunciation": "troh-VYAH-moh" },
+      { "subject": "voi", "italian": "trovate", "english": "you find (plural)", "pronunciation": "troh-VAH-teh" },
+      { "subject": "loro", "italian": "trovano", "english": "they find", "pronunciation": "TROH-vah-noh" }
     ]
   },
   {
@@ -228,13 +244,14 @@
     "infinitive": "lasciare",
     "english": "to leave / to let",
     "pronunciation": "(lah-SHYAH-reh)",
+    "package": 4,
     "forms": [
-      { "subject": "io", "italian": "lascio", "english": "I leave" },
-      { "subject": "tu", "italian": "lasci", "english": "you leave (informal)" },
-      { "subject": "lui/lei", "italian": "lascia", "english": "he/she leaves" },
-      { "subject": "noi", "italian": "lasciamo", "english": "we leave" },
-      { "subject": "voi", "italian": "lasciate", "english": "you leave (plural)" },
-      { "subject": "loro", "italian": "lasciano", "english": "they leave" }
+      { "subject": "io", "italian": "lascio", "english": "I leave", "pronunciation": "LAH-shoh" },
+      { "subject": "tu", "italian": "lasci", "english": "you leave (informal)", "pronunciation": "LAH-shee" },
+      { "subject": "lui/lei", "italian": "lascia", "english": "he/she leaves", "pronunciation": "LAH-shah" },
+      { "subject": "noi", "italian": "lasciamo", "english": "we leave", "pronunciation": "lah-SHYAH-moh" },
+      { "subject": "voi", "italian": "lasciate", "english": "you leave (plural)", "pronunciation": "lah-SYAH-teh" },
+      { "subject": "loro", "italian": "lasciano", "english": "they leave", "pronunciation": "LAH-shah-noh" }
     ]
   },
   {
@@ -242,13 +259,14 @@
     "infinitive": "capire",
     "english": "to understand",
     "pronunciation": "(cah-PEE-reh)",
+    "package": 4,
     "forms": [
-      { "subject": "io", "italian": "capisco", "english": "I understand" },
-      { "subject": "tu", "italian": "capisci", "english": "you understand (informal)" },
-      { "subject": "lui/lei", "italian": "capisce", "english": "he/she understands" },
-      { "subject": "noi", "italian": "capiamo", "english": "we understand" },
-      { "subject": "voi", "italian": "capite", "english": "you understand (plural)" },
-      { "subject": "loro", "italian": "capiscono", "english": "they understand" }
+      { "subject": "io", "italian": "capisco", "english": "I understand", "pronunciation": "cah-PEE-skoh" },
+      { "subject": "tu", "italian": "capisci", "english": "you understand (informal)", "pronunciation": "cah-PEE-shee" },
+      { "subject": "lui/lei", "italian": "capisce", "english": "he/she understands", "pronunciation": "cah-PEE-sheh" },
+      { "subject": "noi", "italian": "capiamo", "english": "we understand", "pronunciation": "cah-PYAH-moh" },
+      { "subject": "voi", "italian": "capite", "english": "you understand (plural)", "pronunciation": "cah-PEE-teh" },
+      { "subject": "loro", "italian": "capiscono", "english": "they understand", "pronunciation": "cah-PEE-skoh-noh" }
     ]
   },
   {
@@ -256,13 +274,14 @@
     "infinitive": "guardare",
     "english": "to look / to watch",
     "pronunciation": "(gwar-DAH-reh)",
+    "package": 4,
     "forms": [
-      { "subject": "io", "italian": "guardo", "english": "I look" },
-      { "subject": "tu", "italian": "guardi", "english": "you look (informal)" },
-      { "subject": "lui/lei", "italian": "guarda", "english": "he/she looks" },
-      { "subject": "noi", "italian": "guardiamo", "english": "we look" },
-      { "subject": "voi", "italian": "guardate", "english": "you look (plural)" },
-      { "subject": "loro", "italian": "guardano", "english": "they look" }
+      { "subject": "io", "italian": "guardo", "english": "I look", "pronunciation": "GWAR-doh" },
+      { "subject": "tu", "italian": "guardi", "english": "you look (informal)", "pronunciation": "GWAR-dee" },
+      { "subject": "lui/lei", "italian": "guarda", "english": "he/she looks", "pronunciation": "GWAR-dah" },
+      { "subject": "noi", "italian": "guardiamo", "english": "we look", "pronunciation": "gwar-DYAH-moh" },
+      { "subject": "voi", "italian": "guardate", "english": "you look (plural)", "pronunciation": "gwar-DAH-teh" },
+      { "subject": "loro", "italian": "guardano", "english": "they look", "pronunciation": "GWAR-dah-noh" }
     ]
   },
   {
@@ -270,13 +289,14 @@
     "infinitive": "venire",
     "english": "to come",
     "pronunciation": "(veh-NEE-reh)",
+    "package": 4,
     "forms": [
-      { "subject": "io", "italian": "vengo", "english": "I come" },
-      { "subject": "tu", "italian": "vieni", "english": "you come (informal)" },
-      { "subject": "lui/lei", "italian": "viene", "english": "he/she comes" },
-      { "subject": "noi", "italian": "veniamo", "english": "we come" },
-      { "subject": "voi", "italian": "venite", "english": "you come (plural)" },
-      { "subject": "loro", "italian": "vengono", "english": "they come" }
+      { "subject": "io", "italian": "vengo", "english": "I come", "pronunciation": "VEN-goh" },
+      { "subject": "tu", "italian": "vieni", "english": "you come (informal)", "pronunciation": "VYEH-nee" },
+      { "subject": "lui/lei", "italian": "viene", "english": "he/she comes", "pronunciation": "VYEH-neh" },
+      { "subject": "noi", "italian": "veniamo", "english": "we come", "pronunciation": "veh-NYAH-moh" },
+      { "subject": "voi", "italian": "venite", "english": "you come (plural)", "pronunciation": "veh-NEE-teh" },
+      { "subject": "loro", "italian": "vengono", "english": "they come", "pronunciation": "VEN-goh-noh" }
     ]
   },
   {
@@ -284,13 +304,14 @@
     "infinitive": "pensare",
     "english": "to think",
     "pronunciation": "(pen-SAH-reh)",
+    "package": 5,
     "forms": [
-      { "subject": "io", "italian": "penso", "english": "I think" },
-      { "subject": "tu", "italian": "pensi", "english": "you think (informal)" },
-      { "subject": "lui/lei", "italian": "pensa", "english": "he/she thinks" },
-      { "subject": "noi", "italian": "pensiamo", "english": "we think" },
-      { "subject": "voi", "italian": "pensate", "english": "you think (plural)" },
-      { "subject": "loro", "italian": "pensano", "english": "they think" }
+      { "subject": "io", "italian": "penso", "english": "I think", "pronunciation": "PEN-soh" },
+      { "subject": "tu", "italian": "pensi", "english": "you think (informal)", "pronunciation": "PEN-see" },
+      { "subject": "lui/lei", "italian": "pensa", "english": "he/she thinks", "pronunciation": "PEN-sah" },
+      { "subject": "noi", "italian": "pensiamo", "english": "we think", "pronunciation": "pen-SYAH-moh" },
+      { "subject": "voi", "italian": "pensate", "english": "you think (plural)", "pronunciation": "pen-SAH-teh" },
+      { "subject": "loro", "italian": "pensano", "english": "they think", "pronunciation": "PEN-sah-noh" }
     ]
   },
   {
@@ -298,13 +319,14 @@
     "infinitive": "partire",
     "english": "to leave / to depart",
     "pronunciation": "(par-TEE-reh)",
+    "package": 5,
     "forms": [
-      { "subject": "io", "italian": "parto", "english": "I leave" },
-      { "subject": "tu", "italian": "parti", "english": "you leave (informal)" },
-      { "subject": "lui/lei", "italian": "parte", "english": "he/she leaves" },
-      { "subject": "noi", "italian": "partiamo", "english": "we leave" },
-      { "subject": "voi", "italian": "partite", "english": "you leave (plural)" },
-      { "subject": "loro", "italian": "partono", "english": "they leave" }
+      { "subject": "io", "italian": "parto", "english": "I leave", "pronunciation": "PAR-toh" },
+      { "subject": "tu", "italian": "parti", "english": "you leave (informal)", "pronunciation": "PAR-tee" },
+      { "subject": "lui/lei", "italian": "parte", "english": "he/she leaves", "pronunciation": "PAR-teh" },
+      { "subject": "noi", "italian": "partiamo", "english": "we leave", "pronunciation": "par-TYAH-moh" },
+      { "subject": "voi", "italian": "partite", "english": "you leave (plural)", "pronunciation": "par-TEE-teh" },
+      { "subject": "loro", "italian": "partono", "english": "they leave", "pronunciation": "PAR-toh-noh" }
     ]
   },
   {
@@ -312,13 +334,14 @@
     "infinitive": "mangiare",
     "english": "to eat",
     "pronunciation": "(mahn-JAH-reh)",
+    "package": 5,
     "forms": [
-      { "subject": "io", "italian": "mangio", "english": "I eat" },
-      { "subject": "tu", "italian": "mangi", "english": "you eat (informal)" },
-      { "subject": "lui/lei", "italian": "mangia", "english": "he/she eats" },
-      { "subject": "noi", "italian": "mangiamo", "english": "we eat" },
-      { "subject": "voi", "italian": "mangiate", "english": "you eat (plural)" },
-      { "subject": "loro", "italian": "mangiano", "english": "they eat" }
+      { "subject": "io", "italian": "mangio", "english": "I eat", "pronunciation": "MAHN-joh" },
+      { "subject": "tu", "italian": "mangi", "english": "you eat (informal)", "pronunciation": "MAHN-jee" },
+      { "subject": "lui/lei", "italian": "mangia", "english": "he/she eats", "pronunciation": "MAHN-jah" },
+      { "subject": "noi", "italian": "mangiamo", "english": "we eat", "pronunciation": "mahn-JYAH-moh" },
+      { "subject": "voi", "italian": "mangiate", "english": "you eat (plural)", "pronunciation": "mahn-JAH-teh" },
+      { "subject": "loro", "italian": "mangiano", "english": "they eat", "pronunciation": "MAHN-jah-noh" }
     ]
   },
   {
@@ -326,13 +349,14 @@
     "infinitive": "vivere",
     "english": "to live",
     "pronunciation": "(VEE-veh-reh)",
+    "package": 5,
     "forms": [
-      { "subject": "io", "italian": "vivo", "english": "I live" },
-      { "subject": "tu", "italian": "vivi", "english": "you live (informal)" },
-      { "subject": "lui/lei", "italian": "vive", "english": "he/she lives" },
-      { "subject": "noi", "italian": "viviamo", "english": "we live" },
-      { "subject": "voi", "italian": "vivete", "english": "you live (plural)" },
-      { "subject": "loro", "italian": "vivono", "english": "they live" }
+      { "subject": "io", "italian": "vivo", "english": "I live", "pronunciation": "VEE-voh" },
+      { "subject": "tu", "italian": "vivi", "english": "you live (informal)", "pronunciation": "VEE-vee" },
+      { "subject": "lui/lei", "italian": "vive", "english": "he/she lives", "pronunciation": "VEE-veh" },
+      { "subject": "noi", "italian": "viviamo", "english": "we live", "pronunciation": "vee-VYAH-moh" },
+      { "subject": "voi", "italian": "vivete", "english": "you live (plural)", "pronunciation": "vee-VEH-teh" },
+      { "subject": "loro", "italian": "vivono", "english": "they live", "pronunciation": "VEE-voh-noh" }
     ]
   },
   {
@@ -340,13 +364,14 @@
     "infinitive": "arrivare",
     "english": "to arrive",
     "pronunciation": "(ahr-ree-VAH-reh)",
+    "package": 5,
     "forms": [
-      { "subject": "io", "italian": "arrivo", "english": "I arrive" },
-      { "subject": "tu", "italian": "arrivi", "english": "you arrive (informal)" },
-      { "subject": "lui/lei", "italian": "arriva", "english": "he/she arrives" },
-      { "subject": "noi", "italian": "arriviamo", "english": "we arrive" },
-      { "subject": "voi", "italian": "arrivate", "english": "you arrive (plural)" },
-      { "subject": "loro", "italian": "arrivano", "english": "they arrive" }
+      { "subject": "io", "italian": "arrivo", "english": "I arrive", "pronunciation": "ahr-REE-voh" },
+      { "subject": "tu", "italian": "arrivi", "english": "you arrive (informal)", "pronunciation": "ahr-REE-vee" },
+      { "subject": "lui/lei", "italian": "arriva", "english": "he/she arrives", "pronunciation": "ahr-REE-vah" },
+      { "subject": "noi", "italian": "arriviamo", "english": "we arrive", "pronunciation": "ahr-ree-VYAH-moh" },
+      { "subject": "voi", "italian": "arrivate", "english": "you arrive (plural)", "pronunciation": "ahr-ree-VAH-teh" },
+      { "subject": "loro", "italian": "arrivano", "english": "they arrive", "pronunciation": "ahr-REE-vah-noh" }
     ]
   }
 ]

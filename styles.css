@@ -574,6 +574,7 @@ body.article-page {
     font-weight: 600;
     text-align: center;
     word-wrap: break-word;
+		margin-bottom: 25px;
 }
 
 .flashcard-label {
@@ -622,7 +623,6 @@ body.article-page {
 
 .card-notes {
     font-size: 0.9rem;
-    margin-top: 2.5rem;
     padding: 0.75rem;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 8px;
@@ -697,6 +697,14 @@ body.article-page {
     margin-bottom: 0.75rem;
     font-size: 1rem;
     opacity: 0.9;
+}
+
+.verb-pronoun-list {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    opacity: 0.9;
+    text-align: center;
 }
 
 .verb-table-wrapper {

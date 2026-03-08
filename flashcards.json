@@ -1314,5 +1314,193 @@
     ],
     "correct": 0,
     "incorrect": 0
+  },
+  {
+    "id": "1772984585055r797n1jn8",
+    "question": "morning",
+    "answer": "mattina",
+    "notes": "Io faccio yoga ogni mattina.",
+    "categories": [
+      "dates",
+      "times"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1773000000101",
+    "question": "The shop",
+    "answer": "Il negozio",
+    "notes": "neh-GOHT-tsee-oh",
+    "categories": [
+      "shopping"
+    ],
+    "correct": 1,
+    "incorrect": 1
+  },
+  {
+    "id": "1773000000102",
+    "question": "To buy",
+    "answer": "Comprare",
+    "notes": "",
+    "categories": [
+      "shopping"
+    ],
+    "correct": 3,
+    "incorrect": 0
+  },
+  {
+    "id": "1773000000103",
+    "question": "To go grocery shopping",
+    "answer": "Fare la spesa",
+    "notes": "SPAY-zah",
+    "categories": [
+      "shopping"
+    ],
+    "correct": 1,
+    "incorrect": 0
+  },
+  {
+    "id": "1773000000104",
+    "question": "To go shopping (clothes/luxury)",
+    "answer": "Fare shopping",
+    "notes": "",
+    "categories": [
+      "shopping"
+    ],
+    "correct": 1,
+    "incorrect": 1
+  },
+  {
+    "id": "1773000000105",
+    "question": "Can I help you? ",
+    "answer": "Desidera?",
+    "notes": "deh-zee-DEH-rah",
+    "categories": [
+      "shopping"
+    ],
+    "correct": 1,
+    "incorrect": 1
+  },
+  {
+    "id": "1773000000106",
+    "question": "Can I help you? (formal)",
+    "answer": "Posso aiutarla?",
+    "notes": "eye-yoo-TAR-la",
+    "categories": [
+      "shopping"
+    ],
+    "correct": 1,
+    "incorrect": 0
+  },
+  {
+    "id": "1773000000107",
+    "question": "I'm just looking, thank you",
+    "answer": "Sto solo guardando, grazie",
+    "notes": "",
+    "categories": [
+      "shopping"
+    ],
+    "correct": 2,
+    "incorrect": 1
+  },
+  {
+    "id": "1773000000108",
+    "question": "I am looking for...",
+    "answer": "Cerco...",
+    "notes": "CHAIR-koh",
+    "categories": [
+      "shopping"
+    ],
+    "correct": 1,
+    "incorrect": 1
+  },
+  {
+    "id": "1773000000109",
+    "question": "How much does it cost?",
+    "answer": "Quanto costa?",
+    "notes": "",
+    "categories": [
+      "shopping"
+    ],
+    "correct": 2,
+    "incorrect": 1
+  },
+  {
+    "id": "1773000000110",
+    "question": "How much do they cost?",
+    "answer": "Quanto costano?",
+    "notes": "",
+    "categories": [
+      "shopping"
+    ],
+    "correct": 1,
+    "incorrect": 0
+  },
+  {
+    "id": "1773000000111",
+    "question": "It is too expensive",
+    "answer": "È troppo caro",
+    "notes": "",
+    "categories": [
+      "shopping"
+    ],
+    "correct": 2,
+    "incorrect": 1
+  },
+  {
+    "id": "1773000000112",
+    "question": "Can I pay with a credit card?",
+    "answer": "Posso pagare con carta di credito?",
+    "notes": "",
+    "categories": [
+      "shopping"
+    ],
+    "correct": 1,
+    "incorrect": 0
+  },
+  {
+    "id": "1773000000113",
+    "question": "The size (clothing)",
+    "answer": "La taglia",
+    "notes": "TAHL-ya",
+    "categories": [
+      "shopping"
+    ],
+    "correct": 1,
+    "incorrect": 0
+  },
+  {
+    "id": "1773000000115",
+    "question": "Do you have a larger / smaller size?",
+    "answer": "Avete una taglia più grande / più piccola?",
+    "notes": "",
+    "categories": [
+      "shopping"
+    ],
+    "correct": 1,
+    "incorrect": 0
+  },
+  {
+    "id": "1773000000116",
+    "question": "I am looking for... (continuous)",
+    "answer": "Sto cercando...",
+    "notes": "chair-KAHN-doh",
+    "categories": [
+      "shopping"
+    ],
+    "correct": 1,
+    "incorrect": 1
+  },
+  {
+    "id": "1773000000118",
+    "question": "I am paying",
+    "answer": "Sto pagando",
+    "notes": "",
+    "categories": [
+      "shopping"
+    ],
+    "correct": 1,
+    "incorrect": 0
   }
 ]
