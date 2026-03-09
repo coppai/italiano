@@ -1357,7 +1357,7 @@
     "categories": [
       "shopping"
     ],
-    "correct": 1,
+    "correct": 2,
     "incorrect": 0
   },
   {
@@ -1379,7 +1379,7 @@
     "categories": [
       "shopping"
     ],
-    "correct": 1,
+    "correct": 2,
     "incorrect": 1
   },
   {
@@ -1391,7 +1391,7 @@
       "shopping"
     ],
     "correct": 1,
-    "incorrect": 0
+    "incorrect": 1
   },
   {
     "id": "1773000000107",
@@ -1445,7 +1445,7 @@
     "categories": [
       "shopping"
     ],
-    "correct": 2,
+    "correct": 3,
     "incorrect": 1
   },
   {
@@ -1490,7 +1490,7 @@
       "shopping"
     ],
     "correct": 1,
-    "incorrect": 1
+    "incorrect": 2
   },
   {
     "id": "1773000000118",

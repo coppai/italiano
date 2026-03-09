@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plural Word Endings Practice - Italian Flashcards</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="article-page">
+
+<div class="container">
+    <div class="main-content">
+        <div class="card">
+    <button class="btn-back" onclick="window.location.href='index.html'">← Back to Drills</button>
+    
+    <div class="stats">
+        <div class="stat-item">
+            <div class="stat-value" id="remaining-count">0</div>
+            <div class="stat-label">Remaining</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-value" id="correct-count" style="color: var(--success);">0</div>
+            <div class="stat-label">Correct</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-value" id="incorrect-count" style="color: var(--error);">0</div>
+            <div class="stat-label">Incorrect</div>
+        </div>
+    </div>
+
+    <div class="word-display-section">
+        <div class="label">Singular:</div>
+        <div id="display-word" class="word">Loading...</div>
+        <div class="label" style="margin-top: 20px;">Complete the plural form:</div>
+        <div id="plural-partial" class="word-partial" style="font-size: 2rem; color: var(--primary); margin: 20px 0;">...</div>
+    </div>
+    
+    <input type="text" id="ending-input" placeholder="type the ending..." autocomplete="off" style="text-align: center;">
+    <br>
+    <button class="btn-submit" onclick="checkAnswer()">Submit</button>
+    
+    <div id="feedback"></div>
+
+    <hr>
+
+    <div class="info-area">
+        <div id="extra-info" class="info-text"></div>
+    </div>
+
+    <div class="btn-group">
+        <button class="btn-hint" onclick="showGender()">Show Gender</button>
+        <button class="btn-hint" onclick="showMeaning()">Show Meaning</button>
+        <button class="btn-hint" onclick="showAnswer()">Show Answer</button>
+        <button class="btn-hint" onclick="pronounceWord()">🔊 Pronounce</button>
+    </div>
+</div>
+    </div>
+
+    <div class="sidebar">
+        <h3>Completed Words</h3>
+        <div id="sidebar-list"></div>
+    </div>
+</div>
+
+<script>
+    let vocabulary = [];
+    let currentWordIndex = 0;
+    let deck = [];
+    let correctCount = 0;
+    let incorrectCount = 0;
+    let completedWords = []; // Track completed words for sidebar
+
+    // 1. Fetch the JSON data from your local server
+    async function loadVocabulary() {
+        const display = document.getElementById('display-word');
+        try {
+            const response = await fetch('vocabulary.json');
+            if (!response.ok) throw new Error("File not found");
+            
+            vocabulary = await response.json();
+            if (vocabulary.length === 0) throw new Error("JSON is empty");
+
+            // Shuffle all words first
+            const shuffled = shuffle([...vocabulary]);
+            // Take only 50 random words
+            deck = shuffled.slice(0, 50);
+            // Shuffle the 50 selected words again
+            deck = shuffle(deck);
+            
+            updateStats();
+            displayWord();
+        } catch (error) {
+            display.style.fontSize = "1.2rem";
+            display.innerHTML = `<span style="color:red">Error: Make sure vocabulary.json has data!</span>`;
+            console.error("Load error:", error);
+        }
+    }
+
+    // 2. Randomize the word list using Fisher-Yates algorithm
+    function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
+
+    // 3. Update stats display
+    function updateStats() {
+        document.getElementById('remaining-count').innerText = deck.length;
+        document.getElementById('correct-count').innerText = correctCount;
+        document.getElementById('incorrect-count').innerText = incorrectCount;
+    }
+
+    // 4. Get the partial plural form (without ending)
+    function getPartialPlural(word, pluralForm) {
+        // We'll show the article + first part of the word with underscore
+        // Strategy: remove the last 1-3 characters from the plural form
+        const plural = pluralForm.toLowerCase();
+        
+        // Most Italian plurals change the last 1-2 letters
+        // Let's be smart about it - find where they differ
+        const singular = word.toLowerCase();
+        
+        // Find the common stem
+        let stemLength = 0;
+        for (let i = 0; i < Math.min(singular.length, plural.length); i++) {
+            if (singular[i] === plural[i]) {
+                stemLength = i + 1;
+            } else {
+                break;
+            }
+        }
+        
+        // Show at least 2 characters, but go back from the end if needed
+        // We want to hide at least 1 character, at most 3
+        let cutoff = Math.max(stemLength, plural.length - 3);
+        cutoff = Math.min(cutoff, plural.length - 1);
+        
+        const partial = plural.substring(0, cutoff);
+        return partial + "_";
+    }
+
+    // 5. Get the ending that should be typed
+    function getExpectedEnding(word, pluralForm) {
+        const plural = pluralForm.toLowerCase();
+        const singular = word.toLowerCase();
+        
+        // Find the common stem
+        let stemLength = 0;
+        for (let i = 0; i < Math.min(singular.length, plural.length); i++) {
+            if (singular[i] === plural[i]) {
+                stemLength = i + 1;
+            } else {
+                break;
+            }
+        }
+        
+        // Show at least 2 characters, but go back from the end if needed
+        let cutoff = Math.max(stemLength, plural.length - 3);
+        cutoff = Math.min(cutoff, plural.length - 1);
+        
+        return plural.substring(cutoff);
+    }
+
+    // 6. Update the UI with a new word
+    function displayWord(keepMeaning = false) {
+        // Check if game is over
+        if (deck.length === 0) {
+            document.getElementById('display-word').innerHTML = '<div class="game-over">🎉 Game Over! 🎉</div>';
+            document.getElementById('plural-partial').style.display = 'none';
+            document.getElementById('ending-input').style.display = 'none';
+            document.querySelector('.btn-submit').style.display = 'none';
+            document.querySelector('.btn-group').style.display = 'none';
+            document.getElementById('extra-info').innerText = `You completed all ${correctCount} words!`;
+            return;
+        }
+        
+        currentWordIndex = 0; // Always show first word in remaining deck
+        const currentWord = deck[currentWordIndex];
+        
+        // Show singular form
+        document.getElementById('display-word').innerText = currentWord.word.toLowerCase();
+        
+        // Show partial plural form with article
+        const article = currentWord.PluralDefiniteArticle;
+        const partial = getPartialPlural(currentWord.word, currentWord.PluralForm);
+        document.getElementById('plural-partial').innerText = article + " " + partial;
+        
+        if (!keepMeaning) {
+            document.getElementById('extra-info').innerText = "";
+        }
+        document.getElementById('feedback').innerText = "";
+        document.getElementById('ending-input').value = "";
+        document.getElementById('ending-input').focus();
+    }
+
+    function showGender() {
+        document.getElementById('extra-info').innerText = "Gender: " + deck[currentWordIndex].gender;
+    }
+
+    function showMeaning() {
+        document.getElementById('extra-info').innerText = deck[currentWordIndex].word.toLowerCase() + " → " + deck[currentWordIndex].PluralForm.toLowerCase() + ": " + deck[currentWordIndex].meaning.toLowerCase();
+    }
+
+    function showAnswer() {
+        const expectedEnding = getExpectedEnding(deck[currentWordIndex].word, deck[currentWordIndex].PluralForm);
+        document.getElementById('extra-info').innerText = "Answer: " + expectedEnding;
+    }
+
+    function pronounceWord() {
+        const textToSpeak = deck[currentWordIndex].PluralDefiniteArticle + " " + deck[currentWordIndex].PluralForm.toLowerCase();
+        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+        utterance.lang = 'it-IT';
+        utterance.rate = 0.8;
+        speechSynthesis.speak(utterance);
+    }
+
+    // Add word to sidebar
+    function addToSidebar(wordObj) {
+        completedWords.push(wordObj);
+        const sidebarList = document.getElementById('sidebar-list');
+        const item = document.createElement('div');
+        item.className = 'sidebar-item';
+        
+        const text = document.createElement('span');
+        text.className = 'sidebar-text';
+        text.innerText = wordObj.word.toLowerCase() + ' → ' + wordObj.PluralForm.toLowerCase() + ' (' + wordObj.meaning.toLowerCase() + ')';
+        
+        const playBtn = document.createElement('button');
+        playBtn.className = 'btn-play';
+        playBtn.innerText = '🔊';
+        playBtn.onclick = () => {
+            const utterance = new SpeechSynthesisUtterance(wordObj.PluralDefiniteArticle + ' ' + wordObj.PluralForm.toLowerCase());
+            utterance.lang = 'it-IT';
+            utterance.rate = 0.8;
+            speechSynthesis.speak(utterance);
+        };
+        
+        item.appendChild(text);
+        item.appendChild(playBtn);
+        sidebarList.prepend(item);
+    }
+
+    // Helper function to normalize accented characters
+    function normalizeAccents(str) {
+        return str.replace(/[èéêë]/g, 'e')
+                  .replace(/[àáâä]/g, 'a')
+                  .replace(/[ìíîï]/g, 'i')
+                  .replace(/[òóôö]/g, 'o')
+                  .replace(/[ùúûü]/g, 'u');
+    }
+
+    // 7. Validate the user input
+    function checkAnswer() {
+        const inputField = document.getElementById('ending-input');
+        const feedback = document.getElementById('feedback');
+        const extraInfo = document.getElementById('extra-info');
+        const input = inputField.value.trim().toLowerCase();
+        
+        const expectedEnding = getExpectedEnding(deck[currentWordIndex].word, deck[currentWordIndex].PluralForm);
+        
+        // Normalize both input and expected answer to handle accented characters
+        const normalizedInput = normalizeAccents(input);
+        const normalizedExpected = normalizeAccents(expectedEnding);
+        
+        if (normalizedInput === normalizedExpected) {
+            feedback.style.color = "var(--success)";
+            feedback.innerText = "Bravo! Correct.";
+            
+            // Update counters
+            correctCount++;
+            
+            // Add to sidebar
+            addToSidebar(deck[currentWordIndex]);
+            
+            // Play pronunciation using Web Speech API
+            const textToSpeak = deck[currentWordIndex].PluralDefiniteArticle + " " + deck[currentWordIndex].PluralForm.toLowerCase();
+            const utterance = new SpeechSynthesisUtterance(textToSpeak);
+            utterance.lang = 'it-IT';
+            utterance.rate = 0.8;
+            speechSynthesis.speak(utterance);
+            
+            // Remove word from deck
+            deck.splice(currentWordIndex, 1);
+            
+            // Short delay then show next word
+            setTimeout(() => {
+                updateStats();
+                displayWord(false);
+            }, 1500);
+            
+        } else {
+            feedback.style.color = "var(--error)";
+            feedback.innerText = "Incorrect. Try again!";
+            incorrectCount++;
+            updateStats();
+            
+            // Show the correct full plural form
+            extraInfo.innerText = "The correct plural is: " + deck[currentWordIndex].PluralDefiniteArticle + " " + deck[currentWordIndex].PluralForm.toLowerCase();
+        }
+    }
+
+    // Allow Enter key to submit
+    document.addEventListener('DOMContentLoaded', () => {
+        const input = document.getElementById('ending-input');
+        input.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                checkAnswer();
+            }
+        });
+        
+        loadVocabulary();
+    });
+</script>
+
+</body>
+</html>
