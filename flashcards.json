@@ -5,7 +5,7 @@
     "answer": "mi piace",
     "notes": "(PYA-cheh) Mi piace un gelato.",
     "categories": [],
-    "correct": 2,
+    "correct": 3,
     "incorrect": 3
   },
   {
@@ -13,7 +13,7 @@
     "question": "The bill",
     "answer": "il conto",
     "categories": [],
-    "correct": 1,
+    "correct": 2,
     "incorrect": 4
   },
   {
@@ -34,7 +34,7 @@
     "categories": [
       "days"
     ],
-    "correct": 2,
+    "correct": 3,
     "incorrect": 3
   },
   {
@@ -55,7 +55,7 @@
     "categories": [
       "days"
     ],
-    "correct": 2,
+    "correct": 3,
     "incorrect": 2
   },
   {
@@ -86,7 +86,7 @@
     "categories": [
       "days"
     ],
-    "correct": 1,
+    "correct": 2,
     "incorrect": 3
   },
   {
@@ -96,7 +96,7 @@
     "categories": [
       "ordering"
     ],
-    "correct": 1,
+    "correct": 2,
     "incorrect": 1
   },
   {
@@ -114,7 +114,7 @@
     "answer": "Avete",
     "notes": "(ah-VEH-teh)\n\nAvete un tavolo",
     "categories": [],
-    "correct": 0,
+    "correct": 1,
     "incorrect": 2
   },
   {
@@ -124,7 +124,7 @@
     "notes": "",
     "categories": [],
     "correct": 0,
-    "incorrect": 3
+    "incorrect": 5
   },
   {
     "id": "1772212036135ocidws8jc",
@@ -132,8 +132,8 @@
     "answer": "la carne",
     "notes": "",
     "categories": [],
-    "correct": 1,
-    "incorrect": 4
+    "correct": 2,
+    "incorrect": 6
   },
   {
     "id": "1772212052188v2ty3448d",
@@ -181,7 +181,7 @@
       "verbs"
     ],
     "correct": 2,
-    "incorrect": 2
+    "incorrect": 3
   },
   {
     "id": "1772212125212zpu3qbqu1",
@@ -224,8 +224,8 @@
     "categories": [
       "directions"
     ],
-    "correct": 0,
-    "incorrect": 6
+    "correct": 1,
+    "incorrect": 8
   },
   {
     "id": "1772212282115khdckak63",
@@ -302,7 +302,7 @@
     "answer": "nostro",
     "notes": "",
     "categories": [],
-    "correct": 0,
+    "correct": 1,
     "incorrect": 2
   },
   {
@@ -360,7 +360,7 @@
     "categories": [
       "abitare"
     ],
-    "correct": 4,
+    "correct": 5,
     "incorrect": 0
   },
   {
@@ -448,7 +448,7 @@
     "categories": [
       "essere"
     ],
-    "correct": 3,
+    "correct": 4,
     "incorrect": 0
   },
   {
@@ -459,7 +459,7 @@
     "categories": [
       "essere"
     ],
-    "correct": 2,
+    "correct": 3,
     "incorrect": 2
   },
   {
@@ -490,7 +490,7 @@
     "answer": "la mela",
     "notes": "",
     "categories": [],
-    "correct": 1,
+    "correct": 2,
     "incorrect": 0
   },
   {
@@ -532,7 +532,7 @@
     "categories": [
       "numbers"
     ],
-    "correct": 2,
+    "correct": 3,
     "incorrect": 0
   },
   {
@@ -577,7 +577,7 @@
       "directions"
     ],
     "correct": 0,
-    "incorrect": 3
+    "incorrect": 4
   },
   {
     "id": "1772216001004",
@@ -625,7 +625,7 @@
     "answer": "posso pagare",
     "notes": "",
     "categories": [],
-    "correct": 2,
+    "correct": 3,
     "incorrect": 0
   },
   {
@@ -652,7 +652,7 @@
     "answer": "un giornale",
     "notes": "",
     "categories": [],
-    "correct": 1,
+    "correct": 2,
     "incorrect": 0
   },
   {
@@ -697,7 +697,7 @@
     "answer": "un aereo",
     "notes": "",
     "categories": [],
-    "correct": 0,
+    "correct": 1,
     "incorrect": 1
   },
   {
@@ -724,7 +724,7 @@
     "answer": "una/la penna ",
     "notes": "",
     "categories": [],
-    "correct": 1,
+    "correct": 2,
     "incorrect": 1
   },
   {
@@ -735,8 +735,8 @@
     "categories": [
       "meals"
     ],
-    "correct": 0,
-    "incorrect": 3
+    "correct": 1,
+    "incorrect": 4
   },
   {
     "id": "1772214709680drde1i0zd",
@@ -799,7 +799,7 @@
     "categories": [
       "restaurant"
     ],
-    "correct": 6,
+    "correct": 7,
     "incorrect": 1
   },
   {
@@ -854,8 +854,8 @@
     "categories": [
       "restaurant"
     ],
-    "correct": 2,
-    "incorrect": 7
+    "correct": 3,
+    "incorrect": 9
   },
   {
     "id": "1740787200011",
@@ -898,7 +898,7 @@
     "categories": [
       "restaurant"
     ],
-    "correct": 9,
+    "correct": 10,
     "incorrect": 0
   },
   {
@@ -953,7 +953,7 @@
     "categories": [
       "restaurant"
     ],
-    "correct": 2,
+    "correct": 3,
     "incorrect": 3
   },
   {
@@ -964,7 +964,7 @@
     "categories": [
       "restaurant"
     ],
-    "correct": 2,
+    "correct": 3,
     "incorrect": 4
   },
   {
@@ -975,8 +975,8 @@
     "categories": [
       "restaurant"
     ],
-    "correct": 0,
-    "incorrect": 2
+    "correct": 1,
+    "incorrect": 3
   },
   {
     "id": "1740787200027",
@@ -1019,7 +1019,7 @@
     "categories": [
       "restaurant"
     ],
-    "correct": 2,
+    "correct": 3,
     "incorrect": 2
   },
   {
@@ -1048,8 +1048,8 @@
     "answer": "cucchiaio",
     "notes": "koo-kee-AYE-oh",
     "categories": [],
-    "correct": 0,
-    "incorrect": 0
+    "correct": 1,
+    "incorrect": 3
   },
   {
     "id": "1772596283911c2r8rglzn",
@@ -1205,7 +1205,7 @@
       "months",
       "dates"
     ],
-    "correct": 0,
+    "correct": 1,
     "incorrect": 0
   },
   {
@@ -1229,7 +1229,7 @@
       "months",
       "dates"
     ],
-    "correct": 1,
+    "correct": 2,
     "incorrect": 1
   },
   {
@@ -1312,8 +1312,8 @@
     "categories": [
       "restaraunt"
     ],
-    "correct": 0,
-    "incorrect": 0
+    "correct": 1,
+    "incorrect": 1
   },
   {
     "id": "1772984585055r797n1jn8",
@@ -1368,8 +1368,8 @@
     "categories": [
       "shopping"
     ],
-    "correct": 1,
-    "incorrect": 1
+    "correct": 2,
+    "incorrect": 2
   },
   {
     "id": "1773000000105",
@@ -1390,7 +1390,7 @@
     "categories": [
       "shopping"
     ],
-    "correct": 1,
+    "correct": 2,
     "incorrect": 1
   },
   {
@@ -1412,8 +1412,8 @@
     "categories": [
       "shopping"
     ],
-    "correct": 1,
-    "incorrect": 1
+    "correct": 2,
+    "incorrect": 2
   },
   {
     "id": "1773000000109",
@@ -1423,8 +1423,8 @@
     "categories": [
       "shopping"
     ],
-    "correct": 2,
-    "incorrect": 1
+    "correct": 3,
+    "incorrect": 2
   },
   {
     "id": "1773000000110",
@@ -1467,8 +1467,8 @@
     "categories": [
       "shopping"
     ],
-    "correct": 1,
-    "incorrect": 0
+    "correct": 2,
+    "incorrect": 2
   },
   {
     "id": "1773000000115",
@@ -1501,6 +1501,51 @@
       "shopping"
     ],
     "correct": 1,
+    "incorrect": 0
+  },
+  {
+    "id": "1773175484090fyi8h9wwc",
+    "question": "this",
+    "answer": "questa/o",
+    "notes": "",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1773175512593iwtv0gwx2",
+    "question": "that",
+    "answer": "quella/o",
+    "notes": "",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "17731755464580u7mkqyso",
+    "question": "i like this cat",
+    "answer": "mi piace questo gatto",
+    "notes": "",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1773175577751molt8d85c",
+    "question": "i would like to buy this book",
+    "answer": "vorrei comprare questo libro",
+    "notes": "",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "177317560645964m0t86ad",
+    "question": "I like (something plural)",
+    "answer": "piacciono",
+    "notes": "mi piacciono i gatti",
+    "categories": [],
+    "correct": 0,
     "incorrect": 0
   }
 ]
