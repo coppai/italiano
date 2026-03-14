@@ -218,6 +218,69 @@ const server = http.createServer((req, res) => {
         return;
     }
 
+    // Handle PUT request for updating verb infinitive stats
+    if (req.method === 'PUT' && req.url === '/api/update-verb-infinitive-stats') {
+        let body = '';
+        
+        req.on('data', chunk => {
+            body += chunk.toString();
+        });
+        
+        req.on('end', () => {
+            try {
+                const { id, correct, incorrect } = JSON.parse(body);
+                console.log('Updating verb infinitive stats:', { id, correct, incorrect });
+                
+                // Read existing verbs
+                fs.readFile('./verbs.json', 'utf8', (err, data) => {
+                    if (err) {
+                        console.error('Error reading file:', err);
+                        res.writeHead(500, { 'Content-Type': 'application/json' });
+                        res.end(JSON.stringify({ error: 'Failed to read verbs file' }));
+                        return;
+                    }
+                    
+                    let verbs = JSON.parse(data);
+                    
+                    // Find the verb by ID
+                    const verbIndex = verbs.findIndex(verb => verb.id === id || verb.infinitive === id);
+                    console.log('Found verb at index:', verbIndex);
+                    
+                    if (verbIndex === -1) {
+                        console.error('Verb not found with ID:', id);
+                        res.writeHead(400, { 'Content-Type': 'application/json' });
+                        res.end(JSON.stringify({ error: 'Verb not found' }));
+                        return;
+                    }
+                    
+                    // Update only the infinitive stats
+                    verbs[verbIndex].infinitive_correct = correct;
+                    verbs[verbIndex].infinitive_incorrect = incorrect;
+                    console.log('Updated verb:', verbs[verbIndex]);
+                    
+                    // Write updated verbs back to file
+                    fs.writeFile('./verbs.json', JSON.stringify(verbs, null, 2), 'utf8', (err) => {
+                        if (err) {
+                            console.error('Error writing file:', err);
+                            res.writeHead(500, { 'Content-Type': 'application/json' });
+                            res.end(JSON.stringify({ error: 'Failed to save verb stats' }));
+                            return;
+                        }
+                        
+                        console.log('Successfully saved verb stats to file');
+                        res.writeHead(200, { 'Content-Type': 'application/json' });
+                        res.end(JSON.stringify({ success: true, message: 'Stats updated successfully' }));
+                    });
+                });
+            } catch (error) {
+                res.writeHead(400, { 'Content-Type': 'application/json' });
+                res.end(JSON.stringify({ error: 'Invalid JSON data' }));
+            }
+        });
+        
+        return;
+    }
+
     // Handle DELETE request for deleting flashcards
     if (req.method === 'DELETE' && req.url === '/api/delete-flashcard') {
         let body = '';

@@ -627,8 +627,7 @@ body.article-page {
     background: rgba(255, 255, 255, 0.2);
     border-radius: 8px;
     border: 1px dashed rgba(255, 255, 255, 0.4);
-    max-height: 150px;
-    overflow-y: auto;
+    /* max-height: 150px; */
     text-align: left;
     line-height: 1.4;
 }
@@ -767,6 +766,15 @@ body.article-page {
 
 .verbs-page .flashcard {
     height: 480px;
+}
+
+.infinitive-page .flashcard {
+    height: 580px;
+}
+
+.infinitive-page .flashcard-back {
+    justify-content: flex-start;
+    overflow-y: auto;
 }
 
 .icon {

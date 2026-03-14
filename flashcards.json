@@ -144,7 +144,7 @@
       "parlare",
       "verbs"
     ],
-    "correct": 4,
+    "correct": 5,
     "incorrect": 0
   },
   {
@@ -156,19 +156,19 @@
       "parlare",
       "verbs"
     ],
-    "correct": 2,
+    "correct": 3,
     "incorrect": 0
   },
   {
     "id": "1772212104901eged3nqo5",
     "question": "he speaks",
-    "answer": "parlara",
+    "answer": "parla",
     "notes": "",
     "categories": [
       "parlare",
       "verbs"
     ],
-    "correct": 2,
+    "correct": 3,
     "incorrect": 5
   },
   {
@@ -180,7 +180,7 @@
       "parlare",
       "verbs"
     ],
-    "correct": 2,
+    "correct": 3,
     "incorrect": 3
   },
   {
@@ -1059,7 +1059,7 @@
     "categories": [
       "verb"
     ],
-    "correct": 0,
+    "correct": 1,
     "incorrect": 0
   },
   {
@@ -1070,7 +1070,7 @@
     "categories": [
       "verb"
     ],
-    "correct": 0,
+    "correct": 1,
     "incorrect": 0
   },
   {
@@ -1310,7 +1310,7 @@
     "answer": "tovagliolo",
     "notes": "toh-vahl-yoh-loh.",
     "categories": [
-      "restaraunt"
+      "restaurant"
     ],
     "correct": 1,
     "incorrect": 1
@@ -1322,9 +1322,9 @@
     "notes": "Io faccio yoga ogni mattina.",
     "categories": [
       "dates",
-      "times"
+      "time"
     ],
-    "correct": 0,
+    "correct": 2,
     "incorrect": 0
   },
   {
@@ -1335,8 +1335,8 @@
     "categories": [
       "shopping"
     ],
-    "correct": 1,
-    "incorrect": 1
+    "correct": 4,
+    "incorrect": 2
   },
   {
     "id": "1773000000102",
@@ -1346,7 +1346,7 @@
     "categories": [
       "shopping"
     ],
-    "correct": 3,
+    "correct": 4,
     "incorrect": 0
   },
   {
@@ -1357,7 +1357,7 @@
     "categories": [
       "shopping"
     ],
-    "correct": 2,
+    "correct": 4,
     "incorrect": 0
   },
   {
@@ -1368,7 +1368,7 @@
     "categories": [
       "shopping"
     ],
-    "correct": 2,
+    "correct": 4,
     "incorrect": 2
   },
   {
@@ -1379,8 +1379,8 @@
     "categories": [
       "shopping"
     ],
-    "correct": 2,
-    "incorrect": 1
+    "correct": 4,
+    "incorrect": 2
   },
   {
     "id": "1773000000106",
@@ -1390,8 +1390,8 @@
     "categories": [
       "shopping"
     ],
-    "correct": 2,
-    "incorrect": 1
+    "correct": 4,
+    "incorrect": 2
   },
   {
     "id": "1773000000107",
@@ -1401,8 +1401,8 @@
     "categories": [
       "shopping"
     ],
-    "correct": 2,
-    "incorrect": 1
+    "correct": 5,
+    "incorrect": 2
   },
   {
     "id": "1773000000108",
@@ -1412,7 +1412,7 @@
     "categories": [
       "shopping"
     ],
-    "correct": 2,
+    "correct": 4,
     "incorrect": 2
   },
   {
@@ -1423,18 +1423,18 @@
     "categories": [
       "shopping"
     ],
-    "correct": 3,
+    "correct": 5,
     "incorrect": 2
   },
   {
     "id": "1773000000110",
     "question": "How much do they cost?",
     "answer": "Quanto costano?",
-    "notes": "",
+    "notes": "why something is plural, the verb changes costa -> costano",
     "categories": [
       "shopping"
     ],
-    "correct": 1,
+    "correct": 3,
     "incorrect": 0
   },
   {
@@ -1445,7 +1445,7 @@
     "categories": [
       "shopping"
     ],
-    "correct": 3,
+    "correct": 5,
     "incorrect": 1
   },
   {
@@ -1456,7 +1456,7 @@
     "categories": [
       "shopping"
     ],
-    "correct": 1,
+    "correct": 3,
     "incorrect": 0
   },
   {
@@ -1467,8 +1467,8 @@
     "categories": [
       "shopping"
     ],
-    "correct": 2,
-    "incorrect": 2
+    "correct": 3,
+    "incorrect": 3
   },
   {
     "id": "1773000000115",
@@ -1478,7 +1478,7 @@
     "categories": [
       "shopping"
     ],
-    "correct": 1,
+    "correct": 2,
     "incorrect": 0
   },
   {
@@ -1489,7 +1489,7 @@
     "categories": [
       "shopping"
     ],
-    "correct": 1,
+    "correct": 3,
     "incorrect": 2
   },
   {
@@ -1500,7 +1500,7 @@
     "categories": [
       "shopping"
     ],
-    "correct": 1,
+    "correct": 3,
     "incorrect": 0
   },
   {
@@ -1547,5 +1547,443 @@
     "categories": [],
     "correct": 0,
     "incorrect": 0
+  },
+  {
+    "id": "1773186900565qq3u4pn9f",
+    "question": "I drink?",
+    "answer": "bevo",
+    "notes": "velo il caffe ",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1773186958676bro75rkzl",
+    "question": "i each ",
+    "answer": "mangio",
+    "notes": "mangio una pizza ",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "17733542041351711dkvxa",
+    "question": "ecco",
+    "answer": "here it is",
+    "notes": "can be used to draw attention to things\necco qui, ecco mia moglie, etc",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1773354485441f8x3h9aug",
+    "question": "puoi",
+    "answer": "you can",
+    "notes": "This is the second person singular verb form of postere\n\nTu puoi andare al ristorante\n\n(pwo)",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1773354692366nokexr0dk",
+    "question": "Piu",
+    "answer": "more or plus",
+    "notes": "(pew)\n\nCan be used for comparisons, or to say.  Can be used to say something no longer happens Non fumo più.",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1773354898345z150e23se",
+    "question": "che",
+    "answer": "That/Which/Who: ",
+    "notes": "(kay) Il libro che leggo. (The book that I read.)",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1773356368614mnhfyea4a",
+    "question": "leri",
+    "answer": "yesterday",
+    "notes": "ee-EH-ree",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "17733564092320gvgjsn6a",
+    "question": "last weekend",
+    "answer": "Lo scorso fine settimana",
+    "notes": "",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1773356427114ct0fvqj5q",
+    "question": "this weekend",
+    "answer": "questo fine settimana",
+    "notes": "",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1773356447365pshm6a8kn",
+    "question": "this week",
+    "answer": "questa settimana",
+    "notes": "",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "17733564645901fco826cs",
+    "question": "last week",
+    "answer": "la settimana scorsa",
+    "notes": "",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "177335647789568f7v348q",
+    "question": "last month",
+    "answer": "il mese scorso",
+    "notes": "",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1773356535450nkyv2asfr",
+    "question": "ago (two years ago)",
+    "answer": "fa - due anni fa",
+    "notes": "fah",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1773356633938fc6zcgwx3",
+    "question": "in/from now ( in ten minutes)",
+    "answer": "fra/tra - fra dieci minuti ",
+    "notes": "use either one, they are interchangable",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1773408916967bpv9nx90r",
+    "question": "this afternoon",
+    "answer": "questo pomeriggio",
+    "notes": "po-me-RÌD-jo",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "17734089239647pwv5wtag",
+    "question": "lunch",
+    "answer": "pranzo",
+    "notes": "this can be a verb (I eat lunch) or a noun (lunch). pranzare is the verb form",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1741824000001",
+    "question": "a t-shirt",
+    "answer": "una maglietta",
+    "notes": "(mah-LYEHT-tah)",
+    "categories": [
+      "shopping"
+    ],
+    "correct": 2,
+    "incorrect": 0
+  },
+  {
+    "id": "1741824000002",
+    "question": "I am looking for",
+    "answer": "sto cercando",
+    "notes": "",
+    "categories": [
+      "shopping"
+    ],
+    "correct": 2,
+    "incorrect": 0
+  },
+  {
+    "id": "1741824000003",
+    "question": "can I buy this t-shirt",
+    "answer": "posso comprare questa maglietta",
+    "notes": "",
+    "categories": [
+      "shopping"
+    ],
+    "correct": 2,
+    "incorrect": 0
+  },
+  {
+    "id": "1741824000004",
+    "question": "this (feminine/masculine)",
+    "answer": "questa/questo",
+    "notes": "",
+    "categories": [
+      "shopping"
+    ],
+    "correct": 2,
+    "incorrect": 0
+  },
+  {
+    "id": "1741824000005",
+    "question": "towel (bath)",
+    "answer": "asciugamano",
+    "notes": "(ah-shoo-gah-MAH-no)",
+    "categories": [
+      "shopping"
+    ],
+    "correct": 1,
+    "incorrect": 0
+  },
+  {
+    "id": "1741824000006",
+    "question": "looking for (verb form)",
+    "answer": "cercando",
+    "notes": "use with different forms: sto cercando (I am looking), stiamo cercando (we are looking)",
+    "categories": [
+      "shopping"
+    ],
+    "correct": 2,
+    "incorrect": 0
+  },
+  {
+    "id": "1741824000007",
+    "question": "beach",
+    "answer": "spiaggia",
+    "notes": "(SPYAH-djah)",
+    "categories": [
+      "shopping"
+    ],
+    "correct": 2,
+    "incorrect": 0
+  },
+  {
+    "id": "1741824000008",
+    "question": "sun glasses",
+    "answer": "occhiali da sole",
+    "notes": "(oh-KeY-AHh-lee) gli occhiali (plural). Examples: mi piacciono questi occhiali - I like these sun glasses; sto cercando degli occhiali - I am looking for sun glasses (note the article)",
+    "categories": [
+      "shopping"
+    ],
+    "correct": 1,
+    "incorrect": 0
+  },
+  {
+    "id": "1741824000009",
+    "question": "some flippers",
+    "answer": "delle pinne",
+    "notes": "",
+    "categories": [
+      "shopping"
+    ],
+    "correct": 2,
+    "incorrect": 1
+  },
+  {
+    "id": "1741824000010",
+    "question": "these (masculine/feminine)",
+    "answer": "questi/queste",
+    "notes": "",
+    "categories": [
+      "shopping"
+    ],
+    "correct": 3,
+    "incorrect": 1
+  },
+  {
+    "id": "1741824000011",
+    "question": "how much does it cost",
+    "answer": "quanto costa",
+    "notes": "",
+    "categories": [
+      "shopping"
+    ],
+    "correct": 2,
+    "incorrect": 0
+  },
+  {
+    "id": "1741824000012",
+    "question": "how much does this cost",
+    "answer": "quanto costa questo",
+    "notes": "",
+    "categories": [
+      "shopping"
+    ],
+    "correct": 2,
+    "incorrect": 0
+  },
+  {
+    "id": "1741824000013",
+    "question": "how much does this t-shirt cost",
+    "answer": "quanto costa questa maglietta",
+    "notes": "",
+    "categories": [
+      "shopping"
+    ],
+    "correct": 2,
+    "incorrect": 0
+  },
+  {
+    "id": "1741824000014",
+    "question": "how much do these sun glasses cost",
+    "answer": "quanto costano questi occhiali da sole",
+    "notes": "when the noun is plural, costa becomes costano",
+    "categories": [
+      "shopping"
+    ],
+    "correct": 1,
+    "incorrect": 0
+  },
+  {
+    "id": "1741824000015",
+    "question": "how much do these flippers cost",
+    "answer": "quanto costano queste pinne",
+    "notes": "",
+    "categories": [
+      "shopping"
+    ],
+    "correct": 2,
+    "incorrect": 1
+  },
+  {
+    "id": "1741824000016",
+    "question": "when does the church open",
+    "answer": "quando apre la chiesa?",
+    "notes": "(AH-preh)",
+    "categories": [
+      "time",
+      "open-close"
+    ],
+    "correct": 2,
+    "incorrect": 0
+  },
+  {
+    "id": "1741824000017",
+    "question": "open",
+    "answer": "apre",
+    "notes": "(AH-preh)",
+    "categories": [
+      "open-close"
+    ],
+    "correct": 1,
+    "incorrect": 0
+  },
+  {
+    "id": "1741824000018",
+    "question": "at what time",
+    "answer": "a che ora",
+    "notes": "",
+    "categories": [
+      "time"
+    ],
+    "correct": 1,
+    "incorrect": 0
+  },
+  {
+    "id": "1741824000019",
+    "question": "at what time does the church open",
+    "answer": "a che ora apre la chiesa",
+    "notes": "",
+    "categories": [
+      "time",
+      "open-close"
+    ],
+    "correct": 1,
+    "incorrect": 1
+  },
+  {
+    "id": "1741824000020",
+    "question": "closed",
+    "answer": "chiusa",
+    "notes": "(Key-YOO-zah)",
+    "categories": [
+      "open-close"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1741824000021",
+    "question": "what can one do here?",
+    "answer": "cosa si può fare qui?",
+    "notes": "",
+    "categories": [
+      "time",
+      "open-close"
+    ],
+    "correct": 1,
+    "incorrect": 2
+  },
+  {
+    "id": "1741824000022",
+    "question": "what can one see here?",
+    "answer": "cosa si può vedere qui?",
+    "notes": "",
+    "categories": [
+      "time",
+      "open-close"
+    ],
+    "correct": 1,
+    "incorrect": 2
+  },
+  {
+    "id": "1741824000023",
+    "question": "one can go to the beach",
+    "answer": "Si può andare in spiaggia.",
+    "notes": "",
+    "categories": [
+      "time",
+      "open-close"
+    ],
+    "correct": 1,
+    "incorrect": 0
+  },
+  {
+    "id": "1741824000024",
+    "question": "one can visit the castle",
+    "answer": "si può visitare il castello",
+    "notes": "",
+    "categories": [
+      "time",
+      "open-close"
+    ],
+    "correct": 1,
+    "incorrect": 1
+  },
+  {
+    "id": "1741824000025",
+    "question": "I like to visit the castle",
+    "answer": "mi piace visitare il castello",
+    "notes": "",
+    "categories": [
+      "time",
+      "open-close"
+    ],
+    "correct": 1,
+    "incorrect": 0
+  },
+  {
+    "id": "1741824000026",
+    "question": "you can see a movie at the cinema",
+    "answer": "si può vedere un film al cinema",
+    "notes": "(pwo)",
+    "categories": [
+      "time",
+      "open-close"
+    ],
+    "correct": 1,
+    "incorrect": 2
   }
 ]
