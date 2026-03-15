@@ -30,6 +30,9 @@
             <select id="packageSelect">
                 <option value="all">All Verbs</option>
             </select>
+            <button id="reverseBtn" class="btn-secondary" style="margin-left: 1rem;">
+                <span>🔄 Reverse Cards</span>
+            </button>
         </div>
 
         <div class="flashcard-container">
@@ -94,6 +97,7 @@
     let flashcards = [];  // Currently displayed cards (shuffled/filtered view)
     let currentIndex = 0;
     let isFlipped = false;
+    let isReversed = false;      // Track if cards are reversed (Italian -> English)
     let completedCards = new Set();  // Track cards marked as correct (by verb.id)
     let currentFilter = 'all';       // Track which package is currently selected
 
@@ -113,6 +117,7 @@
     const cardStatsEl = document.getElementById('cardStats');
     const cardNotesEl = document.getElementById('cardNotes');
     const packageSelect = document.getElementById('packageSelect');
+    const reverseBtn = document.getElementById('reverseBtn');
     const verbTableBody = document.getElementById('verbTableBody');
 
     // Load verbs and convert to flashcard format
@@ -223,8 +228,18 @@
         currentIndex = index;
         const card = flashcards[currentIndex];
         
-        questionEl.textContent = card.question;
-        answerEl.textContent = card.answer;
+        // Swap question/answer if reversed
+        const displayQuestion = isReversed ? card.answer : card.question;
+        const displayAnswer = isReversed ? card.question : card.answer;
+        const frontLabel = isReversed ? 'Italian Infinitive' : 'English Verb';
+        const backLabel = isReversed ? 'English Translation' : 'Italian Infinitive';
+        
+        // Update labels
+        document.querySelector('.flashcard-front .flashcard-label').textContent = frontLabel;
+        document.querySelector('.flashcard-back .flashcard-label').textContent = backLabel;
+        
+        questionEl.textContent = displayQuestion;
+        answerEl.textContent = displayAnswer;
         cardNotesEl.textContent = card.notes || '';
         
         // Populate conjugation table
@@ -295,7 +310,9 @@
     // Pronounce
     pronounceBtn.addEventListener('click', (e) => {
         e.stopPropagation();
-        const textToSpeak = flashcards[currentIndex].answer; // Always pronounce the Italian infinitive
+        const card = flashcards[currentIndex];
+        // Always pronounce the Italian infinitive
+        const textToSpeak = card.answer;
         
         if ('speechSynthesis' in window) {
             const utterance = new SpeechSynthesisUtterance(textToSpeak);
@@ -305,6 +322,13 @@
         } else {
             alert('Text-to-speech is not supported in your browser.');
         }
+    });
+
+    // Reverse cards button
+    reverseBtn.addEventListener('click', () => {
+        isReversed = !isReversed;
+        reverseBtn.querySelector('span').textContent = isReversed ? '🔄 Normal Cards' : '🔄 Reverse Cards';
+        showCard(currentIndex);
     });
 
     // Shuffle function

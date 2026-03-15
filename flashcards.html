@@ -25,6 +25,9 @@
             <select id="categoryFilter">
                 <option value="all">All Categories</option>
             </select>
+            <button id="reverseBtn" class="btn-secondary" style="margin-left: 1rem;">
+                <span>🔄 Reverse Cards</span>
+            </button>
         </div>
 
         <div class="progress">
@@ -80,6 +83,7 @@
     let flashcards = [];  // Currently displayed cards (shuffled/filtered view)
     let currentIndex = 0;
     let isFlipped = false;
+    let isReversed = false;      // Track if cards are reversed (Answer -> Question)
     let completedCards = new Set();  // Track cards marked as correct (by card.id)
     let currentFilter = 'all';       // Track which category is currently selected
 
@@ -99,6 +103,7 @@
     const cardStatsEl = document.getElementById('cardStats');
     const cardNotesEl = document.getElementById('cardNotes');
     const categoryFilter = document.getElementById('categoryFilter');
+    const reverseBtn = document.getElementById('reverseBtn');
 
     // Load flashcards
     async function loadFlashcards() {
@@ -200,8 +205,18 @@
         currentIndex = index;
         const card = flashcards[currentIndex];
         
-        questionEl.textContent = card.question;
-        answerEl.textContent = card.answer;
+        // Swap question/answer if reversed
+        const displayQuestion = isReversed ? card.answer : card.question;
+        const displayAnswer = isReversed ? card.question : card.answer;
+        const frontLabel = isReversed ? 'Answer' : 'Question';
+        const backLabel = isReversed ? 'Question' : 'Answer';
+        
+        // Update labels
+        document.querySelector('.flashcard-front .flashcard-label').textContent = frontLabel;
+        document.querySelector('.flashcard-back .flashcard-label').textContent = backLabel;
+        
+        questionEl.textContent = displayQuestion;
+        answerEl.textContent = displayAnswer;
         cardNotesEl.textContent = card.notes || '';
         
         // Show completed count vs total cards in current view (respecting filters).
@@ -260,7 +275,8 @@
     // Pronounce
     pronounceBtn.addEventListener('click', (e) => {
         e.stopPropagation();
-        const textToSpeak = isFlipped ? flashcards[currentIndex].answer : flashcards[currentIndex].question;
+        const card = flashcards[currentIndex];
+        const textToSpeak = isFlipped ? card.answer : card.question;
         
         if ('speechSynthesis' in window) {
             const utterance = new SpeechSynthesisUtterance(textToSpeak);
@@ -270,6 +286,13 @@
         } else {
             alert('Text-to-speech is not supported in your browser.');
         }
+    });
+
+    // Reverse cards button
+    reverseBtn.addEventListener('click', () => {
+        isReversed = !isReversed;
+        reverseBtn.querySelector('span').textContent = isReversed ? '🔄 Normal Cards' : '🔄 Reverse Cards';
+        showCard(currentIndex);
     });
 
     // Shuffle function
