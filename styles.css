@@ -928,6 +928,28 @@ body.article-page {
     background: white;
 }
 
+/* Mobile responsive for filter section */
+@media (max-width: 768px) {
+    .filter-section {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .filter-section label {
+        font-size: 0.9rem;
+    }
+    
+    .filter-section select {
+        width: 100%;
+        min-width: auto;
+    }
+    
+    .filter-section .reverse-btn {
+        width: 100%;
+    }
+}
+
 /* ============================================
    ADMIN PAGE
    ============================================ */
