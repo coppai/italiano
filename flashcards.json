@@ -1985,5 +1985,98 @@
     ],
     "correct": 1,
     "incorrect": 2
+  },
+  {
+    "id": "1773753767208jj5m866dz",
+    "question": "the stop (bus/train)",
+    "answer": "la fermata",
+    "notes": "fer-MAH-tah",
+    "categories": [
+      "trains",
+      "travel"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "177375381584564ollmd9f",
+    "question": "the ticket office",
+    "answer": "la biglietteria",
+    "notes": "bee-lyeh-te-REE-ah",
+    "categories": [
+      "travel",
+      "trains"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "17737538643792axlot9aw",
+    "question": "the track or platform",
+    "answer": "il binario",
+    "notes": "bee-NAH-ryoh",
+    "categories": [
+      "train",
+      "travel"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "177375391411699cv6rvv3",
+    "question": "to leave/depart",
+    "answer": "partire",
+    "notes": "par-TEE-reh",
+    "categories": [
+      "travel",
+      "train"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1773753937223m8jgl1fv1",
+    "question": "to arrive",
+    "answer": "arrivare",
+    "notes": "",
+    "categories": [
+      "train",
+      "travel"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "17737539713254b4xtahvn",
+    "question": "what time does the train leave?",
+    "answer": "A che ora parte il treno?",
+    "notes": "",
+    "categories": [
+      "train",
+      "travel"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1773754004867igua0e7n5",
+    "question": "to buy a ticket",
+    "answer": "comprare un biglietto",
+    "notes": "[bee-LYEH-toh]",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "17737540602075zry8y9q1",
+    "question": "which platform does the train leave from?",
+    "answer": "Da quale binario parte il treno?",
+    "notes": "[dah KWAH]",
+    "categories": [
+      "train",
+      "travel"
+    ],
+    "correct": 0,
+    "incorrect": 0
   }
 ]
