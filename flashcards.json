@@ -23,7 +23,7 @@
     "categories": [
       "days"
     ],
-    "correct": 2,
+    "correct": 3,
     "incorrect": 0
   },
   {
@@ -34,7 +34,7 @@
     "categories": [
       "days"
     ],
-    "correct": 3,
+    "correct": 4,
     "incorrect": 3
   },
   {
@@ -44,7 +44,7 @@
     "categories": [
       "days"
     ],
-    "correct": 2,
+    "correct": 3,
     "incorrect": 0
   },
   {
@@ -55,7 +55,7 @@
     "categories": [
       "days"
     ],
-    "correct": 3,
+    "correct": 4,
     "incorrect": 2
   },
   {
@@ -66,7 +66,7 @@
     "categories": [
       "days"
     ],
-    "correct": 0,
+    "correct": 1,
     "incorrect": 3
   },
   {
@@ -76,7 +76,7 @@
     "categories": [
       "days"
     ],
-    "correct": 2,
+    "correct": 3,
     "incorrect": 0
   },
   {
@@ -86,17 +86,18 @@
     "categories": [
       "days"
     ],
-    "correct": 2,
+    "correct": 3,
     "incorrect": 3
   },
   {
     "id": "1772209370075duxsznlz1",
     "question": "i would like a glass of wine",
     "answer": "vorrei un bicchiere di vino",
+    "notes": "[vohr-RAY]\n[beek-key-aire]",
     "categories": [
-      "ordering"
+      "restaurant"
     ],
-    "correct": 2,
+    "correct": 3,
     "incorrect": 1
   },
   {
@@ -136,87 +137,6 @@
     "incorrect": 6
   },
   {
-    "id": "1772212052188v2ty3448d",
-    "question": "i speak",
-    "answer": "parlo",
-    "notes": "",
-    "categories": [
-      "parlare",
-      "verbs"
-    ],
-    "correct": 5,
-    "incorrect": 0
-  },
-  {
-    "id": "177221207242440n6u7qrb",
-    "question": "you speak?",
-    "answer": "parli",
-    "notes": "",
-    "categories": [
-      "parlare",
-      "verbs"
-    ],
-    "correct": 3,
-    "incorrect": 0
-  },
-  {
-    "id": "1772212104901eged3nqo5",
-    "question": "he speaks",
-    "answer": "parla",
-    "notes": "",
-    "categories": [
-      "parlare",
-      "verbs"
-    ],
-    "correct": 3,
-    "incorrect": 5
-  },
-  {
-    "id": "1772212115717g9f58go6s",
-    "question": "we speak",
-    "answer": "parliamo",
-    "notes": "",
-    "categories": [
-      "parlare",
-      "verbs"
-    ],
-    "correct": 3,
-    "incorrect": 3
-  },
-  {
-    "id": "1772212125212zpu3qbqu1",
-    "question": "they speak",
-    "answer": "parlano",
-    "notes": "",
-    "categories": [
-      "parlare"
-    ],
-    "correct": 3,
-    "incorrect": 1
-  },
-  {
-    "id": "1772212148206j223monei",
-    "question": "you (plural) speak",
-    "answer": "parlate",
-    "notes": "",
-    "categories": [
-      "parlare"
-    ],
-    "correct": 4,
-    "incorrect": 0
-  },
-  {
-    "id": "1772212161003a92qqnkxi",
-    "question": "they speak",
-    "answer": "parlano",
-    "notes": "",
-    "categories": [
-      "parlare"
-    ],
-    "correct": 2,
-    "incorrect": 2
-  },
-  {
     "id": "1772212184029guqj87ncv",
     "question": "on the right",
     "answer": "sulla destra",
@@ -224,7 +144,7 @@
     "categories": [
       "directions"
     ],
-    "correct": 1,
+    "correct": 2,
     "incorrect": 8
   },
   {
@@ -235,7 +155,7 @@
     "categories": [
       "directions"
     ],
-    "correct": 1,
+    "correct": 2,
     "incorrect": 1
   },
   {
@@ -266,7 +186,7 @@
     "categories": [
       "directions"
     ],
-    "correct": 1,
+    "correct": 2,
     "incorrect": 1
   },
   {
@@ -313,7 +233,7 @@
     "categories": [
       "days"
     ],
-    "correct": 0,
+    "correct": 1,
     "incorrect": 1
   },
   {
@@ -349,138 +269,6 @@
     "answer": "dove abiti?",
     "notes": "",
     "categories": [],
-    "correct": 2,
-    "incorrect": 0
-  },
-  {
-    "id": "1772212783667zkrpjyxov",
-    "question": "I live",
-    "answer": "abito",
-    "notes": "",
-    "categories": [
-      "abitare"
-    ],
-    "correct": 5,
-    "incorrect": 0
-  },
-  {
-    "id": "1772213001001",
-    "question": "you live",
-    "answer": "abiti",
-    "notes": "",
-    "categories": [
-      "abitare"
-    ],
-    "correct": 6,
-    "incorrect": 0
-  },
-  {
-    "id": "1772213001002",
-    "question": "he/she lives",
-    "answer": "abita",
-    "notes": "",
-    "categories": [
-      "abitare"
-    ],
-    "correct": 6,
-    "incorrect": 0
-  },
-  {
-    "id": "1772213001003",
-    "question": "we live",
-    "answer": "abitiamo",
-    "notes": "",
-    "categories": [
-      "abitare"
-    ],
-    "correct": 4,
-    "incorrect": 0
-  },
-  {
-    "id": "1772213001004",
-    "question": "you (plural) live",
-    "answer": "abitate",
-    "notes": "",
-    "categories": [
-      "abitare"
-    ],
-    "correct": 4,
-    "incorrect": 1
-  },
-  {
-    "id": "1772213001005",
-    "question": "they live",
-    "answer": "abitano",
-    "notes": "",
-    "categories": [
-      "abitare"
-    ],
-    "correct": 3,
-    "incorrect": 3
-  },
-  {
-    "id": "1772214001001",
-    "question": "I am",
-    "answer": "sono",
-    "notes": "",
-    "categories": [
-      "essere"
-    ],
-    "correct": 3,
-    "incorrect": 0
-  },
-  {
-    "id": "1772214001002",
-    "question": "you are",
-    "answer": "sei",
-    "notes": "",
-    "categories": [
-      "essere"
-    ],
-    "correct": 3,
-    "incorrect": 1
-  },
-  {
-    "id": "1772214001003",
-    "question": "he/she is",
-    "answer": "è",
-    "notes": "",
-    "categories": [
-      "essere"
-    ],
-    "correct": 4,
-    "incorrect": 0
-  },
-  {
-    "id": "1772214001004",
-    "question": "we are",
-    "answer": "siamo",
-    "notes": "",
-    "categories": [
-      "essere"
-    ],
-    "correct": 3,
-    "incorrect": 2
-  },
-  {
-    "id": "1772214001005",
-    "question": "you (plural) are",
-    "answer": "siete",
-    "notes": "",
-    "categories": [
-      "essere"
-    ],
-    "correct": 5,
-    "incorrect": 0
-  },
-  {
-    "id": "1772214001006",
-    "question": "they are",
-    "answer": "sono",
-    "notes": "",
-    "categories": [
-      "essere"
-    ],
     "correct": 2,
     "incorrect": 0
   },
@@ -587,7 +375,7 @@
     "categories": [
       "directions"
     ],
-    "correct": 0,
+    "correct": 1,
     "incorrect": 3
   },
   {
@@ -735,8 +523,8 @@
     "categories": [
       "meals"
     ],
-    "correct": 1,
-    "incorrect": 4
+    "correct": 2,
+    "incorrect": 6
   },
   {
     "id": "1772214709680drde1i0zd",
@@ -755,7 +543,7 @@
     "categories": [
       "restaurant"
     ],
-    "correct": 8,
+    "correct": 9,
     "incorrect": 2
   },
   {
@@ -766,7 +554,7 @@
     "categories": [
       "restaurant"
     ],
-    "correct": 6,
+    "correct": 7,
     "incorrect": 1
   },
   {
@@ -777,7 +565,7 @@
     "categories": [
       "restaurant"
     ],
-    "correct": 5,
+    "correct": 6,
     "incorrect": 0
   },
   {
@@ -788,19 +576,8 @@
     "categories": [
       "restaurant"
     ],
-    "correct": 6,
-    "incorrect": 2
-  },
-  {
-    "id": "1740787200005",
-    "question": "The menu",
-    "answer": "Il menù",
-    "notes": "",
-    "categories": [
-      "restaurant"
-    ],
     "correct": 7,
-    "incorrect": 1
+    "incorrect": 2
   },
   {
     "id": "1740787200006",
@@ -810,7 +587,7 @@
     "categories": [
       "restaurant"
     ],
-    "correct": 3,
+    "correct": 4,
     "incorrect": 6
   },
   {
@@ -821,7 +598,7 @@
     "categories": [
       "restaurant"
     ],
-    "correct": 6,
+    "correct": 7,
     "incorrect": 0
   },
   {
@@ -832,7 +609,7 @@
     "categories": [
       "restaurant"
     ],
-    "correct": 3,
+    "correct": 4,
     "incorrect": 5
   },
   {
@@ -843,7 +620,7 @@
     "categories": [
       "restaurant"
     ],
-    "correct": 4,
+    "correct": 5,
     "incorrect": 1
   },
   {
@@ -854,7 +631,7 @@
     "categories": [
       "restaurant"
     ],
-    "correct": 3,
+    "correct": 4,
     "incorrect": 9
   },
   {
@@ -865,51 +642,18 @@
     "categories": [
       "restaurant"
     ],
-    "correct": 1,
-    "incorrect": 5
-  },
-  {
-    "id": "1740787200014",
-    "question": "A ham sandwich",
-    "answer": "Un panino al prosciutto",
-    "notes": "",
-    "categories": [
-      "restaurant"
-    ],
-    "correct": 4,
-    "incorrect": 3
-  },
-  {
-    "id": "1740787200015",
-    "question": "A cheese sandwich",
-    "answer": "Un panino al formaggio",
-    "notes": "",
-    "categories": [
-      "restaurant"
-    ],
-    "correct": 9,
-    "incorrect": 0
-  },
-  {
-    "id": "1740787200016",
-    "question": "A sandwich with tomato & mozzarella",
-    "answer": "Un panino con pomodoro e mozzarella",
-    "notes": "",
-    "categories": [
-      "restaurant"
-    ],
-    "correct": 10,
-    "incorrect": 0
+    "correct": 2,
+    "incorrect": 6
   },
   {
     "id": "1740787200019",
     "question": "What are you having?",
     "answer": "Cosa prendete?",
-    "notes": "prehn-DEHN-teh",
+    "notes": "prehn-DEHN-teh\n\nform of the verb prevare ",
     "categories": [
       "restaurant"
     ],
-    "correct": 2,
+    "correct": 3,
     "incorrect": 4
   },
   {
@@ -920,7 +664,7 @@
     "categories": [
       "restaurant"
     ],
-    "correct": 2,
+    "correct": 3,
     "incorrect": 2
   },
   {
@@ -931,7 +675,7 @@
     "categories": [
       "restaurant"
     ],
-    "correct": 4,
+    "correct": 5,
     "incorrect": 0
   },
   {
@@ -942,7 +686,7 @@
     "categories": [
       "restaurant"
     ],
-    "correct": 2,
+    "correct": 3,
     "incorrect": 4
   },
   {
@@ -953,7 +697,7 @@
     "categories": [
       "restaurant"
     ],
-    "correct": 3,
+    "correct": 4,
     "incorrect": 3
   },
   {
@@ -964,7 +708,7 @@
     "categories": [
       "restaurant"
     ],
-    "correct": 3,
+    "correct": 4,
     "incorrect": 4
   },
   {
@@ -975,8 +719,8 @@
     "categories": [
       "restaurant"
     ],
-    "correct": 1,
-    "incorrect": 3
+    "correct": 2,
+    "incorrect": 5
   },
   {
     "id": "1740787200027",
@@ -986,8 +730,8 @@
     "categories": [
       "restaurant"
     ],
-    "correct": 0,
-    "incorrect": 4
+    "correct": 1,
+    "incorrect": 6
   },
   {
     "id": "1740787200028",
@@ -997,7 +741,7 @@
     "categories": [
       "restaurant"
     ],
-    "correct": 1,
+    "correct": 2,
     "incorrect": 2
   },
   {
@@ -1008,7 +752,7 @@
     "categories": [
       "restaurant"
     ],
-    "correct": 1,
+    "correct": 2,
     "incorrect": 2
   },
   {
@@ -1019,7 +763,7 @@
     "categories": [
       "restaurant"
     ],
-    "correct": 3,
+    "correct": 4,
     "incorrect": 2
   },
   {
@@ -1030,7 +774,7 @@
     "categories": [
       "restaurant"
     ],
-    "correct": 0,
+    "correct": 1,
     "incorrect": 0
   },
   {
@@ -1083,72 +827,6 @@
     "incorrect": 0
   },
   {
-    "id": "17726528426037qoq2ofuk",
-    "question": "I have",
-    "answer": "ho",
-    "notes": "ho un cane ",
-    "categories": [
-      "avere"
-    ],
-    "correct": 3,
-    "incorrect": 0
-  },
-  {
-    "id": "1772652896483x2lajm1ea",
-    "question": "you have (singular)",
-    "answer": "hai",
-    "notes": "(eye)",
-    "categories": [
-      "avere"
-    ],
-    "correct": 3,
-    "incorrect": 0
-  },
-  {
-    "id": "1772652912235v53euaqll",
-    "question": "he/she has",
-    "answer": "ha",
-    "notes": "ah",
-    "categories": [
-      "avere"
-    ],
-    "correct": 1,
-    "incorrect": 3
-  },
-  {
-    "id": "177265293005675vlhvj3w",
-    "question": "we have",
-    "answer": "abbiamo",
-    "notes": "ahb-BYAH-mo",
-    "categories": [
-      "avere"
-    ],
-    "correct": 1,
-    "incorrect": 1
-  },
-  {
-    "id": "1772652944444pf71aj8mq",
-    "question": "you all have",
-    "answer": "avete",
-    "notes": "ah-VEH-teh",
-    "categories": [
-      "avere"
-    ],
-    "correct": 1,
-    "incorrect": 2
-  },
-  {
-    "id": "1772652958645o0af7p560",
-    "question": "they have",
-    "answer": "hanno",
-    "notes": "AHN-no",
-    "categories": [
-      "avere"
-    ],
-    "correct": 2,
-    "incorrect": 2
-  },
-  {
     "id": "1772700000001",
     "question": "Month",
     "answer": "il mese",
@@ -1157,7 +835,7 @@
       "months",
       "dates"
     ],
-    "correct": 2,
+    "correct": 3,
     "incorrect": 1
   },
   {
@@ -1169,7 +847,7 @@
       "months",
       "dates"
     ],
-    "correct": 0,
+    "correct": 1,
     "incorrect": 0
   },
   {
@@ -1181,7 +859,7 @@
       "months",
       "dates"
     ],
-    "correct": 0,
+    "correct": 2,
     "incorrect": 0
   },
   {
@@ -1193,8 +871,8 @@
       "months",
       "dates"
     ],
-    "correct": 1,
-    "incorrect": 0
+    "correct": 3,
+    "incorrect": 1
   },
   {
     "id": "1772700000005",
@@ -1205,7 +883,7 @@
       "months",
       "dates"
     ],
-    "correct": 1,
+    "correct": 3,
     "incorrect": 0
   },
   {
@@ -1217,8 +895,8 @@
       "months",
       "dates"
     ],
-    "correct": 0,
-    "incorrect": 0
+    "correct": 2,
+    "incorrect": 1
   },
   {
     "id": "1772700000007",
@@ -1229,7 +907,7 @@
       "months",
       "dates"
     ],
-    "correct": 2,
+    "correct": 3,
     "incorrect": 1
   },
   {
@@ -1241,7 +919,7 @@
       "months",
       "dates"
     ],
-    "correct": 0,
+    "correct": 1,
     "incorrect": 0
   },
   {
@@ -1253,7 +931,7 @@
       "months",
       "dates"
     ],
-    "correct": 0,
+    "correct": 2,
     "incorrect": 0
   },
   {
@@ -1265,7 +943,7 @@
       "months",
       "dates"
     ],
-    "correct": 0,
+    "correct": 1,
     "incorrect": 0
   },
   {
@@ -1277,7 +955,7 @@
       "months",
       "dates"
     ],
-    "correct": 0,
+    "correct": 2,
     "incorrect": 0
   },
   {
@@ -1289,7 +967,7 @@
       "months",
       "dates"
     ],
-    "correct": 1,
+    "correct": 2,
     "incorrect": 0
   },
   {
@@ -1301,7 +979,7 @@
       "months",
       "dates"
     ],
-    "correct": 0,
+    "correct": 1,
     "incorrect": 0
   },
   {
@@ -1312,7 +990,7 @@
     "categories": [
       "restaurant"
     ],
-    "correct": 1,
+    "correct": 2,
     "incorrect": 1
   },
   {
@@ -1324,7 +1002,7 @@
       "dates",
       "time"
     ],
-    "correct": 2,
+    "correct": 3,
     "incorrect": 0
   },
   {
@@ -1645,7 +1323,7 @@
     "notes": "",
     "categories": [],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 1
   },
   {
     "id": "177335647789568f7v348q",
@@ -1866,7 +1544,7 @@
       "time",
       "open-close"
     ],
-    "correct": 2,
+    "correct": 3,
     "incorrect": 0
   },
   {
@@ -1877,7 +1555,7 @@
     "categories": [
       "open-close"
     ],
-    "correct": 1,
+    "correct": 2,
     "incorrect": 0
   },
   {
@@ -1900,8 +1578,8 @@
       "time",
       "open-close"
     ],
-    "correct": 1,
-    "incorrect": 1
+    "correct": 2,
+    "incorrect": 2
   },
   {
     "id": "1741824000020",
@@ -1911,8 +1589,8 @@
     "categories": [
       "open-close"
     ],
-    "correct": 0,
-    "incorrect": 0
+    "correct": 1,
+    "incorrect": 2
   },
   {
     "id": "1741824000021",
@@ -1923,19 +1601,19 @@
       "time",
       "open-close"
     ],
-    "correct": 1,
-    "incorrect": 2
+    "correct": 2,
+    "incorrect": 3
   },
   {
     "id": "1741824000022",
     "question": "what can one see here?",
     "answer": "cosa si può vedere qui?",
-    "notes": "",
+    "notes": "[pwoh]",
     "categories": [
       "time",
       "open-close"
     ],
-    "correct": 1,
+    "correct": 2,
     "incorrect": 2
   },
   {
@@ -1947,7 +1625,7 @@
       "time",
       "open-close"
     ],
-    "correct": 1,
+    "correct": 2,
     "incorrect": 0
   },
   {
@@ -1959,7 +1637,7 @@
       "time",
       "open-close"
     ],
-    "correct": 1,
+    "correct": 2,
     "incorrect": 1
   },
   {
@@ -1971,8 +1649,8 @@
       "time",
       "open-close"
     ],
-    "correct": 1,
-    "incorrect": 0
+    "correct": 2,
+    "incorrect": 2
   },
   {
     "id": "1741824000026",
@@ -1983,8 +1661,8 @@
       "time",
       "open-close"
     ],
-    "correct": 1,
-    "incorrect": 2
+    "correct": 2,
+    "incorrect": 3
   },
   {
     "id": "1773753767208jj5m866dz",
@@ -2075,6 +1753,182 @@
     "categories": [
       "train",
       "travel"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1773754100001",
+    "question": "ticket",
+    "answer": "il biglietto",
+    "notes": "eel bee-LYEH-toh",
+    "categories": [
+      "travel"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1773754100002",
+    "question": "ticket office",
+    "answer": "la biglietteria",
+    "notes": "lah bee-lyet-teh-REE-ah",
+    "categories": [
+      "travel"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1773754100003",
+    "question": "train station",
+    "answer": "la stazione (ferroviaria)",
+    "notes": "lah stah-TSYOH-neh (fehr-roh-VYAH-ree-ah)",
+    "categories": [
+      "travel"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1773754100004",
+    "question": "timetable / schedule",
+    "answer": "l'orario",
+    "notes": "oh-RAH-ree-oh",
+    "categories": [
+      "travel"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1773754100005",
+    "question": "departure",
+    "answer": "la partenza",
+    "notes": "lah par-TEN-tsa",
+    "categories": [
+      "travel"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1773754100006",
+    "question": "connection",
+    "answer": "la coincidenza",
+    "notes": "lah koyn-chee-DEN-tsa",
+    "categories": [
+      "travel"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1773754100007",
+    "question": "direct",
+    "answer": "diretto",
+    "notes": "dee-REH-toh",
+    "categories": [
+      "travel"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1773754100008",
+    "question": "one-way",
+    "answer": "andata",
+    "notes": "ahn-DAH-tah",
+    "categories": [
+      "travel"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1773754100009",
+    "question": "round trip",
+    "answer": "andata e ritorno",
+    "notes": "ahn-DAH-tah eh ree-TOHR-noh",
+    "categories": [
+      "travel"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1773754100010",
+    "question": "reservation",
+    "answer": "la prenotazione",
+    "notes": "lah preh-noh-tah-TSYOH-neh",
+    "categories": [
+      "travel"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1773754100011",
+    "question": "seat",
+    "answer": "il posto",
+    "notes": "eel POH-stoh",
+    "categories": [
+      "travel"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1773754100012",
+    "question": "carriage",
+    "answer": "il vagone",
+    "notes": "eel vah-GOH-neh",
+    "categories": [
+      "travel"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1773754100013",
+    "question": "a ticket to…",
+    "answer": "un biglietto per…",
+    "notes": "oon bee-LYEH-toh pehr",
+    "categories": [
+      "travel"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1773754100014",
+    "question": "what time does it leave?",
+    "answer": "a che ora parte?",
+    "notes": "ah keh OH-rah PAR-teh",
+    "categories": [
+      "travel"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1773754100015",
+    "question": "what time does it arrive?",
+    "answer": "a che ora arriva?",
+    "notes": "ah keh OH-rah ah-REE-va",
+    "categories": [
+      "travel"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1773867810243dpl9t2a1v",
+    "question": "now",
+    "answer": "adesso",
+    "notes": "",
+    "categories": [
+      "time"
     ],
     "correct": 0,
     "incorrect": 0
