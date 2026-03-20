@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partitive Article Practice - Italian Flashcards</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="article-page">
+
+<div class="container">
+    <div class="main-content">
+        <div class="card">
+    <button class="btn-back" onclick="window.location.href='index.html'">← Back to Drills</button>
+    
+    <div class="stats">
+        <div class="stat-item">
+            <div class="stat-value" id="remaining-count">0</div>
+            <div class="stat-label">Remaining</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-value" id="correct-count" style="color: var(--success);">0</div>
+            <div class="stat-label">Correct</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-value" id="incorrect-count" style="color: var(--error);">0</div>
+            <div class="stat-label">Incorrect</div>
+        </div>
+    </div>
+
+    <div id="display-word" class="word">Loading...</div>
+    
+    <input type="text" id="article-input" placeholder="you got this..." autocomplete="off">
+    <br>
+    <button class="btn-submit" onclick="checkAnswer()">Submit</button>
+    
+    <div id="feedback"></div>
+
+    <hr>
+
+    <div class="info-area">
+        <div id="extra-info" class="info-text"></div>
+    </div>
+
+    <div class="btn-group">
+        <button class="btn-hint" onclick="showGender()">Show Gender</button>
+        <button class="btn-hint" onclick="showMeaning()">Show Meaning</button>
+        <button class="btn-hint" onclick="showAnswer()">Show Answer</button>
+        <button class="btn-hint" onclick="pronounceWord()">🔊 Pronounce</button>
+    </div>
+</div>
+    </div>
+
+    <div class="sidebar">
+        <h3>Completed Words</h3>
+        <div id="sidebar-list"></div>
+    </div>
+</div>
+
+<script>
+    let vocabulary = [];
+    let currentWordIndex = 0;
+    let deck = [];
+    let correctCount = 0;
+    let incorrectCount = 0;
+    let completedWords = [];
+
+    // 1. Fetch the JSON data from your local server
+    async function loadVocabulary() {
+        const display = document.getElementById('display-word');
+        try {
+            const response = await fetch('vocabulary.json');
+            if (!response.ok) throw new Error("File not found");
+            
+            vocabulary = await response.json();
+            if (vocabulary.length === 0) throw new Error("JSON is empty");
+
+            // Create deck with both singular and plural forms
+            let expandedDeck = [];
+            vocabulary.forEach(word => {
+                // Add singular form
+                expandedDeck.push({
+                    ...word,
+                    displayWord: word.word,
+                    number: 'singular',
+                    partitiveArticle: calculatePartitiveArticle(word.word, word.gender, 'singular')
+                });
+                // Add plural form
+                expandedDeck.push({
+                    ...word,
+                    displayWord: word.PluralForm,
+                    number: 'plural',
+                    partitiveArticle: calculatePartitiveArticle(word.PluralForm, word.gender, 'plural')
+                });
+            });
+
+            // Shuffle all words first
+            const shuffled = shuffle(expandedDeck);
+            // Take only 50 random words (mix of singular and plural)
+            deck = shuffled.slice(0, 50);
+            // Shuffle the 50 selected words again
+            deck = shuffle(deck);
+            
+            updateStats();
+            displayWord();
+        } catch (error) {
+            display.style.fontSize = "1.2rem";
+            display.innerHTML = `<span style="color:red">Error: Make sure vocabulary.json has data!</span>`;
+            console.error("Load error:", error);
+        }
+    }
+
+    // Calculate the correct partitive article based on the rules
+    function calculatePartitiveArticle(word, gender, number) {
+        const firstChar = word.toLowerCase().charAt(0);
+        const firstTwoChars = word.toLowerCase().substring(0, 2);
+        
+        // Check for vowels
+        const isVowel = 'aeiou'.includes(firstChar);
+        
+        if (gender === "Masculine") {
+            if (number === "singular") {
+                // dell' if starts with vowel
+                if (isVowel) {
+                    return "dell'";
+                }
+                // dello if starts with z, s+consonant, gn, ps, pn, x, y
+                if (firstChar === 'z' || firstChar === 'x' || firstChar === 'y') {
+                    return "dello";
+                }
+                if (firstTwoChars === 'gn' || firstTwoChars === 'ps' || firstTwoChars === 'pn') {
+                    return "dello";
+                }
+                // s + consonant
+                if (firstChar === 's' && word.length > 1 && !'aeiou'.includes(word.toLowerCase().charAt(1))) {
+                    return "dello";
+                }
+                // del for all other consonants
+                return "del";
+            } else {
+                // Plural masculine
+                // degli if starts with vowel, z, s+consonant, gn, ps, pn, x, y
+                if (isVowel) {
+                    return "degli";
+                }
+                if (firstChar === 'z' || firstChar === 'x' || firstChar === 'y') {
+                    return "degli";
+                }
+                if (firstTwoChars === 'gn' || firstTwoChars === 'ps' || firstTwoChars === 'pn') {
+                    return "degli";
+                }
+                // s + consonant
+                if (firstChar === 's' && word.length > 1 && !'aeiou'.includes(word.toLowerCase().charAt(1))) {
+                    return "degli";
+                }
+                // dei for all other consonants
+                return "dei";
+            }
+        } else {
+            // Feminine
+            if (number === "singular") {
+                // dell' if starts with vowel
+                if (isVowel) {
+                    return "dell'";
+                }
+                // della if starts with consonant
+                return "della";
+            } else {
+                // Plural feminine: always delle
+                return "delle";
+            }
+        }
+    }
+
+    // 2. Randomize the word list using Fisher-Yates algorithm
+    function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
+
+    // 3. Update stats display
+    function updateStats() {
+        document.getElementById('remaining-count').innerText = deck.length;
+        document.getElementById('correct-count').innerText = correctCount;
+        document.getElementById('incorrect-count').innerText = incorrectCount;
+    }
+
+    // 4. Update the UI with a new word
+    function displayWord(keepMeaning = false) {
+        // Check if game is over
+        if (deck.length === 0) {
+            document.getElementById('display-word').innerHTML = '<div class="game-over">🎉 Game Over! 🎉</div>';
+            document.getElementById('article-input').style.display = 'none';
+            document.querySelector('.btn-submit').style.display = 'none';
+            document.querySelector('.btn-group').style.display = 'none';
+            document.getElementById('extra-info').innerText = `You completed all ${correctCount} words!`;
+            return;
+        }
+        
+        currentWordIndex = 0; // Always show first word in remaining deck
+        document.getElementById('display-word').innerText = deck[currentWordIndex].displayWord.toLowerCase();
+        if (!keepMeaning) {
+            document.getElementById('extra-info').innerText = "";
+        }
+        document.getElementById('feedback').innerText = "";
+        document.getElementById('article-input').value = "";
+        document.getElementById('article-input').focus();
+    }
+
+    function showGender() {
+        document.getElementById('extra-info').innerText = "Gender: " + deck[currentWordIndex].gender + ", Number: " + deck[currentWordIndex].number;
+    }
+
+    function showMeaning() {
+        const numberText = deck[currentWordIndex].number === 'singular' ? 'the' : 'the (plural)';
+        document.getElementById('extra-info').innerText = numberText + " " + deck[currentWordIndex].meaning.toLowerCase();
+    }
+
+    function showAnswer() {
+        document.getElementById('extra-info').innerText = "Answer: " + deck[currentWordIndex].partitiveArticle;
+    }
+
+    function pronounceWord() {
+        const textToSpeak = deck[currentWordIndex].partitiveArticle + " " + deck[currentWordIndex].displayWord.toLowerCase();
+        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+        utterance.lang = 'it-IT';
+        utterance.rate = 0.8;
+        speechSynthesis.speak(utterance);
+    }
+
+    // Add word to sidebar
+    function addToSidebar(wordObj) {
+        completedWords.push(wordObj);
+        const sidebarList = document.getElementById('sidebar-list');
+        const item = document.createElement('div');
+        item.className = 'sidebar-item';
+        
+        const text = document.createElement('span');
+        text.className = 'sidebar-text';
+        text.innerText = wordObj.displayWord.toLowerCase() + ' (' + wordObj.meaning.toLowerCase() + ')';
+        
+        const playBtn = document.createElement('button');
+        playBtn.className = 'btn-play';
+        playBtn.innerText = '🔊';
+        playBtn.onclick = () => {
+            const utterance = new SpeechSynthesisUtterance(wordObj.partitiveArticle + ' ' + wordObj.displayWord.toLowerCase());
+            utterance.lang = 'it-IT';
+            utterance.rate = 0.8;
+            speechSynthesis.speak(utterance);
+        };
+        
+        item.appendChild(text);
+        item.appendChild(playBtn);
+        sidebarList.prepend(item);
+    }
+
+    // 5. Validate the user input
+    function checkAnswer() {
+        const inputField = document.getElementById('article-input');
+        const feedback = document.getElementById('feedback');
+        const extraInfo = document.getElementById('extra-info');
+        const input = inputField.value.trim().toLowerCase();
+        const correct = deck[currentWordIndex].partitiveArticle.toLowerCase();
+        const word = deck[currentWordIndex].displayWord.toLowerCase();
+        const correctWithNoun = correct + " " + word;
+        
+        // Accept either just the article or article + noun
+        if (input === correct || input === correctWithNoun) {
+            feedback.style.color = "var(--success)";
+            feedback.innerText = "Bravo! Correct.";
+            
+            // Update counters
+            correctCount++;
+            
+            // Add to sidebar
+            addToSidebar(deck[currentWordIndex]);
+            
+            // Play pronunciation using Web Speech API
+            const textToSpeak = deck[currentWordIndex].partitiveArticle + " " + deck[currentWordIndex].displayWord.toLowerCase();
+            const utterance = new SpeechSynthesisUtterance(textToSpeak);
+            utterance.lang = 'it-IT';
+            utterance.rate = 0.8; // Slightly slower for learning
+            speechSynthesis.speak(utterance);
+            
+            // Remove this word from the deck
+            deck.splice(currentWordIndex, 1);
+            
+            // Update stats
+            updateStats();
+            
+            // Move to next word immediately but keep meaning visible
+            displayWord(true);
+            
+            // Clear the meaning after 3 seconds
+            setTimeout(() => {
+                extraInfo.innerText = "";
+            }, 3000);
+        } else {
+            feedback.style.color = "var(--error)";
+            feedback.innerText = "Try again!";
+            incorrectCount++;
+            updateStats();
+        }
+    }
+
+    // 6. Allow pressing "Enter" to submit
+    document.getElementById('article-input').addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') {
+            checkAnswer();
+        }
+    });
+
+    // Start the app
+    loadVocabulary();
+</script>
+
+</body>
+</html>

@@ -1932,5 +1932,67 @@
     ],
     "correct": 0,
     "incorrect": 0
+  },
+  {
+    "id": "1773949691318kvwrss4qy",
+    "question": "therefor/so",
+    "answer": "Quindi",
+    "notes": "",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1774022288285l4jkx6k44",
+    "question": "I am going to take a shower",
+    "answer": "vado a fare la doccia",
+    "notes": "DOH-chah",
+    "categories": [
+      "bathroom"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1774022354575mg26x7g3p",
+    "question": "can i take a shower",
+    "answer": "posso fare la doccia",
+    "notes": "",
+    "categories": [
+      "bathroom"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1774022398643gah1dq63u",
+    "question": "you can drive",
+    "answer": "Tu puoi guidare",
+    "notes": "",
+    "categories": [
+      "travel"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "17740224280023oy9w2ifi",
+    "question": "I'm going to drive",
+    "answer": "Vado a guidare",
+    "notes": "",
+    "categories": [
+      "travel"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1774023267830ouhjo1qmw",
+    "question": "I don't understand, could you repeat?",
+    "answer": "Scusa, non capisco. Come",
+    "notes": "",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0
   }
 ]
