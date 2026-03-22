@@ -1,58 +1,5 @@
 [
   {
-    "id": "essere",
-    "infinitive": "essere",
-    "english": "to be",
-    "pronunciation": "(EH-seh-reh)",
-    "package": 1,
-    "forms": [
-      {
-        "subject": "io",
-        "italian": "sono",
-        "english": "I am",
-        "pronunciation": "SOH-noh",
-        "example": "Io sono italiano. (I am Italian.)"
-      },
-      {
-        "subject": "tu",
-        "italian": "sei",
-        "english": "you are (informal)",
-        "pronunciation": "SEY",
-        "example": "Tu sei molto gentile. (You are very kind.)"
-      },
-      {
-        "subject": "lui/lei",
-        "italian": "è",
-        "english": "he/she is",
-        "pronunciation": "EH",
-        "example": "Lei è una dottoressa. (She is a doctor.)"
-      },
-      {
-        "subject": "noi",
-        "italian": "siamo",
-        "english": "we are",
-        "pronunciation": "SYAH-moh",
-        "example": "Noi siamo felici. (We are happy.)"
-      },
-      {
-        "subject": "voi",
-        "italian": "siete",
-        "english": "you are (plural)",
-        "pronunciation": "SYEH-teh",
-        "example": "Voi siete studenti. (You are students.)"
-      },
-      {
-        "subject": "loro",
-        "italian": "sono",
-        "english": "they are",
-        "pronunciation": "SOH-noh",
-        "example": "Loro sono amici. (They are friends.)"
-      }
-    ],
-    "infinitive_correct": 1,
-    "infinitive_incorrect": 0
-  },
-  {
     "id": "avere",
     "infinitive": "avere",
     "english": "to have",
