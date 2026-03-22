@@ -43,7 +43,11 @@
                     <div class="flashcard-content" id="verbItalian"></div>
                     <div class="pronunciation-note" id="verbPronunciation"></div>
                     <div class="example-sentence" id="exampleSentence"></div>
-                    <button id="pronounceBtn" class="btn-play-large">🔊 Pronounce</button>
+                    <div class="card-actions">
+                        <button id="copyBtn" class="btn-copy">📋 Copy</button>
+                        <button id="pronounceBtn" class="btn-play-large">🔊 Pronounce</button>
+                    </div>
+                    <div class="infinitive-note" id="verbInfinitive"></div>
                 </div>
             </div>
         </div>
@@ -88,6 +92,7 @@
     const verbCard = document.getElementById('verbCard');
     const verbEnglishEl = document.getElementById('verbEnglish');
     const verbItalianEl = document.getElementById('verbItalian');
+    const verbInfinitiveEl = document.getElementById('verbInfinitive');
     const verbPronunciationEl = document.getElementById('verbPronunciation');
     const exampleSentenceEl = document.getElementById('exampleSentence');
     const totalVerbsEl = document.getElementById('totalVerbs');
@@ -96,6 +101,7 @@
     const nextVerbBtn = document.getElementById('nextVerbBtn');
     const shuffleVerbsBtn = document.getElementById('shuffleVerbsBtn');
     const pronounceBtn = document.getElementById('pronounceBtn');
+    const copyBtn = document.getElementById('copyBtn');
     const correctBtn = document.getElementById('correctBtn');
     const incorrectBtn = document.getElementById('incorrectBtn');
 
@@ -137,6 +143,9 @@
         
         verbs.forEach(verb => {
             if (Array.isArray(verb.forms)) {
+                // Get all the Italian forms from this verb
+                const allForms = verb.forms.map(f => f.italian).join(', ');
+                
                 verb.forms.forEach(form => {
                     cards.push({
                         english: form.english || form.subject,  // e.g., "I am"
@@ -144,7 +153,8 @@
                         pronunciation: form.pronunciation,
                         example: form.example,  // example sentence
                         package: verb.package,
-                        infinitive: verb.infinitive
+                        infinitive: verb.infinitive,
+                        allForms: allForms  // e.g., "sono, sei, è, siamo, siete, sono"
                     });
                 });
             }
@@ -202,6 +212,10 @@
             exampleSentenceEl.textContent = '';
             exampleSentenceEl.style.display = 'none';
         }
+        
+        verbInfinitiveEl.textContent = card.infinitive 
+            ? `${card.infinitive} (${card.allForms})`
+            : '';
 
         if (isFlipped) {
             verbCard.classList.remove('flipped');
@@ -257,8 +271,36 @@
         pronounceCurrentCard();
     });
 
+    copyBtn.addEventListener('click', async (e) => {
+        e.stopPropagation();
+        const card = cards[currentIndex];
+        if (!card || !card.italian) return;
+
+        try {
+            await navigator.clipboard.writeText(card.italian);
+            // Visual feedback
+            const originalText = copyBtn.innerHTML;
+            copyBtn.innerHTML = '✓ Copied!';
+            copyBtn.style.background = 'var(--success)';
+            
+            setTimeout(() => {
+                copyBtn.innerHTML = originalText;
+                copyBtn.style.background = '';
+            }, 1500);
+        } catch (err) {
+            console.error('Failed to copy:', err);
+            alert('Failed to copy to clipboard');
+        }
+    });
+
     correctBtn.addEventListener('click', () => {
         if (cards.length === 0) return;
+        
+        // Flip card to front first if it's currently flipped
+        if (isFlipped) {
+            verbCard.classList.remove('flipped');
+            isFlipped = false;
+        }
         
         // Remove the current card from rotation
         cards.splice(currentIndex, 1);
@@ -281,17 +323,28 @@
             currentIndex = cards.length - 1;
         }
         
-        showCard(currentIndex);
+        // Wait a brief moment for flip animation, then show next card
+        setTimeout(() => {
+            showCard(currentIndex);
+        }, 100);
     });
 
     incorrectBtn.addEventListener('click', () => {
-        // Just move to the next card, keeping this one in rotation
-        if (currentIndex < cards.length - 1) {
-            showCard(currentIndex + 1);
-        } else {
-            // If at the end, wrap to beginning
-            showCard(0);
+        // Flip card to front first if it's currently flipped
+        if (isFlipped) {
+            verbCard.classList.remove('flipped');
+            isFlipped = false;
         }
+        
+        // Wait a brief moment for flip animation, then move to next card
+        setTimeout(() => {
+            if (currentIndex < cards.length - 1) {
+                showCard(currentIndex + 1);
+            } else {
+                // If at the end, wrap to beginning
+                showCard(0);
+            }
+        }, 100);
     });
 
     function pronounceCurrentCard() {

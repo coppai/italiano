@@ -478,6 +478,45 @@ body.article-page {
     opacity: 0.8;
 }
 
+.btn-play-large {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-play-large:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+.btn-copy {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background: var(--secondary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-copy:hover {
+    background: #1a252f;
+    transform: translateY(-2px);
+}
+
+.card-actions {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
 .word { 
     font-size: 3rem; 
     margin-bottom: 1.5rem; 
@@ -816,6 +855,16 @@ body.article-page {
     margin-top: 0.5rem;
     font-size: 0.85rem;
     opacity: 0.8;
+}
+
+.infinitive-note {
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    font-size: 0.85rem;
+    opacity: 0.75;
+    color: #34495e;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    line-height: 1.5;
 }
 
 .example-sentence {
