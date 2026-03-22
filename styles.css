@@ -109,6 +109,41 @@ button:active {
     box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
 }
 
+.btn-correct {
+    background: var(--success);
+    color: white;
+    font-size: 1.1rem;
+    padding: 0.875rem 2rem;
+    min-width: 140px;
+}
+
+.btn-correct:hover:not(:disabled) {
+    background: #229954;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(39, 174, 96, 0.3);
+}
+
+.btn-incorrect {
+    background: var(--error);
+    color: white;
+    font-size: 1.1rem;
+    padding: 0.875rem 2rem;
+    min-width: 140px;
+}
+
+.btn-incorrect:hover:not(:disabled) {
+    background: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+}
+
+.answer-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 1.5rem 0;
+}
+
 .btn-back { 
     background: var(--secondary); 
     color: white; 
@@ -238,6 +273,28 @@ hr {
 
 .no-cards a:hover {
     background: #2980b9;
+}
+
+.completion-message {
+    text-align: center;
+    padding: 3rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    max-width: 500px;
+    margin: 2rem auto;
+}
+
+.completion-message h2 {
+    color: var(--success);
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.completion-message p {
+    color: var(--secondary);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
 }
 
 /* Message */
@@ -753,6 +810,22 @@ body.article-page {
     margin-top: 0.75rem;
     font-size: 0.9rem;
     opacity: 0.95;
+}
+
+.pronunciation-note {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+.example-sentence {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-style: italic;
+    line-height: 1.5;
 }
 
 .verbs-page .flashcard-back {

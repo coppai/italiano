@@ -22,7 +22,7 @@
 
     <div id="verbArea" style="display: none;">
         <div class="progress">
-            Verb <span id="currentVerb">1</span> / <span id="totalVerbs">0</span>
+            <span id="totalVerbs">0</span> cards remaining
         </div>
 
         <div class="filter-section">
@@ -35,39 +35,29 @@
         <div class="flashcard-container">
             <div class="flashcard" id="verbCard">
                 <div class="flashcard-face flashcard-front">
-                    <div class="flashcard-label">English Verb</div>
+                    <div class="flashcard-label">English</div>
                     <div class="flashcard-content" id="verbEnglish"></div>
-                    <div class="verb-pronoun-list">
-                        <div>I</div>
-                        <div>you</div>
-                        <div>he/she</div>
-                        <div>we</div>
-                        <div>you (pl)</div>
-                        <div>they</div>
-                    </div>
                 </div>
                 <div class="flashcard-face flashcard-back">
-                    <div class="flashcard-label">Present Tense Conjugation</div>
-                    <div class="verb-meta" id="verbTitle"></div>
-                    <div class="verb-table-wrapper">
-                        <table class="verb-table">
-                            <thead>
-                                <tr>
-                                    <th>Subject</th>
-                                    <th>Italian</th>
-                                    <th>Pronunciation</th>
-                                    <th></th>
-                                </tr>
-                            </thead>
-                            <tbody id="verbTableBody"></tbody>
-                        </table>
-                    </div>
-                    <div class="verb-pronunciation-line" id="verbPronunciation"></div>
+                    <div class="flashcard-label">Italian</div>
+                    <div class="flashcard-content" id="verbItalian"></div>
+                    <div class="pronunciation-note" id="verbPronunciation"></div>
+                    <div class="example-sentence" id="exampleSentence"></div>
+                    <button id="pronounceBtn" class="btn-play-large">🔊 Pronounce</button>
                 </div>
             </div>
         </div>
 
         <div class="tap-hint">👆 Tap card to flip</div>
+
+        <div class="answer-buttons">
+            <button id="incorrectBtn" class="btn-incorrect">
+                <span>✗ Incorrect</span>
+            </button>
+            <button id="correctBtn" class="btn-correct">
+                <span>✓ Correct</span>
+            </button>
+        </div>
 
         <div class="controls">
             <button id="prevVerbBtn" class="btn-secondary">
@@ -88,8 +78,8 @@
 </div>
 
 <script>
-    let verbs = [];
-    let allVerbs = [];
+    let cards = [];  // Array of individual verb form cards
+    let allCards = [];
     let currentIndex = 0;
     let isFlipped = false;
 
@@ -97,15 +87,17 @@
     const noVerbs = document.getElementById('noVerbs');
     const verbCard = document.getElementById('verbCard');
     const verbEnglishEl = document.getElementById('verbEnglish');
-    const verbTitleEl = document.getElementById('verbTitle');
+    const verbItalianEl = document.getElementById('verbItalian');
     const verbPronunciationEl = document.getElementById('verbPronunciation');
-    const verbTableBody = document.getElementById('verbTableBody');
-    const currentVerbEl = document.getElementById('currentVerb');
+    const exampleSentenceEl = document.getElementById('exampleSentence');
     const totalVerbsEl = document.getElementById('totalVerbs');
     const packageSelect = document.getElementById('packageSelect');
     const prevVerbBtn = document.getElementById('prevVerbBtn');
     const nextVerbBtn = document.getElementById('nextVerbBtn');
     const shuffleVerbsBtn = document.getElementById('shuffleVerbsBtn');
+    const pronounceBtn = document.getElementById('pronounceBtn');
+    const correctBtn = document.getElementById('correctBtn');
+    const incorrectBtn = document.getElementById('incorrectBtn');
 
     async function loadVerbs() {
         try {
@@ -113,26 +105,26 @@
             if (!response.ok) {
                 throw new Error('verbs.json not found');
             }
-            verbs = await response.json();
+            const verbs = await response.json();
 
             if (!Array.isArray(verbs) || verbs.length === 0) {
                 throw new Error('verbs.json is empty or invalid');
             }
 
-            // Keep a copy of the full verb list so we can select subsets
-            allVerbs = verbs.slice();
-
+            // Convert verb data into individual cards (one per conjugation form)
+            allCards = createCards(verbs);
+            
             // Populate package dropdown based on package tags in the data
-            populatePackages();
+            populatePackages(verbs);
 
-            // Start with all verbs as the active deck
-            verbs = allVerbs.slice();
-            shuffleVerbs();
+            // Start with all cards as the active deck
+            cards = allCards.slice();
+            shuffleCards();
 
-            totalVerbsEl.textContent = verbs.length;
+            totalVerbsEl.textContent = cards.length;
             noVerbs.style.display = 'none';
             verbArea.style.display = 'block';
-            showVerb(0);
+            showCard(0);
         } catch (err) {
             console.error('Error loading verbs:', err);
             noVerbs.style.display = 'block';
@@ -140,19 +132,40 @@
         }
     }
 
-    function shuffleVerbs() {
-        for (let i = verbs.length - 1; i > 0; i--) {
+    function createCards(verbs) {
+        const cards = [];
+        
+        verbs.forEach(verb => {
+            if (Array.isArray(verb.forms)) {
+                verb.forms.forEach(form => {
+                    cards.push({
+                        english: form.english || form.subject,  // e.g., "I am"
+                        italian: form.italian,  // e.g., "sono"
+                        pronunciation: form.pronunciation,
+                        example: form.example,  // example sentence
+                        package: verb.package,
+                        infinitive: verb.infinitive
+                    });
+                });
+            }
+        });
+        
+        return cards;
+    }
+
+    function shuffleCards() {
+        for (let i = cards.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
-            [verbs[i], verbs[j]] = [verbs[j], verbs[i]];
+            [cards[i], cards[j]] = [cards[j], cards[i]];
         }
         currentIndex = 0;
     }
 
-    function populatePackages() {
-        if (!Array.isArray(allVerbs) || allVerbs.length === 0) return;
+    function populatePackages(verbs) {
+        if (!Array.isArray(verbs) || verbs.length === 0) return;
 
         const packages = new Set();
-        allVerbs.forEach(v => {
+        verbs.forEach(v => {
             if (typeof v.package === 'number') {
                 packages.add(v.package);
             }
@@ -169,57 +182,26 @@
         });
     }
 
-    function showVerb(index) {
-        if (verbs.length === 0) return;
+    function showCard(index) {
+        if (cards.length === 0) return;
 
         currentIndex = index;
-        const verb = verbs[currentIndex];
+        const card = cards[currentIndex];
 
-        verbEnglishEl.textContent = verb.english || '';
-
-        verbTitleEl.textContent = verb.infinitive && verb.english
-            ? `${verb.infinitive} → ${verb.english}`
-            : verb.infinitive || '';
-
-        // Build table rows
-        verbTableBody.innerHTML = '';
-        if (Array.isArray(verb.forms)) {
-            verb.forms.forEach(form => {
-                const tr = document.createElement('tr');
-
-                const tdSubject = document.createElement('td');
-                tdSubject.textContent = form.subject || '';
-                tdSubject.className = 'verb-table-subject';
-
-                const tdItalian = document.createElement('td');
-                tdItalian.textContent = form.italian || '';
-
-                const tdPronounceText = document.createElement('td');
-                tdPronounceText.textContent = form.pronunciation || '';
-
-                const tdPlay = document.createElement('td');
-                const playBtn = document.createElement('button');
-                playBtn.className = 'btn-play';
-                playBtn.textContent = '🔊';
-                playBtn.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    pronounceForm(verb, form);
-                });
-                tdPlay.appendChild(playBtn);
-
-                tr.appendChild(tdSubject);
-                tr.appendChild(tdItalian);
-                tr.appendChild(tdPronounceText);
-                tr.appendChild(tdPlay);
-                verbTableBody.appendChild(tr);
-            });
-        }
-
-        verbPronunciationEl.textContent = verb.pronunciation
-            ? `Pronunciation: ${verb.pronunciation}`
+        verbEnglishEl.textContent = card.english || '';
+        verbItalianEl.textContent = card.italian || '';
+        
+        verbPronunciationEl.textContent = card.pronunciation
+            ? `Pronunciation: ${card.pronunciation}`
             : '';
-
-        currentVerbEl.textContent = currentIndex + 1;
+        
+        if (card.example) {
+            exampleSentenceEl.textContent = card.example;
+            exampleSentenceEl.style.display = 'block';
+        } else {
+            exampleSentenceEl.textContent = '';
+            exampleSentenceEl.style.display = 'none';
+        }
 
         if (isFlipped) {
             verbCard.classList.remove('flipped');
@@ -227,7 +209,7 @@
         }
 
         prevVerbBtn.disabled = currentIndex === 0;
-        nextVerbBtn.disabled = currentIndex === verbs.length - 1;
+        nextVerbBtn.disabled = currentIndex === cards.length - 1;
     }
 
     verbCard.addEventListener('click', (e) => {
@@ -238,47 +220,90 @@
 
     prevVerbBtn.addEventListener('click', () => {
         if (currentIndex > 0) {
-            showVerb(currentIndex - 1);
+            showCard(currentIndex - 1);
         }
     });
 
     nextVerbBtn.addEventListener('click', () => {
-        if (currentIndex < verbs.length - 1) {
-            showVerb(currentIndex + 1);
+        if (currentIndex < cards.length - 1) {
+            showCard(currentIndex + 1);
         }
     });
 
     shuffleVerbsBtn.addEventListener('click', () => {
-        shuffleVerbs();
-        showVerb(0);
+        shuffleCards();
+        showCard(0);
     });
 
     packageSelect.addEventListener('change', (e) => {
         const value = e.target.value;
 
         if (value === 'all') {
-            verbs = allVerbs.slice();
+            cards = allCards.slice();
         } else {
             const pkg = parseInt(value, 10);
-            verbs = allVerbs.filter(v => v.package === pkg);
+            cards = allCards.filter(c => c.package === pkg);
         }
 
-        if (verbs.length === 0) return;
+        if (cards.length === 0) return;
 
         currentIndex = 0;
-        totalVerbsEl.textContent = verbs.length;
-        showVerb(0);
+        totalVerbsEl.textContent = cards.length;
+        showCard(0);
     });
 
-    function pronounceForm(verb, form) {
+    pronounceBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        pronounceCurrentCard();
+    });
+
+    correctBtn.addEventListener('click', () => {
+        if (cards.length === 0) return;
+        
+        // Remove the current card from rotation
+        cards.splice(currentIndex, 1);
+        totalVerbsEl.textContent = cards.length;
+        
+        if (cards.length === 0) {
+            // All cards completed!
+            verbArea.innerHTML = `
+                <div class="completion-message">
+                    <h2>🎉 Congratulations!</h2>
+                    <p>You've completed all the cards in this set!</p>
+                    <button onclick="location.reload()" class="btn-primary">Start Over</button>
+                </div>
+            `;
+            return;
+        }
+        
+        // If we removed the last card, go to the previous one
+        if (currentIndex >= cards.length) {
+            currentIndex = cards.length - 1;
+        }
+        
+        showCard(currentIndex);
+    });
+
+    incorrectBtn.addEventListener('click', () => {
+        // Just move to the next card, keeping this one in rotation
+        if (currentIndex < cards.length - 1) {
+            showCard(currentIndex + 1);
+        } else {
+            // If at the end, wrap to beginning
+            showCard(0);
+        }
+    });
+
+    function pronounceCurrentCard() {
         if (!('speechSynthesis' in window)) {
             alert('Text-to-speech is not supported in your browser.');
             return;
         }
 
-        if (!form || !form.italian) return;
-        const textToSpeak = form.italian;
-        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+        const card = cards[currentIndex];
+        if (!card || !card.italian) return;
+        
+        const utterance = new SpeechSynthesisUtterance(card.italian);
         utterance.lang = 'it-IT';
         utterance.rate = 0.9;
         speechSynthesis.speak(utterance);

@@ -10,37 +10,43 @@
         "subject": "io",
         "italian": "sono",
         "english": "I am",
-        "pronunciation": "SOH-noh"
+        "pronunciation": "SOH-noh",
+        "example": "Io sono italiano. (I am Italian.)"
       },
       {
         "subject": "tu",
         "italian": "sei",
         "english": "you are (informal)",
-        "pronunciation": "SEY"
+        "pronunciation": "SEY",
+        "example": "Tu sei molto gentile. (You are very kind.)"
       },
       {
         "subject": "lui/lei",
         "italian": "è",
         "english": "he/she is",
-        "pronunciation": "EH"
+        "pronunciation": "EH",
+        "example": "Lei è una dottoressa. (She is a doctor.)"
       },
       {
         "subject": "noi",
         "italian": "siamo",
         "english": "we are",
-        "pronunciation": "SYAH-moh"
+        "pronunciation": "SYAH-moh",
+        "example": "Noi siamo felici. (We are happy.)"
       },
       {
         "subject": "voi",
         "italian": "siete",
         "english": "you are (plural)",
-        "pronunciation": "SYEH-teh"
+        "pronunciation": "SYEH-teh",
+        "example": "Voi siete studenti. (You are students.)"
       },
       {
         "subject": "loro",
         "italian": "sono",
         "english": "they are",
-        "pronunciation": "SOH-noh"
+        "pronunciation": "SOH-noh",
+        "example": "Loro sono amici. (They are friends.)"
       }
     ],
     "infinitive_correct": 1,
@@ -57,37 +63,43 @@
         "subject": "io",
         "italian": "ho",
         "english": "I have",
-        "pronunciation": "OH"
+        "pronunciation": "OH",
+        "example": "Io ho un cane. (I have a dog.)"
       },
       {
         "subject": "tu",
         "italian": "hai",
         "english": "you have (informal)",
-        "pronunciation": "EYE"
+        "pronunciation": "EYE",
+        "example": "Tu hai una bella casa. (You have a beautiful house.)"
       },
       {
         "subject": "lui/lei",
         "italian": "ha",
         "english": "he/she has",
-        "pronunciation": "AH"
+        "pronunciation": "AH",
+        "example": "Lui ha fame. (He is hungry.)"
       },
       {
         "subject": "noi",
         "italian": "abbiamo",
         "english": "we have",
-        "pronunciation": "ahb-BYAH-moh"
+        "pronunciation": "ahb-BYAH-moh",
+        "example": "Noi abbiamo tempo. (We have time.)"
       },
       {
         "subject": "voi",
         "italian": "avete",
         "english": "you have (plural)",
-        "pronunciation": "ah-VEH-teh"
+        "pronunciation": "ah-VEH-teh",
+        "example": "Voi avete ragione. (You are right.)"
       },
       {
         "subject": "loro",
         "italian": "hanno",
         "english": "they have",
-        "pronunciation": "AHN-noh"
+        "pronunciation": "AHN-noh",
+        "example": "Loro hanno molti amici. (They have many friends.)"
       }
     ],
     "infinitive_correct": 1,
@@ -104,37 +116,43 @@
         "subject": "io",
         "italian": "faccio",
         "english": "I do / I make",
-        "pronunciation": "FAH-choh"
+        "pronunciation": "FAH-choh",
+        "example": "Io faccio colazione. (I have breakfast.)"
       },
       {
         "subject": "tu",
         "italian": "fai",
         "english": "you do (informal)",
-        "pronunciation": "FYE"
+        "pronunciation": "FYE",
+        "example": "Tu fai sport? (Do you do sports?)"
       },
       {
         "subject": "lui/lei",
         "italian": "fa",
         "english": "he/she does",
-        "pronunciation": "FAH"
+        "pronunciation": "FAH",
+        "example": "Lei fa la spesa. (She does the shopping.)"
       },
       {
         "subject": "noi",
         "italian": "facciamo",
         "english": "we do",
-        "pronunciation": "fah-CHYAH-moh"
+        "pronunciation": "fah-CHYAH-moh",
+        "example": "Noi facciamo una pausa. (We take a break.)"
       },
       {
         "subject": "voi",
         "italian": "fate",
         "english": "you do (plural)",
-        "pronunciation": "FAH-teh"
+        "pronunciation": "FAH-teh",
+        "example": "Voi fate i compiti. (You do homework.)"
       },
       {
         "subject": "loro",
         "italian": "fanno",
         "english": "they do",
-        "pronunciation": "FAHN-noh"
+        "pronunciation": "FAHN-noh",
+        "example": "Loro fanno una festa. (They are having a party.)"
       }
     ],
     "infinitive_correct": 1,
@@ -151,37 +169,43 @@
         "subject": "io",
         "italian": "dico",
         "english": "I say",
-        "pronunciation": "DEE-koh"
+        "pronunciation": "DEE-koh",
+        "example": "Io dico la verità. (I say the truth.)"
       },
       {
         "subject": "tu",
         "italian": "dici",
         "english": "you say (informal)",
-        "pronunciation": "DEE-chee"
+        "pronunciation": "DEE-chee",
+        "example": "Tu dici sempre sì. (You always say yes.)"
       },
       {
         "subject": "lui/lei",
         "italian": "dice",
         "english": "he/she says",
-        "pronunciation": "DEE-cheh"
+        "pronunciation": "DEE-cheh",
+        "example": "Lei dice buongiorno. (She says good morning.)"
       },
       {
         "subject": "noi",
         "italian": "diciamo",
         "english": "we say",
-        "pronunciation": "dee-CHYAH-moh"
+        "pronunciation": "dee-CHYAH-moh",
+        "example": "Noi diciamo ciao. (We say hello.)"
       },
       {
         "subject": "voi",
         "italian": "dite",
         "english": "you say (plural)",
-        "pronunciation": "DEE-teh"
+        "pronunciation": "DEE-teh",
+        "example": "Voi dite grazie. (You say thank you.)"
       },
       {
         "subject": "loro",
         "italian": "dicono",
         "english": "they say",
-        "pronunciation": "DEE-koh-noh"
+        "pronunciation": "DEE-koh-noh",
+        "example": "Loro dicono no. (They say no.)"
       }
     ],
     "infinitive_correct": 1,
@@ -198,37 +222,43 @@
         "subject": "io",
         "italian": "posso",
         "english": "I can",
-        "pronunciation": "POHS-soh"
+        "pronunciation": "POHS-soh",
+        "example": "Io posso aiutare. (I can help.)"
       },
       {
         "subject": "tu",
         "italian": "puoi",
         "english": "you can (informal)",
-        "pronunciation": "PWAW-ee"
+        "pronunciation": "PWAW-ee",
+        "example": "Tu puoi venire domani. (You can come tomorrow.)"
       },
       {
         "subject": "lui/lei",
         "italian": "può",
         "english": "he/she can",
-        "pronunciation": "PWOH"
+        "pronunciation": "PWOH",
+        "example": "Lui può parlare italiano. (He can speak Italian.)"
       },
       {
         "subject": "noi",
         "italian": "possiamo",
         "english": "we can",
-        "pronunciation": "pohs-SYAH-moh"
+        "pronunciation": "pohs-SYAH-moh",
+        "example": "Noi possiamo mangiare qui. (We can eat here.)"
       },
       {
         "subject": "voi",
         "italian": "potete",
         "english": "you can (plural)",
-        "pronunciation": "poh-TEH-teh"
+        "pronunciation": "poh-TEH-teh",
+        "example": "Voi potete aspettare. (You can wait.)"
       },
       {
         "subject": "loro",
         "italian": "possono",
         "english": "they can",
-        "pronunciation": "POHS-soh-noh"
+        "pronunciation": "POHS-soh-noh",
+        "example": "Loro possono restare. (They can stay.)"
       }
     ],
     "infinitive_correct": 1,
@@ -245,37 +275,43 @@
         "subject": "io",
         "italian": "vado",
         "english": "I go",
-        "pronunciation": "VAH-doh"
+        "pronunciation": "VAH-doh",
+        "example": "Io vado a scuola. (I go to school.)"
       },
       {
         "subject": "tu",
         "italian": "vai",
         "english": "you go (informal)",
-        "pronunciation": "VYE"
+        "pronunciation": "VYE",
+        "example": "Tu vai al cinema. (You go to the cinema.)"
       },
       {
         "subject": "lui/lei",
         "italian": "va",
         "english": "he/she goes",
-        "pronunciation": "VAH"
+        "pronunciation": "VAH",
+        "example": "Lei va in Italia. (She goes to Italy.)"
       },
       {
         "subject": "noi",
         "italian": "andiamo",
         "english": "we go",
-        "pronunciation": "ahn-DYAH-moh"
+        "pronunciation": "ahn-DYAH-moh",
+        "example": "Noi andiamo a casa. (We go home.)"
       },
       {
         "subject": "voi",
         "italian": "andate",
         "english": "you go (plural)",
-        "pronunciation": "ahn-DAH-teh"
+        "pronunciation": "ahn-DAH-teh",
+        "example": "Voi andate al parco. (You go to the park.)"
       },
       {
         "subject": "loro",
         "italian": "vanno",
         "english": "they go",
-        "pronunciation": "VAHN-noh"
+        "pronunciation": "VAHN-noh",
+        "example": "Loro vanno in vacanza. (They go on vacation.)"
       }
     ],
     "infinitive_correct": 1,
@@ -292,37 +328,43 @@
         "subject": "io",
         "italian": "vedo",
         "english": "I see",
-        "pronunciation": "VEH-doh"
+        "pronunciation": "VEH-doh",
+        "example": "Io vedo il mare. (I see the sea.)"
       },
       {
         "subject": "tu",
         "italian": "vedi",
         "english": "you see (informal)",
-        "pronunciation": "VEH-dee"
+        "pronunciation": "VEH-dee",
+        "example": "Tu vedi la luna. (You see the moon.)"
       },
       {
         "subject": "lui/lei",
         "italian": "vede",
         "english": "he/she sees",
-        "pronunciation": "VEH-deh"
+        "pronunciation": "VEH-deh",
+        "example": "Lei vede un film. (She sees a movie.)"
       },
       {
         "subject": "noi",
         "italian": "vediamo",
         "english": "we see",
-        "pronunciation": "veh-DYAH-moh"
+        "pronunciation": "veh-DYAH-moh",
+        "example": "Noi vediamo le stelle. (We see the stars.)"
       },
       {
         "subject": "voi",
         "italian": "vedete",
         "english": "you see (plural)",
-        "pronunciation": "veh-TEH-teh"
+        "pronunciation": "veh-TEH-teh",
+        "example": "Voi vedete la differenza. (You see the difference.)"
       },
       {
         "subject": "loro",
         "italian": "vedono",
         "english": "they see",
-        "pronunciation": "VEH-doh-noh"
+        "pronunciation": "VEH-doh-noh",
+        "example": "Loro vedono tutto. (They see everything.)"
       }
     ],
     "infinitive_correct": 1,
@@ -339,37 +381,43 @@
         "subject": "io",
         "italian": "do",
         "english": "I give",
-        "pronunciation": "DOH"
+        "pronunciation": "DOH",
+        "example": "Io do un regalo. (I give a gift.)"
       },
       {
         "subject": "tu",
         "italian": "dai",
         "english": "you give (informal)",
-        "pronunciation": "DYE"
+        "pronunciation": "DYE",
+        "example": "Tu dai l'acqua. (You give the water.)"
       },
       {
         "subject": "lui/lei",
         "italian": "dà",
         "english": "he/she gives",
-        "pronunciation": "DAH"
+        "pronunciation": "DAH",
+        "example": "Lei dà una mano. (She gives a hand.)"
       },
       {
         "subject": "noi",
         "italian": "diamo",
         "english": "we give",
-        "pronunciation": "DYAH-moh"
+        "pronunciation": "DYAH-moh",
+        "example": "Noi diamo i soldi. (We give the money.)"
       },
       {
         "subject": "voi",
         "italian": "date",
         "english": "you give (plural)",
-        "pronunciation": "DAH-teh"
+        "pronunciation": "DAH-teh",
+        "example": "Voi date un consiglio. (You give advice.)"
       },
       {
         "subject": "loro",
         "italian": "danno",
         "english": "they give",
-        "pronunciation": "DAHN-noh"
+        "pronunciation": "DAHN-noh",
+        "example": "Loro danno aiuto. (They give help.)"
       }
     ]
   },
@@ -384,37 +432,43 @@
         "subject": "io",
         "italian": "voglio",
         "english": "I want",
-        "pronunciation": "VOHL-lyoh"
+        "pronunciation": "VOHL-lyoh",
+        "example": "Io voglio un caffè. (I want a coffee.)"
       },
       {
         "subject": "tu",
         "italian": "vuoi",
         "english": "you want (informal)",
-        "pronunciation": "VWOY"
+        "pronunciation": "VWOY",
+        "example": "Tu vuoi partire. (You want to leave.)"
       },
       {
         "subject": "lui/lei",
         "italian": "vuole",
         "english": "he/she wants",
-        "pronunciation": "VWAW-leh"
+        "pronunciation": "VWAW-leh",
+        "example": "Lei vuole dormire. (She wants to sleep.)"
       },
       {
         "subject": "noi",
         "italian": "vogliamo",
         "english": "we want",
-        "pronunciation": "vohl-YAH-moh"
+        "pronunciation": "vohl-YAH-moh",
+        "example": "Noi vogliamo mangiare. (We want to eat.)"
       },
       {
         "subject": "voi",
         "italian": "volete",
         "english": "you want (plural)",
-        "pronunciation": "voh-LEH-teh"
+        "pronunciation": "voh-LEH-teh",
+        "example": "Voi volete ballare. (You want to dance.)"
       },
       {
         "subject": "loro",
         "italian": "vogliono",
         "english": "they want",
-        "pronunciation": "VOHL-lyoh-noh"
+        "pronunciation": "VOHL-lyoh-noh",
+        "example": "Loro vogliono viaggiare. (They want to travel.)"
       }
     ],
     "infinitive_correct": 1,
@@ -431,37 +485,43 @@
         "subject": "io",
         "italian": "so",
         "english": "I know",
-        "pronunciation": "SOH"
+        "pronunciation": "SOH",
+        "example": "Io so la risposta. (I know the answer.)"
       },
       {
         "subject": "tu",
         "italian": "sai",
         "english": "you know (informal)",
-        "pronunciation": "SIGH"
+        "pronunciation": "SIGH",
+        "example": "Tu sai dove andare. (You know where to go.)"
       },
       {
         "subject": "lui/lei",
         "italian": "sa",
         "english": "he/she knows",
-        "pronunciation": "SAH"
+        "pronunciation": "SAH",
+        "example": "Lui sa parlare inglese. (He knows how to speak English.)"
       },
       {
         "subject": "noi",
         "italian": "sappiamo",
         "english": "we know",
-        "pronunciation": "sap-PYAH-moh"
+        "pronunciation": "sap-PYAH-moh",
+        "example": "Noi sappiamo la verità. (We know the truth.)"
       },
       {
         "subject": "voi",
         "italian": "sapete",
         "english": "you know (plural)",
-        "pronunciation": "sah-PEH-teh"
+        "pronunciation": "sah-PEH-teh",
+        "example": "Voi sapete tutto. (You know everything.)"
       },
       {
         "subject": "loro",
         "italian": "sanno",
         "english": "they know",
-        "pronunciation": "SAHN-noh"
+        "pronunciation": "SAHN-noh",
+        "example": "Loro sanno nuotare. (They know how to swim.)"
       }
     ]
   },
@@ -476,37 +536,43 @@
         "subject": "io",
         "italian": "sto",
         "english": "I stay / I am",
-        "pronunciation": "STOH"
+        "pronunciation": "STOH",
+        "example": "Io sto bene. (I am well.)"
       },
       {
         "subject": "tu",
         "italian": "stai",
         "english": "you stay (informal)",
-        "pronunciation": "STY"
+        "pronunciation": "STY",
+        "example": "Tu stai a casa. (You stay at home.)"
       },
       {
         "subject": "lui/lei",
         "italian": "sta",
         "english": "he/she stays",
-        "pronunciation": "STAH"
+        "pronunciation": "STAH",
+        "example": "Lei sta attenta. (She is attentive.)"
       },
       {
         "subject": "noi",
         "italian": "stiamo",
         "english": "we stay",
-        "pronunciation": "STYAH-moh"
+        "pronunciation": "STYAH-moh",
+        "example": "Noi stiamo insieme. (We stay together.)"
       },
       {
         "subject": "voi",
         "italian": "state",
         "english": "you stay (plural)",
-        "pronunciation": "STAH-teh"
+        "pronunciation": "STAH-teh",
+        "example": "Voi state zitti. (You stay quiet.)"
       },
       {
         "subject": "loro",
         "italian": "stanno",
         "english": "they stay",
-        "pronunciation": "STAHN-noh"
+        "pronunciation": "STAHN-noh",
+        "example": "Loro stanno qui. (They stay here.)"
       }
     ]
   },
@@ -521,37 +587,43 @@
         "subject": "io",
         "italian": "devo",
         "english": "I must / I have to",
-        "pronunciation": "DEH-voh"
+        "pronunciation": "DEH-voh",
+        "example": "Io devo studiare. (I must study.)"
       },
       {
         "subject": "tu",
         "italian": "devi",
         "english": "you must (informal)",
-        "pronunciation": "DEH-vee"
+        "pronunciation": "DEH-vee",
+        "example": "Tu devi partire presto. (You must leave early.)"
       },
       {
         "subject": "lui/lei",
         "italian": "deve",
         "english": "he/she must",
-        "pronunciation": "DEH-veh"
+        "pronunciation": "DEH-veh",
+        "example": "Lei deve lavorare. (She must work.)"
       },
       {
         "subject": "noi",
         "italian": "dobbiamo",
         "english": "we must",
-        "pronunciation": "dob-BYAH-moh"
+        "pronunciation": "dob-BYAH-moh",
+        "example": "Noi dobbiamo andare. (We must go.)"
       },
       {
         "subject": "voi",
         "italian": "dovete",
         "english": "you must (plural)",
-        "pronunciation": "doh-VEH-teh"
+        "pronunciation": "doh-VEH-teh",
+        "example": "Voi dovete aspettare. (You must wait.)"
       },
       {
         "subject": "loro",
         "italian": "devono",
         "english": "they must",
-        "pronunciation": "DEH-voh-noh"
+        "pronunciation": "DEH-voh-noh",
+        "example": "Loro devono pagare. (They must pay.)"
       }
     ]
   },
@@ -566,37 +638,43 @@
         "subject": "io",
         "italian": "prendo",
         "english": "I take",
-        "pronunciation": "PREHN-doh"
+        "pronunciation": "PREHN-doh",
+        "example": "Io prendo il treno. (I take the train.)"
       },
       {
         "subject": "tu",
         "italian": "prendi",
         "english": "you take (informal)",
-        "pronunciation": "PREHN-dee"
+        "pronunciation": "PREHN-dee",
+        "example": "Tu prendi il bus. (You take the bus.)"
       },
       {
         "subject": "lui/lei",
         "italian": "prende",
         "english": "he/she takes",
-        "pronunciation": "PREHN-deh"
+        "pronunciation": "PREHN-deh",
+        "example": "Lei prende un caffè. (She takes a coffee.)"
       },
       {
         "subject": "noi",
         "italian": "prendiamo",
         "english": "we take",
-        "pronunciation": "prehn-DYAH-moh"
+        "pronunciation": "prehn-DYAH-moh",
+        "example": "Noi prendiamo l'aereo. (We take the plane.)"
       },
       {
         "subject": "voi",
         "italian": "prendete",
         "english": "you take (plural)",
-        "pronunciation": "pren-DEH-teh"
+        "pronunciation": "pren-DEH-teh",
+        "example": "Voi prendete la macchina. (You take the car.)"
       },
       {
         "subject": "loro",
         "italian": "prendono",
         "english": "they take",
-        "pronunciation": "PREHN-doh-noh"
+        "pronunciation": "PREHN-doh-noh",
+        "example": "Loro prendono il sole. (They sunbathe.)"
       }
     ]
   },
@@ -611,37 +689,43 @@
         "subject": "io",
         "italian": "parlo",
         "english": "I speak",
-        "pronunciation": "PAR-loh"
+        "pronunciation": "PAR-loh",
+        "example": "Io parlo italiano. (I speak Italian.)"
       },
       {
         "subject": "tu",
         "italian": "parli",
         "english": "you speak (informal)",
-        "pronunciation": "PAR-lee"
+        "pronunciation": "PAR-lee",
+        "example": "Tu parli inglese. (You speak English.)"
       },
       {
         "subject": "lui/lei",
         "italian": "parla",
         "english": "he/she speaks",
-        "pronunciation": "PAR-lah"
+        "pronunciation": "PAR-lah",
+        "example": "Lei parla troppo. (She speaks too much.)"
       },
       {
         "subject": "noi",
         "italian": "parliamo",
         "english": "we speak",
-        "pronunciation": "par-LYAH-moh"
+        "pronunciation": "par-LYAH-moh",
+        "example": "Noi parliamo tedesco. (We speak German.)"
       },
       {
         "subject": "voi",
         "italian": "parlate",
         "english": "you speak (plural)",
-        "pronunciation": "par-LAH-teh"
+        "pronunciation": "par-LAH-teh",
+        "example": "Voi parlate piano. (You speak slowly.)"
       },
       {
         "subject": "loro",
         "italian": "parlano",
         "english": "they speak",
-        "pronunciation": "PAR-lah-noh"
+        "pronunciation": "PAR-lah-noh",
+        "example": "Loro parlano francese. (They speak French.)"
       }
     ]
   },
@@ -656,37 +740,43 @@
         "subject": "io",
         "italian": "metto",
         "english": "I put",
-        "pronunciation": "MET-toh"
+        "pronunciation": "MET-toh",
+        "example": "Io metto il libro sul tavolo. (I put the book on the table.)"
       },
       {
         "subject": "tu",
         "italian": "metti",
         "english": "you put (informal)",
-        "pronunciation": "MET-tee"
+        "pronunciation": "MET-tee",
+        "example": "Tu metti la giacca. (You put on the jacket.)"
       },
       {
         "subject": "lui/lei",
         "italian": "mette",
         "english": "he/she puts",
-        "pronunciation": "MET-teh"
+        "pronunciation": "MET-teh",
+        "example": "Lei mette lo zucchero. (She puts sugar.)"
       },
       {
         "subject": "noi",
         "italian": "mettiamo",
         "english": "we put",
-        "pronunciation": "met-TYAH-moh"
+        "pronunciation": "met-TYAH-moh",
+        "example": "Noi mettiamo i fiori. (We put the flowers.)"
       },
       {
         "subject": "voi",
         "italian": "mettete",
         "english": "you put (plural)",
-        "pronunciation": "met-TEH-teh"
+        "pronunciation": "met-TEH-teh",
+        "example": "Voi mettete i piatti. (You put the plates.)"
       },
       {
         "subject": "loro",
         "italian": "mettono",
         "english": "they put",
-        "pronunciation": "MET-toh-noh"
+        "pronunciation": "MET-toh-noh",
+        "example": "Loro mettono ordine. (They put things in order.)"
       }
     ]
   },
@@ -701,37 +791,43 @@
         "subject": "io",
         "italian": "trovo",
         "english": "I find",
-        "pronunciation": "TROH-voh"
+        "pronunciation": "TROH-voh",
+        "example": "Io trovo le chiavi. (I find the keys.)"
       },
       {
         "subject": "tu",
         "italian": "trovi",
         "english": "you find (informal)",
-        "pronunciation": "TROH-vee"
+        "pronunciation": "TROH-vee",
+        "example": "Tu trovi un lavoro. (You find a job.)"
       },
       {
         "subject": "lui/lei",
         "italian": "trova",
         "english": "he/she finds",
-        "pronunciation": "TROH-vah"
+        "pronunciation": "TROH-vah",
+        "example": "Lei trova la strada. (She finds the way.)"
       },
       {
         "subject": "noi",
         "italian": "troviamo",
         "english": "we find",
-        "pronunciation": "troh-VYAH-moh"
+        "pronunciation": "troh-VYAH-moh",
+        "example": "Noi troviamo un posto. (We find a place.)"
       },
       {
         "subject": "voi",
         "italian": "trovate",
         "english": "you find (plural)",
-        "pronunciation": "troh-VAH-teh"
+        "pronunciation": "troh-VAH-teh",
+        "example": "Voi trovate la soluzione. (You find the solution.)"
       },
       {
         "subject": "loro",
         "italian": "trovano",
         "english": "they find",
-        "pronunciation": "TROH-vah-noh"
+        "pronunciation": "TROH-vah-noh",
+        "example": "Loro trovano un tesoro. (They find a treasure.)"
       }
     ]
   },
@@ -746,37 +842,43 @@
         "subject": "io",
         "italian": "lascio",
         "english": "I leave",
-        "pronunciation": "LAH-shoh"
+        "pronunciation": "LAH-shoh",
+        "example": "Io lascio la città. (I leave the city.)"
       },
       {
         "subject": "tu",
         "italian": "lasci",
         "english": "you leave (informal)",
-        "pronunciation": "LAH-shee"
+        "pronunciation": "LAH-shee",
+        "example": "Tu lasci un messaggio. (You leave a message.)"
       },
       {
         "subject": "lui/lei",
         "italian": "lascia",
         "english": "he/she leaves",
-        "pronunciation": "LAH-shah"
+        "pronunciation": "LAH-shah",
+        "example": "Lei lascia il lavoro. (She leaves work.)"
       },
       {
         "subject": "noi",
         "italian": "lasciamo",
         "english": "we leave",
-        "pronunciation": "lah-SHYAH-moh"
+        "pronunciation": "lah-SHYAH-moh",
+        "example": "Noi lasciamo la porta aperta. (We leave the door open.)"
       },
       {
         "subject": "voi",
         "italian": "lasciate",
         "english": "you leave (plural)",
-        "pronunciation": "lah-SYAH-teh"
+        "pronunciation": "lah-SYAH-teh",
+        "example": "Voi lasciate tutto qui. (You leave everything here.)"
       },
       {
         "subject": "loro",
         "italian": "lasciano",
         "english": "they leave",
-        "pronunciation": "LAH-shah-noh"
+        "pronunciation": "LAH-shah-noh",
+        "example": "Loro lasciano presto. (They leave early.)"
       }
     ]
   },
@@ -791,37 +893,43 @@
         "subject": "io",
         "italian": "capisco",
         "english": "I understand",
-        "pronunciation": "cah-PEE-skoh"
+        "pronunciation": "cah-PEE-skoh",
+        "example": "Io capisco tutto. (I understand everything.)"
       },
       {
         "subject": "tu",
         "italian": "capisci",
         "english": "you understand (informal)",
-        "pronunciation": "cah-PEE-shee"
+        "pronunciation": "cah-PEE-shee",
+        "example": "Tu capisci l'italiano. (You understand Italian.)"
       },
       {
         "subject": "lui/lei",
         "italian": "capisce",
         "english": "he/she understands",
-        "pronunciation": "cah-PEE-sheh"
+        "pronunciation": "cah-PEE-sheh",
+        "example": "Lei capisce la lezione. (She understands the lesson.)"
       },
       {
         "subject": "noi",
         "italian": "capiamo",
         "english": "we understand",
-        "pronunciation": "cah-PYAH-moh"
+        "pronunciation": "cah-PYAH-moh",
+        "example": "Noi capiamo il problema. (We understand the problem.)"
       },
       {
         "subject": "voi",
         "italian": "capite",
         "english": "you understand (plural)",
-        "pronunciation": "cah-PEE-teh"
+        "pronunciation": "cah-PEE-teh",
+        "example": "Voi capite bene. (You understand well.)"
       },
       {
         "subject": "loro",
         "italian": "capiscono",
         "english": "they understand",
-        "pronunciation": "cah-PEE-skoh-noh"
+        "pronunciation": "cah-PEE-skoh-noh",
+        "example": "Loro capiscono la musica. (They understand music.)"
       }
     ]
   },
@@ -836,37 +944,43 @@
         "subject": "io",
         "italian": "guardo",
         "english": "I look",
-        "pronunciation": "GWAR-doh"
+        "pronunciation": "GWAR-doh",
+        "example": "Io guardo la TV. (I watch TV.)"
       },
       {
         "subject": "tu",
         "italian": "guardi",
         "english": "you look (informal)",
-        "pronunciation": "GWAR-dee"
+        "pronunciation": "GWAR-dee",
+        "example": "Tu guardi il cielo. (You look at the sky.)"
       },
       {
         "subject": "lui/lei",
         "italian": "guarda",
         "english": "he/she looks",
-        "pronunciation": "GWAR-dah"
+        "pronunciation": "GWAR-dah",
+        "example": "Lei guarda un film. (She watches a movie.)"
       },
       {
         "subject": "noi",
         "italian": "guardiamo",
         "english": "we look",
-        "pronunciation": "gwar-DYAH-moh"
+        "pronunciation": "gwar-DYAH-moh",
+        "example": "Noi guardiamo le foto. (We look at the photos.)"
       },
       {
         "subject": "voi",
         "italian": "guardate",
         "english": "you look (plural)",
-        "pronunciation": "gwar-DAH-teh"
+        "pronunciation": "gwar-DAH-teh",
+        "example": "Voi guardate avanti. (You look ahead.)"
       },
       {
         "subject": "loro",
         "italian": "guardano",
         "english": "they look",
-        "pronunciation": "GWAR-dah-noh"
+        "pronunciation": "GWAR-dah-noh",
+        "example": "Loro guardano lo spettacolo. (They watch the show.)"
       }
     ]
   },
@@ -881,37 +995,43 @@
         "subject": "io",
         "italian": "vengo",
         "english": "I come",
-        "pronunciation": "VEN-goh"
+        "pronunciation": "VEN-goh",
+        "example": "Io vengo con te. (I come with you.)"
       },
       {
         "subject": "tu",
         "italian": "vieni",
         "english": "you come (informal)",
-        "pronunciation": "VYEH-nee"
+        "pronunciation": "VYEH-nee",
+        "example": "Tu vieni a casa mia. (You come to my house.)"
       },
       {
         "subject": "lui/lei",
         "italian": "viene",
         "english": "he/she comes",
-        "pronunciation": "VYEH-neh"
+        "pronunciation": "VYEH-neh",
+        "example": "Lei viene domani. (She comes tomorrow.)"
       },
       {
         "subject": "noi",
         "italian": "veniamo",
         "english": "we come",
-        "pronunciation": "veh-NYAH-moh"
+        "pronunciation": "veh-NYAH-moh",
+        "example": "Noi veniamo alla festa. (We come to the party.)"
       },
       {
         "subject": "voi",
         "italian": "venite",
         "english": "you come (plural)",
-        "pronunciation": "veh-NEE-teh"
+        "pronunciation": "veh-NEE-teh",
+        "example": "Voi venite presto. (You come early.)"
       },
       {
         "subject": "loro",
         "italian": "vengono",
         "english": "they come",
-        "pronunciation": "VEN-goh-noh"
+        "pronunciation": "VEN-goh-noh",
+        "example": "Loro vengono dall'Italia. (They come from Italy.)"
       }
     ]
   },
@@ -926,37 +1046,43 @@
         "subject": "io",
         "italian": "penso",
         "english": "I think",
-        "pronunciation": "PEN-soh"
+        "pronunciation": "PEN-soh",
+        "example": "Io penso a te. (I think of you.)"
       },
       {
         "subject": "tu",
         "italian": "pensi",
         "english": "you think (informal)",
-        "pronunciation": "PEN-see"
+        "pronunciation": "PEN-see",
+        "example": "Tu pensi troppo. (You think too much.)"
       },
       {
         "subject": "lui/lei",
         "italian": "pensa",
         "english": "he/she thinks",
-        "pronunciation": "PEN-sah"
+        "pronunciation": "PEN-sah",
+        "example": "Lei pensa al futuro. (She thinks about the future.)"
       },
       {
         "subject": "noi",
         "italian": "pensiamo",
         "english": "we think",
-        "pronunciation": "pen-SYAH-moh"
+        "pronunciation": "pen-SYAH-moh",
+        "example": "Noi pensiamo la stessa cosa. (We think the same thing.)"
       },
       {
         "subject": "voi",
         "italian": "pensate",
         "english": "you think (plural)",
-        "pronunciation": "pen-SAH-teh"
+        "pronunciation": "pen-SAH-teh",
+        "example": "Voi pensate bene. (You think well.)"
       },
       {
         "subject": "loro",
         "italian": "pensano",
         "english": "they think",
-        "pronunciation": "PEN-sah-noh"
+        "pronunciation": "PEN-sah-noh",
+        "example": "Loro pensano sempre. (They always think.)"
       }
     ]
   },
@@ -971,37 +1097,43 @@
         "subject": "io",
         "italian": "parto",
         "english": "I leave",
-        "pronunciation": "PAR-toh"
+        "pronunciation": "PAR-toh",
+        "example": "Io parto domani. (I leave tomorrow.)"
       },
       {
         "subject": "tu",
         "italian": "parti",
         "english": "you leave (informal)",
-        "pronunciation": "PAR-tee"
+        "pronunciation": "PAR-tee",
+        "example": "Tu parti per Roma. (You leave for Rome.)"
       },
       {
         "subject": "lui/lei",
         "italian": "parte",
         "english": "he/she leaves",
-        "pronunciation": "PAR-teh"
+        "pronunciation": "PAR-teh",
+        "example": "Lei parte alle otto. (She leaves at eight.)"
       },
       {
         "subject": "noi",
         "italian": "partiamo",
         "english": "we leave",
-        "pronunciation": "par-TYAH-moh"
+        "pronunciation": "par-TYAH-moh",
+        "example": "Noi partiamo insieme. (We leave together.)"
       },
       {
         "subject": "voi",
         "italian": "partite",
         "english": "you leave (plural)",
-        "pronunciation": "par-TEE-teh"
+        "pronunciation": "par-TEE-teh",
+        "example": "Voi partite in treno. (You leave by train.)"
       },
       {
         "subject": "loro",
         "italian": "partono",
         "english": "they leave",
-        "pronunciation": "PAR-toh-noh"
+        "pronunciation": "PAR-toh-noh",
+        "example": "Loro partono in aereo. (They leave by plane.)"
       }
     ]
   },
@@ -1016,37 +1148,43 @@
         "subject": "io",
         "italian": "mangio",
         "english": "I eat",
-        "pronunciation": "MAHN-joh"
+        "pronunciation": "MAHN-joh",
+        "example": "Io mangio la pizza. (I eat pizza.)"
       },
       {
         "subject": "tu",
         "italian": "mangi",
         "english": "you eat (informal)",
-        "pronunciation": "MAHN-jee"
+        "pronunciation": "MAHN-jee",
+        "example": "Tu mangi la pasta. (You eat pasta.)"
       },
       {
         "subject": "lui/lei",
         "italian": "mangia",
         "english": "he/she eats",
-        "pronunciation": "MAHN-jah"
+        "pronunciation": "MAHN-jah",
+        "example": "Lei mangia il gelato. (She eats ice cream.)"
       },
       {
         "subject": "noi",
         "italian": "mangiamo",
         "english": "we eat",
-        "pronunciation": "mahn-JYAH-moh"
+        "pronunciation": "mahn-JYAH-moh",
+        "example": "Noi mangiamo insieme. (We eat together.)"
       },
       {
         "subject": "voi",
         "italian": "mangiate",
         "english": "you eat (plural)",
-        "pronunciation": "mahn-JAH-teh"
+        "pronunciation": "mahn-JAH-teh",
+        "example": "Voi mangiate al ristorante. (You eat at the restaurant.)"
       },
       {
         "subject": "loro",
         "italian": "mangiano",
         "english": "they eat",
-        "pronunciation": "MAHN-jah-noh"
+        "pronunciation": "MAHN-jah-noh",
+        "example": "Loro mangiano la frutta. (They eat fruit.)"
       }
     ]
   },
@@ -1061,37 +1199,43 @@
         "subject": "io",
         "italian": "vivo",
         "english": "I live",
-        "pronunciation": "VEE-voh"
+        "pronunciation": "VEE-voh",
+        "example": "Io vivo a Roma. (I live in Rome.)"
       },
       {
         "subject": "tu",
         "italian": "vivi",
         "english": "you live (informal)",
-        "pronunciation": "VEE-vee"
+        "pronunciation": "VEE-vee",
+        "example": "Tu vivi in Italia. (You live in Italy.)"
       },
       {
         "subject": "lui/lei",
         "italian": "vive",
         "english": "he/she lives",
-        "pronunciation": "VEE-veh"
+        "pronunciation": "VEE-veh",
+        "example": "Lei vive qui. (She lives here.)"
       },
       {
         "subject": "noi",
         "italian": "viviamo",
         "english": "we live",
-        "pronunciation": "vee-VYAH-moh"
+        "pronunciation": "vee-VYAH-moh",
+        "example": "Noi viviamo insieme. (We live together.)"
       },
       {
         "subject": "voi",
         "italian": "vivete",
         "english": "you live (plural)",
-        "pronunciation": "vee-VEH-teh"
+        "pronunciation": "vee-VEH-teh",
+        "example": "Voi vivete bene. (You live well.)"
       },
       {
         "subject": "loro",
         "italian": "vivono",
         "english": "they live",
-        "pronunciation": "VEE-voh-noh"
+        "pronunciation": "VEE-voh-noh",
+        "example": "Loro vivono a Milano. (They live in Milan.)"
       }
     ]
   },
@@ -1106,37 +1250,43 @@
         "subject": "io",
         "italian": "arrivo",
         "english": "I arrive",
-        "pronunciation": "ahr-REE-voh"
+        "pronunciation": "ahr-REE-voh",
+        "example": "Io arrivo alle sette. (I arrive at seven.)"
       },
       {
         "subject": "tu",
         "italian": "arrivi",
         "english": "you arrive (informal)",
-        "pronunciation": "ahr-REE-vee"
+        "pronunciation": "ahr-REE-vee",
+        "example": "Tu arrivi presto. (You arrive early.)"
       },
       {
         "subject": "lui/lei",
         "italian": "arriva",
         "english": "he/she arrives",
-        "pronunciation": "ahr-REE-vah"
+        "pronunciation": "ahr-REE-vah",
+        "example": "Lei arriva domani. (She arrives tomorrow.)"
       },
       {
         "subject": "noi",
         "italian": "arriviamo",
         "english": "we arrive",
-        "pronunciation": "ahr-ree-VYAH-moh"
+        "pronunciation": "ahr-ree-VYAH-moh",
+        "example": "Noi arriviamo in treno. (We arrive by train.)"
       },
       {
         "subject": "voi",
         "italian": "arrivate",
         "english": "you arrive (plural)",
-        "pronunciation": "ahr-ree-VAH-teh"
+        "pronunciation": "ahr-ree-VAH-teh",
+        "example": "Voi arrivate tardi. (You arrive late.)"
       },
       {
         "subject": "loro",
         "italian": "arrivano",
         "english": "they arrive",
-        "pronunciation": "ahr-REE-vah-noh"
+        "pronunciation": "ahr-REE-vah-noh",
+        "example": "Loro arrivano dall'America. (They arrive from America.)"
       }
     ]
   }
