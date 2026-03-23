@@ -39,8 +39,10 @@
 
             <div class="form-group">
                 <label for="tagsInput">Categories (Press Enter to add)</label>
-                <div class="tags-container" id="tagsContainer">
-                    <input type="text" id="tagsInput" class="tags-input" placeholder="Add a category...">
+                <div class="tags-container" id="tagsContainer"></div>
+                <div class="tags-input-wrapper">
+                    <input type="text" id="tagsInput" class="tags-input" placeholder="Add a category..." autocomplete="off">
+                    <div class="tags-autocomplete" id="tagsAutocomplete"></div>
                 </div>
                 <div class="helper-text">e.g., verbs, greetings, food, travel</div>
             </div>
@@ -89,6 +91,8 @@
         let allFlashcards = [];
         let searchQuery = '';
         let selectedCategory = 'all';
+        let autocompleteIndex = -1;
+        const tagsAutocomplete = document.getElementById('tagsAutocomplete');
 
         // Tag management
         function addTag(tagText) {
@@ -119,21 +123,120 @@
                     <span class="remove-tag">&times;</span>
                 `;
                 pill.querySelector('.remove-tag').addEventListener('click', () => removeTag(tag));
-                tagsContainer.insertBefore(pill, tagsInput);
+                tagsContainer.appendChild(pill);
             });
         }
 
-        // Handle Enter key to add tag
-        tagsInput.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter') {
-                e.preventDefault();
-                addTag(tagsInput.value);
+        // Get all existing categories
+        function getExistingCategories() {
+            const categories = new Set();
+            allFlashcards.forEach(card => {
+                if (card.categories && card.categories.length > 0) {
+                    card.categories.forEach(cat => categories.add(cat));
+                }
+            });
+            return Array.from(categories).sort();
+        }
+
+        // Show autocomplete suggestions
+        function showAutocomplete(suggestions) {
+            if (suggestions.length === 0) {
+                tagsAutocomplete.style.display = 'none';
+                return;
+            }
+
+            tagsAutocomplete.innerHTML = suggestions.map((suggestion, index) => 
+                `<div class="autocomplete-item" data-index="${index}">${suggestion}</div>`
+            ).join('');
+            tagsAutocomplete.style.display = 'block';
+            autocompleteIndex = -1;
+        }
+
+        // Hide autocomplete
+        function hideAutocomplete() {
+            tagsAutocomplete.style.display = 'none';
+            autocompleteIndex = -1;
+        }
+
+        // Handle autocomplete item click
+        tagsAutocomplete.addEventListener('click', (e) => {
+            if (e.target.classList.contains('autocomplete-item')) {
+                addTag(e.target.textContent);
+                hideAutocomplete();
             }
         });
+
+        // Handle input changes for autocomplete
+        tagsInput.addEventListener('input', (e) => {
+            const value = e.target.value.trim().toLowerCase();
+            
+            if (!value) {
+                hideAutocomplete();
+                return;
+            }
+
+            const existingCategories = getExistingCategories();
+            const filteredCategories = existingCategories.filter(cat => 
+                cat.toLowerCase().includes(value) && !tags.includes(cat)
+            );
+
+            showAutocomplete(filteredCategories);
+        });
+
+        // Handle Enter key and arrow navigation
+        tagsInput.addEventListener('keydown', (e) => {
+            const items = tagsAutocomplete.querySelectorAll('.autocomplete-item');
+            
+            if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                if (items.length > 0) {
+                    autocompleteIndex = Math.min(autocompleteIndex + 1, items.length - 1);
+                    updateAutocompleteSelection(items);
+                }
+            } else if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                if (items.length > 0) {
+                    autocompleteIndex = Math.max(autocompleteIndex - 1, -1);
+                    updateAutocompleteSelection(items);
+                }
+            } else if (e.key === 'Enter') {
+                e.preventDefault();
+                
+                // If an autocomplete item is selected, use it
+                if (autocompleteIndex >= 0 && items[autocompleteIndex]) {
+                    addTag(items[autocompleteIndex].textContent);
+                    hideAutocomplete();
+                } else {
+                    // Otherwise, add the typed value as a new category
+                    addTag(tagsInput.value);
+                    hideAutocomplete();
+                }
+            } else if (e.key === 'Escape') {
+                hideAutocomplete();
+            }
+        });
+
+        // Update autocomplete selection highlighting
+        function updateAutocompleteSelection(items) {
+            items.forEach((item, index) => {
+                if (index === autocompleteIndex) {
+                    item.classList.add('selected');
+                } else {
+                    item.classList.remove('selected');
+                }
+            });
+        }
 
         // Focus input when clicking container
         tagsContainer.addEventListener('click', () => {
             tagsInput.focus();
+        });
+
+        // Hide autocomplete when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!tagsInput.contains(e.target) && !tagsAutocomplete.contains(e.target)) {
+                hideAutocomplete();
+            }
         });
 
         function showMessage(text, type) {

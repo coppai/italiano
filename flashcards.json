@@ -1994,5 +1994,208 @@
     "categories": [],
     "correct": 0,
     "incorrect": 0
+  },
+  {
+    "id": "1774282165854xwq8nsddu",
+    "question": "I'm sorry",
+    "answer": "Mi dispiace",
+    "notes": "",
+    "categories": [
+      "fundamental-phrases"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1774282239748w6b2xg50c",
+    "question": "I'm sorry but I don't understand what that means",
+    "answer": "Mi dispiace Non capisco cosa voldere ",
+    "notes": "",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1774282274144uo9eqx3xh",
+    "question": "welcome back",
+    "answer": "Bentornato",
+    "notes": "",
+    "categories": [
+      "greetings"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1774282389541eouojqil4",
+    "question": "it's windy",
+    "answer": "C'è vento",
+    "notes": "",
+    "categories": [
+      "weather"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1774282424147vi6mfgip5",
+    "question": "it is foggy",
+    "answer": "C'è nebbia",
+    "notes": "",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1774282451159h3isrtyjz",
+    "question": "it is warm",
+    "answer": "Fa caldo",
+    "notes": "",
+    "categories": [
+      "weather"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1774282540428u97wxnvxb",
+    "question": "it is cold",
+    "answer": "Fa freddo.",
+    "notes": "",
+    "categories": [
+      "weather"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1774282641335fdfldhyfv",
+    "question": "What is the weather there",
+    "answer": "Che tempo fa?",
+    "notes": "",
+    "categories": [
+      "weather"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1774282776716ag0b596q4",
+    "question": "The weather is nice",
+    "answer": "fa bello",
+    "notes": "",
+    "categories": [
+      "weather"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1774282833966hw9j0sd9n",
+    "question": "The weather is bad",
+    "answer": "fa brutto tempo",
+    "notes": "",
+    "categories": [
+      "weather"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1774282907501894twqp2b",
+    "question": "it is quite hot",
+    "answer": "Fa abbastanza caldo",
+    "notes": "",
+    "categories": [
+      "weather"
+    ],
+    "correct": 0,
+    "incorrect": 1
+  },
+  {
+    "id": "1774282937878a9pzoi0pc",
+    "question": "it is snowing",
+    "answer": "Sta nevicando",
+    "notes": "",
+    "categories": [
+      "weather"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1774282956818s15bfzy8t",
+    "question": "it is raining",
+    "answer": "Sta piovendo",
+    "notes": "",
+    "categories": [
+      "weather"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1774282986514vik4j44u2",
+    "question": "what is the weather like?",
+    "answer": "che tempo fa?",
+    "notes": "",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1774283105822j3w2mfgy8",
+    "question": "What is your favorite season?",
+    "answer": "Qual è la tua stagione preferita?",
+    "notes": "sta-JO-neh\nTo break it down phonetically:\n\nsta: Like the \"sta\" in stack or star (but with a shorter \"a\" sound).\n\nJO: Like the name Joe. This is the stressed syllable.\n\nneh: Like the \"ne\" in net or next.",
+    "categories": [
+      "weather"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1774283125343v0snvwl0i",
+    "question": "spring",
+    "answer": "la primavera",
+    "notes": "",
+    "categories": [
+      "weather"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1774283136956crylkk57w",
+    "question": "fall",
+    "answer": "l'autounno",
+    "notes": "",
+    "categories": [
+      "weather"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1774283145997qrlr6ek31",
+    "question": "winter",
+    "answer": "l'inverno",
+    "notes": "",
+    "categories": [
+      "weather"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1774283218674378rwwej4",
+    "question": "spring is beautiful",
+    "answer": "La primavera è bella",
+    "notes": "",
+    "categories": [
+      "weather"
+    ],
+    "correct": 0,
+    "incorrect": 0
   }
 ]
