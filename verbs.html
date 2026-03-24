@@ -78,6 +78,7 @@
 
     <div class="back-link">
         <a href="/">← Back to Home</a>
+        <a href="verb-stats.html" style="margin-left: 20px;">📊 View Stats</a>
     </div>
 </div>
 
@@ -105,6 +106,52 @@
     const correctBtn = document.getElementById('correctBtn');
     const incorrectBtn = document.getElementById('incorrectBtn');
 
+    // Stats tracking functions
+    function getVerbStats() {
+        const statsJson = localStorage.getItem('verbStats');
+        return statsJson ? JSON.parse(statsJson) : {};
+    }
+
+    function saveVerbStats(stats) {
+        localStorage.setItem('verbStats', JSON.stringify(stats));
+    }
+
+    function getVerbKey(card) {
+        // Create unique key for each verb form (e.g., "avere_ho")
+        return `${card.infinitive}_${card.italian}`;
+    }
+
+    function recordAnswer(card, isCorrect) {
+        const stats = getVerbStats();
+        const key = getVerbKey(card);
+        
+        console.log('Recording answer:', {
+            key: key,
+            isCorrect: isCorrect,
+            card: card
+        });
+        
+        if (!stats[key]) {
+            stats[key] = {
+                infinitive: card.infinitive,
+                italian: card.italian,
+                english: card.english,
+                correct: 0,
+                incorrect: 0
+            };
+        }
+        
+        if (isCorrect) {
+            stats[key].correct++;
+        } else {
+            stats[key].incorrect++;
+        }
+        
+        console.log('Updated stats for', key, ':', stats[key]);
+        saveVerbStats(stats);
+        console.log('Stats saved to localStorage');
+    }
+
     async function loadVerbs() {
         try {
             const response = await fetch('verbs.json');
@@ -123,14 +170,100 @@
             // Populate package dropdown based on package tags in the data
             populatePackages(verbs);
 
-            // Start with all cards as the active deck
+            // Check for URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const verbFilter = urlParams.get('verb');
+            const mode = urlParams.get('mode');
+            
+            // Start with all cards
             cards = allCards.slice();
-            shuffleCards();
+            
+            // Handle "weakest" mode - sort by incorrect count
+            if (mode === 'weakest') {
+                const stats = getVerbStats();
+                
+                // Add stats data to cards and filter out cards with no attempts
+                cards = cards.map(card => {
+                    const key = getVerbKey(card);
+                    const cardStats = stats[key] || { correct: 0, incorrect: 0 };
+                    return {
+                        ...card,
+                        statsCorrect: cardStats.correct,
+                        statsIncorrect: cardStats.incorrect,
+                        statsTotal: cardStats.correct + cardStats.incorrect
+                    };
+                }).filter(card => card.statsTotal > 0); // Only cards with attempts
+                
+                // Sort by incorrect count (descending), then by total attempts
+                cards.sort((a, b) => {
+                    if (b.statsIncorrect !== a.statsIncorrect) {
+                        return b.statsIncorrect - a.statsIncorrect;
+                    }
+                    return b.statsTotal - a.statsTotal;
+                });
+                
+                console.log('Weakest mode: sorted', cards.length, 'cards by incorrect count');
+                
+                if (cards.length === 0) {
+                    // No cards with attempts
+                    const noVerbsH2 = noVerbs.querySelector('h2');
+                    const noVerbsP = noVerbs.querySelector('p');
+                    if (noVerbsH2) noVerbsH2.textContent = 'No Practice Data Yet';
+                    if (noVerbsP) noVerbsP.textContent = 'Start practicing verbs to build your stats, then return here to focus on your weakest areas.';
+                    throw new Error('No cards with attempts');
+                }
+                
+                // Update header
+                const headerEl = document.querySelector('.header h1');
+                if (headerEl) {
+                    headerEl.innerHTML = `Italian Verb Conjugation <small style="font-size:0.5em;color:#666;">(Practice: Weakest First)</small>`;
+                }
+                
+                const headerPara = document.querySelector('.header p');
+                if (headerPara) {
+                    headerPara.innerHTML = 'Cards sorted from most incorrect to least. <a href="verbs.html" style="color:var(--primary);text-decoration:underline;">Back to normal practice</a>';
+                }
+            }
+            // Handle verb filter
+            else if (verbFilter) {
+                // Filter cards to only show forms for this specific verb
+                cards = cards.filter(c => c.infinitive === verbFilter);
+                
+                console.log('Filtering for verb:', verbFilter);
+                console.log('Filtered cards:', cards.length);
+                
+                if (cards.length === 0) {
+                    // Verb not found, show all cards instead
+                    console.warn('No cards found for verb:', verbFilter);
+                    cards = allCards.slice();
+                } else {
+                    // Update header to show filtering
+                    const headerEl = document.querySelector('.header h1');
+                    if (headerEl) {
+                        headerEl.innerHTML = `Italian Verb Conjugation <small style="font-size:0.5em;color:#666;">(Filtered: ${verbFilter})</small>`;
+                    }
+                    
+                    // Add a "clear filter" button
+                    const headerPara = document.querySelector('.header p');
+                    if (headerPara) {
+                        headerPara.innerHTML = 'Flip the card to see full present-tense conjugations. <a href="verbs.html" style="color:var(--primary);text-decoration:underline;">Clear filter</a>';
+                    }
+                }
+            }
+            
+            // Only shuffle if not in special modes
+            if (mode !== 'weakest') {
+                shuffleCards();
+            }
 
-            totalVerbsEl.textContent = cards.length;
-            noVerbs.style.display = 'none';
-            verbArea.style.display = 'block';
-            showCard(0);
+            if (cards.length > 0) {
+                totalVerbsEl.textContent = cards.length;
+                noVerbs.style.display = 'none';
+                verbArea.style.display = 'block';
+                showCard(0);
+            } else {
+                throw new Error('No cards available');
+            }
         } catch (err) {
             console.error('Error loading verbs:', err);
             noVerbs.style.display = 'block';
@@ -252,11 +385,44 @@
     packageSelect.addEventListener('change', (e) => {
         const value = e.target.value;
 
+        // Check if there's a verb filter or mode from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const verbFilter = urlParams.get('verb');
+        const mode = urlParams.get('mode');
+
         if (value === 'all') {
             cards = allCards.slice();
         } else {
             const pkg = parseInt(value, 10);
             cards = allCards.filter(c => c.package === pkg);
+        }
+
+        // Apply verb filter if present
+        if (verbFilter) {
+            cards = cards.filter(c => c.infinitive === verbFilter);
+        }
+        
+        // Apply weakest mode sorting if present
+        if (mode === 'weakest') {
+            const stats = getVerbStats();
+            
+            cards = cards.map(card => {
+                const key = getVerbKey(card);
+                const cardStats = stats[key] || { correct: 0, incorrect: 0 };
+                return {
+                    ...card,
+                    statsCorrect: cardStats.correct,
+                    statsIncorrect: cardStats.incorrect,
+                    statsTotal: cardStats.correct + cardStats.incorrect
+                };
+            }).filter(card => card.statsTotal > 0);
+            
+            cards.sort((a, b) => {
+                if (b.statsIncorrect !== a.statsIncorrect) {
+                    return b.statsIncorrect - a.statsIncorrect;
+                }
+                return b.statsTotal - a.statsTotal;
+            });
         }
 
         if (cards.length === 0) return;
@@ -296,6 +462,10 @@
     correctBtn.addEventListener('click', () => {
         if (cards.length === 0) return;
         
+        // Record correct answer
+        const currentCard = cards[currentIndex];
+        recordAnswer(currentCard, true);
+        
         // Flip card to front first if it's currently flipped
         if (isFlipped) {
             verbCard.classList.remove('flipped');
@@ -313,6 +483,7 @@
                     <h2>🎉 Congratulations!</h2>
                     <p>You've completed all the cards in this set!</p>
                     <button onclick="location.reload()" class="btn-primary">Start Over</button>
+                    <a href="verb-stats.html" class="btn-secondary" style="display:inline-block;margin-top:10px;">View Stats</a>
                 </div>
             `;
             return;
@@ -330,6 +501,12 @@
     });
 
     incorrectBtn.addEventListener('click', () => {
+        if (cards.length === 0) return;
+        
+        // Record incorrect answer
+        const currentCard = cards[currentIndex];
+        recordAnswer(currentCard, false);
+        
         // Flip card to front first if it's currently flipped
         if (isFlipped) {
             verbCard.classList.remove('flipped');

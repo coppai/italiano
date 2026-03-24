@@ -336,7 +336,9 @@ const server = http.createServer((req, res) => {
     }
     
     // Handle GET requests for static files
-    let filePath = req.url === '/' ? './index.html' : `.${req.url}`;
+    // Strip query parameters from URL before looking for file
+    const urlWithoutQuery = req.url.split('?')[0];
+    let filePath = urlWithoutQuery === '/' ? './index.html' : `.${urlWithoutQuery}`;
     const extname = path.extname(filePath);
     let contentType = MIME_TYPES[extname] || 'text/plain';
 
