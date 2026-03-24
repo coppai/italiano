@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verb Conjugation Stats</title>
+    <title>Article Practice Stats</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         .stats-container {
@@ -132,15 +132,30 @@
             color: var(--danger);
         }
 
-        .verb-link {
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 700;
+        .type-badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            background: var(--primary);
+            color: white;
         }
 
-        .verb-link:hover {
-            text-decoration: underline;
-            color: var(--primary-dark);
+        .type-definite {
+            background: #3498db;
+        }
+
+        .type-indefinite {
+            background: #9b59b6;
+        }
+
+        .type-plural_definite {
+            background: #e74c3c;
+        }
+
+        .type-partitive {
+            background: #f39c12;
         }
 
         .btn-primary {
@@ -148,6 +163,7 @@
             color: white;
             border: none;
             border-radius: 8px;
+            padding: 12px 24px;
             cursor: pointer;
             font-size: 1rem;
             font-weight: 600;
@@ -158,6 +174,22 @@
             background: var(--primary-dark);
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(78, 205, 196, 0.3);
+        }
+
+        .btn-secondary {
+            background: #95a5a6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 24px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .btn-secondary:hover {
+            background: #7f8c8d;
         }
 
         .no-stats {
@@ -202,15 +234,15 @@
 
 <div class="stats-container">
     <div class="stats-header">
-        <h1>📊 Verb Conjugation Stats</h1>
-        <p>Track your progress in learning Italian verb conjugations. Click any infinitive to practice that verb.</p>
+        <h1>📊 Article Practice Stats</h1>
+        <p>Track your progress in learning Italian articles.</p>
     </div>
 
     <div id="statsContent">
         <div class="stats-summary">
             <div class="summary-card">
-                <h3>Total Verbs</h3>
-                <div class="value" id="totalVerbs">0</div>
+                <h3>Total Words</h3>
+                <div class="value" id="totalWords">0</div>
             </div>
             <div class="summary-card">
                 <h3>Total Attempts</h3>
@@ -231,7 +263,6 @@
         </div>
 
         <div class="controls">
-            <a href="verbs.html?mode=weakest" class="btn-primary" style="display:inline-block;text-decoration:none;padding:12px 24px;">🎯 Practice Weakest Verbs</a>
             <button id="debugBtn" class="btn-secondary">🔍 Debug: Show localStorage</button>
             <button id="resetStatsBtn" class="btn-secondary">🗑️ Reset All Stats</button>
         </div>
@@ -240,9 +271,10 @@
             <table class="stats-table">
                 <thead>
                     <tr>
-                        <th data-sort="infinitive">Infinitive</th>
-                        <th data-sort="italian">Italian Form</th>
-                        <th data-sort="english">English</th>
+                        <th data-sort="word">Word</th>
+                        <th data-sort="type">Type</th>
+                        <th data-sort="article">Article</th>
+                        <th data-sort="meaning">Meaning</th>
                         <th data-sort="correct">Correct</th>
                         <th data-sort="incorrect">Incorrect</th>
                         <th data-sort="total">Total</th>
@@ -257,12 +289,12 @@
 
     <div id="noStats" class="no-stats" style="display: none;">
         <h2>📋 No Stats Yet</h2>
-        <p>Start practicing verb conjugations to see your stats here!</p>
-        <a href="verbs.html" class="btn-primary">Practice Verbs</a>
+        <p>Start practicing articles to see your stats here!</p>
+        <a href="articles-menu.html" class="btn-primary">Practice Articles</a>
     </div>
 
     <div class="back-link">
-        <a href="verbs-menu.html">← Back to Verb Drills</a>
+        <a href="articles-menu.html">← Back to Article Drills</a>
         <a href="/" style="margin-left: 20px;">🏠 Home</a>
     </div>
 </div>
@@ -272,7 +304,7 @@
     let statsData = [];
 
     function loadStats() {
-        const statsJson = localStorage.getItem('verbStats');
+        const statsJson = localStorage.getItem('articleStats');
         console.log('Raw localStorage data:', statsJson);
         
         if (!statsJson) {
@@ -285,7 +317,7 @@
         const stats = JSON.parse(statsJson);
         console.log('Parsed stats:', stats);
         const keys = Object.keys(stats);
-        console.log('Number of verb forms tracked:', keys.length);
+        console.log('Number of article forms tracked:', keys.length);
 
         if (keys.length === 0) {
             console.log('Stats object is empty');
@@ -301,9 +333,11 @@
             const percent = total > 0 ? ((item.correct / total) * 100).toFixed(1) : 0;
             return {
                 key: key,
-                infinitive: item.infinitive,
-                italian: item.italian,
-                english: item.english,
+                word: item.word,
+                type: item.type,
+                article: item.article,
+                meaning: item.meaning || '',
+                gender: item.gender || '',
                 correct: item.correct,
                 incorrect: item.incorrect,
                 total: total,
@@ -318,17 +352,27 @@
     }
 
     function updateSummary() {
-        const totalVerbs = statsData.length;
+        const totalWords = statsData.length;
         const totalAttempts = statsData.reduce((sum, item) => sum + item.total, 0);
         const totalCorrect = statsData.reduce((sum, item) => sum + item.correct, 0);
         const totalIncorrect = statsData.reduce((sum, item) => sum + item.incorrect, 0);
         const overallPercent = totalAttempts > 0 ? ((totalCorrect / totalAttempts) * 100).toFixed(1) : 0;
 
-        document.getElementById('totalVerbs').textContent = totalVerbs;
+        document.getElementById('totalWords').textContent = totalWords;
         document.getElementById('totalAttempts').textContent = totalAttempts;
         document.getElementById('totalCorrect').textContent = totalCorrect;
         document.getElementById('totalIncorrect').textContent = totalIncorrect;
         document.getElementById('overallPercent').textContent = overallPercent + '%';
+    }
+
+    function formatType(type) {
+        const typeNames = {
+            'definite': 'Definite',
+            'indefinite': 'Indefinite',
+            'plural_definite': 'Plural',
+            'partitive': 'Partitive'
+        };
+        return typeNames[type] || type;
     }
 
     function sortAndDisplayTable() {
@@ -361,9 +405,10 @@
                                 item.percent >= 50 ? 'percent-medium' : 'percent-low';
 
             row.innerHTML = `
-                <td><a href="verbs.html?verb=${encodeURIComponent(item.infinitive)}" class="verb-link"><strong>${item.infinitive}</strong></a></td>
-                <td>${item.italian}</td>
-                <td>${item.english}</td>
+                <td><strong>${item.word}</strong></td>
+                <td><span class="type-badge type-${item.type}">${formatType(item.type)}</span></td>
+                <td><strong>${item.article}</strong></td>
+                <td>${item.meaning}</td>
                 <td class="correct-count">${item.correct}</td>
                 <td class="incorrect-count">${item.incorrect}</td>
                 <td>${item.total}</td>
@@ -402,9 +447,9 @@
 
     // Debug button
     document.getElementById('debugBtn').addEventListener('click', () => {
-        const statsJson = localStorage.getItem('verbStats');
+        const statsJson = localStorage.getItem('articleStats');
         if (!statsJson) {
-            alert('localStorage is EMPTY\n\nNo "verbStats" key found.\n\nMake sure you click the Correct ✓ or Incorrect ✗ buttons on the verbs.html page first!');
+            alert('localStorage is EMPTY\n\nNo "articleStats" key found.\n\nMake sure you practice some articles first!');
         } else {
             alert('localStorage contents:\n\n' + statsJson + '\n\nStats found! Check the browser console for more details.');
             console.log('Full localStorage data:', JSON.parse(statsJson));
@@ -413,8 +458,8 @@
 
     // Reset stats button
     document.getElementById('resetStatsBtn').addEventListener('click', () => {
-        if (confirm('Are you sure you want to reset all verb conjugation stats? This cannot be undone.')) {
-            localStorage.removeItem('verbStats');
+        if (confirm('Are you sure you want to reset all article practice stats? This cannot be undone.')) {
+            localStorage.removeItem('articleStats');
             location.reload();
         }
     });

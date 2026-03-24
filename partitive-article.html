@@ -11,7 +11,7 @@
 <div class="container">
     <div class="main-content">
         <div class="card">
-    <button class="btn-back" onclick="window.location.href='index.html'">← Back to Drills</button>
+    <button class="btn-back" onclick="window.location.href='articles-menu.html'">← Back to Article Drills</button>
     
     <div class="stats">
         <div class="stat-item">
@@ -64,6 +64,46 @@
     let correctCount = 0;
     let incorrectCount = 0;
     let completedWords = [];
+
+    // Stats tracking functions
+    function getArticleStats() {
+        const stats = localStorage.getItem('articleStats');
+        return stats ? JSON.parse(stats) : {};
+    }
+
+    function saveArticleStats(stats) {
+        localStorage.setItem('articleStats', JSON.stringify(stats));
+    }
+
+    function getArticleKey(wordObj) {
+        return `${wordObj.displayWord.toLowerCase()}_partitive_${wordObj.number}`;
+    }
+
+    function recordAnswer(wordObj, isCorrect) {
+        const stats = getArticleStats();
+        const key = getArticleKey(wordObj);
+        
+        if (!stats[key]) {
+            stats[key] = {
+                word: wordObj.displayWord.toLowerCase(),
+                meaning: wordObj.meaning,
+                gender: wordObj.gender,
+                article: wordObj.partitiveArticle,
+                type: 'partitive',
+                number: wordObj.number,
+                correct: 0,
+                incorrect: 0
+            };
+        }
+        
+        if (isCorrect) {
+            stats[key].correct++;
+        } else {
+            stats[key].incorrect++;
+        }
+        
+        saveArticleStats(stats);
+    }
 
     // 1. Fetch the JSON data from your local server
     async function loadVocabulary() {
@@ -272,6 +312,9 @@
             feedback.style.color = "var(--success)";
             feedback.innerText = "Bravo! Correct.";
             
+            // Record correct answer
+            recordAnswer(deck[currentWordIndex], true);
+            
             // Update counters
             correctCount++;
             
@@ -301,6 +344,10 @@
         } else {
             feedback.style.color = "var(--error)";
             feedback.innerText = "Try again!";
+            
+            // Record incorrect answer
+            recordAnswer(deck[currentWordIndex], false);
+            
             incorrectCount++;
             updateStats();
         }
