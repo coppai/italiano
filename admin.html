@@ -314,7 +314,7 @@
 
             flashcardsList.innerHTML = filteredCards.map(card => `
                 <div class="flashcard-item">
-                    <div class="flashcard-info">
+                    <div class="flashcard-info" onclick="editFlashcard('${card.id}')">
                         <div class="flashcard-question">${card.question}</div>
                         <div class="flashcard-answer">${card.answer}</div>
                         ${card.categories && card.categories.length > 0 ? `
@@ -324,7 +324,6 @@
                         ` : ''}
                     </div>
                     <div class="flashcard-actions">
-                        <button class="btn-small btn-edit" onclick="editFlashcard('${card.id}')">Edit</button>
                         <button class="btn-small btn-delete" onclick="deleteFlashcard('${card.id}')">Delete</button>
                     </div>
                 </div>

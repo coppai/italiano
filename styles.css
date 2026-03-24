@@ -1313,6 +1313,7 @@ body.article-page {
 
 .flashcard-info {
     flex: 1;
+    cursor: pointer;
 }
 
 .flashcard-question {
