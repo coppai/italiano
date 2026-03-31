@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcard Stats</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .stats-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .stats-summary {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .summary-card {
+            background: var(--card-bg);
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            min-width: 150px;
+            text-align: center;
+        }
+
+        .summary-card h3 {
+            margin: 0 0 10px 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .summary-card .value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .stats-table-container {
+            background: var(--card-bg);
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+
+        .stats-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .stats-table th {
+            background: var(--primary);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            cursor: pointer;
+            user-select: none;
+            position: relative;
+        }
+
+        .stats-table th:hover {
+            background: var(--primary-dark);
+        }
+
+        .stats-table th::after {
+            content: '⇅';
+            position: absolute;
+            right: 10px;
+            opacity: 0.5;
+        }
+
+        .stats-table th.sorted-asc::after {
+            content: '↑';
+            opacity: 1;
+        }
+
+        .stats-table th.sorted-desc::after {
+            content: '↓';
+            opacity: 1;
+        }
+
+        .stats-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .stats-table tbody tr:hover {
+            background: rgba(78, 205, 196, 0.1);
+        }
+
+        .stats-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .correct-count {
+            color: var(--success);
+            font-weight: 600;
+        }
+
+        .incorrect-count {
+            color: var(--danger);
+            font-weight: 600;
+        }
+
+        .percent-correct {
+            font-weight: 600;
+        }
+
+        .percent-high {
+            color: var(--success);
+        }
+
+        .percent-medium {
+            color: #f39c12;
+        }
+
+        .percent-low {
+            color: var(--danger);
+        }
+
+        .category-badge {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            margin-right: 4px;
+            margin-bottom: 4px;
+        }
+
+        .categories-cell {
+            max-width: 200px;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(78, 205, 196, 0.3);
+        }
+
+        .no-stats {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .no-stats h2 {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .controls {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .filter-section {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .category-filter {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .category-pill {
+            background: white;
+            border: 2px solid var(--border);
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 0.9rem;
+        }
+
+        .category-pill:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .category-pill.selected {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            .stats-table {
+                font-size: 0.9rem;
+            }
+
+            .stats-table th,
+            .stats-table td {
+                padding: 10px 8px;
+            }
+
+            .summary-card {
+                min-width: 120px;
+            }
+
+            .summary-card .value {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body class="flashcards-page">
+
+<div class="stats-container">
+    <div class="stats-header">
+        <h1>📊 Flashcard Stats</h1>
+        <p>Track your progress in learning Italian vocabulary and phrases.</p>
+    </div>
+
+    <div id="statsContent">
+        <div class="stats-summary">
+            <div class="summary-card">
+                <h3>Total Cards</h3>
+                <div class="value" id="totalCards">0</div>
+            </div>
+            <div class="summary-card">
+                <h3>Total Attempts</h3>
+                <div class="value" id="totalAttempts">0</div>
+            </div>
+            <div class="summary-card">
+                <h3>Correct</h3>
+                <div class="value correct-count" id="totalCorrect">0</div>
+            </div>
+            <div class="summary-card">
+                <h3>Incorrect</h3>
+                <div class="value incorrect-count" id="totalIncorrect">0</div>
+            </div>
+            <div class="summary-card">
+                <h3>Overall Accuracy</h3>
+                <div class="value" id="overallPercent">0%</div>
+            </div>
+        </div>
+
+        <div class="filter-section">
+            <h3>Filter by Category</h3>
+            <div id="categoryFilters" class="category-filter">
+                <button class="category-pill selected" data-category="all">All Cards</button>
+            </div>
+        </div>
+
+        <div class="controls">
+            <a href="flashcards.html" class="btn-primary" style="display:inline-block;text-decoration:none;padding:12px 24px;">🎯 Practice Flashcards</a>
+            <button id="resetStatsBtn" class="btn-secondary">🗑️ Reset All Stats</button>
+        </div>
+
+        <div class="stats-table-container">
+            <table class="stats-table">
+                <thead>
+                    <tr>
+                        <th data-sort="question">Question</th>
+                        <th data-sort="answer">Answer</th>
+                        <th data-sort="categories">Categories</th>
+                        <th data-sort="correct">Correct</th>
+                        <th data-sort="incorrect">Incorrect</th>
+                        <th data-sort="total">Total</th>
+                        <th data-sort="percent">Accuracy</th>
+                    </tr>
+                </thead>
+                <tbody id="statsTableBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="noStats" class="no-stats" style="display: none;">
+        <h2>📋 No Stats Yet</h2>
+        <p>Start practicing flashcards to see your stats here!</p>
+        <a href="flashcards.html" class="btn-primary">Practice Flashcards</a>
+    </div>
+
+    <div class="back-link">
+        <a href="flashcards.html">← Back to Flashcards</a>
+        <a href="/" style="margin-left: 20px;">🏠 Home</a>
+    </div>
+</div>
+
+<script>
+    let currentSort = { column: 'incorrect', ascending: false };
+    let allStatsData = [];
+    let statsData = [];
+    let selectedCategory = 'all';
+
+    async function loadStats() {
+        try {
+            const response = await fetch('flashcards.json');
+            const flashcards = await response.json();
+            
+            console.log('Loaded flashcards:', flashcards.length);
+
+            if (flashcards.length === 0) {
+                showNoStats();
+                return;
+            }
+
+            // Convert flashcards to stats data
+            allStatsData = flashcards.map(card => {
+                const correct = card.correct || 0;
+                const incorrect = card.incorrect || 0;
+                const total = correct + incorrect;
+                const percent = total > 0 ? ((correct / total) * 100).toFixed(1) : 0;
+                
+                return {
+                    id: card.id,
+                    question: card.question,
+                    answer: card.answer,
+                    categories: card.categories || [],
+                    notes: card.notes || '',
+                    correct: correct,
+                    incorrect: incorrect,
+                    total: total,
+                    percent: parseFloat(percent)
+                };
+            });
+
+            // Filter to only cards with attempts
+            const cardsWithStats = allStatsData.filter(card => card.total > 0);
+            
+            if (cardsWithStats.length === 0) {
+                showNoStats();
+                return;
+            }
+
+            statsData = [...allStatsData];
+            
+            populateCategoryFilter();
+            updateSummary();
+            sortAndDisplayTable();
+            
+            document.getElementById('statsContent').style.display = 'block';
+            document.getElementById('noStats').style.display = 'none';
+        } catch (error) {
+            console.error('Error loading flashcard stats:', error);
+            showNoStats();
+        }
+    }
+
+    function showNoStats() {
+        document.getElementById('statsContent').style.display = 'none';
+        document.getElementById('noStats').style.display = 'block';
+    }
+
+    function populateCategoryFilter() {
+        const categories = new Set();
+        
+        allStatsData.forEach(card => {
+            if (card.categories && card.categories.length > 0) {
+                card.categories.forEach(cat => categories.add(cat));
+            }
+        });
+
+        const filterContainer = document.getElementById('categoryFilters');
+        
+        // Keep the "All Cards" button
+        filterContainer.innerHTML = '<button class="category-pill selected" data-category="all">All Cards</button>';
+        
+        // Add category buttons sorted alphabetically
+        Array.from(categories).sort().forEach(category => {
+            const pill = document.createElement('button');
+            pill.className = 'category-pill';
+            pill.textContent = category;
+            pill.dataset.category = category;
+            pill.addEventListener('click', () => filterByCategory(category, pill));
+            filterContainer.appendChild(pill);
+        });
+
+        // Add click handler to "All Cards" button
+        filterContainer.querySelector('[data-category="all"]').addEventListener('click', function() {
+            filterByCategory('all', this);
+        });
+    }
+
+    function filterByCategory(category, pillElement) {
+        selectedCategory = category;
+        
+        // Update pill styles
+        document.querySelectorAll('.category-pill').forEach(p => p.classList.remove('selected'));
+        pillElement.classList.add('selected');
+        
+        // Filter data
+        if (category === 'all') {
+            statsData = [...allStatsData];
+        } else {
+            statsData = allStatsData.filter(card => 
+                card.categories && card.categories.includes(category)
+            );
+        }
+        
+        updateSummary();
+        sortAndDisplayTable();
+    }
+
+    function updateSummary() {
+        const totalCards = statsData.length;
+        const totalAttempts = statsData.reduce((sum, item) => sum + item.total, 0);
+        const totalCorrect = statsData.reduce((sum, item) => sum + item.correct, 0);
+        const totalIncorrect = statsData.reduce((sum, item) => sum + item.incorrect, 0);
+        const overallPercent = totalAttempts > 0 ? ((totalCorrect / totalAttempts) * 100).toFixed(1) : 0;
+
+        document.getElementById('totalCards').textContent = totalCards;
+        document.getElementById('totalAttempts').textContent = totalAttempts;
+        document.getElementById('totalCorrect').textContent = totalCorrect;
+        document.getElementById('totalIncorrect').textContent = totalIncorrect;
+        document.getElementById('overallPercent').textContent = overallPercent + '%';
+    }
+
+    function sortAndDisplayTable() {
+        // Sort the data
+        statsData.sort((a, b) => {
+            let aVal = a[currentSort.column];
+            let bVal = b[currentSort.column];
+
+            // Handle array comparisons (categories)
+            if (Array.isArray(aVal)) {
+                aVal = aVal.join(', ').toLowerCase();
+                bVal = bVal.join(', ').toLowerCase();
+            }
+
+            // Handle string comparisons
+            if (typeof aVal === 'string') {
+                aVal = aVal.toLowerCase();
+                bVal = bVal.toLowerCase();
+            }
+
+            if (currentSort.ascending) {
+                return aVal > bVal ? 1 : aVal < bVal ? -1 : 0;
+            } else {
+                return aVal < bVal ? 1 : aVal > bVal ? -1 : 0;
+            }
+        });
+
+        // Display the sorted data
+        const tbody = document.getElementById('statsTableBody');
+        tbody.innerHTML = '';
+
+        statsData.forEach(item => {
+            const row = document.createElement('tr');
+            
+            const percentClass = item.percent >= 80 ? 'percent-high' : 
+                                item.percent >= 50 ? 'percent-medium' : 'percent-low';
+
+            const categoriesHtml = item.categories.length > 0 
+                ? item.categories.map(cat => `<span class="category-badge">${cat}</span>`).join('')
+                : '<span style="color: var(--text-secondary); font-style: italic;">none</span>';
+
+            row.innerHTML = `
+                <td><strong>${item.question}</strong></td>
+                <td>${item.answer}</td>
+                <td class="categories-cell">${categoriesHtml}</td>
+                <td class="correct-count">${item.correct}</td>
+                <td class="incorrect-count">${item.incorrect}</td>
+                <td>${item.total}</td>
+                <td class="percent-correct ${percentClass}">${item.total > 0 ? item.percent + '%' : '-'}</td>
+            `;
+            
+            tbody.appendChild(row);
+        });
+
+        // Update header sort indicators
+        document.querySelectorAll('.stats-table th').forEach(th => {
+            th.classList.remove('sorted-asc', 'sorted-desc');
+            if (th.dataset.sort === currentSort.column) {
+                th.classList.add(currentSort.ascending ? 'sorted-asc' : 'sorted-desc');
+            }
+        });
+    }
+
+    // Add click handlers to table headers
+    document.querySelectorAll('.stats-table th').forEach(th => {
+        th.addEventListener('click', () => {
+            const column = th.dataset.sort;
+            
+            if (currentSort.column === column) {
+                // Toggle sort direction
+                currentSort.ascending = !currentSort.ascending;
+            } else {
+                // New column, default to descending for numeric columns
+                currentSort.column = column;
+                currentSort.ascending = ['question', 'answer', 'categories'].includes(column);
+            }
+            
+            sortAndDisplayTable();
+        });
+    });
+
+    // Reset stats button
+    document.getElementById('resetStatsBtn').addEventListener('click', async () => {
+        if (confirm('Are you sure you want to reset all flashcard stats? This cannot be undone.')) {
+            try {
+                // Reset all cards to 0/0
+                const response = await fetch('flashcards.json');
+                const flashcards = await response.json();
+                
+                for (const card of flashcards) {
+                    await fetch('/api/update-flashcard-stats', {
+                        method: 'PUT',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            id: card.id,
+                            correct: 0,
+                            incorrect: 0
+                        })
+                    });
+                }
+                
+                alert('Stats reset successfully!');
+                location.reload();
+            } catch (error) {
+                console.error('Error resetting stats:', error);
+                alert('Error resetting stats. See console for details.');
+            }
+        }
+    });
+
+    loadStats();
+</script>
+
+</body>
+</html>

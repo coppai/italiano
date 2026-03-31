@@ -72,6 +72,7 @@
 
     <div class="back-link">
         <a href="/">← Back to Home</a>
+        <a href="flashcard-stats.html" style="margin-left: 20px;">📊 View Stats</a>
     </div>
 </div>
 
@@ -315,12 +316,37 @@
     pronounceBtn.addEventListener('click', (e) => {
         e.stopPropagation();
         const card = flashcards[currentIndex];
-        const textToSpeak = isFlipped ? card.answer : card.question;
+        
+        // Determine what text to speak based on what's currently showing
+        // When isReversed is true, the display is swapped
+        let textToSpeak;
+        if (isReversed) {
+            // Cards are reversed: front shows answer, back shows question
+            textToSpeak = isFlipped ? card.question : card.answer;
+        } else {
+            // Normal: front shows question, back shows answer
+            textToSpeak = isFlipped ? card.answer : card.question;
+        }
+        
+        console.log('Pronounce clicked:', { textToSpeak, isFlipped, isReversed });
+        
+        if (!textToSpeak) {
+            console.error('No text to speak');
+            return;
+        }
         
         if ('speechSynthesis' in window) {
+            // Cancel any ongoing speech
+            speechSynthesis.cancel();
+            
             const utterance = new SpeechSynthesisUtterance(textToSpeak);
             utterance.lang = 'it-IT'; // Italian
             utterance.rate = 0.9;
+            
+            utterance.onerror = (event) => {
+                console.error('Speech synthesis error:', event);
+            };
+            
             speechSynthesis.speak(utterance);
         } else {
             alert('Text-to-speech is not supported in your browser.');

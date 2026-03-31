@@ -14,7 +14,7 @@
     "answer": "il conto",
     "categories": [],
     "correct": 3,
-    "incorrect": 4
+    "incorrect": 5
   },
   {
     "id": "1772208939182kr1wzcsto",
@@ -115,7 +115,7 @@
     "answer": "Avete",
     "notes": "(ah-VEH-teh)\n\nAvete un tavolo",
     "categories": [],
-    "correct": 1,
+    "correct": 2,
     "incorrect": 2
   },
   {
@@ -124,7 +124,7 @@
     "answer": "ecco qui",
     "notes": "",
     "categories": [],
-    "correct": 0,
+    "correct": 1,
     "incorrect": 5
   },
   {
@@ -587,7 +587,7 @@
     "categories": [
       "restaurant"
     ],
-    "correct": 4,
+    "correct": 5,
     "incorrect": 6
   },
   {
@@ -824,7 +824,7 @@
     "notes": "toh-vah-LYOH-loh",
     "categories": [],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 1
   },
   {
     "id": "1772700000001",
@@ -1294,7 +1294,10 @@
     "question": "last weekend",
     "answer": "Lo scorso fine settimana",
     "notes": "",
-    "categories": [],
+    "categories": [
+      "time",
+      "dates"
+    ],
     "correct": 0,
     "incorrect": 0
   },
@@ -1323,7 +1326,7 @@
     "notes": "",
     "categories": [],
     "correct": 0,
-    "incorrect": 1
+    "incorrect": 2
   },
   {
     "id": "177335647789568f7v348q",
@@ -1566,7 +1569,7 @@
     "categories": [
       "time"
     ],
-    "correct": 1,
+    "correct": 2,
     "incorrect": 0
   },
   {
@@ -1887,7 +1890,7 @@
       "travel"
     ],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 1
   },
   {
     "id": "1773754100013",
@@ -1938,7 +1941,9 @@
     "question": "therefor/so",
     "answer": "Quindi",
     "notes": "",
-    "categories": [],
+    "categories": [
+      "common-words"
+    ],
     "correct": 0,
     "incorrect": 0
   },
@@ -2186,5 +2191,249 @@
     ],
     "correct": 1,
     "incorrect": 2
+  },
+  {
+    "id": "1774800000001",
+    "question": "Head",
+    "answer": "La testa",
+    "notes": "",
+    "categories": [
+      "body-parts"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1774800000002",
+    "question": "The stomach",
+    "answer": "Lo stomaco",
+    "notes": "",
+    "categories": [
+      "body-parts"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1774800000003",
+    "question": "Throat",
+    "answer": "La gola",
+    "notes": "also: Una gola (a throat)",
+    "categories": [
+      "body-parts"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1774800000004",
+    "question": "Back",
+    "answer": "La schiena",
+    "notes": "",
+    "categories": [
+      "body-parts"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1774800000005",
+    "question": "Ears",
+    "answer": "Le orecchie",
+    "notes": "",
+    "categories": [
+      "body-parts"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1774800000006",
+    "question": "Teeth",
+    "answer": "I denti",
+    "notes": "",
+    "categories": [
+      "body-parts"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1774800000007",
+    "question": "Arm",
+    "answer": "Il braccio",
+    "notes": "",
+    "categories": [
+      "body-parts"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1774800000008",
+    "question": "Mouth",
+    "answer": "La bocca",
+    "notes": "",
+    "categories": [
+      "body-parts"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1774800000009",
+    "question": "Voice",
+    "answer": "La voce",
+    "notes": "",
+    "categories": [
+      "body-parts"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1774800000010",
+    "question": "Nose",
+    "answer": "Il naso",
+    "notes": "",
+    "categories": [
+      "body-parts"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1774800000012",
+    "question": "I have a sore throat",
+    "answer": "Ho mal di gola",
+    "notes": "",
+    "categories": [
+      "health"
+    ],
+    "correct": 3,
+    "incorrect": 1
+  },
+  {
+    "id": "1774800000013",
+    "question": "I have a headache",
+    "answer": "Ho mal di testa",
+    "notes": "",
+    "categories": [
+      "health"
+    ],
+    "correct": 3,
+    "incorrect": 4
+  },
+  {
+    "id": "1774800000014",
+    "question": "My arm is sore",
+    "answer": "Mi fa male il braccio",
+    "notes": "BRAHT-choh",
+    "categories": [
+      "health"
+    ],
+    "correct": 3,
+    "incorrect": 7
+  },
+  {
+    "id": "1774800000015",
+    "question": "It hurts / I feel pain",
+    "answer": "Mi fa male",
+    "notes": "",
+    "categories": [
+      "health"
+    ],
+    "correct": 3,
+    "incorrect": 5
+  },
+  {
+    "id": "1774800000016",
+    "question": "Do you have a headache?",
+    "answer": "Hai mal di testa?",
+    "notes": "",
+    "categories": [
+      "health"
+    ],
+    "correct": 3,
+    "incorrect": 6
+  },
+  {
+    "id": "1774800000017",
+    "question": "Cold (illness)",
+    "answer": "Il raffreddore",
+    "notes": "",
+    "categories": [
+      "health"
+    ],
+    "correct": 3,
+    "incorrect": 10
+  },
+  {
+    "id": "1774800000018",
+    "question": "Fever",
+    "answer": "La febbre",
+    "notes": "FEB-bray",
+    "categories": [
+      "health"
+    ],
+    "correct": 2,
+    "incorrect": 3
+  },
+  {
+    "id": "1774800000019",
+    "question": "On the",
+    "answer": "Sul / sulla / sui / sulle",
+    "notes": "depends on gender & number",
+    "categories": [
+      "common-words"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1774800000020",
+    "question": "Empty",
+    "answer": "Vuoto",
+    "notes": "",
+    "categories": [
+      "common-words"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1774800000021",
+    "question": "To learn",
+    "answer": "Imparare",
+    "notes": "",
+    "categories": [
+      "common-words",
+      "verb"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1774800000022",
+    "question": "Last",
+    "answer": "Scorsa / scorso",
+    "notes": "scorsa (feminine) / scorso (masculine)",
+    "categories": [
+      "time",
+      "dates"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1774800000023",
+    "question": "Continuously / all the time",
+    "answer": "Continuamente",
+    "notes": "",
+    "categories": [
+      "common-words"
+    ],
+    "correct": 0,
+    "incorrect": 0
   }
 ]
