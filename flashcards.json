@@ -34,7 +34,7 @@
     "categories": [
       "days"
     ],
-    "correct": 4,
+    "correct": 5,
     "incorrect": 3
   },
   {
@@ -45,7 +45,7 @@
       "days"
     ],
     "correct": 3,
-    "incorrect": 0
+    "incorrect": 1
   },
   {
     "id": "1772209001003",
@@ -287,7 +287,7 @@
     "answer": "le mele",
     "notes": "",
     "categories": [],
-    "correct": 1,
+    "correct": 2,
     "incorrect": 1
   },
   {
@@ -676,7 +676,7 @@
       "restaurant"
     ],
     "correct": 5,
-    "incorrect": 0
+    "incorrect": 1
   },
   {
     "id": "1740787200022",
@@ -1002,7 +1002,7 @@
       "dates",
       "time"
     ],
-    "correct": 3,
+    "correct": 4,
     "incorrect": 0
   },
   {
@@ -1236,15 +1236,6 @@
     "incorrect": 0
   },
   {
-    "id": "1773186958676bro75rkzl",
-    "question": "i each ",
-    "answer": "mangio",
-    "notes": "mangio una pizza ",
-    "categories": [],
-    "correct": 0,
-    "incorrect": 0
-  },
-  {
     "id": "17733542041351711dkvxa",
     "question": "ecco",
     "answer": "here it is",
@@ -1299,7 +1290,7 @@
       "dates"
     ],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 1
   },
   {
     "id": "1773356427114ct0fvqj5q",
@@ -1381,7 +1372,7 @@
     "categories": [
       "shopping"
     ],
-    "correct": 2,
+    "correct": 3,
     "incorrect": 0
   },
   {
@@ -1469,8 +1460,8 @@
     "categories": [
       "shopping"
     ],
-    "correct": 2,
-    "incorrect": 1
+    "correct": 3,
+    "incorrect": 2
   },
   {
     "id": "1741824000010",
@@ -1481,7 +1472,7 @@
       "shopping"
     ],
     "correct": 3,
-    "incorrect": 1
+    "incorrect": 2
   },
   {
     "id": "1741824000011",
@@ -1612,10 +1603,7 @@
     "question": "what can one see here?",
     "answer": "cosa si può vedere qui?",
     "notes": "[pwoh]",
-    "categories": [
-      "time",
-      "open-close"
-    ],
+    "categories": [],
     "correct": 2,
     "incorrect": 2
   },
@@ -1625,7 +1613,6 @@
     "answer": "Si può andare in spiaggia.",
     "notes": "",
     "categories": [
-      "time",
       "open-close"
     ],
     "correct": 2,
@@ -1637,7 +1624,6 @@
     "answer": "si può visitare il castello",
     "notes": "",
     "categories": [
-      "time",
       "open-close"
     ],
     "correct": 2,
@@ -1648,10 +1634,7 @@
     "question": "I like to visit the castle",
     "answer": "mi piace visitare il castello",
     "notes": "",
-    "categories": [
-      "time",
-      "open-close"
-    ],
+    "categories": [],
     "correct": 2,
     "incorrect": 2
   },
@@ -1661,7 +1644,6 @@
     "answer": "si può vedere un film al cinema",
     "notes": "(pwo)",
     "categories": [
-      "time",
       "open-close"
     ],
     "correct": 2,
@@ -1933,8 +1915,8 @@
     "categories": [
       "time"
     ],
-    "correct": 0,
-    "incorrect": 0
+    "correct": 1,
+    "incorrect": 1
   },
   {
     "id": "1773949691318kvwrss4qy",
@@ -1955,7 +1937,7 @@
     "categories": [
       "bathroom"
     ],
-    "correct": 0,
+    "correct": 3,
     "incorrect": 0
   },
   {
@@ -1966,7 +1948,7 @@
     "categories": [
       "bathroom"
     ],
-    "correct": 0,
+    "correct": 3,
     "incorrect": 0
   },
   {
@@ -1988,8 +1970,8 @@
     "categories": [
       "travel"
     ],
-    "correct": 0,
-    "incorrect": 0
+    "correct": 1,
+    "incorrect": 1
   },
   {
     "id": "1774023267830ouhjo1qmw",
@@ -2039,8 +2021,8 @@
     "categories": [
       "weather"
     ],
-    "correct": 1,
-    "incorrect": 1
+    "correct": 2,
+    "incorrect": 2
   },
   {
     "id": "1774282424147vi6mfgip5",
@@ -2049,7 +2031,7 @@
     "notes": "",
     "categories": [],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 4
   },
   {
     "id": "1774282451159h3isrtyjz",
@@ -2059,8 +2041,8 @@
     "categories": [
       "weather"
     ],
-    "correct": 2,
-    "incorrect": 0
+    "correct": 3,
+    "incorrect": 2
   },
   {
     "id": "1774282540428u97wxnvxb",
@@ -2156,7 +2138,7 @@
     "categories": [
       "weather"
     ],
-    "correct": 1,
+    "correct": 2,
     "incorrect": 0
   },
   {
@@ -2167,7 +2149,7 @@
     "categories": [
       "weather"
     ],
-    "correct": 2,
+    "correct": 3,
     "incorrect": 1
   },
   {
@@ -2189,7 +2171,7 @@
     "categories": [
       "weather"
     ],
-    "correct": 1,
+    "correct": 2,
     "incorrect": 2
   },
   {
@@ -2200,7 +2182,7 @@
     "categories": [
       "body-parts"
     ],
-    "correct": 0,
+    "correct": 7,
     "incorrect": 0
   },
   {
@@ -2211,8 +2193,8 @@
     "categories": [
       "body-parts"
     ],
-    "correct": 0,
-    "incorrect": 0
+    "correct": 7,
+    "incorrect": 2
   },
   {
     "id": "1774800000003",
@@ -2222,30 +2204,30 @@
     "categories": [
       "body-parts"
     ],
-    "correct": 0,
-    "incorrect": 0
+    "correct": 9,
+    "incorrect": 5
   },
   {
     "id": "1774800000004",
     "question": "Back",
     "answer": "La schiena",
-    "notes": "",
+    "notes": "SKEH-nah",
     "categories": [
       "body-parts"
     ],
-    "correct": 0,
-    "incorrect": 0
+    "correct": 6,
+    "incorrect": 5
   },
   {
     "id": "1774800000005",
     "question": "Ears",
     "answer": "Le orecchie",
-    "notes": "",
+    "notes": "oh-REHK-kyeh",
     "categories": [
       "body-parts"
     ],
-    "correct": 0,
-    "incorrect": 0
+    "correct": 7,
+    "incorrect": 14
   },
   {
     "id": "1774800000006",
@@ -2255,19 +2237,19 @@
     "categories": [
       "body-parts"
     ],
-    "correct": 0,
-    "incorrect": 0
+    "correct": 7,
+    "incorrect": 1
   },
   {
     "id": "1774800000007",
     "question": "Arm",
     "answer": "Il braccio",
-    "notes": "",
+    "notes": "BRAHT-choh",
     "categories": [
       "body-parts"
     ],
-    "correct": 0,
-    "incorrect": 0
+    "correct": 7,
+    "incorrect": 13
   },
   {
     "id": "1774800000008",
@@ -2277,7 +2259,7 @@
     "categories": [
       "body-parts"
     ],
-    "correct": 0,
+    "correct": 8,
     "incorrect": 0
   },
   {
@@ -2288,19 +2270,19 @@
     "categories": [
       "body-parts"
     ],
-    "correct": 0,
-    "incorrect": 0
+    "correct": 8,
+    "incorrect": 3
   },
   {
     "id": "1774800000010",
     "question": "Nose",
     "answer": "Il naso",
-    "notes": "",
+    "notes": "eel NAH-zoh",
     "categories": [
       "body-parts"
     ],
-    "correct": 0,
-    "incorrect": 0
+    "correct": 7,
+    "incorrect": 7
   },
   {
     "id": "1774800000012",
@@ -2332,8 +2314,8 @@
     "categories": [
       "health"
     ],
-    "correct": 3,
-    "incorrect": 7
+    "correct": 4,
+    "incorrect": 9
   },
   {
     "id": "1774800000015",
@@ -2343,7 +2325,7 @@
     "categories": [
       "health"
     ],
-    "correct": 3,
+    "correct": 4,
     "incorrect": 5
   },
   {
@@ -2354,8 +2336,8 @@
     "categories": [
       "health"
     ],
-    "correct": 3,
-    "incorrect": 6
+    "correct": 4,
+    "incorrect": 7
   },
   {
     "id": "1774800000017",
@@ -2387,7 +2369,7 @@
     "categories": [
       "common-words"
     ],
-    "correct": 0,
+    "correct": 1,
     "incorrect": 0
   },
   {
@@ -2435,5 +2417,224 @@
     ],
     "correct": 0,
     "incorrect": 0
+  },
+  {
+    "id": "17750066347304le2og5k0",
+    "question": "hair",
+    "answer": "capeli",
+    "notes": "",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1775006789687vfvm7k3bb",
+    "question": "up or high",
+    "answer": "alto",
+    "notes": "",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "17750070627634hfk1n9qa",
+    "question": "i bought",
+    "answer": "ho comparto ",
+    "notes": "",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1775100000001",
+    "question": "today",
+    "answer": "oggi",
+    "notes": "OH-jee",
+    "categories": [
+      "time",
+      "dates"
+    ],
+    "correct": 1,
+    "incorrect": 0
+  },
+  {
+    "id": "1775100000002",
+    "question": "tomorrow",
+    "answer": "domani",
+    "notes": "doh-MAH-nee",
+    "categories": [
+      "time",
+      "dates"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1775100000003",
+    "question": "tonight",
+    "answer": "stasera",
+    "notes": "stah-SEH-rah",
+    "categories": [
+      "time",
+      "dates"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1775100000004",
+    "question": "evening",
+    "answer": "la sera",
+    "notes": "lah SEH-rah",
+    "categories": [
+      "time",
+      "dates"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1775100000005",
+    "question": "night",
+    "answer": "la notte",
+    "notes": "lah NOH-teh",
+    "categories": [
+      "time",
+      "dates"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1775100000006",
+    "question": "afternoon",
+    "answer": "il pomeriggio",
+    "notes": "eel poh-meh-REE-joh",
+    "categories": [
+      "time",
+      "dates"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1775100000007",
+    "question": "day",
+    "answer": "il giorno",
+    "notes": "eel JOHR-noh",
+    "categories": [
+      "time",
+      "dates"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1775100000008",
+    "question": "week",
+    "answer": "la settimana",
+    "notes": "lah seh-tee-MAH-nah",
+    "categories": [
+      "time",
+      "dates"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1775100000009",
+    "question": "year",
+    "answer": "l'anno",
+    "notes": "LAHN-noh",
+    "categories": [
+      "time",
+      "dates"
+    ],
+    "correct": 0,
+    "incorrect": 1
+  },
+  {
+    "id": "1775100000010",
+    "question": "next week",
+    "answer": "la prossima settimana",
+    "notes": "PROHS-see-mah",
+    "categories": [
+      "time",
+      "dates"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1775100000011",
+    "question": "next month",
+    "answer": "il prossimo mese",
+    "notes": "",
+    "categories": [
+      "time",
+      "dates"
+    ],
+    "correct": 0,
+    "incorrect": 1
+  },
+  {
+    "id": "1775100000012",
+    "question": "next year",
+    "answer": "il prossimo anno",
+    "notes": "",
+    "categories": [
+      "time",
+      "dates"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1775100000013",
+    "question": "this year",
+    "answer": "quest'anno",
+    "notes": "kwest-AHN-noh",
+    "categories": [
+      "time",
+      "dates"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1775100000014",
+    "question": "last year",
+    "answer": "l'anno scorso",
+    "notes": "",
+    "categories": [
+      "time",
+      "dates"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1775100000015",
+    "question": "the day before yesterday",
+    "answer": "l'altro ieri",
+    "notes": "LAHL-troh ee-EH-ree",
+    "categories": [
+      "time",
+      "dates"
+    ],
+    "correct": 0,
+    "incorrect": 0
+  },
+  {
+    "id": "1775100000016",
+    "question": "the day after tomorrow",
+    "answer": "dopodomani",
+    "notes": "doh-poh-doh-MAH-nee",
+    "categories": [
+      "time",
+      "dates"
+    ],
+    "correct": 0,
+    "incorrect": 1
   }
 ]

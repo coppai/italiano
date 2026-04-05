@@ -49,7 +49,7 @@
         "example": "Loro hanno molti amici. (They have many friends.)"
       }
     ],
-    "infinitive_correct": 1,
+    "infinitive_correct": 2,
     "infinitive_incorrect": 0
   },
   {
@@ -102,7 +102,7 @@
         "example": "Loro fanno una festa. (They are having a party.)"
       }
     ],
-    "infinitive_correct": 1,
+    "infinitive_correct": 2,
     "infinitive_incorrect": 0
   },
   {
@@ -155,7 +155,7 @@
         "example": "Loro dicono no. (They say no.)"
       }
     ],
-    "infinitive_correct": 1,
+    "infinitive_correct": 2,
     "infinitive_incorrect": 0
   },
   {
@@ -208,7 +208,7 @@
         "example": "Loro possono restare. (They can stay.)"
       }
     ],
-    "infinitive_correct": 1,
+    "infinitive_correct": 2,
     "infinitive_incorrect": 0
   },
   {
@@ -261,8 +261,8 @@
         "example": "Loro vanno in vacanza. (They go on vacation.)"
       }
     ],
-    "infinitive_correct": 1,
-    "infinitive_incorrect": 0
+    "infinitive_correct": 2,
+    "infinitive_incorrect": 1
   },
   {
     "id": "vedere",
@@ -314,7 +314,7 @@
         "example": "Loro vedono tutto. (They see everything.)"
       }
     ],
-    "infinitive_correct": 1,
+    "infinitive_correct": 2,
     "infinitive_incorrect": 0
   },
   {
@@ -366,7 +366,9 @@
         "pronunciation": "DAHN-noh",
         "example": "Loro danno aiuto. (They give help.)"
       }
-    ]
+    ],
+    "infinitive_correct": 1,
+    "infinitive_incorrect": 0
   },
   {
     "id": "volere",
@@ -418,7 +420,7 @@
         "example": "Loro vogliono viaggiare. (They want to travel.)"
       }
     ],
-    "infinitive_correct": 1,
+    "infinitive_correct": 2,
     "infinitive_incorrect": 0
   },
   {
@@ -470,7 +472,9 @@
         "pronunciation": "SAHN-noh",
         "example": "Loro sanno nuotare. (They know how to swim.)"
       }
-    ]
+    ],
+    "infinitive_correct": 1,
+    "infinitive_incorrect": 0
   },
   {
     "id": "stare",
@@ -521,7 +525,9 @@
         "pronunciation": "STAHN-noh",
         "example": "Loro stanno qui. (They stay here.)"
       }
-    ]
+    ],
+    "infinitive_correct": 1,
+    "infinitive_incorrect": 0
   },
   {
     "id": "dovere",
@@ -572,7 +578,9 @@
         "pronunciation": "DEH-voh-noh",
         "example": "Loro devono pagare. (They must pay.)"
       }
-    ]
+    ],
+    "infinitive_correct": 1,
+    "infinitive_incorrect": 1
   },
   {
     "id": "prendere",
@@ -623,58 +631,9 @@
         "pronunciation": "PREHN-doh-noh",
         "example": "Loro prendono il sole. (They sunbathe.)"
       }
-    ]
-  },
-  {
-    "id": "parlare",
-    "infinitive": "parlare",
-    "english": "to speak / to talk",
-    "pronunciation": "(par-LAH-reh)",
-    "package": 3,
-    "forms": [
-      {
-        "subject": "io",
-        "italian": "parlo",
-        "english": "I speak",
-        "pronunciation": "PAR-loh",
-        "example": "Io parlo italiano. (I speak Italian.)"
-      },
-      {
-        "subject": "tu",
-        "italian": "parli",
-        "english": "you speak (informal)",
-        "pronunciation": "PAR-lee",
-        "example": "Tu parli inglese. (You speak English.)"
-      },
-      {
-        "subject": "lui/lei",
-        "italian": "parla",
-        "english": "he/she speaks",
-        "pronunciation": "PAR-lah",
-        "example": "Lei parla troppo. (She speaks too much.)"
-      },
-      {
-        "subject": "noi",
-        "italian": "parliamo",
-        "english": "we speak",
-        "pronunciation": "par-LYAH-moh",
-        "example": "Noi parliamo tedesco. (We speak German.)"
-      },
-      {
-        "subject": "voi",
-        "italian": "parlate",
-        "english": "you speak (plural)",
-        "pronunciation": "par-LAH-teh",
-        "example": "Voi parlate piano. (You speak slowly.)"
-      },
-      {
-        "subject": "loro",
-        "italian": "parlano",
-        "english": "they speak",
-        "pronunciation": "PAR-lah-noh",
-        "example": "Loro parlano francese. (They speak French.)"
-      }
-    ]
+    ],
+    "infinitive_correct": 1,
+    "infinitive_incorrect": 0
   },
   {
     "id": "mettere",
@@ -725,7 +684,9 @@
         "pronunciation": "MET-toh-noh",
         "example": "Loro mettono ordine. (They put things in order.)"
       }
-    ]
+    ],
+    "infinitive_correct": 1,
+    "infinitive_incorrect": 0
   },
   {
     "id": "trovare",
@@ -834,7 +795,7 @@
     "infinitive": "capire",
     "english": "to understand",
     "pronunciation": "(cah-PEE-reh)",
-    "package": 4,
+    "package": 3,
     "forms": [
       {
         "subject": "io",
@@ -936,7 +897,7 @@
     "infinitive": "venire",
     "english": "to come",
     "pronunciation": "(veh-NEE-reh)",
-    "package": 4,
+    "package": 3,
     "forms": [
       {
         "subject": "io",
@@ -1191,7 +1152,7 @@
     "infinitive": "arrivare",
     "english": "to arrive",
     "pronunciation": "(ahr-ree-VAH-reh)",
-    "package": 5,
+    "package": 3,
     "forms": [
       {
         "subject": "io",
