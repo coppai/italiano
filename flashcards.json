@@ -1002,7 +1002,7 @@
       "dates",
       "time"
     ],
-    "correct": 4,
+    "correct": 5,
     "incorrect": 0
   },
   {
@@ -1289,7 +1289,7 @@
       "time",
       "dates"
     ],
-    "correct": 0,
+    "correct": 1,
     "incorrect": 1
   },
   {
@@ -1535,10 +1535,9 @@
     "answer": "quando apre la chiesa?",
     "notes": "(AH-preh)",
     "categories": [
-      "time",
       "open-close"
     ],
-    "correct": 3,
+    "correct": 4,
     "incorrect": 0
   },
   {
@@ -1560,8 +1559,8 @@
     "categories": [
       "time"
     ],
-    "correct": 2,
-    "incorrect": 0
+    "correct": 4,
+    "incorrect": 1
   },
   {
     "id": "1741824000019",
@@ -1572,8 +1571,8 @@
       "time",
       "open-close"
     ],
-    "correct": 2,
-    "incorrect": 2
+    "correct": 3,
+    "incorrect": 5
   },
   {
     "id": "1741824000020",
@@ -1592,7 +1591,6 @@
     "answer": "cosa si può fare qui?",
     "notes": "",
     "categories": [
-      "time",
       "open-close"
     ],
     "correct": 2,
@@ -1915,7 +1913,7 @@
     "categories": [
       "time"
     ],
-    "correct": 1,
+    "correct": 3,
     "incorrect": 1
   },
   {
@@ -2404,8 +2402,8 @@
       "time",
       "dates"
     ],
-    "correct": 0,
-    "incorrect": 0
+    "correct": 2,
+    "incorrect": 2
   },
   {
     "id": "1774800000023",
@@ -2454,7 +2452,7 @@
       "time",
       "dates"
     ],
-    "correct": 1,
+    "correct": 2,
     "incorrect": 0
   },
   {
@@ -2466,7 +2464,7 @@
       "time",
       "dates"
     ],
-    "correct": 0,
+    "correct": 1,
     "incorrect": 0
   },
   {
@@ -2478,8 +2476,8 @@
       "time",
       "dates"
     ],
-    "correct": 0,
-    "incorrect": 0
+    "correct": 1,
+    "incorrect": 1
   },
   {
     "id": "1775100000004",
@@ -2490,8 +2488,8 @@
       "time",
       "dates"
     ],
-    "correct": 0,
-    "incorrect": 0
+    "correct": 2,
+    "incorrect": 1
   },
   {
     "id": "1775100000005",
@@ -2502,8 +2500,8 @@
       "time",
       "dates"
     ],
-    "correct": 0,
-    "incorrect": 0
+    "correct": 2,
+    "incorrect": 1
   },
   {
     "id": "1775100000006",
@@ -2514,8 +2512,8 @@
       "time",
       "dates"
     ],
-    "correct": 0,
-    "incorrect": 0
+    "correct": 1,
+    "incorrect": 3
   },
   {
     "id": "1775100000007",
@@ -2526,8 +2524,8 @@
       "time",
       "dates"
     ],
-    "correct": 0,
-    "incorrect": 0
+    "correct": 1,
+    "incorrect": 2
   },
   {
     "id": "1775100000008",
@@ -2538,8 +2536,8 @@
       "time",
       "dates"
     ],
-    "correct": 0,
-    "incorrect": 0
+    "correct": 1,
+    "incorrect": 2
   },
   {
     "id": "1775100000009",
@@ -2550,8 +2548,8 @@
       "time",
       "dates"
     ],
-    "correct": 0,
-    "incorrect": 1
+    "correct": 1,
+    "incorrect": 2
   },
   {
     "id": "1775100000010",
@@ -2562,8 +2560,8 @@
       "time",
       "dates"
     ],
-    "correct": 0,
-    "incorrect": 0
+    "correct": 1,
+    "incorrect": 1
   },
   {
     "id": "1775100000011",
@@ -2574,8 +2572,8 @@
       "time",
       "dates"
     ],
-    "correct": 0,
-    "incorrect": 1
+    "correct": 2,
+    "incorrect": 3
   },
   {
     "id": "1775100000012",
@@ -2586,8 +2584,8 @@
       "time",
       "dates"
     ],
-    "correct": 0,
-    "incorrect": 0
+    "correct": 1,
+    "incorrect": 2
   },
   {
     "id": "1775100000013",
@@ -2598,8 +2596,8 @@
       "time",
       "dates"
     ],
-    "correct": 0,
-    "incorrect": 0
+    "correct": 1,
+    "incorrect": 1
   },
   {
     "id": "1775100000014",
@@ -2610,8 +2608,8 @@
       "time",
       "dates"
     ],
-    "correct": 0,
-    "incorrect": 0
+    "correct": 1,
+    "incorrect": 6
   },
   {
     "id": "1775100000015",
@@ -2622,8 +2620,8 @@
       "time",
       "dates"
     ],
-    "correct": 0,
-    "incorrect": 0
+    "correct": 1,
+    "incorrect": 4
   },
   {
     "id": "1775100000016",
@@ -2634,7 +2632,7 @@
       "time",
       "dates"
     ],
-    "correct": 0,
-    "incorrect": 1
+    "correct": 2,
+    "incorrect": 4
   }
 ]

@@ -61,6 +61,9 @@
             <button id="shuffleBtn" class="btn-secondary">
                 <span>🔀 Shuffle</span>
             </button>
+            <button id="theFiveBtn" class="btn-secondary">
+                <span>✋ The Five</span>
+            </button>
             <button id="reverseBtn" class="btn-secondary reverse-btn">
                 <span>🔄 Reverse Cards</span>
             </button>
@@ -84,6 +87,9 @@
     let isReversed = false;      // Track if cards are reversed (Answer -> Question)
     let completedCards = new Set();  // Track cards marked as correct (by card.id)
     let selectedCategories = new Set();  // Track selected category filters
+    let theFiveMode = false;         // Track if "The Five" mode is active
+    let theFiveOffset = 0;           // Track which batch of 5 we're showing
+    let theFiveCompleted = 0;        // Track how many of current batch are completed
 
     const flashcardEl = document.getElementById('flashcard');
     const questionEl = document.getElementById('question');
@@ -102,6 +108,7 @@
     const cardNotesEl = document.getElementById('cardNotes');
     const categoryPillsContainer = document.getElementById('categoryPills');
     const reverseBtn = document.getElementById('reverseBtn');
+    const theFiveBtn = document.getElementById('theFiveBtn');
 
     // Load flashcards
     async function loadFlashcards() {
@@ -195,12 +202,13 @@
     
     // Filter flashcards by selected categories (OR logic)
     function applyFilters() {
+        let filteredCards;
         if (selectedCategories.size === 0) {
             // No filters selected, show all cards
-            flashcards = [...allFlashcards];
+            filteredCards = [...allFlashcards];
         } else {
             // Show cards that match ANY of the selected categories (OR)
-            flashcards = allFlashcards.filter(card => {
+            filteredCards = allFlashcards.filter(card => {
                 // Check if "uncategorized" is selected and card has no categories
                 if (selectedCategories.has('uncategorized') && (!card.categories || card.categories.length === 0)) {
                     return true;
@@ -213,6 +221,14 @@
             });
         }
         
+        // If "The Five" mode is active, only show 5 cards at a time
+        if (theFiveMode) {
+            flashcards = filteredCards.slice(theFiveOffset, theFiveOffset + 5);
+            theFiveCompleted = 0;
+        } else {
+            flashcards = filteredCards;
+        }
+        
         if (flashcards.length === 0) {
             noCardsArea.querySelector('h2').textContent = 'No Cards Match Selected Categories';
             noCardsArea.querySelector('p').textContent = 'Try selecting different categories.';
@@ -222,8 +238,10 @@
             noCardsArea.style.display = 'none';
             flashcardArea.style.display = 'block';
             totalCardsEl.textContent = flashcards.length;
-            // Shuffle cards whenever filters change
-            shuffleCards();
+            // Shuffle cards whenever filters change (but not in The Five mode)
+            if (!theFiveMode) {
+                shuffleCards();
+            }
             showCard(0);
         }
     }
@@ -360,6 +378,23 @@
         showCard(currentIndex);
     });
 
+    // The Five button
+    theFiveBtn.addEventListener('click', () => {
+        theFiveMode = !theFiveMode;
+        
+        if (theFiveMode) {
+            theFiveOffset = 0;
+            theFiveCompleted = 0;
+            theFiveBtn.querySelector('span').textContent = '✋ Exit The Five';
+            theFiveBtn.classList.add('selected');
+        } else {
+            theFiveBtn.querySelector('span').textContent = '✋ The Five';
+            theFiveBtn.classList.remove('selected');
+        }
+        
+        applyFilters();
+    });
+
     // Shuffle function
     function shuffleCards() {
         // Weighted shuffle - cards with more incorrect answers appear more often
@@ -455,9 +490,39 @@
         // Remove this card from the deck
         flashcards.splice(currentIndex, 1);
         
+        // If in "The Five" mode, track completion
+        if (theFiveMode) {
+            theFiveCompleted++;
+            
+            // Check if we've completed all 5 cards in this batch
+            if (flashcards.length === 0 && theFiveCompleted >= 5) {
+                // Move to next batch of 5
+                theFiveOffset += 5;
+                theFiveCompleted = 0;
+                
+                // Apply filters to load next 5 cards
+                applyFilters();
+                
+                // Check if there are more cards
+                if (flashcards.length === 0) {
+                    alert('🎉 Congratulations! You\'ve completed all cards in this category!');
+                    theFiveMode = false;
+                    theFiveOffset = 0;
+                    theFiveBtn.querySelector('span').textContent = '✋ The Five';
+                    theFiveBtn.classList.remove('selected');
+                    applyFilters();
+                } else {
+                    alert(`Great job! Moving to the next 5 cards (${flashcards.length} remaining in this batch).`);
+                }
+                return;
+            }
+        }
+        
         // Check if all cards completed
         if (flashcards.length === 0) {
-            alert('🎉 Congratulations! You\'ve completed all cards!');
+            if (!theFiveMode) {
+                alert('🎉 Congratulations! You\'ve completed all cards!');
+            }
             return;
         }
         
