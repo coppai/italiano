@@ -415,14 +415,17 @@
             
             const isEditing = editingId !== null;
             
+            const existingCard = isEditing ? allFlashcards.find(c => c.id === editingId) : null;
+            
             const formData = {
                 id: isEditing ? editingId : Date.now().toString() + Math.random().toString(36).substr(2, 9),
                 question: document.getElementById('question').value,
                 answer: document.getElementById('answer').value,
                 notes: document.getElementById('notes').value,
                 categories: tags,
-                correct: isEditing ? (allFlashcards.find(c => c.id === editingId)?.correct || 0) : 0,
-                incorrect: isEditing ? (allFlashcards.find(c => c.id === editingId)?.incorrect || 0) : 0
+                correct: isEditing ? (existingCard?.correct || 0) : 0,
+                incorrect: isEditing ? (existingCard?.incorrect || 0) : 0,
+                dateAdded: isEditing ? (existingCard?.dateAdded || new Date().toISOString().split('T')[0]) : new Date().toISOString().split('T')[0]
             };
 
             submitBtn.disabled = true;

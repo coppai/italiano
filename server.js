@@ -49,7 +49,9 @@ const server = http.createServer((req, res) => {
     const isAdminRoute =
         req.url === '/admin.html' ||
         req.url === '/admin' ||
+        req.url === '/migrate-dates.html' ||
         (req.method === 'POST' && req.url === '/api/add-flashcard') ||
+        (req.method === 'POST' && req.url === '/api/flashcards') ||
         (req.method === 'PUT' && req.url === '/api/edit-flashcard') ||
         (req.method === 'DELETE' && req.url === '/api/delete-flashcard');
 
@@ -325,6 +327,45 @@ const server = http.createServer((req, res) => {
                         res.writeHead(200, { 'Content-Type': 'application/json' });
                         res.end(JSON.stringify({ success: true, message: 'Flashcard deleted successfully' }));
                     });
+                });
+            } catch (error) {
+                res.writeHead(400, { 'Content-Type': 'application/json' });
+                res.end(JSON.stringify({ error: 'Invalid JSON data' }));
+            }
+        });
+        
+        return;
+    }
+
+    // Handle POST request for bulk updating all flashcards (for migration)
+    if (req.method === 'POST' && req.url === '/api/flashcards') {
+        let body = '';
+        
+        req.on('data', chunk => {
+            body += chunk.toString();
+        });
+        
+        req.on('end', () => {
+            try {
+                const flashcards = JSON.parse(body);
+                
+                // Validate that it's an array
+                if (!Array.isArray(flashcards)) {
+                    res.writeHead(400, { 'Content-Type': 'application/json' });
+                    res.end(JSON.stringify({ error: 'Data must be an array of flashcards' }));
+                    return;
+                }
+                
+                // Write the entire flashcards array to file
+                fs.writeFile('./flashcards.json', JSON.stringify(flashcards, null, 2), 'utf8', (err) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'application/json' });
+                        res.end(JSON.stringify({ error: 'Failed to save flashcards' }));
+                        return;
+                    }
+                    
+                    res.writeHead(200, { 'Content-Type': 'application/json' });
+                    res.end(JSON.stringify({ success: true, message: 'All flashcards updated successfully' }));
                 });
             } catch (error) {
                 res.writeHead(400, { 'Content-Type': 'application/json' });

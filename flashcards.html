@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Italian Flashcards</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        #datePicker:hover {
+            background: #1a252f;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(44, 62, 80, 0.3);
+        }
+        
+        #datePicker::-webkit-calendar-picker-indicator {
+            filter: invert(1);
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body class="flashcards-page">
 
@@ -21,8 +33,28 @@
 
     <div id="flashcardArea" style="display: none;">
         <div class="filter-section">
-            <div id="categoryPills" class="category-pills"></div>
+            <button id="categoryFilterBtn" class="category-filter-btn">
+                📁 Categories <span id="categoryCount"></span>
+            </button>
+            <input type="date" id="datePicker" class="date-picker-input">
         </div>
+
+        <!-- Category Filter Modal -->
+        <div id="categoryModal" class="category-modal" style="display: none;">
+            <div class="category-modal-content">
+                <div class="category-modal-header">
+                    <h3>Select Categories</h3>
+                    <button id="closeModal" class="close-modal">✕</button>
+                </div>
+                <div id="categoryList" class="category-list"></div>
+                <div class="category-modal-footer">
+                    <button id="clearAllBtn" class="btn-secondary">Clear All</button>
+                    <button id="applyFiltersBtn" class="btn-primary">Apply Filters</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="dateProgress" style="margin: 10px 0; text-align: center; color: #3498db; font-weight: bold; display: none;"></div>
 
         <div class="progress">
             Completed: <span id="currentCard">0</span> / <span id="totalCards">0</span>
@@ -58,6 +90,9 @@
             <button id="prevBtn" class="btn-secondary">
                 <span>← Previous</span>
             </button>
+						<button id="nextBtn" class="btn-primary">
+                <span>Next →</span>
+            </button>
             <button id="shuffleBtn" class="btn-secondary">
                 <span>🔀 Shuffle</span>
             </button>
@@ -67,9 +102,7 @@
             <button id="reverseBtn" class="btn-secondary reverse-btn">
                 <span>🔄 Reverse Cards</span>
             </button>
-            <button id="nextBtn" class="btn-primary">
-                <span>Next →</span>
-            </button>
+            
         </div>
     </div>
 
@@ -90,6 +123,9 @@
     let theFiveMode = false;         // Track if "The Five" mode is active
     let theFiveOffset = 0;           // Track which batch of 5 we're showing
     let theFiveCompleted = 0;        // Track how many of current batch are completed
+    let sortMode = null;             // 'date' or 'shuffle' - default to null (show all cards)
+    let selectedDate = null;         // Currently selected date for date mode
+    let dateCompletedCards = new Set(); // Track cards completed in current date session
 
     const flashcardEl = document.getElementById('flashcard');
     const questionEl = document.getElementById('question');
@@ -106,9 +142,22 @@
     const incorrectBtn = document.getElementById('incorrectBtn');
     const cardStatsEl = document.getElementById('cardStats');
     const cardNotesEl = document.getElementById('cardNotes');
-    const categoryPillsContainer = document.getElementById('categoryPills');
+    const categoryFilterBtn = document.getElementById('categoryFilterBtn');
+    const categoryModal = document.getElementById('categoryModal');
+    const categoryList = document.getElementById('categoryList');
+    const closeModal = document.getElementById('closeModal');
+    const clearAllBtn = document.getElementById('clearAllBtn');
+    const applyFiltersBtn = document.getElementById('applyFiltersBtn');
+    const categoryCount = document.getElementById('categoryCount');
     const reverseBtn = document.getElementById('reverseBtn');
     const theFiveBtn = document.getElementById('theFiveBtn');
+    const datePicker = document.getElementById('datePicker');
+    const dateProgress = document.getElementById('dateProgress');
+
+    console.log('DOM elements:', {
+        datePicker: !!datePicker,
+        dateProgress: !!dateProgress
+    });
 
     // Load flashcards
     async function loadFlashcards() {
@@ -116,14 +165,15 @@
             const response = await fetch('flashcards.json');
             allFlashcards = await response.json();
             
-            // Initialize IDs, counts, and categories if they don't exist
+            // Initialize IDs, counts, dates, and categories if they don't exist
             allFlashcards = allFlashcards.map(card => ({
                 ...card,
                 id: card.id || Date.now().toString() + Math.random().toString(36).substr(2, 9),
                 categories: card.categories || [],
                 notes: card.notes || '',
                 correct: card.correct || 0,
-                incorrect: card.incorrect || 0
+                incorrect: card.incorrect || 0,
+                dateAdded: card.dateAdded || '2026-01-01' // Default old cards to past date
             }));
             
             // Populate category filter
@@ -139,8 +189,8 @@
                 noCardsArea.style.display = 'none';
                 flashcardArea.style.display = 'block';
                 totalCardsEl.textContent = flashcards.length;
-                // Automatically shuffle on load
-                shuffleCards();
+                // Show all cards by default without date filtering
+                setupDatePickerRange(); // Set up min/max dates but don't select one
                 showCard(0);
             }
         } catch (error) {
@@ -150,7 +200,7 @@
         }
     }
 
-    // Populate category filter pills
+    // Populate category filter checkboxes in modal
     function populateCategoryFilter() {
         const categories = new Set();
         let hasUncategorized = false;
@@ -163,42 +213,94 @@
             }
         });
         
-        // Clear existing pills
-        categoryPillsContainer.innerHTML = '';
+        // Clear existing list
+        categoryList.innerHTML = '';
         
-        // Add "uncategorized" pill first if there are uncategorized cards
+        // Add "uncategorized" checkbox first if there are uncategorized cards
         if (hasUncategorized) {
-            const pill = document.createElement('button');
-            pill.className = 'category-pill';
-            pill.textContent = 'uncategorized';
-            pill.dataset.category = 'uncategorized';
-            pill.addEventListener('click', () => toggleCategoryFilter('uncategorized', pill));
-            categoryPillsContainer.appendChild(pill);
+            const item = createCategoryCheckbox('uncategorized');
+            categoryList.appendChild(item);
         }
         
-        // Add category pills sorted alphabetically
+        // Add category checkboxes sorted alphabetically
         Array.from(categories).sort().forEach(category => {
-            const pill = document.createElement('button');
-            pill.className = 'category-pill';
-            pill.textContent = category;
-            pill.dataset.category = category;
-            pill.addEventListener('click', () => toggleCategoryFilter(category, pill));
-            categoryPillsContainer.appendChild(pill);
+            const item = createCategoryCheckbox(category);
+            categoryList.appendChild(item);
         });
+        
+        updateCategoryCount();
     }
 
-    // Toggle category filter
-    function toggleCategoryFilter(category, pillElement) {
-        if (selectedCategories.has(category)) {
-            selectedCategories.delete(category);
-            pillElement.classList.remove('selected');
-        } else {
-            selectedCategories.add(category);
-            pillElement.classList.add('selected');
-        }
+    // Create a checkbox item for a category
+    function createCategoryCheckbox(category) {
+        const label = document.createElement('label');
+        label.className = 'category-checkbox-item';
         
-        applyFilters();
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.value = category;
+        checkbox.checked = selectedCategories.has(category);
+        checkbox.addEventListener('change', () => {
+            if (checkbox.checked) {
+                selectedCategories.add(category);
+            } else {
+                selectedCategories.delete(category);
+            }
+            updateCategoryCount();
+        });
+        
+        const span = document.createElement('span');
+        span.textContent = category;
+        
+        label.appendChild(checkbox);
+        label.appendChild(span);
+        
+        return label;
     }
+
+    // Update the category count indicator on the button
+    function updateCategoryCount() {
+        if (selectedCategories.size > 0) {
+            categoryCount.textContent = ` (${selectedCategories.size})`;
+            categoryFilterBtn.classList.add('has-filters');
+        } else {
+            categoryCount.textContent = '';
+            categoryFilterBtn.classList.remove('has-filters');
+        }
+    }
+
+    // Open category modal
+    categoryFilterBtn.addEventListener('click', () => {
+        categoryModal.style.display = 'flex';
+    });
+
+    // Close category modal
+    function closeCategoryModal() {
+        categoryModal.style.display = 'none';
+    }
+
+    closeModal.addEventListener('click', closeCategoryModal);
+    
+    // Close modal when clicking outside
+    categoryModal.addEventListener('click', (e) => {
+        if (e.target === categoryModal) {
+            closeCategoryModal();
+        }
+    });
+
+    // Clear all filters
+    clearAllBtn.addEventListener('click', () => {
+        selectedCategories.clear();
+        const checkboxes = categoryList.querySelectorAll('input[type="checkbox"]');
+        checkboxes.forEach(cb => cb.checked = false);
+        updateCategoryCount();
+    });
+
+    // Apply filters and close modal
+    applyFiltersBtn.addEventListener('click', () => {
+        applyFilters();
+        closeCategoryModal();
+    });
     
     // Filter flashcards by selected categories (OR logic)
     function applyFilters() {
@@ -238,9 +340,14 @@
             noCardsArea.style.display = 'none';
             flashcardArea.style.display = 'block';
             totalCardsEl.textContent = flashcards.length;
-            // Shuffle cards whenever filters change (but not in The Five mode)
+            // Apply current sort mode when filters change (but not in The Five mode)
             if (!theFiveMode) {
-                shuffleCards();
+                if (sortMode === 'date') {
+                    sortByDate();
+                } else if (sortMode === 'shuffle') {
+                    shuffleCards();
+                }
+                // If sortMode is null, keep cards in their natural order
             }
             showCard(0);
         }
@@ -265,7 +372,17 @@
         
         questionEl.textContent = displayQuestion;
         answerEl.textContent = displayAnswer;
-        cardNotesEl.textContent = card.notes || '';
+        
+        // Show notes with date info
+        //const dateInfo = getDateLabel(card.dateAdded);
+        const notesText = card.notes || '';
+        cardNotesEl.textContent = notesText;
+        // if (dateInfo) {
+        //     const dateLabel = document.createElement('div');
+        //     dateLabel.style.cssText = 'margin-top: 8px; padding: 4px 8px; background: rgba(52, 152, 219, 0.1); border-radius: 4px; font-size: 0.85em; color: #3498db;';
+        //     dateLabel.textContent = dateInfo;
+        //     cardNotesEl.appendChild(dateLabel);
+        // }
         
         // Show completed count vs total cards in current view (respecting filters).
         // Use allFlashcards so that cards you've already completed (and removed
@@ -395,6 +512,169 @@
         applyFilters();
     });
 
+    // Set up date picker range without selecting a default date
+    function setupDatePickerRange() {
+        console.log('Setting up date picker, total cards:', allFlashcards.length);
+        
+        // Get all unique dates from cards
+        const dates = Array.from(new Set(allFlashcards.map(c => c.dateAdded))).filter(d => d).sort((a, b) => b.localeCompare(a));
+        
+        console.log('Found dates:', dates);
+        
+        if (dates.length === 0) {
+            console.warn('No dates found in flashcards');
+            return;
+        }
+        
+        // Set min and max dates for the picker
+        datePicker.min = dates[dates.length - 1]; // oldest
+        datePicker.max = dates[0]; // newest
+        
+        console.log('Date picker range:', datePicker.min, 'to', datePicker.max);
+        
+        // Don't set a default value - let user choose when they want to filter by date
+    }
+    
+    // Format date for display in selector
+    function formatDateForDisplay(dateStr) {
+        if (!dateStr) return 'Unknown';
+        
+        const today = new Date().toISOString().split('T')[0];
+        const yesterday = new Date(Date.now() - 86400000).toISOString().split('T')[0];
+        
+        if (dateStr === today) {
+            return `📌 Today (${dateStr})`;
+        } else if (dateStr === yesterday) {
+            return `📆 Yesterday (${dateStr})`;
+        } else {
+            const daysAgo = Math.floor((Date.now() - new Date(dateStr).getTime()) / 86400000);
+            if (daysAgo <= 30 && daysAgo > 0) {
+                return `📆 ${daysAgo} days ago (${dateStr})`;
+            } else {
+                return `📆 ${dateStr}`;
+            }
+        }
+    }
+    
+    // Update date progress indicator
+    function updateDateProgress() {
+        if (sortMode !== 'date' || !selectedDate) {
+            dateProgress.textContent = '';
+            return;
+        }
+        
+        const cardsForDate = allFlashcards.filter(card => card.dateAdded === selectedDate);
+        const completedForDate = cardsForDate.filter(card => dateCompletedCards.has(card.id)).length;
+        dateProgress.textContent = `${completedForDate} / ${cardsForDate.length} completed`;
+    }
+    
+    // Handle date picker change
+    datePicker.addEventListener('change', () => {
+        console.log('Date changed to:', datePicker.value);
+        
+        if (!datePicker.value) {
+            // Date cleared - show all cards
+            sortMode = null;
+            selectedDate = null;
+            dateProgress.style.display = 'none';
+            flashcards = [...allFlashcards];
+            totalCardsEl.textContent = flashcards.length;
+            showCard(0);
+            return;
+        }
+        
+        selectedDate = datePicker.value;
+        
+        // Check if this date has cards
+        const cardsForDate = allFlashcards.filter(c => c.dateAdded === selectedDate);
+        if (cardsForDate.length === 0) {
+            alert('No cards found for this date. Please select a date when you added flashcards.');
+            datePicker.value = ''; // Clear the picker
+            return;
+        }
+        
+        sortMode = 'date';
+        dateProgress.style.display = 'block';
+        dateCompletedCards.clear(); // Reset completion tracking for new date
+        filterBySelectedDate();
+        showCard(0);
+    });
+    
+    // Filter flashcards by selected date
+    function filterBySelectedDate() {
+        if (!selectedDate) return;
+        
+        // Filter to only cards from selected date that haven't been completed in this session
+        flashcards = allFlashcards.filter(card => 
+            card.dateAdded === selectedDate && !dateCompletedCards.has(card.id)
+        );
+        
+        totalCardsEl.textContent = flashcards.length;
+        updateDateProgress();
+        
+        if (flashcards.length === 0) {
+            // All cards for this date completed, move to next date
+            moveToNextDate();
+        }
+    }
+    
+    // Move to the next available date (previous day)
+    function moveToNextDate() {
+        const dates = Array.from(new Set(allFlashcards.map(c => c.dateAdded))).filter(d => d).sort((a, b) => b.localeCompare(a));
+        const currentIndex = dates.indexOf(selectedDate);
+        
+        if (currentIndex < dates.length - 1) {
+            // Move to next date
+            const nextDate = dates[currentIndex + 1];
+            selectedDate = nextDate;
+            datePicker.value = nextDate;
+            dateCompletedCards.clear();
+            alert(`🎉 Great job! All cards for ${formatDateForDisplay(dates[currentIndex])} completed!\n\nMoving to ${formatDateForDisplay(nextDate)}...`);
+            filterBySelectedDate();
+            showCard(0);
+        } else {
+            alert('🎉 Congratulations! You\'ve completed all cards for all dates!');
+            noCardsArea.querySelector('h2').textContent = 'All Cards Completed!';
+            noCardsArea.querySelector('p').textContent = 'Great job! You\'ve reviewed all your flashcards.';
+            noCardsArea.style.display = 'block';
+            flashcardArea.style.display = 'none';
+        }
+    }
+
+    // Get human-readable date label
+    function getDateLabel(dateAdded) {
+        if (!dateAdded) return null;
+        
+        const today = new Date().toISOString().split('T')[0];
+        const yesterday = new Date(Date.now() - 86400000).toISOString().split('T')[0];
+        
+        if (dateAdded === today) {
+            return '📌 Added today';
+        } else if (dateAdded === yesterday) {
+            return '📆 Added yesterday';
+        } else {
+            const daysAgo = Math.floor((Date.now() - new Date(dateAdded).getTime()) / 86400000);
+            if (daysAgo <= 30) {
+                return `📆 Added ${daysAgo} days ago`;
+            } else {
+                return `📆 Added ${dateAdded}`;
+            }
+        }
+    }
+
+    // Sort by date (newest first) - now also filters by selected date
+    function sortByDate() {
+        if (selectedDate) {
+            filterBySelectedDate();
+        } else {
+            flashcards.sort((a, b) => {
+                const dateA = a.dateAdded || '1970-01-01';
+                const dateB = b.dateAdded || '1970-01-01';
+                return dateB.localeCompare(dateA); // Newest first
+            });
+        }
+    }
+
     // Shuffle function
     function shuffleCards() {
         // Weighted shuffle - cards with more incorrect answers appear more often
@@ -439,9 +719,43 @@
         flashcards = newOrder;
     }
 
+    // Sort by date button
+    // Note: Date selection is now handled by datePicker change event
+    // The button click will trigger the native date picker to open
+
     // Shuffle button
     shuffleBtn.addEventListener('click', () => {
-        shuffleCards();
+        sortMode = 'shuffle';
+        shuffleBtn.classList.add('selected');
+        
+        // Get currently filtered cards based on BOTH category and date filters
+        let filteredCards = [...allFlashcards];
+        
+        // Apply category filters if any are selected
+        if (selectedCategories.size > 0) {
+            filteredCards = filteredCards.filter(card => {
+                // Check if "uncategorized" is selected and card has no categories
+                if (selectedCategories.has('uncategorized') && (!card.categories || card.categories.length === 0)) {
+                    return true;
+                }
+                // Check if card has any of the selected categories
+                if (card.categories && card.categories.length > 0) {
+                    return card.categories.some(cat => selectedCategories.has(cat));
+                }
+                return false;
+            });
+        }
+        
+        // Apply date filter if a date is selected
+        if (selectedDate) {
+            filteredCards = filteredCards.filter(card => 
+                card.dateAdded === selectedDate && !dateCompletedCards.has(card.id)
+            );
+        }
+        
+        flashcards = filteredCards;
+        shuffleCards(); // Shuffle the filtered cards
+        totalCardsEl.textContent = flashcards.length;
         showCard(0);
     });
 
@@ -480,6 +794,12 @@
         
         // Mark this card as completed
         completedCards.add(card.id);
+        
+        // If in date mode, also track for date-specific completion
+        if (sortMode === 'date') {
+            dateCompletedCards.add(card.id);
+            updateDateProgress();
+        }
         
         // Update display
         cardStatsEl.textContent = `✓ ${card.correct}  ✗ ${card.incorrect || 0}`;
@@ -520,7 +840,11 @@
         
         // Check if all cards completed
         if (flashcards.length === 0) {
-            if (!theFiveMode) {
+            if (sortMode === 'date') {
+                // In date mode, move to next date
+                moveToNextDate();
+                return;
+            } else if (!theFiveMode) {
                 alert('🎉 Congratulations! You\'ve completed all cards!');
             }
             return;

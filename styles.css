@@ -726,6 +726,7 @@ body.article-page {
     /* max-height: 150px; */
     text-align: left;
     line-height: 1.4;
+    white-space: pre-line;
 }
 
 .card-notes:empty {
@@ -998,6 +999,7 @@ body.article-page {
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    flex-wrap: wrap;
     transition: box-shadow 0.3s ease;
 }
 
@@ -1135,6 +1137,256 @@ body.article-page {
     .category-pill {
         font-size: 0.85rem;
         padding: 0.5rem 1rem;
+    }
+}
+
+.category-filter-btn {
+    padding: 0.875rem 1.5rem;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(52, 152, 219, 0.2);
+}
+
+.category-filter-btn:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(52, 152, 219, 0.3);
+}
+
+.category-filter-btn.has-filters {
+    background: #27ae60;
+}
+
+.category-filter-btn.has-filters:hover {
+    background: #229954;
+}
+
+#categoryCount {
+    font-weight: 700;
+    opacity: 0.9;
+}
+
+/* Date Picker Input */
+.date-picker-input {
+    padding: 0.875rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: var(--primary);
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 4px 8px rgba(52, 152, 219, 0.2);
+		width: 25%;
+		margin-bottom: 0;
+}
+
+.date-picker-input:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(52, 152, 219, 0.3);
+}
+
+.date-picker-input::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    filter: invert(1) brightness(100%);
+}
+
+.date-picker-input::-webkit-calendar-picker-indicator:hover {
+    filter: invert(1) brightness(120%);
+}
+
+/* Category Modal */
+.category-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.category-modal-content {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    max-width: 500px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.category-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #e0e6ed;
+}
+
+.category-modal-header h3 {
+    margin: 0;
+    color: var(--secondary);
+    font-size: 1.5rem;
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #7f8c8d;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    transition: all 0.2s ease;
+    border-radius: 4px;
+}
+
+.close-modal:hover {
+    background: #f0f4f8;
+    color: var(--secondary);
+}
+
+.category-list {
+    margin-bottom: 1.5rem;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.category-checkbox-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+.category-checkbox-item:hover {
+    background: #e3ebf3;
+    transform: translateX(4px);
+}
+
+.category-checkbox-item input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    cursor: pointer;
+    accent-color: var(--primary);
+}
+
+.category-checkbox-item span {
+    font-size: 1rem;
+    color: var(--secondary);
+    font-weight: 500;
+}
+
+.category-modal-footer {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    padding-top: 1rem;
+    border-top: 2px solid #e0e6ed;
+}
+
+.category-modal-footer button {
+    flex: 1;
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Mobile responsive for category modal */
+@media (max-width: 768px) {
+    .filter-section {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .category-filter-btn {
+        width: 100%;
+        padding: 1rem 1.5rem;
+        font-size: 1.1rem;
+    }
+
+    .date-picker-input {
+        width: 100%;
+        padding: 1rem 1.5rem;
+        font-size: 1.1rem;
+    }
+
+    .category-modal-content {
+        width: 95%;
+        padding: 1.5rem;
+        max-height: 85vh;
+    }
+
+    .category-modal-header h3 {
+        font-size: 1.25rem;
+    }
+
+    .category-checkbox-item {
+        padding: 1rem;
+    }
+
+    .category-checkbox-item input[type="checkbox"] {
+        width: 22px;
+        height: 22px;
+        margin-right: 14px;
+    }
+
+    .category-checkbox-item span {
+        font-size: 1.05rem;
+    }
+
+    .category-modal-footer {
+        flex-direction: column;
+    }
+
+    .category-modal-footer button {
+        width: 100%;
     }
 }
 

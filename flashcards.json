@@ -1,93 +1,12 @@
 [
   {
-    "id": "1",
-    "question": "I like (something singular)",
-    "answer": "mi piace",
-    "notes": "(PYA-cheh) Mi piace un gelato.",
-    "categories": [],
-    "correct": 3,
-    "incorrect": 3
-  },
-  {
     "id": "1772208909105xuxopi3xk",
     "question": "The bill",
     "answer": "il conto",
     "categories": [],
-    "correct": 3,
-    "incorrect": 5
-  },
-  {
-    "id": "1772208939182kr1wzcsto",
-    "question": "Monday",
-    "answer": "Lunedì",
-    "categories": [
-      "days"
-    ],
-    "correct": 3,
-    "incorrect": 0
-  },
-  {
-    "id": "1772209001001",
-    "question": "Tuesday",
-    "answer": "Martedì",
-    "notes": "(mar-teh-DEE)",
-    "categories": [
-      "days"
-    ],
-    "correct": 5,
-    "incorrect": 3
-  },
-  {
-    "id": "1772209001002",
-    "question": "Wednesday",
-    "answer": "Mercoledì",
-    "categories": [
-      "days"
-    ],
-    "correct": 3,
-    "incorrect": 1
-  },
-  {
-    "id": "1772209001003",
-    "question": "Thursday",
-    "answer": "Giovedì",
-    "notes": "(joh-veh-DEE)",
-    "categories": [
-      "days"
-    ],
     "correct": 4,
-    "incorrect": 2
-  },
-  {
-    "id": "1772209001004",
-    "question": "Friday",
-    "answer": "Venerdì",
-    "notes": "(veh-nehr-DEE)",
-    "categories": [
-      "days"
-    ],
-    "correct": 1,
-    "incorrect": 3
-  },
-  {
-    "id": "1772209001005",
-    "question": "Saturday",
-    "answer": "Sabato",
-    "categories": [
-      "days"
-    ],
-    "correct": 3,
-    "incorrect": 0
-  },
-  {
-    "id": "1772209001006",
-    "question": "Sunday",
-    "answer": "Domenica",
-    "categories": [
-      "days"
-    ],
-    "correct": 3,
-    "incorrect": 3
+    "incorrect": 5,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772209370075duxsznlz1",
@@ -98,7 +17,8 @@
       "restaurant"
     ],
     "correct": 3,
-    "incorrect": 1
+    "incorrect": 1,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772211852023u6ou9rwy6",
@@ -107,7 +27,8 @@
     "notes": "(boo-TEE-lyah)\n\nvorrei una bottiglia di vino rosa ",
     "categories": [],
     "correct": 0,
-    "incorrect": 2
+    "incorrect": 2,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772211961825xx92aeijz",
@@ -116,7 +37,8 @@
     "notes": "(ah-VEH-teh)\n\nAvete un tavolo",
     "categories": [],
     "correct": 2,
-    "incorrect": 2
+    "incorrect": 2,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "17722119755683vrpwmsdw",
@@ -125,7 +47,8 @@
     "notes": "",
     "categories": [],
     "correct": 1,
-    "incorrect": 5
+    "incorrect": 5,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772212036135ocidws8jc",
@@ -134,7 +57,8 @@
     "notes": "",
     "categories": [],
     "correct": 2,
-    "incorrect": 6
+    "incorrect": 6,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772212184029guqj87ncv",
@@ -145,7 +69,8 @@
       "directions"
     ],
     "correct": 2,
-    "incorrect": 8
+    "incorrect": 8,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772212282115khdckak63",
@@ -156,7 +81,8 @@
       "directions"
     ],
     "correct": 2,
-    "incorrect": 1
+    "incorrect": 1,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "17722123474415upaazt4s",
@@ -165,7 +91,8 @@
     "notes": "(PWAW-ee ah-yoo-TAH-reh)",
     "categories": [],
     "correct": 0,
-    "incorrect": 2
+    "incorrect": 2,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772212371622s9mia0yu6",
@@ -176,7 +103,8 @@
       "directions"
     ],
     "correct": 0,
-    "incorrect": 1
+    "incorrect": 1,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772212408448ig7ji4i67",
@@ -187,7 +115,8 @@
       "directions"
     ],
     "correct": 2,
-    "incorrect": 1
+    "incorrect": 1,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772212422173g87fswvm2",
@@ -196,7 +125,8 @@
     "notes": "",
     "categories": [],
     "correct": 2,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "17722124324798jqsljj3c",
@@ -205,7 +135,8 @@
     "notes": "",
     "categories": [],
     "correct": 1,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772212480301nzn61dl0h",
@@ -214,7 +145,8 @@
     "notes": "",
     "categories": [],
     "correct": 1,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772212489450ko3zhps9w",
@@ -223,18 +155,8 @@
     "notes": "",
     "categories": [],
     "correct": 1,
-    "incorrect": 2
-  },
-  {
-    "id": "1772212504961wl1820nte",
-    "question": "month",
-    "answer": "mese",
-    "notes": "",
-    "categories": [
-      "days"
-    ],
-    "correct": 1,
-    "incorrect": 1
+    "incorrect": 2,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772212513754uusarwkyq",
@@ -243,7 +165,8 @@
     "notes": "",
     "categories": [],
     "correct": 3,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772212597679mxbgawysl",
@@ -252,7 +175,8 @@
     "notes": "(MO-lyeh)\n\nnote the ending of question and mio would change based on the noun",
     "categories": [],
     "correct": 3,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772212612367euylagzfh",
@@ -261,7 +185,8 @@
     "notes": "",
     "categories": [],
     "correct": 2,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772212626990p8hwzkzrv",
@@ -270,7 +195,8 @@
     "notes": "",
     "categories": [],
     "correct": 2,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "17722129328494rxue98cs",
@@ -279,7 +205,8 @@
     "notes": "",
     "categories": [],
     "correct": 2,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "17722129441086jxpdsxiq",
@@ -288,7 +215,8 @@
     "notes": "",
     "categories": [],
     "correct": 2,
-    "incorrect": 1
+    "incorrect": 1,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772215001005",
@@ -299,7 +227,8 @@
       "numbers"
     ],
     "correct": 3,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772215001008",
@@ -310,7 +239,8 @@
       "numbers"
     ],
     "correct": 2,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772215001009",
@@ -321,7 +251,8 @@
       "numbers"
     ],
     "correct": 3,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772215001010",
@@ -332,7 +263,8 @@
       "numbers"
     ],
     "correct": 1,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772216001001",
@@ -343,7 +275,8 @@
       "directions"
     ],
     "correct": 0,
-    "incorrect": 4
+    "incorrect": 4,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772216001002",
@@ -354,7 +287,8 @@
       "directions"
     ],
     "correct": 0,
-    "incorrect": 2
+    "incorrect": 2,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772216001003",
@@ -365,7 +299,8 @@
       "directions"
     ],
     "correct": 0,
-    "incorrect": 4
+    "incorrect": 4,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772216001004",
@@ -376,7 +311,8 @@
       "directions"
     ],
     "correct": 1,
-    "incorrect": 3
+    "incorrect": 3,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772216001005",
@@ -387,7 +323,8 @@
       "directions"
     ],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772213305534rohlsw9c4",
@@ -396,7 +333,8 @@
     "notes": "(cheh)",
     "categories": [],
     "correct": 2,
-    "incorrect": 1
+    "incorrect": 1,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "17722133533543m80hoah7",
@@ -405,7 +343,8 @@
     "notes": "",
     "categories": [],
     "correct": 1,
-    "incorrect": 1
+    "incorrect": 1,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772213646537cndwsf30x",
@@ -414,7 +353,8 @@
     "notes": "",
     "categories": [],
     "correct": 3,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772213927222zcu91n1hj",
@@ -423,7 +363,8 @@
     "notes": "( pyat-choh-noh)\n\nmi piacciono i funghi\n",
     "categories": [],
     "correct": 0,
-    "incorrect": 1
+    "incorrect": 1,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772214179379ggqia8t3a",
@@ -432,7 +373,8 @@
     "notes": "( SHEH-nah )\n\nfeminine\n",
     "categories": [],
     "correct": 1,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772214215409j1p3babpw",
@@ -441,7 +383,8 @@
     "notes": "",
     "categories": [],
     "correct": 2,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772214256872tcp7ap98w",
@@ -450,7 +393,8 @@
     "notes": "",
     "categories": [],
     "correct": 1,
-    "incorrect": 1
+    "incorrect": 1,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772214281309me7i45ulh",
@@ -458,8 +402,9 @@
     "answer": "uno zaino",
     "notes": "TSAI-NOH",
     "categories": [],
-    "correct": 0,
-    "incorrect": 1
+    "correct": 1,
+    "incorrect": 1,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772214307983dusbctgvw",
@@ -468,7 +413,8 @@
     "notes": "",
     "categories": [],
     "correct": 0,
-    "incorrect": 1
+    "incorrect": 1,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "17722143520833ixxe29wm",
@@ -477,7 +423,8 @@
     "notes": "",
     "categories": [],
     "correct": 1,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772214380735atrq81xss",
@@ -486,7 +433,8 @@
     "notes": "",
     "categories": [],
     "correct": 1,
-    "incorrect": 1
+    "incorrect": 1,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772214512633af23xihkc",
@@ -495,7 +443,8 @@
     "notes": "",
     "categories": [],
     "correct": 1,
-    "incorrect": 1
+    "incorrect": 1,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772214594101d5h4bb3y5",
@@ -504,7 +453,8 @@
     "notes": "",
     "categories": [],
     "correct": 1,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772214620024airfk4dud",
@@ -513,7 +463,8 @@
     "notes": "",
     "categories": [],
     "correct": 2,
-    "incorrect": 1
+    "incorrect": 1,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772214673797ee2a5unt2",
@@ -524,7 +475,8 @@
       "meals"
     ],
     "correct": 2,
-    "incorrect": 6
+    "incorrect": 6,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772214709680drde1i0zd",
@@ -533,7 +485,8 @@
     "notes": "",
     "categories": [],
     "correct": 2,
-    "incorrect": 1
+    "incorrect": 1,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1740787200001",
@@ -544,7 +497,8 @@
       "restaurant"
     ],
     "correct": 9,
-    "incorrect": 2
+    "incorrect": 2,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1740787200002",
@@ -555,7 +509,8 @@
       "restaurant"
     ],
     "correct": 7,
-    "incorrect": 1
+    "incorrect": 1,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1740787200003",
@@ -566,7 +521,8 @@
       "restaurant"
     ],
     "correct": 6,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1740787200004",
@@ -577,7 +533,8 @@
       "restaurant"
     ],
     "correct": 7,
-    "incorrect": 2
+    "incorrect": 2,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1740787200006",
@@ -588,7 +545,8 @@
       "restaurant"
     ],
     "correct": 5,
-    "incorrect": 6
+    "incorrect": 6,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1740787200007",
@@ -599,7 +557,8 @@
       "restaurant"
     ],
     "correct": 7,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1740787200008",
@@ -610,7 +569,8 @@
       "restaurant"
     ],
     "correct": 4,
-    "incorrect": 5
+    "incorrect": 5,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1740787200009",
@@ -621,7 +581,8 @@
       "restaurant"
     ],
     "correct": 5,
-    "incorrect": 1
+    "incorrect": 1,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1740787200010",
@@ -632,7 +593,8 @@
       "restaurant"
     ],
     "correct": 4,
-    "incorrect": 9
+    "incorrect": 9,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1740787200011",
@@ -643,7 +605,8 @@
       "restaurant"
     ],
     "correct": 2,
-    "incorrect": 6
+    "incorrect": 6,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1740787200019",
@@ -654,7 +617,8 @@
       "restaurant"
     ],
     "correct": 3,
-    "incorrect": 4
+    "incorrect": 4,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1740787200020",
@@ -665,7 +629,8 @@
       "restaurant"
     ],
     "correct": 3,
-    "incorrect": 2
+    "incorrect": 2,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1740787200021",
@@ -676,7 +641,8 @@
       "restaurant"
     ],
     "correct": 5,
-    "incorrect": 1
+    "incorrect": 1,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1740787200022",
@@ -687,7 +653,8 @@
       "restaurant"
     ],
     "correct": 3,
-    "incorrect": 4
+    "incorrect": 4,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1740787200023",
@@ -698,7 +665,8 @@
       "restaurant"
     ],
     "correct": 4,
-    "incorrect": 3
+    "incorrect": 3,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1740787200024",
@@ -709,7 +677,8 @@
       "restaurant"
     ],
     "correct": 4,
-    "incorrect": 4
+    "incorrect": 4,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1740787200025",
@@ -720,7 +689,8 @@
       "restaurant"
     ],
     "correct": 2,
-    "incorrect": 5
+    "incorrect": 5,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1740787200027",
@@ -731,7 +701,8 @@
       "restaurant"
     ],
     "correct": 1,
-    "incorrect": 6
+    "incorrect": 6,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1740787200028",
@@ -742,7 +713,8 @@
       "restaurant"
     ],
     "correct": 2,
-    "incorrect": 2
+    "incorrect": 2,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1740787200029",
@@ -753,7 +725,8 @@
       "restaurant"
     ],
     "correct": 2,
-    "incorrect": 2
+    "incorrect": 2,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1740787200030",
@@ -764,7 +737,8 @@
       "restaurant"
     ],
     "correct": 4,
-    "incorrect": 2
+    "incorrect": 2,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772555652984df86ldt6o",
@@ -775,7 +749,8 @@
       "restaurant"
     ],
     "correct": 1,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772555683570h0hohxkj1",
@@ -784,7 +759,8 @@
     "notes": "",
     "categories": [],
     "correct": 1,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "17725557218806m9ra0zy9",
@@ -793,7 +769,8 @@
     "notes": "koo-kee-AYE-oh",
     "categories": [],
     "correct": 1,
-    "incorrect": 3
+    "incorrect": 3,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772596283911c2r8rglzn",
@@ -804,7 +781,8 @@
       "verb"
     ],
     "correct": 1,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "17725963118258h9lpxlx7",
@@ -815,7 +793,8 @@
       "verb"
     ],
     "correct": 1,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772596378695tr473f3dz",
@@ -824,7 +803,8 @@
     "notes": "toh-vah-LYOH-loh",
     "categories": [],
     "correct": 0,
-    "incorrect": 1
+    "incorrect": 1,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772700000001",
@@ -836,7 +816,8 @@
       "dates"
     ],
     "correct": 3,
-    "incorrect": 1
+    "incorrect": 1,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772700000002",
@@ -848,7 +829,8 @@
       "dates"
     ],
     "correct": 1,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772700000003",
@@ -860,7 +842,8 @@
       "dates"
     ],
     "correct": 2,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772700000004",
@@ -872,7 +855,8 @@
       "dates"
     ],
     "correct": 3,
-    "incorrect": 1
+    "incorrect": 1,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772700000005",
@@ -884,7 +868,8 @@
       "dates"
     ],
     "correct": 3,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772700000006",
@@ -896,7 +881,8 @@
       "dates"
     ],
     "correct": 2,
-    "incorrect": 1
+    "incorrect": 1,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772700000007",
@@ -908,7 +894,8 @@
       "dates"
     ],
     "correct": 3,
-    "incorrect": 1
+    "incorrect": 1,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772700000008",
@@ -920,7 +907,8 @@
       "dates"
     ],
     "correct": 1,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772700000009",
@@ -932,7 +920,8 @@
       "dates"
     ],
     "correct": 2,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772700000010",
@@ -944,7 +933,8 @@
       "dates"
     ],
     "correct": 1,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772700000011",
@@ -956,7 +946,8 @@
       "dates"
     ],
     "correct": 2,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772700000012",
@@ -968,7 +959,8 @@
       "dates"
     ],
     "correct": 2,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772700000013",
@@ -980,7 +972,8 @@
       "dates"
     ],
     "correct": 1,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772814070271f1vqjz9h1",
@@ -991,7 +984,8 @@
       "restaurant"
     ],
     "correct": 2,
-    "incorrect": 1
+    "incorrect": 1,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1772984585055r797n1jn8",
@@ -1002,8 +996,9 @@
       "dates",
       "time"
     ],
-    "correct": 5,
-    "incorrect": 0
+    "correct": 6,
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1773000000101",
@@ -1014,7 +1009,8 @@
       "shopping"
     ],
     "correct": 4,
-    "incorrect": 2
+    "incorrect": 2,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1773000000102",
@@ -1025,7 +1021,8 @@
       "shopping"
     ],
     "correct": 4,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1773000000103",
@@ -1036,7 +1033,8 @@
       "shopping"
     ],
     "correct": 4,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1773000000104",
@@ -1047,7 +1045,8 @@
       "shopping"
     ],
     "correct": 4,
-    "incorrect": 2
+    "incorrect": 2,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1773000000105",
@@ -1058,7 +1057,8 @@
       "shopping"
     ],
     "correct": 4,
-    "incorrect": 2
+    "incorrect": 2,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1773000000106",
@@ -1069,7 +1069,8 @@
       "shopping"
     ],
     "correct": 4,
-    "incorrect": 2
+    "incorrect": 2,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1773000000107",
@@ -1080,7 +1081,8 @@
       "shopping"
     ],
     "correct": 5,
-    "incorrect": 2
+    "incorrect": 2,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1773000000108",
@@ -1091,7 +1093,8 @@
       "shopping"
     ],
     "correct": 4,
-    "incorrect": 2
+    "incorrect": 2,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1773000000109",
@@ -1102,7 +1105,8 @@
       "shopping"
     ],
     "correct": 5,
-    "incorrect": 2
+    "incorrect": 2,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1773000000110",
@@ -1113,7 +1117,8 @@
       "shopping"
     ],
     "correct": 3,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1773000000111",
@@ -1124,7 +1129,8 @@
       "shopping"
     ],
     "correct": 5,
-    "incorrect": 1
+    "incorrect": 1,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1773000000112",
@@ -1135,7 +1141,8 @@
       "shopping"
     ],
     "correct": 3,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1773000000113",
@@ -1146,7 +1153,8 @@
       "shopping"
     ],
     "correct": 3,
-    "incorrect": 3
+    "incorrect": 3,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1773000000115",
@@ -1157,7 +1165,8 @@
       "shopping"
     ],
     "correct": 2,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1773000000116",
@@ -1168,7 +1177,8 @@
       "shopping"
     ],
     "correct": 3,
-    "incorrect": 2
+    "incorrect": 2,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1773000000118",
@@ -1179,7 +1189,8 @@
       "shopping"
     ],
     "correct": 3,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1773175484090fyi8h9wwc",
@@ -1188,7 +1199,8 @@
     "notes": "",
     "categories": [],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1773175512593iwtv0gwx2",
@@ -1197,7 +1209,8 @@
     "notes": "",
     "categories": [],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "17731755464580u7mkqyso",
@@ -1206,7 +1219,8 @@
     "notes": "",
     "categories": [],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1773175577751molt8d85c",
@@ -1215,7 +1229,8 @@
     "notes": "",
     "categories": [],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "177317560645964m0t86ad",
@@ -1224,7 +1239,8 @@
     "notes": "mi piacciono i gatti",
     "categories": [],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1773186900565qq3u4pn9f",
@@ -1233,7 +1249,8 @@
     "notes": "velo il caffe ",
     "categories": [],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "17733542041351711dkvxa",
@@ -1242,7 +1259,8 @@
     "notes": "can be used to draw attention to things\necco qui, ecco mia moglie, etc",
     "categories": [],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1773354485441f8x3h9aug",
@@ -1251,7 +1269,8 @@
     "notes": "This is the second person singular verb form of postere\n\nTu puoi andare al ristorante\n\n(pwo)",
     "categories": [],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1773354692366nokexr0dk",
@@ -1260,7 +1279,8 @@
     "notes": "(pew)\n\nCan be used for comparisons, or to say.  Can be used to say something no longer happens Non fumo più.",
     "categories": [],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1773354898345z150e23se",
@@ -1269,7 +1289,8 @@
     "notes": "(kay) Il libro che leggo. (The book that I read.)",
     "categories": [],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1773356368614mnhfyea4a",
@@ -1278,7 +1299,8 @@
     "notes": "ee-EH-ree",
     "categories": [],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "17733564092320gvgjsn6a",
@@ -1289,8 +1311,9 @@
       "time",
       "dates"
     ],
-    "correct": 1,
-    "incorrect": 1
+    "correct": 2,
+    "incorrect": 2,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1773356427114ct0fvqj5q",
@@ -1299,7 +1322,8 @@
     "notes": "",
     "categories": [],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1773356447365pshm6a8kn",
@@ -1308,7 +1332,8 @@
     "notes": "",
     "categories": [],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "17733564645901fco826cs",
@@ -1317,7 +1342,8 @@
     "notes": "",
     "categories": [],
     "correct": 0,
-    "incorrect": 2
+    "incorrect": 2,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "177335647789568f7v348q",
@@ -1326,7 +1352,8 @@
     "notes": "",
     "categories": [],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1773356535450nkyv2asfr",
@@ -1335,7 +1362,8 @@
     "notes": "fah",
     "categories": [],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1773356633938fc6zcgwx3",
@@ -1344,7 +1372,8 @@
     "notes": "use either one, they are interchangable",
     "categories": [],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1773408916967bpv9nx90r",
@@ -1353,7 +1382,8 @@
     "notes": "po-me-RÌD-jo",
     "categories": [],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "17734089239647pwv5wtag",
@@ -1362,7 +1392,8 @@
     "notes": "this can be a verb (I eat lunch) or a noun (lunch). pranzare is the verb form",
     "categories": [],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 1,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1741824000001",
@@ -1373,7 +1404,8 @@
       "shopping"
     ],
     "correct": 3,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1741824000002",
@@ -1384,7 +1416,8 @@
       "shopping"
     ],
     "correct": 2,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1741824000003",
@@ -1395,7 +1428,8 @@
       "shopping"
     ],
     "correct": 2,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1741824000004",
@@ -1406,7 +1440,8 @@
       "shopping"
     ],
     "correct": 2,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1741824000005",
@@ -1417,7 +1452,8 @@
       "shopping"
     ],
     "correct": 1,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1741824000006",
@@ -1428,7 +1464,8 @@
       "shopping"
     ],
     "correct": 2,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1741824000007",
@@ -1439,7 +1476,8 @@
       "shopping"
     ],
     "correct": 2,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1741824000008",
@@ -1450,7 +1488,8 @@
       "shopping"
     ],
     "correct": 1,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1741824000009",
@@ -1461,7 +1500,8 @@
       "shopping"
     ],
     "correct": 3,
-    "incorrect": 2
+    "incorrect": 2,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1741824000010",
@@ -1472,7 +1512,8 @@
       "shopping"
     ],
     "correct": 3,
-    "incorrect": 2
+    "incorrect": 2,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1741824000011",
@@ -1483,7 +1524,8 @@
       "shopping"
     ],
     "correct": 2,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1741824000012",
@@ -1494,7 +1536,8 @@
       "shopping"
     ],
     "correct": 2,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1741824000013",
@@ -1505,7 +1548,8 @@
       "shopping"
     ],
     "correct": 2,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1741824000014",
@@ -1516,7 +1560,8 @@
       "shopping"
     ],
     "correct": 1,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1741824000015",
@@ -1527,7 +1572,8 @@
       "shopping"
     ],
     "correct": 2,
-    "incorrect": 1
+    "incorrect": 1,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1741824000016",
@@ -1538,7 +1584,8 @@
       "open-close"
     ],
     "correct": 4,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1741824000017",
@@ -1549,7 +1596,8 @@
       "open-close"
     ],
     "correct": 2,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1741824000018",
@@ -1559,8 +1607,9 @@
     "categories": [
       "time"
     ],
-    "correct": 4,
-    "incorrect": 1
+    "correct": 5,
+    "incorrect": 1,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1741824000019",
@@ -1571,8 +1620,9 @@
       "time",
       "open-close"
     ],
-    "correct": 3,
-    "incorrect": 5
+    "correct": 4,
+    "incorrect": 6,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1741824000020",
@@ -1583,7 +1633,8 @@
       "open-close"
     ],
     "correct": 1,
-    "incorrect": 2
+    "incorrect": 2,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1741824000021",
@@ -1594,7 +1645,8 @@
       "open-close"
     ],
     "correct": 2,
-    "incorrect": 3
+    "incorrect": 3,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1741824000022",
@@ -1603,7 +1655,8 @@
     "notes": "[pwoh]",
     "categories": [],
     "correct": 2,
-    "incorrect": 2
+    "incorrect": 2,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1741824000023",
@@ -1614,7 +1667,8 @@
       "open-close"
     ],
     "correct": 2,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1741824000024",
@@ -1625,7 +1679,8 @@
       "open-close"
     ],
     "correct": 2,
-    "incorrect": 1
+    "incorrect": 1,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1741824000025",
@@ -1634,7 +1689,8 @@
     "notes": "",
     "categories": [],
     "correct": 2,
-    "incorrect": 2
+    "incorrect": 2,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1741824000026",
@@ -1645,7 +1701,8 @@
       "open-close"
     ],
     "correct": 2,
-    "incorrect": 3
+    "incorrect": 3,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1773753767208jj5m866dz",
@@ -1657,7 +1714,8 @@
       "travel"
     ],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "177375381584564ollmd9f",
@@ -1669,7 +1727,8 @@
       "trains"
     ],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "17737538643792axlot9aw",
@@ -1681,7 +1740,8 @@
       "travel"
     ],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "177375391411699cv6rvv3",
@@ -1693,7 +1753,8 @@
       "train"
     ],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1773753937223m8jgl1fv1",
@@ -1705,7 +1766,8 @@
       "travel"
     ],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "17737539713254b4xtahvn",
@@ -1717,7 +1779,8 @@
       "travel"
     ],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1773754004867igua0e7n5",
@@ -1726,7 +1789,8 @@
     "notes": "[bee-LYEH-toh]",
     "categories": [],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "17737540602075zry8y9q1",
@@ -1738,7 +1802,8 @@
       "travel"
     ],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1773754100001",
@@ -1749,7 +1814,8 @@
       "travel"
     ],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1773754100002",
@@ -1760,7 +1826,8 @@
       "travel"
     ],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1773754100003",
@@ -1771,7 +1838,8 @@
       "travel"
     ],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1773754100004",
@@ -1782,7 +1850,8 @@
       "travel"
     ],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1773754100005",
@@ -1793,7 +1862,8 @@
       "travel"
     ],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1773754100006",
@@ -1804,7 +1874,8 @@
       "travel"
     ],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1773754100007",
@@ -1815,7 +1886,8 @@
       "travel"
     ],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1773754100008",
@@ -1826,7 +1898,8 @@
       "travel"
     ],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1773754100009",
@@ -1837,7 +1910,8 @@
       "travel"
     ],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1773754100010",
@@ -1848,7 +1922,8 @@
       "travel"
     ],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1773754100011",
@@ -1859,7 +1934,8 @@
       "travel"
     ],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1773754100012",
@@ -1870,7 +1946,8 @@
       "travel"
     ],
     "correct": 0,
-    "incorrect": 1
+    "incorrect": 1,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1773754100013",
@@ -1881,7 +1958,8 @@
       "travel"
     ],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1773754100014",
@@ -1892,7 +1970,8 @@
       "travel"
     ],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1773754100015",
@@ -1903,7 +1982,8 @@
       "travel"
     ],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1773867810243dpl9t2a1v",
@@ -1913,8 +1993,9 @@
     "categories": [
       "time"
     ],
-    "correct": 3,
-    "incorrect": 1
+    "correct": 4,
+    "incorrect": 1,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1773949691318kvwrss4qy",
@@ -1925,7 +2006,8 @@
       "common-words"
     ],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1774022288285l4jkx6k44",
@@ -1936,7 +2018,8 @@
       "bathroom"
     ],
     "correct": 3,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1774022354575mg26x7g3p",
@@ -1947,7 +2030,8 @@
       "bathroom"
     ],
     "correct": 3,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1774022398643gah1dq63u",
@@ -1958,7 +2042,8 @@
       "travel"
     ],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "17740224280023oy9w2ifi",
@@ -1969,7 +2054,8 @@
       "travel"
     ],
     "correct": 1,
-    "incorrect": 1
+    "incorrect": 1,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1774023267830ouhjo1qmw",
@@ -1978,7 +2064,8 @@
     "notes": "",
     "categories": [],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1774282165854xwq8nsddu",
@@ -1989,7 +2076,8 @@
       "fundamental-phrases"
     ],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1774282239748w6b2xg50c",
@@ -1998,7 +2086,8 @@
     "notes": "",
     "categories": [],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1774282274144uo9eqx3xh",
@@ -2009,7 +2098,8 @@
       "greetings"
     ],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1774282389541eouojqil4",
@@ -2019,8 +2109,9 @@
     "categories": [
       "weather"
     ],
-    "correct": 2,
-    "incorrect": 2
+    "correct": 4,
+    "incorrect": 3,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1774282424147vi6mfgip5",
@@ -2029,7 +2120,8 @@
     "notes": "",
     "categories": [],
     "correct": 0,
-    "incorrect": 4
+    "incorrect": 4,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1774282451159h3isrtyjz",
@@ -2039,8 +2131,9 @@
     "categories": [
       "weather"
     ],
-    "correct": 3,
-    "incorrect": 2
+    "correct": 4,
+    "incorrect": 2,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1774282540428u97wxnvxb",
@@ -2050,8 +2143,9 @@
     "categories": [
       "weather"
     ],
-    "correct": 2,
-    "incorrect": 2
+    "correct": 4,
+    "incorrect": 3,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1774282641335fdfldhyfv",
@@ -2061,8 +2155,9 @@
     "categories": [
       "weather"
     ],
-    "correct": 1,
-    "incorrect": 1
+    "correct": 3,
+    "incorrect": 2,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1774282776716ag0b596q4",
@@ -2072,8 +2167,9 @@
     "categories": [
       "weather"
     ],
-    "correct": 1,
-    "incorrect": 0
+    "correct": 2,
+    "incorrect": 1,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1774282833966hw9j0sd9n",
@@ -2083,8 +2179,9 @@
     "categories": [
       "weather"
     ],
-    "correct": 1,
-    "incorrect": 1
+    "correct": 3,
+    "incorrect": 1,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1774282907501894twqp2b",
@@ -2094,8 +2191,9 @@
     "categories": [
       "weather"
     ],
-    "correct": 1,
-    "incorrect": 2
+    "correct": 3,
+    "incorrect": 4,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1774282937878a9pzoi0pc",
@@ -2105,8 +2203,9 @@
     "categories": [
       "weather"
     ],
-    "correct": 1,
-    "incorrect": 2
+    "correct": 3,
+    "incorrect": 4,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1774282956818s15bfzy8t",
@@ -2116,8 +2215,9 @@
     "categories": [
       "weather"
     ],
-    "correct": 1,
-    "incorrect": 2
+    "correct": 2,
+    "incorrect": 4,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1774282986514vik4j44u2",
@@ -2126,7 +2226,8 @@
     "notes": "",
     "categories": [],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1774283125343v0snvwl0i",
@@ -2136,8 +2237,9 @@
     "categories": [
       "weather"
     ],
-    "correct": 2,
-    "incorrect": 0
+    "correct": 3,
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1774283136956crylkk57w",
@@ -2147,8 +2249,9 @@
     "categories": [
       "weather"
     ],
-    "correct": 3,
-    "incorrect": 1
+    "correct": 4,
+    "incorrect": 2,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1774283145997qrlr6ek31",
@@ -2158,8 +2261,9 @@
     "categories": [
       "weather"
     ],
-    "correct": 1,
-    "incorrect": 2
+    "correct": 2,
+    "incorrect": 4,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1774283218674378rwwej4",
@@ -2169,8 +2273,9 @@
     "categories": [
       "weather"
     ],
-    "correct": 2,
-    "incorrect": 2
+    "correct": 4,
+    "incorrect": 2,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1774800000001",
@@ -2181,7 +2286,8 @@
       "body-parts"
     ],
     "correct": 7,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1774800000002",
@@ -2192,7 +2298,8 @@
       "body-parts"
     ],
     "correct": 7,
-    "incorrect": 2
+    "incorrect": 2,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1774800000003",
@@ -2203,7 +2310,8 @@
       "body-parts"
     ],
     "correct": 9,
-    "incorrect": 5
+    "incorrect": 5,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1774800000004",
@@ -2214,7 +2322,8 @@
       "body-parts"
     ],
     "correct": 6,
-    "incorrect": 5
+    "incorrect": 5,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1774800000005",
@@ -2225,7 +2334,8 @@
       "body-parts"
     ],
     "correct": 7,
-    "incorrect": 14
+    "incorrect": 14,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1774800000006",
@@ -2236,7 +2346,8 @@
       "body-parts"
     ],
     "correct": 7,
-    "incorrect": 1
+    "incorrect": 1,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1774800000007",
@@ -2247,7 +2358,8 @@
       "body-parts"
     ],
     "correct": 7,
-    "incorrect": 13
+    "incorrect": 13,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1774800000008",
@@ -2258,7 +2370,8 @@
       "body-parts"
     ],
     "correct": 8,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1774800000009",
@@ -2269,7 +2382,8 @@
       "body-parts"
     ],
     "correct": 8,
-    "incorrect": 3
+    "incorrect": 3,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1774800000010",
@@ -2280,7 +2394,8 @@
       "body-parts"
     ],
     "correct": 7,
-    "incorrect": 7
+    "incorrect": 7,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1774800000012",
@@ -2291,7 +2406,8 @@
       "health"
     ],
     "correct": 3,
-    "incorrect": 1
+    "incorrect": 1,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1774800000013",
@@ -2302,7 +2418,8 @@
       "health"
     ],
     "correct": 3,
-    "incorrect": 4
+    "incorrect": 4,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1774800000014",
@@ -2313,7 +2430,8 @@
       "health"
     ],
     "correct": 4,
-    "incorrect": 9
+    "incorrect": 9,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1774800000015",
@@ -2324,7 +2442,8 @@
       "health"
     ],
     "correct": 4,
-    "incorrect": 5
+    "incorrect": 5,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1774800000016",
@@ -2335,7 +2454,8 @@
       "health"
     ],
     "correct": 4,
-    "incorrect": 7
+    "incorrect": 7,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1774800000017",
@@ -2346,7 +2466,8 @@
       "health"
     ],
     "correct": 3,
-    "incorrect": 10
+    "incorrect": 10,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1774800000018",
@@ -2357,7 +2478,8 @@
       "health"
     ],
     "correct": 2,
-    "incorrect": 3
+    "incorrect": 3,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1774800000019",
@@ -2368,7 +2490,8 @@
       "common-words"
     ],
     "correct": 1,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1774800000020",
@@ -2379,7 +2502,8 @@
       "common-words"
     ],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1774800000021",
@@ -2391,7 +2515,8 @@
       "verb"
     ],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1774800000022",
@@ -2402,8 +2527,9 @@
       "time",
       "dates"
     ],
-    "correct": 2,
-    "incorrect": 2
+    "correct": 3,
+    "incorrect": 2,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1774800000023",
@@ -2413,8 +2539,9 @@
     "categories": [
       "common-words"
     ],
-    "correct": 0,
-    "incorrect": 0
+    "correct": 1,
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "17750066347304le2og5k0",
@@ -2423,7 +2550,8 @@
     "notes": "",
     "categories": [],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1775006789687vfvm7k3bb",
@@ -2432,7 +2560,8 @@
     "notes": "",
     "categories": [],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "17750070627634hfk1n9qa",
@@ -2441,7 +2570,8 @@
     "notes": "",
     "categories": [],
     "correct": 0,
-    "incorrect": 0
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1775100000001",
@@ -2452,8 +2582,9 @@
       "time",
       "dates"
     ],
-    "correct": 2,
-    "incorrect": 0
+    "correct": 3,
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1775100000002",
@@ -2464,8 +2595,9 @@
       "time",
       "dates"
     ],
-    "correct": 1,
-    "incorrect": 0
+    "correct": 2,
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1775100000003",
@@ -2476,8 +2608,9 @@
       "time",
       "dates"
     ],
-    "correct": 1,
-    "incorrect": 1
+    "correct": 2,
+    "incorrect": 2,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1775100000004",
@@ -2488,8 +2621,9 @@
       "time",
       "dates"
     ],
-    "correct": 2,
-    "incorrect": 1
+    "correct": 3,
+    "incorrect": 1,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1775100000005",
@@ -2500,8 +2634,9 @@
       "time",
       "dates"
     ],
-    "correct": 2,
-    "incorrect": 1
+    "correct": 3,
+    "incorrect": 1,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1775100000006",
@@ -2512,8 +2647,9 @@
       "time",
       "dates"
     ],
-    "correct": 1,
-    "incorrect": 3
+    "correct": 2,
+    "incorrect": 4,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1775100000007",
@@ -2524,8 +2660,9 @@
       "time",
       "dates"
     ],
-    "correct": 1,
-    "incorrect": 2
+    "correct": 2,
+    "incorrect": 3,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1775100000008",
@@ -2536,8 +2673,9 @@
       "time",
       "dates"
     ],
-    "correct": 1,
-    "incorrect": 2
+    "correct": 2,
+    "incorrect": 2,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1775100000009",
@@ -2548,8 +2686,9 @@
       "time",
       "dates"
     ],
-    "correct": 1,
-    "incorrect": 2
+    "correct": 2,
+    "incorrect": 2,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1775100000010",
@@ -2560,8 +2699,9 @@
       "time",
       "dates"
     ],
-    "correct": 1,
-    "incorrect": 1
+    "correct": 2,
+    "incorrect": 2,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1775100000011",
@@ -2572,8 +2712,9 @@
       "time",
       "dates"
     ],
-    "correct": 2,
-    "incorrect": 3
+    "correct": 3,
+    "incorrect": 3,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1775100000012",
@@ -2584,8 +2725,9 @@
       "time",
       "dates"
     ],
-    "correct": 1,
-    "incorrect": 2
+    "correct": 2,
+    "incorrect": 2,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1775100000013",
@@ -2596,8 +2738,9 @@
       "time",
       "dates"
     ],
-    "correct": 1,
-    "incorrect": 1
+    "correct": 2,
+    "incorrect": 1,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1775100000014",
@@ -2608,8 +2751,9 @@
       "time",
       "dates"
     ],
-    "correct": 1,
-    "incorrect": 6
+    "correct": 2,
+    "incorrect": 7,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1775100000015",
@@ -2620,8 +2764,9 @@
       "time",
       "dates"
     ],
-    "correct": 1,
-    "incorrect": 4
+    "correct": 2,
+    "incorrect": 5,
+    "dateAdded": "2026-01-01"
   },
   {
     "id": "1775100000016",
@@ -2632,7 +2777,144 @@
       "time",
       "dates"
     ],
-    "correct": 2,
-    "incorrect": 4
+    "correct": 3,
+    "incorrect": 5,
+    "dateAdded": "2026-01-01"
+  },
+  {
+    "id": "1775498970144exw73fje1",
+    "question": "to walk (verb)",
+    "answer": "camminare",
+    "notes": "",
+    "categories": [
+      "exercise"
+    ],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-01-01"
+  },
+  {
+    "id": "1744243200001",
+    "question": "sheet of paper / page",
+    "answer": "foglio",
+    "notes": "(masculine) (FOH-lyoh)\n\nHo bisogno di un foglio bianco. → I need a blank sheet of paper.",
+    "categories": [
+      "household-items"
+    ],
+    "correct": 17,
+    "incorrect": 2,
+    "dateAdded": "2026-04-09"
+  },
+  {
+    "id": "1744243200002",
+    "question": "pillow",
+    "answer": "cuscino",
+    "notes": "(masculine) (koo-SHEE-noh)\n\nIl cuscino è morbido. → The pillow is soft.",
+    "categories": [
+      "household-items",
+      "bedroom"
+    ],
+    "correct": 10,
+    "incorrect": 5,
+    "dateAdded": "2026-04-09"
+  },
+  {
+    "id": "1744243200003",
+    "question": "clock / watch",
+    "answer": "orologio",
+    "notes": "(masculine) (oh-roh-LOH-joh)\n\nIl mio orologio è rotto. → My watch is broken.",
+    "categories": [
+      "household-items"
+    ],
+    "correct": 9,
+    "incorrect": 3,
+    "dateAdded": "2026-04-09"
+  },
+  {
+    "id": "1744243200004",
+    "question": "plate / dish",
+    "answer": "piatto",
+    "notes": "(masculine) (PYAH-toh)\n\nMetti il piatto sul tavolo. → Put the plate on the table.",
+    "categories": [
+      "household-items",
+      "kitchen"
+    ],
+    "correct": 10,
+    "incorrect": 2,
+    "dateAdded": "2026-04-09"
+  },
+  {
+    "id": "1744243200005",
+    "question": "key",
+    "answer": "chiave",
+    "notes": "(feminine) (KYAH-veh)\n\nNon trovo la chiave di casa. → I can't find the house key.",
+    "categories": [
+      "household-items"
+    ],
+    "correct": 9,
+    "incorrect": 1,
+    "dateAdded": "2026-04-08"
+  },
+  {
+    "id": "1744243200006",
+    "question": "window",
+    "answer": "finestra",
+    "notes": "(feminine) (fee-NEH-strah)\n\nApri la finestra, per favore. → Open the window, please.",
+    "categories": [
+      "household-items"
+    ],
+    "correct": 1,
+    "incorrect": 0,
+    "dateAdded": "2026-04-08"
+  },
+  {
+    "id": "1744243200007",
+    "question": "door",
+    "answer": "porta",
+    "notes": "(feminine) (POHR-tah)\n\nLa porta è chiusa. → The door is closed.",
+    "categories": [
+      "household-items"
+    ],
+    "correct": 1,
+    "incorrect": 0,
+    "dateAdded": "2026-04-08"
+  },
+  {
+    "id": "1744243200008",
+    "question": "light",
+    "answer": "luce",
+    "notes": "(feminine) (LOO-cheh)\n\nAccendi la luce. → Turn on the light.",
+    "categories": [
+      "household-items"
+    ],
+    "correct": 1,
+    "incorrect": 2,
+    "dateAdded": "2026-04-08"
+  },
+  {
+    "id": "1744243200009",
+    "question": "bed",
+    "answer": "letto",
+    "notes": "(masculine) (LEHT-toh)\n\nIl letto è molto comodo. → The bed is very comfortable.",
+    "categories": [
+      "household-items",
+      "bedroom"
+    ],
+    "correct": 1,
+    "incorrect": 2,
+    "dateAdded": "2026-04-08"
+  },
+  {
+    "id": "1744243200010",
+    "question": "cup",
+    "answer": "tazza",
+    "notes": "(feminine) (TAHT-tsah)\n\nVorrei una tazza di caffè. → I would like a cup of coffee.",
+    "categories": [
+      "household-items",
+      "kitchen"
+    ],
+    "correct": 1,
+    "incorrect": 2,
+    "dateAdded": "2026-04-08"
   }
 ]
