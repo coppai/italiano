@@ -148,8 +148,18 @@
             // Populate package filter
             populatePackageFilter();
             
-            // Show all verbs initially
-            flashcards = [...allVerbs];
+            // Check for query string parameter
+            const urlParams = new URLSearchParams(window.location.search);
+            const packageParam = urlParams.get('package');
+            
+            // Set the dropdown to match the query parameter
+            if (packageParam && packageSelect.querySelector(`option[value="${packageParam}"]`)) {
+                packageSelect.value = packageParam;
+                filterByPackage(packageParam);
+            } else {
+                // Show all verbs initially
+                flashcards = [...allVerbs];
+            }
             
             if (flashcards.length === 0) {
                 noCardsArea.style.display = 'block';
@@ -158,8 +168,10 @@
                 noCardsArea.style.display = 'none';
                 flashcardArea.style.display = 'block';
                 totalCardsEl.textContent = flashcards.length;
-                // Automatically shuffle on load
-                shuffleCards();
+                // Automatically shuffle on load (only if not filtered)
+                if (!packageParam) {
+                    shuffleCards();
+                }
                 showCard(0);
             }
         } catch (error) {
@@ -230,7 +242,17 @@
 
     // Package filter change handler
     packageSelect.addEventListener('change', (e) => {
-        filterByPackage(e.target.value);
+        const selectedPackage = e.target.value;
+        filterByPackage(selectedPackage);
+        
+        // Update URL with query parameter
+        const url = new URL(window.location);
+        if (selectedPackage === 'all') {
+            url.searchParams.delete('package');
+        } else {
+            url.searchParams.set('package', selectedPackage);
+        }
+        window.history.pushState({}, '', url);
     });
 
     // Show a specific card

@@ -2801,7 +2801,7 @@
     "categories": [
       "household-items"
     ],
-    "correct": 17,
+    "correct": 20,
     "incorrect": 2,
     "dateAdded": "2026-04-09"
   },
@@ -2814,7 +2814,7 @@
       "household-items",
       "bedroom"
     ],
-    "correct": 10,
+    "correct": 13,
     "incorrect": 5,
     "dateAdded": "2026-04-09"
   },
@@ -2826,8 +2826,8 @@
     "categories": [
       "household-items"
     ],
-    "correct": 9,
-    "incorrect": 3,
+    "correct": 12,
+    "incorrect": 4,
     "dateAdded": "2026-04-09"
   },
   {
@@ -2839,7 +2839,7 @@
       "household-items",
       "kitchen"
     ],
-    "correct": 10,
+    "correct": 13,
     "incorrect": 2,
     "dateAdded": "2026-04-09"
   },
@@ -2851,7 +2851,7 @@
     "categories": [
       "household-items"
     ],
-    "correct": 9,
+    "correct": 13,
     "incorrect": 1,
     "dateAdded": "2026-04-08"
   },
@@ -2863,7 +2863,7 @@
     "categories": [
       "household-items"
     ],
-    "correct": 1,
+    "correct": 4,
     "incorrect": 0,
     "dateAdded": "2026-04-08"
   },
@@ -2875,7 +2875,7 @@
     "categories": [
       "household-items"
     ],
-    "correct": 1,
+    "correct": 4,
     "incorrect": 0,
     "dateAdded": "2026-04-08"
   },
@@ -2887,7 +2887,7 @@
     "categories": [
       "household-items"
     ],
-    "correct": 1,
+    "correct": 4,
     "incorrect": 2,
     "dateAdded": "2026-04-08"
   },
@@ -2900,8 +2900,8 @@
       "household-items",
       "bedroom"
     ],
-    "correct": 1,
-    "incorrect": 2,
+    "correct": 3,
+    "incorrect": 4,
     "dateAdded": "2026-04-08"
   },
   {
@@ -2913,8 +2913,120 @@
       "household-items",
       "kitchen"
     ],
-    "correct": 1,
+    "correct": 4,
     "incorrect": 2,
     "dateAdded": "2026-04-08"
+  },
+  {
+    "id": "1744329600001",
+    "question": "Too much / Too many",
+    "answer": "Troppo",
+    "notes": "È troppo caro = It's too expensive\nTroppo tempo = Too much time\nTroppe persone = Too many people",
+    "categories": [
+      "common-words",
+      "quantity"
+    ],
+    "correct": 5,
+    "incorrect": 0,
+    "dateAdded": "2026-04-10"
+  },
+  {
+    "id": "1744329600002",
+    "question": "A lot / So much / So many",
+    "answer": "Tanto",
+    "notes": "Mi piace tanto = I like it so much\nTanto tempo = A long time\nTante grazie = Thanks a lot",
+    "categories": [
+      "common-words",
+      "quantity"
+    ],
+    "correct": 5,
+    "incorrect": 1,
+    "dateAdded": "2026-04-10"
+  },
+  {
+    "id": "1744329600003",
+    "question": "Nothing",
+    "answer": "Niente",
+    "notes": "NYEHN-tay (Rhymes with the English word 'bent' followed by a crisp 'ay')\n\n\"Di niente.\" (It’s nothing / No problem)",
+    "categories": [
+      "common-words"
+    ],
+    "correct": 4,
+    "incorrect": 1,
+    "dateAdded": "2026-04-10"
+  },
+  {
+    "id": "1744329600004",
+    "question": "Then / Later",
+    "answer": "Poi",
+    "notes": "Prima...poi = First...then\nA dopo poi = See you later\nE poi? = And then?\n\nVado al mercato e poi mangio",
+    "categories": [
+      "common-words",
+      "time"
+    ],
+    "correct": 3,
+    "incorrect": 0,
+    "dateAdded": "2026-04-10"
+  },
+  {
+    "id": "1744329600005",
+    "question": "Maybe / Perhaps",
+    "answer": "Forse",
+    "notes": "Forse domani = Maybe tomorrow\nForse sì, forse no = Maybe yes, maybe no\nForse hai ragione = Maybe you're right",
+    "categories": [
+      "common-words"
+    ],
+    "correct": 3,
+    "incorrect": 2,
+    "dateAdded": "2026-04-10"
+  },
+  {
+    "id": "1744329600006",
+    "question": "Without",
+    "answer": "Senza",
+    "notes": "",
+    "categories": [
+      "common-words"
+    ],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-04-11"
+  },
+  {
+    "id": "1744329600007",
+    "question": "Need",
+    "answer": "Bisogno",
+    "notes": "Usually used with avere: Avere bisogno di = To have need of / To need",
+    "categories": [
+      "common-words"
+    ],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-04-11"
+  },
+  {
+    "id": "1744329600008",
+    "question": "Place / Spot / Seat",
+    "answer": "Posto",
+    "notes": "",
+    "categories": [
+      "common-words"
+    ],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-04-11"
+  },
+  {
+    "id": "1744329600009",
+    "question": "Said / Told",
+    "answer": "Detto",
+    "notes": "Past participle of dire",
+    "categories": [
+      "verb",
+      "common-words"
+    ],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-04-11"
   }
 ]

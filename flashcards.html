@@ -6,12 +6,6 @@
     <title>Italian Flashcards</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        #datePicker:hover {
-            background: #1a252f;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(44, 62, 80, 0.3);
-        }
-        
         #datePicker::-webkit-calendar-picker-indicator {
             filter: invert(1);
             cursor: pointer;
@@ -159,6 +153,57 @@
         dateProgress: !!dateProgress
     });
 
+    // URL Query String Management
+    function updateURLParams() {
+        const params = new URLSearchParams();
+        
+        // Add selected categories
+        if (selectedCategories.size > 0) {
+            params.set('categories', Array.from(selectedCategories).join(','));
+        }
+        
+        // Add selected date
+        if (selectedDate) {
+            params.set('date', selectedDate);
+        }
+        
+        // Add sort mode
+        if (sortMode) {
+            params.set('mode', sortMode);
+        }
+        
+        // Update URL without reloading page
+        const newURL = params.toString() ? `${window.location.pathname}?${params.toString()}` : window.location.pathname;
+        window.history.replaceState({}, '', newURL);
+    }
+    
+    function loadURLParams() {
+        const params = new URLSearchParams(window.location.search);
+        
+        // Load categories
+        const categoriesParam = params.get('categories');
+        if (categoriesParam) {
+            categoriesParam.split(',').forEach(cat => {
+                if (cat.trim()) {
+                    selectedCategories.add(cat.trim());
+                }
+            });
+        }
+        
+        // Load date
+        const dateParam = params.get('date');
+        if (dateParam) {
+            selectedDate = dateParam;
+            datePicker.value = dateParam;
+        }
+        
+        // Load sort mode
+        const modeParam = params.get('mode');
+        if (modeParam) {
+            sortMode = modeParam;
+        }
+    }
+
     // Load flashcards
     async function loadFlashcards() {
         try {
@@ -176,6 +221,9 @@
                 dateAdded: card.dateAdded || '2026-01-01' // Default old cards to past date
             }));
             
+            // Load filters from URL parameters
+            loadURLParams();
+            
             // Populate category filter
             populateCategoryFilter();
             
@@ -191,6 +239,24 @@
                 totalCardsEl.textContent = flashcards.length;
                 // Show all cards by default without date filtering
                 setupDatePickerRange(); // Set up min/max dates but don't select one
+                
+                // Apply filters from URL if any were loaded
+                if (selectedCategories.size > 0 || selectedDate) {
+                    if (selectedDate) {
+                        sortMode = 'date';
+                        dateProgress.style.display = 'block';
+                        filterBySelectedDate();
+                    } else {
+                        applyFilters();
+                    }
+                }
+                
+                // Apply visual state for shuffle mode if loaded from URL
+                if (sortMode === 'shuffle') {
+                    shuffleBtn.classList.add('selected');
+                    shuffleCards();
+                }
+                
                 showCard(0);
             }
         } catch (error) {
@@ -294,11 +360,13 @@
         const checkboxes = categoryList.querySelectorAll('input[type="checkbox"]');
         checkboxes.forEach(cb => cb.checked = false);
         updateCategoryCount();
+        updateURLParams(); // Update URL to reflect cleared filters
     });
 
     // Apply filters and close modal
     applyFiltersBtn.addEventListener('click', () => {
         applyFilters();
+        updateURLParams();
         closeCategoryModal();
     });
     
@@ -579,6 +647,7 @@
             dateProgress.style.display = 'none';
             flashcards = [...allFlashcards];
             totalCardsEl.textContent = flashcards.length;
+            updateURLParams(); // Update URL to remove date parameter
             showCard(0);
             return;
         }
@@ -590,6 +659,8 @@
         if (cardsForDate.length === 0) {
             alert('No cards found for this date. Please select a date when you added flashcards.');
             datePicker.value = ''; // Clear the picker
+            selectedDate = null;
+            updateURLParams();
             return;
         }
         
@@ -597,6 +668,7 @@
         dateProgress.style.display = 'block';
         dateCompletedCards.clear(); // Reset completion tracking for new date
         filterBySelectedDate();
+        updateURLParams(); // Update URL with date parameter
         showCard(0);
     });
     
@@ -629,6 +701,7 @@
             selectedDate = nextDate;
             datePicker.value = nextDate;
             dateCompletedCards.clear();
+            updateURLParams(); // Update URL with new date
             alert(`🎉 Great job! All cards for ${formatDateForDisplay(dates[currentIndex])} completed!\n\nMoving to ${formatDateForDisplay(nextDate)}...`);
             filterBySelectedDate();
             showCard(0);
@@ -756,6 +829,7 @@
         flashcards = filteredCards;
         shuffleCards(); // Shuffle the filtered cards
         totalCardsEl.textContent = flashcards.length;
+        updateURLParams(); // Update URL with shuffle mode
         showCard(0);
     });
 

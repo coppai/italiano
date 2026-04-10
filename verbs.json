@@ -737,7 +737,9 @@
         "pronunciation": "TROH-vah-noh",
         "example": "Loro trovano un tesoro. (They find a treasure.)"
       }
-    ]
+    ],
+    "infinitive_correct": 3,
+    "infinitive_incorrect": 0
   },
   {
     "id": "lasciare",
@@ -788,7 +790,9 @@
         "pronunciation": "LAH-shah-noh",
         "example": "Loro lasciano presto. (They leave early.)"
       }
-    ]
+    ],
+    "infinitive_correct": 3,
+    "infinitive_incorrect": 2
   },
   {
     "id": "capire",
@@ -890,7 +894,9 @@
         "pronunciation": "GWAR-dah-noh",
         "example": "Loro guardano lo spettacolo. (They watch the show.)"
       }
-    ]
+    ],
+    "infinitive_correct": 3,
+    "infinitive_incorrect": 1
   },
   {
     "id": "venire",
