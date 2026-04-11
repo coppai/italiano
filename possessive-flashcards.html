@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Possessive Chart Flashcards - Italian</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="flashcards-page">
+
+<div class="container">
+    <div class="header">
+        <h1>Possessive Chart Flashcards</h1>
+        <p>Learn the possessive forms by owner and gender/number</p>
+    </div>
+
+    <div id="flashcardArea">
+        <div class="progress">
+            Card: <span id="currentCard">1</span> / <span id="totalCards">24</span>
+        </div>
+
+        <div class="flashcard-container">
+            <div class="flashcard" id="flashcard">
+                <div class="flashcard-face flashcard-front">
+                    <div class="flashcard-label">What is the possessive form?</div>
+                    <div class="flashcard-content" id="question">
+                        <div style="font-size: 1.8rem; margin-bottom: 20px;" id="owner"></div>
+                        <div style="font-size: 1.4rem; color: #7f8c8d;" id="type"></div>
+                    </div>
+                </div>
+                <div class="flashcard-face flashcard-back">
+                    <div class="flashcard-label">Answer</div>
+                    <div class="flashcard-content" id="answer"></div>
+                    <div class="card-answer-buttons">
+                        <button id="incorrectBtn" class="btn-incorrect">✗ Need Practice</button>
+                        <button id="correctBtn" class="btn-correct">✓ Got It!</button>
+                    </div>
+                    <div class="card-actions">
+                        <button id="pronounceBtn" class="btn-success">
+                            <span>🔊 Pronounce</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tap-hint">👆 Tap card to flip</div>
+
+        <div class="controls">
+            <button id="prevBtn" class="btn-secondary">
+                <span>← Previous</span>
+            </button>
+            <button id="nextBtn" class="btn-primary">
+                <span>Next →</span>
+            </button>
+            <button id="shuffleBtn" class="btn-secondary">
+                <span>🔀 Shuffle</span>
+            </button>
+            <button id="resetBtn" class="btn-secondary">
+                <span>↺ Reset</span>
+            </button>
+        </div>
+
+        <button class="btn-back" onclick="window.location.href='possessives.html'" style="margin-top: 20px;">
+            ← Back to Possessives Practice
+        </button>
+    </div>
+</div>
+
+<script>
+    // Possessive chart data
+    const possessiveData = [
+        { owner: "I (My)", ownerShort: "my", type: "Masculine Singular", article: "il", form: "il mio" },
+        { owner: "I (My)", ownerShort: "my", type: "Feminine Singular", article: "la", form: "la mia" },
+        { owner: "I (My)", ownerShort: "my", type: "Masculine Plural", article: "i", form: "i miei" },
+        { owner: "I (My)", ownerShort: "my", type: "Feminine Plural", article: "le", form: "le mie" },
+        
+        { owner: "You (Your)", ownerShort: "your", type: "Masculine Singular", article: "il", form: "il tuo" },
+        { owner: "You (Your)", ownerShort: "your", type: "Feminine Singular", article: "la", form: "la tua" },
+        { owner: "You (Your)", ownerShort: "your", type: "Masculine Plural", article: "i", form: "i tuoi" },
+        { owner: "You (Your)", ownerShort: "your", type: "Feminine Plural", article: "le", form: "le tue" },
+        
+        { owner: "He/She (His/Her)", ownerShort: "his/her", type: "Masculine Singular", article: "il", form: "il suo" },
+        { owner: "He/She (His/Her)", ownerShort: "his/her", type: "Feminine Singular", article: "la", form: "la sua" },
+        { owner: "He/She (His/Her)", ownerShort: "his/her", type: "Masculine Plural", article: "i", form: "i suoi" },
+        { owner: "He/She (His/Her)", ownerShort: "his/her", type: "Feminine Plural", article: "le", form: "le sue" },
+        
+        { owner: "We (Our)", ownerShort: "our", type: "Masculine Singular", article: "il", form: "il nostro" },
+        { owner: "We (Our)", ownerShort: "our", type: "Feminine Singular", article: "la", form: "la nostra" },
+        { owner: "We (Our)", ownerShort: "our", type: "Masculine Plural", article: "i", form: "i nostri" },
+        { owner: "We (Our)", ownerShort: "our", type: "Feminine Plural", article: "le", form: "le nostre" },
+        
+        { owner: "You all (Your)", ownerShort: "your (plural)", type: "Masculine Singular", article: "il", form: "il vostro" },
+        { owner: "You all (Your)", ownerShort: "your (plural)", type: "Feminine Singular", article: "la", form: "la vostra" },
+        { owner: "You all (Your)", ownerShort: "your (plural)", type: "Masculine Plural", article: "i", form: "i vostri" },
+        { owner: "You all (Your)", ownerShort: "your (plural)", type: "Feminine Plural", article: "le", form: "le vostre" },
+        
+        { owner: "They (Their)", ownerShort: "their", type: "Masculine Singular", article: "il", form: "il loro" },
+        { owner: "They (Their)", ownerShort: "their", type: "Feminine Singular", article: "la", form: "la loro" },
+        { owner: "They (Their)", ownerShort: "their", type: "Masculine Plural", article: "i", form: "i loro" },
+        { owner: "They (Their)", ownerShort: "their", type: "Feminine Plural", article: "le", form: "le loro" }
+    ];
+
+    let cards = [...possessiveData];
+    let currentIndex = 0;
+    let isFlipped = false;
+
+    // Initialize
+    function init() {
+        updateCard();
+        updateProgress();
+        setupEventListeners();
+    }
+
+    function setupEventListeners() {
+        // Flip card on click
+        document.getElementById('flashcard').addEventListener('click', flipCard);
+        
+        // Navigation
+        document.getElementById('prevBtn').addEventListener('click', (e) => {
+            e.stopPropagation();
+            previousCard();
+        });
+        
+        document.getElementById('nextBtn').addEventListener('click', (e) => {
+            e.stopPropagation();
+            nextCard();
+        });
+        
+        // Shuffle
+        document.getElementById('shuffleBtn').addEventListener('click', (e) => {
+            e.stopPropagation();
+            shuffleCards();
+        });
+        
+        // Reset
+        document.getElementById('resetBtn').addEventListener('click', (e) => {
+            e.stopPropagation();
+            resetCards();
+        });
+        
+        // Pronounce
+        document.getElementById('pronounceBtn').addEventListener('click', (e) => {
+            e.stopPropagation();
+            pronounce();
+        });
+        
+        // Answer buttons
+        document.getElementById('correctBtn').addEventListener('click', (e) => {
+            e.stopPropagation();
+            nextCard();
+        });
+        
+        document.getElementById('incorrectBtn').addEventListener('click', (e) => {
+            e.stopPropagation();
+            nextCard();
+        });
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                previousCard();
+            } else if (e.key === 'ArrowRight' || e.key === ' ') {
+                e.preventDefault();
+                if (isFlipped) {
+                    nextCard();
+                } else {
+                    flipCard();
+                }
+            } else if (e.key === 'Enter') {
+                flipCard();
+            }
+        });
+    }
+
+    function updateCard() {
+        const card = cards[currentIndex];
+        const flashcard = document.getElementById('flashcard');
+        
+        // Update front
+        document.getElementById('owner').textContent = card.owner;
+        document.getElementById('type').textContent = card.type;
+        
+        // Update back
+        document.getElementById('answer').textContent = card.form;
+        
+        // Reset flip state
+        if (isFlipped) {
+            flashcard.classList.remove('flipped');
+            isFlipped = false;
+        }
+    }
+
+    function updateProgress() {
+        document.getElementById('currentCard').textContent = currentIndex + 1;
+        document.getElementById('totalCards').textContent = cards.length;
+    }
+
+    function flipCard() {
+        const flashcard = document.getElementById('flashcard');
+        flashcard.classList.toggle('flipped');
+        isFlipped = !isFlipped;
+    }
+
+    function nextCard() {
+        currentIndex = (currentIndex + 1) % cards.length;
+        updateCard();
+        updateProgress();
+    }
+
+    function previousCard() {
+        currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+        updateCard();
+        updateProgress();
+    }
+
+    function shuffleCards() {
+        // Fisher-Yates shuffle
+        for (let i = cards.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [cards[i], cards[j]] = [cards[j], cards[i]];
+        }
+        currentIndex = 0;
+        updateCard();
+        updateProgress();
+    }
+
+    function resetCards() {
+        cards = [...possessiveData];
+        currentIndex = 0;
+        updateCard();
+        updateProgress();
+    }
+
+    function pronounce() {
+        const card = cards[currentIndex];
+        const utterance = new SpeechSynthesisUtterance(card.form);
+        utterance.lang = 'it-IT';
+        utterance.rate = 0.7;
+        speechSynthesis.speak(utterance);
+    }
+
+    // Start the app
+    init();
+</script>
+
+</body>
+</html>

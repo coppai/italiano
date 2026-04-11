@@ -49,7 +49,7 @@
         "example": "Loro hanno molti amici. (They have many friends.)"
       }
     ],
-    "infinitive_correct": 2,
+    "infinitive_correct": 3,
     "infinitive_incorrect": 0
   },
   {
@@ -102,7 +102,7 @@
         "example": "Loro fanno una festa. (They are having a party.)"
       }
     ],
-    "infinitive_correct": 2,
+    "infinitive_correct": 3,
     "infinitive_incorrect": 0
   },
   {
@@ -155,7 +155,7 @@
         "example": "Loro dicono no. (They say no.)"
       }
     ],
-    "infinitive_correct": 2,
+    "infinitive_correct": 3,
     "infinitive_incorrect": 0
   },
   {
@@ -208,7 +208,7 @@
         "example": "Loro possono restare. (They can stay.)"
       }
     ],
-    "infinitive_correct": 2,
+    "infinitive_correct": 3,
     "infinitive_incorrect": 0
   },
   {
@@ -261,7 +261,7 @@
         "example": "Loro vanno in vacanza. (They go on vacation.)"
       }
     ],
-    "infinitive_correct": 2,
+    "infinitive_correct": 3,
     "infinitive_incorrect": 1
   },
   {
@@ -314,7 +314,7 @@
         "example": "Loro vedono tutto. (They see everything.)"
       }
     ],
-    "infinitive_correct": 2,
+    "infinitive_correct": 3,
     "infinitive_incorrect": 0
   },
   {
@@ -367,7 +367,7 @@
         "example": "Loro danno aiuto. (They give help.)"
       }
     ],
-    "infinitive_correct": 1,
+    "infinitive_correct": 2,
     "infinitive_incorrect": 0
   },
   {
@@ -420,7 +420,7 @@
         "example": "Loro vogliono viaggiare. (They want to travel.)"
       }
     ],
-    "infinitive_correct": 2,
+    "infinitive_correct": 3,
     "infinitive_incorrect": 0
   },
   {
@@ -473,7 +473,7 @@
         "example": "Loro sanno nuotare. (They know how to swim.)"
       }
     ],
-    "infinitive_correct": 1,
+    "infinitive_correct": 2,
     "infinitive_incorrect": 0
   },
   {
@@ -526,7 +526,7 @@
         "example": "Loro stanno qui. (They stay here.)"
       }
     ],
-    "infinitive_correct": 1,
+    "infinitive_correct": 2,
     "infinitive_incorrect": 0
   },
   {
@@ -579,7 +579,7 @@
         "example": "Loro devono pagare. (They must pay.)"
       }
     ],
-    "infinitive_correct": 1,
+    "infinitive_correct": 2,
     "infinitive_incorrect": 1
   },
   {
@@ -632,7 +632,7 @@
         "example": "Loro prendono il sole. (They sunbathe.)"
       }
     ],
-    "infinitive_correct": 1,
+    "infinitive_correct": 2,
     "infinitive_incorrect": 0
   },
   {
@@ -685,7 +685,7 @@
         "example": "Loro mettono ordine. (They put things in order.)"
       }
     ],
-    "infinitive_correct": 1,
+    "infinitive_correct": 2,
     "infinitive_incorrect": 0
   },
   {
@@ -738,7 +738,7 @@
         "example": "Loro trovano un tesoro. (They find a treasure.)"
       }
     ],
-    "infinitive_correct": 3,
+    "infinitive_correct": 5,
     "infinitive_incorrect": 0
   },
   {
@@ -791,7 +791,7 @@
         "example": "Loro lasciano presto. (They leave early.)"
       }
     ],
-    "infinitive_correct": 3,
+    "infinitive_correct": 6,
     "infinitive_incorrect": 2
   },
   {
@@ -843,7 +843,9 @@
         "pronunciation": "cah-PEE-skoh-noh",
         "example": "Loro capiscono la musica. (They understand music.)"
       }
-    ]
+    ],
+    "infinitive_correct": 1,
+    "infinitive_incorrect": 1
   },
   {
     "id": "guardare",
@@ -895,7 +897,7 @@
         "example": "Loro guardano lo spettacolo. (They watch the show.)"
       }
     ],
-    "infinitive_correct": 3,
+    "infinitive_correct": 5,
     "infinitive_incorrect": 1
   },
   {
@@ -903,7 +905,7 @@
     "infinitive": "venire",
     "english": "to come",
     "pronunciation": "(veh-NEE-reh)",
-    "package": 3,
+    "package": 4,
     "forms": [
       {
         "subject": "io",
@@ -947,14 +949,16 @@
         "pronunciation": "VEN-goh-noh",
         "example": "Loro vengono dall'Italia. (They come from Italy.)"
       }
-    ]
+    ],
+    "infinitive_correct": 1,
+    "infinitive_incorrect": 1
   },
   {
     "id": "pensare",
     "infinitive": "pensare",
     "english": "to think",
     "pronunciation": "(pen-SAH-reh)",
-    "package": 5,
+    "package": 4,
     "forms": [
       {
         "subject": "io",
@@ -998,14 +1002,16 @@
         "pronunciation": "PEN-sah-noh",
         "example": "Loro pensano sempre. (They always think.)"
       }
-    ]
+    ],
+    "infinitive_correct": 2,
+    "infinitive_incorrect": 0
   },
   {
     "id": "partire",
     "infinitive": "partire",
     "english": "to leave / to depart",
     "pronunciation": "(par-TEE-reh)",
-    "package": 5,
+    "package": 4,
     "forms": [
       {
         "subject": "io",
@@ -1049,7 +1055,9 @@
         "pronunciation": "PAR-toh-noh",
         "example": "Loro partono in aereo. (They leave by plane.)"
       }
-    ]
+    ],
+    "infinitive_correct": 1,
+    "infinitive_incorrect": 0
   },
   {
     "id": "mangiare",
@@ -1202,6 +1210,8 @@
         "pronunciation": "ahr-REE-vah-noh",
         "example": "Loro arrivano dall'America. (They arrive from America.)"
       }
-    ]
+    ],
+    "infinitive_correct": 1,
+    "infinitive_incorrect": 0
   }
 ]

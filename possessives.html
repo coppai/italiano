@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Possessives Practice - Italian Flashcards</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .chart {
+            margin: 20px 0;
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .chart h3 {
+            margin-top: 0;
+            color: var(--secondary);
+            text-align: center;
+        }
+        .chart-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+        .chart-table th, .chart-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        .chart-table th {
+            background-color: var(--primary);
+            color: white;
+            font-weight: bold;
+        }
+        .chart-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .hint-text {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="article-page">
+
+<div class="container">
+    <div class="main-content">
+        <div class="card">
+    <button class="btn-back" onclick="window.location.href='index.html'">← Back to Home</button>
+    
+    <h2 style="text-align: center; color: var(--secondary); margin-bottom: 20px;">Italian Possessives Practice</h2>
+    
+    <div class="chart">
+        <h3>📊 The Italian Possessive Chart</h3>
+        <p style="text-align: center; color: #7f8c8d; font-size: 0.9rem;">In Italian, you almost always include the definite article (il, la, i, le) with the possessive.</p>
+        <table class="chart-table">
+            <thead>
+                <tr>
+                    <th>Owner (Person)</th>
+                    <th>Masc. Sing. (il)</th>
+                    <th>Fem. Sing. (la)</th>
+                    <th>Masc. Plur. (i)</th>
+                    <th>Fem. Plur. (le)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>I (My)</strong></td>
+                    <td>il mio</td>
+                    <td>la mia</td>
+                    <td>i miei</td>
+                    <td>le mie</td>
+                </tr>
+                <tr>
+                    <td><strong>You (Your)</strong></td>
+                    <td>il tuo</td>
+                    <td>la tua</td>
+                    <td>i tuoi</td>
+                    <td>le tue</td>
+                </tr>
+                <tr>
+                    <td><strong>He/She (His/Her)</strong></td>
+                    <td>il suo</td>
+                    <td>la sua</td>
+                    <td>i suoi</td>
+                    <td>le sue</td>
+                </tr>
+                <tr>
+                    <td><strong>We (Our)</strong></td>
+                    <td>il nostro</td>
+                    <td>la nostra</td>
+                    <td>i nostri</td>
+                    <td>le nostre</td>
+                </tr>
+                <tr>
+                    <td><strong>You all (Your)</strong></td>
+                    <td>il vostro</td>
+                    <td>la vostra</td>
+                    <td>i vostri</td>
+                    <td>le vostre</td>
+                </tr>
+                <tr>
+                    <td><strong>They (Their)</strong></td>
+                    <td>il loro</td>
+                    <td>la loro</td>
+                    <td>i loro</td>
+                    <td>le loro</td>
+                </tr>
+            </tbody>
+        </table>
+        <div style="text-align: center; margin-top: 15px;">
+            <button class="btn-primary" onclick="window.location.href='possessive-flashcards.html'" style="font-size: 0.95rem;">
+                🎴 Practice Chart with Flashcards
+            </button>
+        </div>
+    </div>
+    
+    <div class="stats">
+        <div class="stat-item">
+            <div class="stat-value" id="remaining-count">0</div>
+            <div class="stat-label">Remaining</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-value" id="correct-count" style="color: var(--success);">0</div>
+            <div class="stat-label">Correct</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-value" id="incorrect-count" style="color: var(--error);">0</div>
+            <div class="stat-label">Incorrect</div>
+        </div>
+    </div>
+
+    <div id="display-word" class="word">Loading...</div>
+    <div class="hint-text">Translate to Italian (include article + possessive + noun)</div>
+    
+    <input type="text" id="possessive-input" placeholder="e.g., il mio libro" autocomplete="off">
+    <br>
+    <button class="btn-submit" onclick="checkAnswer()">Submit</button>
+    
+    <div id="feedback"></div>
+
+    <hr>
+
+    <div class="info-area">
+        <div id="extra-info" class="info-text"></div>
+    </div>
+
+    <div class="btn-group">
+        <button class="btn-hint" onclick="showNoun()">Show Noun</button>
+        <button class="btn-hint" onclick="showGenderNumber()">Show Gender/Number</button>
+        <button class="btn-hint" onclick="showComponents()">Show Components</button>
+        <button class="btn-hint" onclick="showAnswer()">Show Answer</button>
+        <button class="btn-hint" onclick="pronouncePhrase()">🔊 Pronounce</button>
+    </div>
+</div>
+    </div>
+
+    <div class="sidebar">
+        <h3>Completed Phrases</h3>
+        <div id="sidebar-list"></div>
+    </div>
+</div>
+
+<script>
+    let possessives = [];
+    let currentItemIndex = 0;
+    let deck = [];
+    let correctCount = 0;
+    let incorrectCount = 0;
+    let completedItems = [];
+
+    // Stats tracking functions
+    function getPossessiveStats() {
+        const stats = localStorage.getItem('possessiveStats');
+        return stats ? JSON.parse(stats) : {};
+    }
+
+    function savePossessiveStats(stats) {
+        localStorage.setItem('possessiveStats', JSON.stringify(stats));
+    }
+
+    function getPossessiveKey(item) {
+        return `${item.english.toLowerCase().replace(/\s+/g, '_')}`;
+    }
+
+    function recordAnswer(item, isCorrect) {
+        const stats = getPossessiveStats();
+        const key = getPossessiveKey(item);
+        
+        if (!stats[key]) {
+            stats[key] = {
+                english: item.english,
+                answer: item.answer,
+                owner: item.owner,
+                correct: 0,
+                incorrect: 0
+            };
+        }
+        
+        if (isCorrect) {
+            stats[key].correct++;
+        } else {
+            stats[key].incorrect++;
+        }
+        
+        savePossessiveStats(stats);
+    }
+
+    // 1. Fetch the JSON data
+    async function loadPossessives() {
+        const display = document.getElementById('display-word');
+        try {
+            const response = await fetch('possessives.json');
+            if (!response.ok) throw new Error("File not found");
+            
+            possessives = await response.json();
+            if (possessives.length === 0) throw new Error("JSON is empty");
+
+            // Shuffle and create deck
+            deck = shuffle([...possessives]);
+            
+            updateStats();
+            displayItem();
+        } catch (error) {
+            display.style.fontSize = "1.2rem";
+            display.innerHTML = `<span style="color:red">Error: Make sure possessives.json has data!</span>`;
+            console.error("Load error:", error);
+        }
+    }
+
+    // 2. Randomize using Fisher-Yates algorithm
+    function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
+
+    // 3. Update stats display
+    function updateStats() {
+        document.getElementById('remaining-count').innerText = deck.length;
+        document.getElementById('correct-count').innerText = correctCount;
+        document.getElementById('incorrect-count').innerText = incorrectCount;
+    }
+
+    // 4. Display current item
+    function displayItem(keepInfo = false) {
+        // Check if game is over
+        if (deck.length === 0) {
+            document.getElementById('display-word').innerHTML = '<div class="game-over">🎉 Game Over! 🎉</div>';
+            document.getElementById('possessive-input').style.display = 'none';
+            document.querySelector('.btn-submit').style.display = 'none';
+            document.querySelector('.btn-group').style.display = 'none';
+            document.getElementById('extra-info').innerText = `You completed all ${correctCount} phrases!`;
+            return;
+        }
+        
+        currentItemIndex = 0;
+        const item = deck[currentItemIndex];
+        document.getElementById('display-word').innerText = item.english;
+        
+        if (!keepInfo) {
+            document.getElementById('extra-info').innerText = "";
+        }
+        document.getElementById('feedback').innerText = "";
+        document.getElementById('possessive-input').value = "";
+        document.getElementById('possessive-input').focus();
+    }
+
+    function showNoun() {
+        const item = deck[currentItemIndex];
+        document.getElementById('extra-info').innerText = 
+            `Italian noun: ${item.noun} (${item.meaning})`;
+    }
+
+    function showGenderNumber() {
+        const item = deck[currentItemIndex];
+        document.getElementById('extra-info').innerText = 
+            `Gender: ${item.gender}, Number: ${item.number}\nNoun: ${item.noun} (${item.meaning})`;
+    }
+
+    function showComponents() {
+        const item = deck[currentItemIndex];
+        document.getElementById('extra-info').innerText = 
+            `Article: ${item.article} + Possessive: ${item.possessive} + Noun: ${item.noun}`;
+    }
+
+    function showAnswer() {
+        const item = deck[currentItemIndex];
+        document.getElementById('extra-info').innerText = `Answer: ${item.answer}`;
+    }
+
+    function pronouncePhrase() {
+        const item = deck[currentItemIndex];
+        const textToSpeak = item.answer;
+        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+        utterance.lang = 'it-IT';
+        utterance.rate = 0.7;
+        speechSynthesis.speak(utterance);
+    }
+
+    // Add item to sidebar
+    function addToSidebar(item) {
+        completedItems.push(item);
+        const sidebarList = document.getElementById('sidebar-list');
+        const itemDiv = document.createElement('div');
+        itemDiv.className = 'sidebar-item';
+        
+        const text = document.createElement('span');
+        text.className = 'sidebar-text';
+        text.innerText = item.english + ' → ' + item.answer;
+        
+        const playBtn = document.createElement('button');
+        playBtn.className = 'btn-play';
+        playBtn.innerText = '🔊';
+        playBtn.onclick = () => {
+            const utterance = new SpeechSynthesisUtterance(item.answer);
+            utterance.lang = 'it-IT';
+            utterance.rate = 0.7;
+            speechSynthesis.speak(utterance);
+        };
+        
+        itemDiv.appendChild(text);
+        itemDiv.appendChild(playBtn);
+        sidebarList.prepend(itemDiv);
+    }
+
+    // 5. Validate the user input
+    function checkAnswer() {
+        const inputField = document.getElementById('possessive-input');
+        const feedback = document.getElementById('feedback');
+        const extraInfo = document.getElementById('extra-info');
+        const input = inputField.value.trim().toLowerCase();
+        const item = deck[currentItemIndex];
+        const correct = item.answer.toLowerCase();
+        
+        if (input === correct) {
+            feedback.style.color = "var(--success)";
+            feedback.innerText = "Perfetto! ✓";
+            
+            // Record correct answer
+            recordAnswer(item, true);
+            
+            // Update counters
+            correctCount++;
+            
+            // Add to sidebar
+            addToSidebar(item);
+            
+            // Pronounce the phrase
+            const utterance = new SpeechSynthesisUtterance(item.answer);
+            utterance.lang = 'it-IT';
+            utterance.rate = 0.7;
+            speechSynthesis.speak(utterance);
+            
+            // Remove from deck
+            deck.splice(currentItemIndex, 1);
+            
+            // Update stats
+            updateStats();
+            
+            // Move to next item
+            displayItem(true);
+            
+            // Clear info after delay
+            setTimeout(() => {
+                extraInfo.innerText = "";
+            }, 3000);
+        } else {
+            feedback.style.color = "var(--error)";
+            feedback.innerText = "Try again! ✗";
+            
+            // Record incorrect answer
+            recordAnswer(item, false);
+            
+            incorrectCount++;
+            updateStats();
+        }
+    }
+
+    // 6. Allow pressing "Enter" to submit
+    document.getElementById('possessive-input').addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') {
+            checkAnswer();
+        }
+    });
+
+    // Start the app
+    loadPossessives();
+</script>
+
+</body>
+</html>
