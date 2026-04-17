@@ -90,6 +90,9 @@
             <button id="shuffleBtn" class="btn-secondary">
                 <span>🔀 Shuffle</span>
             </button>
+            <button id="reverseOrderBtn" class="btn-secondary">
+                <span>⬇️ Reverse Order</span>
+            </button>
             <button id="theFiveBtn" class="btn-secondary">
                 <span>✋ The Five</span>
             </button>
@@ -112,6 +115,7 @@
     let currentIndex = 0;
     let isFlipped = false;
     let isReversed = false;      // Track if cards are reversed (Answer -> Question)
+    let isReverseOrder = false;  // Track if card order is reversed (last to first)
     let completedCards = new Set();  // Track cards marked as correct (by card.id)
     let selectedCategories = new Set();  // Track selected category filters
     let theFiveMode = false;         // Track if "The Five" mode is active
@@ -144,6 +148,7 @@
     const applyFiltersBtn = document.getElementById('applyFiltersBtn');
     const categoryCount = document.getElementById('categoryCount');
     const reverseBtn = document.getElementById('reverseBtn');
+    const reverseOrderBtn = document.getElementById('reverseOrderBtn');
     const theFiveBtn = document.getElementById('theFiveBtn');
     const datePicker = document.getElementById('datePicker');
     const dateProgress = document.getElementById('dateProgress');
@@ -170,6 +175,11 @@
         // Add sort mode
         if (sortMode) {
             params.set('mode', sortMode);
+        }
+        
+        // Add reverse order state
+        if (isReverseOrder) {
+            params.set('reverse', 'true');
         }
         
         // Update URL without reloading page
@@ -201,6 +211,12 @@
         const modeParam = params.get('mode');
         if (modeParam) {
             sortMode = modeParam;
+        }
+        
+        // Load reverse order state
+        const reverseParam = params.get('reverse');
+        if (reverseParam === 'true') {
+            isReverseOrder = true;
         }
     }
 
@@ -255,6 +271,13 @@
                 if (sortMode === 'shuffle') {
                     shuffleBtn.classList.add('selected');
                     shuffleCards();
+                }
+                
+                // Apply reverse order if loaded from URL
+                if (isReverseOrder) {
+                    reverseOrderBtn.classList.add('selected');
+                    reverseOrderBtn.querySelector('span').textContent = '⬆️ Normal Order';
+                    flashcards.reverse();
                 }
                 
                 showCard(0);
@@ -416,6 +439,11 @@
                     shuffleCards();
                 }
                 // If sortMode is null, keep cards in their natural order
+                
+                // Apply reverse order if active
+                if (isReverseOrder) {
+                    flashcards.reverse();
+                }
             }
             showCard(0);
         }
@@ -646,6 +674,12 @@
             selectedDate = null;
             dateProgress.style.display = 'none';
             flashcards = [...allFlashcards];
+            
+            // Apply reverse order if active
+            if (isReverseOrder) {
+                flashcards.reverse();
+            }
+            
             totalCardsEl.textContent = flashcards.length;
             updateURLParams(); // Update URL to remove date parameter
             showCard(0);
@@ -680,6 +714,11 @@
         flashcards = allFlashcards.filter(card => 
             card.dateAdded === selectedDate && !dateCompletedCards.has(card.id)
         );
+        
+        // Apply reverse order if active
+        if (isReverseOrder) {
+            flashcards.reverse();
+        }
         
         totalCardsEl.textContent = flashcards.length;
         updateDateProgress();
@@ -801,6 +840,13 @@
         sortMode = 'shuffle';
         shuffleBtn.classList.add('selected');
         
+        // Clear reverse order when shuffling
+        if (isReverseOrder) {
+            isReverseOrder = false;
+            reverseOrderBtn.classList.remove('selected');
+            reverseOrderBtn.querySelector('span').textContent = '⬇️ Reverse Order';
+        }
+        
         // Get currently filtered cards based on BOTH category and date filters
         let filteredCards = [...allFlashcards];
         
@@ -831,6 +877,35 @@
         totalCardsEl.textContent = flashcards.length;
         updateURLParams(); // Update URL with shuffle mode
         showCard(0);
+    });
+
+    // Reverse Order button
+    reverseOrderBtn.addEventListener('click', () => {
+        isReverseOrder = !isReverseOrder;
+        
+        // Clear shuffle mode when using reverse order
+        if (isReverseOrder && sortMode === 'shuffle') {
+            sortMode = null;
+            shuffleBtn.classList.remove('selected');
+        }
+        
+        if (isReverseOrder) {
+            reverseOrderBtn.querySelector('span').textContent = '⬆️ Normal Order';
+            reverseOrderBtn.classList.add('selected');
+            // Reverse the current card array
+            flashcards.reverse();
+        } else {
+            reverseOrderBtn.querySelector('span').textContent = '⬇️ Reverse Order';
+            reverseOrderBtn.classList.remove('selected');
+            // Reverse back to normal order
+            flashcards.reverse();
+        }
+        
+        updateURLParams(); // Update URL with reverse order state
+        
+        // Stay on the same card content, but it will be at a different index
+        const currentCard = flashcards[currentIndex];
+        showCard(currentIndex);
     });
 
     // Update card stats on server

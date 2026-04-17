@@ -738,7 +738,7 @@
         "example": "Loro trovano un tesoro. (They find a treasure.)"
       }
     ],
-    "infinitive_correct": 5,
+    "infinitive_correct": 8,
     "infinitive_incorrect": 0
   },
   {
@@ -791,8 +791,8 @@
         "example": "Loro lasciano presto. (They leave early.)"
       }
     ],
-    "infinitive_correct": 6,
-    "infinitive_incorrect": 2
+    "infinitive_correct": 9,
+    "infinitive_incorrect": 4
   },
   {
     "id": "capire",
@@ -897,7 +897,7 @@
         "example": "Loro guardano lo spettacolo. (They watch the show.)"
       }
     ],
-    "infinitive_correct": 5,
+    "infinitive_correct": 8,
     "infinitive_incorrect": 1
   },
   {
@@ -950,8 +950,8 @@
         "example": "Loro vengono dall'Italia. (They come from Italy.)"
       }
     ],
-    "infinitive_correct": 1,
-    "infinitive_incorrect": 1
+    "infinitive_correct": 4,
+    "infinitive_incorrect": 2
   },
   {
     "id": "pensare",
@@ -1003,7 +1003,7 @@
         "example": "Loro pensano sempre. (They always think.)"
       }
     ],
-    "infinitive_correct": 2,
+    "infinitive_correct": 5,
     "infinitive_incorrect": 0
   },
   {
@@ -1056,7 +1056,7 @@
         "example": "Loro partono in aereo. (They leave by plane.)"
       }
     ],
-    "infinitive_correct": 1,
+    "infinitive_correct": 4,
     "infinitive_incorrect": 0
   },
   {
