@@ -2443,7 +2443,7 @@
       "time",
       "dates"
     ],
-    "correct": 2,
+    "correct": 3,
     "incorrect": 4,
     "dateAdded": "2026-01-01"
   },
@@ -2456,7 +2456,7 @@
       "time",
       "dates"
     ],
-    "correct": 2,
+    "correct": 3,
     "incorrect": 3,
     "dateAdded": "2026-01-01"
   },
@@ -2469,7 +2469,7 @@
       "time",
       "dates"
     ],
-    "correct": 3,
+    "correct": 4,
     "incorrect": 5,
     "dateAdded": "2026-01-01"
   },
@@ -2482,8 +2482,8 @@
       "time",
       "dates"
     ],
-    "correct": 3,
-    "incorrect": 3,
+    "correct": 4,
+    "incorrect": 4,
     "dateAdded": "2026-01-01"
   },
   {
@@ -2495,7 +2495,7 @@
       "time",
       "dates"
     ],
-    "correct": 2,
+    "correct": 3,
     "incorrect": 2,
     "dateAdded": "2026-01-01"
   },
@@ -2508,7 +2508,7 @@
       "time",
       "dates"
     ],
-    "correct": 2,
+    "correct": 3,
     "incorrect": 1,
     "dateAdded": "2026-01-01"
   },
@@ -2521,7 +2521,7 @@
       "time",
       "dates"
     ],
-    "correct": 2,
+    "correct": 3,
     "incorrect": 7,
     "dateAdded": "2026-01-01"
   },
@@ -2535,7 +2535,7 @@
       "dates"
     ],
     "correct": 2,
-    "incorrect": 5,
+    "incorrect": 7,
     "dateAdded": "2026-01-01"
   },
   {
@@ -2547,7 +2547,7 @@
       "time",
       "dates"
     ],
-    "correct": 3,
+    "correct": 4,
     "incorrect": 6,
     "dateAdded": "2026-01-01"
   },
@@ -2559,7 +2559,7 @@
     "categories": [
       "exercise"
     ],
-    "correct": 1,
+    "correct": 2,
     "incorrect": 0,
     "dateAdded": "2026-01-01"
   },
@@ -2571,7 +2571,7 @@
     "categories": [
       "household-items"
     ],
-    "correct": 27,
+    "correct": 28,
     "incorrect": 2,
     "dateAdded": "2026-04-09"
   },
@@ -2584,7 +2584,7 @@
       "household-items",
       "bedroom"
     ],
-    "correct": 20,
+    "correct": 21,
     "incorrect": 5,
     "dateAdded": "2026-04-09"
   },
@@ -2596,7 +2596,7 @@
     "categories": [
       "household-items"
     ],
-    "correct": 18,
+    "correct": 19,
     "incorrect": 5,
     "dateAdded": "2026-04-09"
   },
@@ -2609,7 +2609,7 @@
       "household-items",
       "kitchen"
     ],
-    "correct": 20,
+    "correct": 21,
     "incorrect": 2,
     "dateAdded": "2026-04-09"
   },
@@ -2621,7 +2621,7 @@
     "categories": [
       "household-items"
     ],
-    "correct": 19,
+    "correct": 20,
     "incorrect": 1,
     "dateAdded": "2026-04-08"
   },
@@ -2633,7 +2633,7 @@
     "categories": [
       "household-items"
     ],
-    "correct": 10,
+    "correct": 11,
     "incorrect": 0,
     "dateAdded": "2026-04-08"
   },
@@ -2645,7 +2645,7 @@
     "categories": [
       "household-items"
     ],
-    "correct": 10,
+    "correct": 11,
     "incorrect": 0,
     "dateAdded": "2026-04-08"
   },
@@ -2657,7 +2657,7 @@
     "categories": [
       "household-items"
     ],
-    "correct": 10,
+    "correct": 11,
     "incorrect": 2,
     "dateAdded": "2026-04-08"
   },
@@ -2670,7 +2670,7 @@
       "household-items",
       "bedroom"
     ],
-    "correct": 9,
+    "correct": 10,
     "incorrect": 4,
     "dateAdded": "2026-04-08"
   },
@@ -2683,7 +2683,7 @@
       "household-items",
       "kitchen"
     ],
-    "correct": 10,
+    "correct": 11,
     "incorrect": 4,
     "dateAdded": "2026-04-08"
   },
@@ -2696,7 +2696,7 @@
       "common-words",
       "quantity"
     ],
-    "correct": 11,
+    "correct": 12,
     "incorrect": 0,
     "dateAdded": "2026-04-10"
   },
@@ -2709,8 +2709,8 @@
       "common-words",
       "quantity"
     ],
-    "correct": 11,
-    "incorrect": 3,
+    "correct": 12,
+    "incorrect": 4,
     "dateAdded": "2026-04-10"
   },
   {
@@ -2721,7 +2721,7 @@
     "categories": [
       "common-words"
     ],
-    "correct": 10,
+    "correct": 11,
     "incorrect": 1,
     "dateAdded": "2026-04-10"
   },
@@ -2734,7 +2734,7 @@
       "common-words",
       "time"
     ],
-    "correct": 9,
+    "correct": 10,
     "incorrect": 0,
     "dateAdded": "2026-04-10"
   },
@@ -2746,7 +2746,7 @@
     "categories": [
       "common-words"
     ],
-    "correct": 9,
+    "correct": 10,
     "incorrect": 4,
     "dateAdded": "2026-04-10"
   },
@@ -2758,7 +2758,7 @@
     "categories": [
       "common-words"
     ],
-    "correct": 9,
+    "correct": 10,
     "incorrect": 7,
     "dateAdded": "2026-04-11"
   },
@@ -2770,7 +2770,7 @@
     "categories": [
       "common-words"
     ],
-    "correct": 8,
+    "correct": 9,
     "incorrect": 8,
     "dateAdded": "2026-04-11"
   },
@@ -2782,7 +2782,7 @@
     "categories": [
       "common-words"
     ],
-    "correct": 9,
+    "correct": 10,
     "incorrect": 5,
     "dateAdded": "2026-04-11"
   },
@@ -2795,7 +2795,7 @@
       "verb",
       "common-words"
     ],
-    "correct": 9,
+    "correct": 10,
     "incorrect": 0,
     "dateAdded": "2026-04-11"
   },
@@ -2807,7 +2807,7 @@
     "categories": [
       "common-words"
     ],
-    "correct": 7,
+    "correct": 8,
     "incorrect": 2,
     "dateAdded": "2026-04-13"
   },
@@ -2819,7 +2819,7 @@
     "categories": [
       "common-words"
     ],
-    "correct": 7,
+    "correct": 8,
     "incorrect": 1,
     "dateAdded": "2026-04-13"
   },
@@ -2831,7 +2831,7 @@
     "categories": [
       "common-words"
     ],
-    "correct": 4,
+    "correct": 5,
     "incorrect": 14,
     "dateAdded": "2026-04-13"
   },
@@ -2843,8 +2843,8 @@
     "categories": [
       "common-words"
     ],
-    "correct": 3,
-    "incorrect": 19,
+    "correct": 4,
+    "incorrect": 21,
     "dateAdded": "2026-04-13"
   },
   {
@@ -2855,7 +2855,7 @@
     "categories": [
       "common-words"
     ],
-    "correct": 6,
+    "correct": 7,
     "incorrect": 2,
     "dateAdded": "2026-04-13"
   },
@@ -2867,7 +2867,7 @@
     "categories": [
       "common-words"
     ],
-    "correct": 5,
+    "correct": 6,
     "incorrect": 6,
     "dateAdded": "2026-04-13"
   },
@@ -2879,7 +2879,7 @@
     "categories": [
       "common-words"
     ],
-    "correct": 3,
+    "correct": 4,
     "incorrect": 8,
     "dateAdded": "2026-04-13"
   },
@@ -2891,7 +2891,7 @@
     "categories": [
       "colors"
     ],
-    "correct": 1,
+    "correct": 3,
     "incorrect": 2,
     "dateAdded": "2026-04-16"
   },
@@ -2903,7 +2903,7 @@
     "categories": [
       "colors"
     ],
-    "correct": 1,
+    "correct": 2,
     "incorrect": 1,
     "dateAdded": "2026-04-16"
   },
@@ -2915,8 +2915,8 @@
     "categories": [
       "colors"
     ],
-    "correct": 0,
-    "incorrect": 3,
+    "correct": 1,
+    "incorrect": 4,
     "dateAdded": "2026-04-16"
   },
   {
@@ -2927,7 +2927,7 @@
     "categories": [
       "colors"
     ],
-    "correct": 1,
+    "correct": 2,
     "incorrect": 1,
     "dateAdded": "2026-04-16"
   },
@@ -2939,7 +2939,7 @@
     "categories": [
       "colors"
     ],
-    "correct": 1,
+    "correct": 2,
     "incorrect": 2,
     "dateAdded": "2026-04-16"
   },
@@ -2951,7 +2951,7 @@
     "categories": [
       "colors"
     ],
-    "correct": 0,
+    "correct": 1,
     "incorrect": 0,
     "dateAdded": "2026-04-16"
   },
@@ -2963,7 +2963,7 @@
     "categories": [
       "colors"
     ],
-    "correct": 0,
+    "correct": 1,
     "incorrect": 0,
     "dateAdded": "2026-04-16"
   },
@@ -2975,8 +2975,237 @@
     "categories": [
       "colors"
     ],
-    "correct": 0,
+    "correct": 1,
     "incorrect": 0,
     "dateAdded": "2026-04-16"
+  },
+  {
+    "id": "1744243200011",
+    "question": "Orange",
+    "answer": "Arancione",
+    "notes": "(ah-rahn-CHOH-neh)\n\nInvariable - doesn't change with gender or number\nLa giacca è arancione = The jacket is orange",
+    "categories": [
+      "colors"
+    ],
+    "correct": 1,
+    "incorrect": 0,
+    "dateAdded": "2026-04-08"
+  },
+  {
+    "id": "1744243200012",
+    "question": "Purple",
+    "answer": "Viola",
+    "notes": "(vee-OH-lah)\n\nInvariable - doesn't change with gender or number\nIl fiore è viola = The flower is purple",
+    "categories": [
+      "colors"
+    ],
+    "correct": 1,
+    "incorrect": 1,
+    "dateAdded": "2026-04-08"
+  },
+  {
+    "id": "1744243200013",
+    "question": "Pink",
+    "answer": "Rosa",
+    "notes": "(ROH-zah)\n\nInvariable - doesn't change with gender or number\nLa camicia è rosa = The shirt is pink",
+    "categories": [
+      "colors"
+    ],
+    "correct": 1,
+    "incorrect": 1,
+    "dateAdded": "2026-04-08"
+  },
+  {
+    "id": "1744243200014",
+    "question": "Light blue",
+    "answer": "Azzurro",
+    "notes": "(ah-TSOOR-roh)\n\nMasculine: azzurro / Feminine: azzurra\nIl cielo è azzurro = The sky is light blue",
+    "categories": [
+      "colors"
+    ],
+    "correct": 1,
+    "incorrect": 2,
+    "dateAdded": "2026-04-08"
+  },
+  {
+    "id": "1744243200015",
+    "question": "Beige",
+    "answer": "Beige",
+    "notes": "(behzh)\n\nInvariable - doesn't change with gender or number\nIl divano è beige = The sofa is beige",
+    "categories": [
+      "colors"
+    ],
+    "correct": 1,
+    "incorrect": 0,
+    "dateAdded": "2026-04-08"
+  },
+  {
+    "id": "1745020800001",
+    "question": "Elderly",
+    "answer": "Anziano",
+    "notes": "(ahn-TSYAH-noh)\n\nMasculine: anziano / Feminine: anziana",
+    "categories": [
+      "appearance",
+      "common-words"
+    ],
+    "correct": 2,
+    "incorrect": 8,
+    "dateAdded": "2026-04-17"
+  },
+  {
+    "id": "1745020800002",
+    "question": "Bald",
+    "answer": "Calvo",
+    "notes": "(KAHL-voh)\n\nMasculine: calvo / Feminine: calva",
+    "categories": [
+      "appearance",
+      "common-words"
+    ],
+    "correct": 2,
+    "incorrect": 3,
+    "dateAdded": "2026-04-17"
+  },
+  {
+    "id": "1745020800003",
+    "question": "Muscular",
+    "answer": "Muscoloso",
+    "notes": "(moo-skoh-LOH-zoh)\n\nMasculine: muscoloso / Feminine: muscolosa",
+    "categories": [
+      "appearance",
+      "common-words"
+    ],
+    "correct": 2,
+    "incorrect": 7,
+    "dateAdded": "2026-04-17"
+  },
+  {
+    "id": "1745020800004",
+    "question": "Tall",
+    "answer": "Alto",
+    "notes": "(AHL-toh)\n\nMasculine: alto / Feminine: alta",
+    "categories": [
+      "appearance",
+      "common-words"
+    ],
+    "correct": 2,
+    "incorrect": 0,
+    "dateAdded": "2026-04-17"
+  },
+  {
+    "id": "1745020800005",
+    "question": "Short",
+    "answer": "Basso",
+    "notes": "(BAHS-soh)\n\nMasculine: basso / Feminine: bassa",
+    "categories": [
+      "appearance",
+      "common-words"
+    ],
+    "correct": 2,
+    "incorrect": 8,
+    "dateAdded": "2026-04-17"
+  },
+  {
+    "id": "1745020800006",
+    "question": "Slim",
+    "answer": "Magro",
+    "notes": "(MAH-groh)\n\nMasculine: magro / Feminine: magra",
+    "categories": [
+      "appearance",
+      "common-words"
+    ],
+    "correct": 2,
+    "incorrect": 5,
+    "dateAdded": "2026-04-17"
+  },
+  {
+    "id": "1745020800007",
+    "question": "Beautiful/Handsome",
+    "answer": "Bello",
+    "notes": "(BEHL-loh)\n\nMasculine: bello / Feminine: bella",
+    "categories": [
+      "appearance",
+      "common-words"
+    ],
+    "correct": 3,
+    "incorrect": 0,
+    "dateAdded": "2026-04-17"
+  },
+  {
+    "id": "1745366400001",
+    "question": "Trip/Journey",
+    "answer": "Viaggio",
+    "notes": "(vee-AH-joh)",
+    "categories": [
+      "travel",
+      "common-words"
+    ],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-04-21"
+  },
+  {
+    "id": "1745366400002",
+    "question": "Exciting/Thrilling",
+    "answer": "Emozionante",
+    "notes": "(eh-moh-tsyoh-NAHN-teh)",
+    "categories": [
+      "emotions",
+      "common-words"
+    ],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-04-21"
+  },
+  {
+    "id": "1745366400003",
+    "question": "Cows",
+    "answer": "Mucche",
+    "notes": "(MOOK-keh)",
+    "categories": [
+      "animals",
+      "common-words"
+    ],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-04-21"
+  },
+  {
+    "id": "1745366400004",
+    "question": "Happy",
+    "answer": "Felice",
+    "notes": "(feh-LEE-cheh)",
+    "categories": [
+      "emotions",
+      "common-words"
+    ],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-04-21"
+  },
+  {
+    "id": "1745366400005",
+    "question": "He/She Did/Made",
+    "answer": "Fece",
+    "notes": "(FEH-cheh)\n\nPast tense of fare (to do/to make)",
+    "categories": [
+      "verbs",
+      "common-words"
+    ],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-04-21"
+  },
+  {
+    "id": "1745366400006",
+    "question": "Together",
+    "answer": "Insieme",
+    "notes": "(een-SYEH-meh)",
+    "categories": [
+      "adverbs",
+      "common-words"
+    ],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-04-21"
   }
 ]
