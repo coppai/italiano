@@ -1108,7 +1108,9 @@
         "pronunciation": "MAHN-jah-noh",
         "example": "Loro mangiano la frutta. (They eat fruit.)"
       }
-    ]
+    ],
+    "infinitive_correct": 2,
+    "infinitive_incorrect": 0
   },
   {
     "id": "vivere",
@@ -1159,7 +1161,9 @@
         "pronunciation": "VEE-voh-noh",
         "example": "Loro vivono a Milano. (They live in Milan.)"
       }
-    ]
+    ],
+    "infinitive_correct": 2,
+    "infinitive_incorrect": 0
   },
   {
     "id": "arrivare",
@@ -1212,6 +1216,165 @@
       }
     ],
     "infinitive_correct": 1,
+    "infinitive_incorrect": 0
+  },
+  {
+    "id": "portare",
+    "infinitive": "portare",
+    "english": "to bring / to carry / to wear",
+    "pronunciation": "(por-TAH-reh)",
+    "package": 5,
+    "forms": [
+      {
+        "subject": "io",
+        "italian": "porto",
+        "english": "I bring",
+        "pronunciation": "POR-toh",
+        "example": "Io porto i libri. (I bring the books.)"
+      },
+      {
+        "subject": "tu",
+        "italian": "porti",
+        "english": "you bring (informal)",
+        "pronunciation": "POR-tee",
+        "example": "Tu porti gli occhiali. (You wear glasses.)"
+      },
+      {
+        "subject": "lui/lei",
+        "italian": "porta",
+        "english": "he/she brings",
+        "pronunciation": "POR-tah",
+        "example": "Lei porta il cibo. (She brings the food.)"
+      },
+      {
+        "subject": "noi",
+        "italian": "portiamo",
+        "english": "we bring",
+        "pronunciation": "por-TYAH-moh",
+        "example": "Noi portiamo le valigie. (We carry the suitcases.)"
+      },
+      {
+        "subject": "voi",
+        "italian": "portate",
+        "english": "you bring (plural)",
+        "pronunciation": "por-TAH-teh",
+        "example": "Voi portate fortuna. (You bring luck.)"
+      },
+      {
+        "subject": "loro",
+        "italian": "portano",
+        "english": "they bring",
+        "pronunciation": "POR-tah-noh",
+        "example": "Loro portano i regali. (They bring the gifts.)"
+      }
+    ],
+    "infinitive_correct": 2,
+    "infinitive_incorrect": 1
+  },
+  {
+    "id": "chiamare",
+    "infinitive": "chiamare",
+    "english": "to call",
+    "pronunciation": "(kyah-MAH-reh)",
+    "package": 5,
+    "forms": [
+      {
+        "subject": "io",
+        "italian": "chiamo",
+        "english": "I call",
+        "pronunciation": "KYAH-moh",
+        "example": "Io chiamo mia madre. (I call my mother.)"
+      },
+      {
+        "subject": "tu",
+        "italian": "chiami",
+        "english": "you call (informal)",
+        "pronunciation": "KYAH-mee",
+        "example": "Tu chiami il dottore. (You call the doctor.)"
+      },
+      {
+        "subject": "lui/lei",
+        "italian": "chiama",
+        "english": "he/she calls",
+        "pronunciation": "KYAH-mah",
+        "example": "Lei chiama un taxi. (She calls a taxi.)"
+      },
+      {
+        "subject": "noi",
+        "italian": "chiamiamo",
+        "english": "we call",
+        "pronunciation": "kyah-MYAH-moh",
+        "example": "Noi chiamiamo i nostri amici. (We call our friends.)"
+      },
+      {
+        "subject": "voi",
+        "italian": "chiamate",
+        "english": "you call (plural)",
+        "pronunciation": "kyah-MAH-teh",
+        "example": "Voi chiamate spesso. (You call often.)"
+      },
+      {
+        "subject": "loro",
+        "italian": "chiamano",
+        "english": "they call",
+        "pronunciation": "KYAH-mah-noh",
+        "example": "Loro chiamano la polizia. (They call the police.)"
+      }
+    ],
+    "infinitive_correct": 2,
+    "infinitive_incorrect": 1
+  },
+  {
+    "id": "lavorare",
+    "infinitive": "lavorare",
+    "english": "to work",
+    "pronunciation": "(lah-voh-RAH-reh)",
+    "package": 5,
+    "forms": [
+      {
+        "subject": "io",
+        "italian": "lavoro",
+        "english": "I work",
+        "pronunciation": "lah-VOH-roh",
+        "example": "Io lavoro in ufficio. (I work in an office.)"
+      },
+      {
+        "subject": "tu",
+        "italian": "lavori",
+        "english": "you work (informal)",
+        "pronunciation": "lah-VOH-ree",
+        "example": "Tu lavori molto. (You work a lot.)"
+      },
+      {
+        "subject": "lui/lei",
+        "italian": "lavora",
+        "english": "he/she works",
+        "pronunciation": "lah-VOH-rah",
+        "example": "Lei lavora in banca. (She works in a bank.)"
+      },
+      {
+        "subject": "noi",
+        "italian": "lavoriamo",
+        "english": "we work",
+        "pronunciation": "lah-voh-RYAH-moh",
+        "example": "Noi lavoriamo insieme. (We work together.)"
+      },
+      {
+        "subject": "voi",
+        "italian": "lavorate",
+        "english": "you work (plural)",
+        "pronunciation": "lah-voh-RAH-teh",
+        "example": "Voi lavorate il sabato. (You work on Saturdays.)"
+      },
+      {
+        "subject": "loro",
+        "italian": "lavorano",
+        "english": "they work",
+        "pronunciation": "lah-VOH-rah-noh",
+        "example": "Loro lavorano da casa. (They work from home.)"
+      }
+    ],
+    "infinitive_correct": 2,
     "infinitive_incorrect": 0
   }
 ]

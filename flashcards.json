@@ -2696,7 +2696,7 @@
       "common-words",
       "quantity"
     ],
-    "correct": 12,
+    "correct": 13,
     "incorrect": 0,
     "dateAdded": "2026-04-10"
   },
@@ -2709,7 +2709,7 @@
       "common-words",
       "quantity"
     ],
-    "correct": 12,
+    "correct": 13,
     "incorrect": 4,
     "dateAdded": "2026-04-10"
   },
@@ -2721,7 +2721,7 @@
     "categories": [
       "common-words"
     ],
-    "correct": 11,
+    "correct": 12,
     "incorrect": 1,
     "dateAdded": "2026-04-10"
   },
@@ -2734,7 +2734,7 @@
       "common-words",
       "time"
     ],
-    "correct": 10,
+    "correct": 11,
     "incorrect": 0,
     "dateAdded": "2026-04-10"
   },
@@ -2746,7 +2746,7 @@
     "categories": [
       "common-words"
     ],
-    "correct": 10,
+    "correct": 11,
     "incorrect": 4,
     "dateAdded": "2026-04-10"
   },
@@ -2758,7 +2758,7 @@
     "categories": [
       "common-words"
     ],
-    "correct": 10,
+    "correct": 11,
     "incorrect": 7,
     "dateAdded": "2026-04-11"
   },
@@ -2770,7 +2770,7 @@
     "categories": [
       "common-words"
     ],
-    "correct": 9,
+    "correct": 10,
     "incorrect": 8,
     "dateAdded": "2026-04-11"
   },
@@ -2782,7 +2782,7 @@
     "categories": [
       "common-words"
     ],
-    "correct": 10,
+    "correct": 11,
     "incorrect": 5,
     "dateAdded": "2026-04-11"
   },
@@ -2795,7 +2795,7 @@
       "verb",
       "common-words"
     ],
-    "correct": 10,
+    "correct": 11,
     "incorrect": 0,
     "dateAdded": "2026-04-11"
   },
@@ -2807,7 +2807,7 @@
     "categories": [
       "common-words"
     ],
-    "correct": 8,
+    "correct": 9,
     "incorrect": 2,
     "dateAdded": "2026-04-13"
   },
@@ -2819,7 +2819,7 @@
     "categories": [
       "common-words"
     ],
-    "correct": 8,
+    "correct": 9,
     "incorrect": 1,
     "dateAdded": "2026-04-13"
   },
@@ -2831,7 +2831,7 @@
     "categories": [
       "common-words"
     ],
-    "correct": 5,
+    "correct": 6,
     "incorrect": 14,
     "dateAdded": "2026-04-13"
   },
@@ -2843,8 +2843,8 @@
     "categories": [
       "common-words"
     ],
-    "correct": 4,
-    "incorrect": 21,
+    "correct": 5,
+    "incorrect": 22,
     "dateAdded": "2026-04-13"
   },
   {
@@ -2855,7 +2855,7 @@
     "categories": [
       "common-words"
     ],
-    "correct": 7,
+    "correct": 8,
     "incorrect": 2,
     "dateAdded": "2026-04-13"
   },
@@ -2867,7 +2867,7 @@
     "categories": [
       "common-words"
     ],
-    "correct": 6,
+    "correct": 7,
     "incorrect": 6,
     "dateAdded": "2026-04-13"
   },
@@ -2879,7 +2879,7 @@
     "categories": [
       "common-words"
     ],
-    "correct": 4,
+    "correct": 5,
     "incorrect": 8,
     "dateAdded": "2026-04-13"
   },
@@ -2891,7 +2891,7 @@
     "categories": [
       "colors"
     ],
-    "correct": 3,
+    "correct": 4,
     "incorrect": 2,
     "dateAdded": "2026-04-16"
   },
@@ -2903,7 +2903,7 @@
     "categories": [
       "colors"
     ],
-    "correct": 2,
+    "correct": 3,
     "incorrect": 1,
     "dateAdded": "2026-04-16"
   },
@@ -2915,8 +2915,8 @@
     "categories": [
       "colors"
     ],
-    "correct": 1,
-    "incorrect": 4,
+    "correct": 2,
+    "incorrect": 5,
     "dateAdded": "2026-04-16"
   },
   {
@@ -2927,7 +2927,7 @@
     "categories": [
       "colors"
     ],
-    "correct": 2,
+    "correct": 3,
     "incorrect": 1,
     "dateAdded": "2026-04-16"
   },
@@ -2939,7 +2939,7 @@
     "categories": [
       "colors"
     ],
-    "correct": 2,
+    "correct": 3,
     "incorrect": 2,
     "dateAdded": "2026-04-16"
   },
@@ -2951,7 +2951,7 @@
     "categories": [
       "colors"
     ],
-    "correct": 1,
+    "correct": 2,
     "incorrect": 0,
     "dateAdded": "2026-04-16"
   },
@@ -2963,7 +2963,7 @@
     "categories": [
       "colors"
     ],
-    "correct": 1,
+    "correct": 2,
     "incorrect": 0,
     "dateAdded": "2026-04-16"
   },
@@ -2975,7 +2975,7 @@
     "categories": [
       "colors"
     ],
-    "correct": 1,
+    "correct": 2,
     "incorrect": 0,
     "dateAdded": "2026-04-16"
   },
@@ -3048,8 +3048,8 @@
       "appearance",
       "common-words"
     ],
-    "correct": 2,
-    "incorrect": 8,
+    "correct": 3,
+    "incorrect": 10,
     "dateAdded": "2026-04-17"
   },
   {
@@ -3061,8 +3061,8 @@
       "appearance",
       "common-words"
     ],
-    "correct": 2,
-    "incorrect": 3,
+    "correct": 3,
+    "incorrect": 4,
     "dateAdded": "2026-04-17"
   },
   {
@@ -3074,8 +3074,8 @@
       "appearance",
       "common-words"
     ],
-    "correct": 2,
-    "incorrect": 7,
+    "correct": 3,
+    "incorrect": 9,
     "dateAdded": "2026-04-17"
   },
   {
@@ -3087,7 +3087,7 @@
       "appearance",
       "common-words"
     ],
-    "correct": 2,
+    "correct": 3,
     "incorrect": 0,
     "dateAdded": "2026-04-17"
   },
@@ -3100,7 +3100,7 @@
       "appearance",
       "common-words"
     ],
-    "correct": 2,
+    "correct": 3,
     "incorrect": 8,
     "dateAdded": "2026-04-17"
   },
@@ -3113,8 +3113,8 @@
       "appearance",
       "common-words"
     ],
-    "correct": 2,
-    "incorrect": 5,
+    "correct": 3,
+    "incorrect": 6,
     "dateAdded": "2026-04-17"
   },
   {
@@ -3126,7 +3126,7 @@
       "appearance",
       "common-words"
     ],
-    "correct": 3,
+    "correct": 4,
     "incorrect": 0,
     "dateAdded": "2026-04-17"
   },
@@ -3139,8 +3139,8 @@
       "travel",
       "common-words"
     ],
-    "correct": 0,
-    "incorrect": 0,
+    "correct": 6,
+    "incorrect": 2,
     "dateAdded": "2026-04-21"
   },
   {
@@ -3152,8 +3152,8 @@
       "emotions",
       "common-words"
     ],
-    "correct": 0,
-    "incorrect": 0,
+    "correct": 6,
+    "incorrect": 3,
     "dateAdded": "2026-04-21"
   },
   {
@@ -3165,8 +3165,8 @@
       "animals",
       "common-words"
     ],
-    "correct": 0,
-    "incorrect": 0,
+    "correct": 6,
+    "incorrect": 2,
     "dateAdded": "2026-04-21"
   },
   {
@@ -3178,8 +3178,8 @@
       "emotions",
       "common-words"
     ],
-    "correct": 0,
-    "incorrect": 0,
+    "correct": 6,
+    "incorrect": 1,
     "dateAdded": "2026-04-21"
   },
   {
@@ -3191,8 +3191,8 @@
       "verbs",
       "common-words"
     ],
-    "correct": 0,
-    "incorrect": 0,
+    "correct": 6,
+    "incorrect": 1,
     "dateAdded": "2026-04-21"
   },
   {
@@ -3204,8 +3204,70 @@
       "adverbs",
       "common-words"
     ],
-    "correct": 0,
-    "incorrect": 0,
+    "correct": 5,
+    "incorrect": 3,
     "dateAdded": "2026-04-21"
+  },
+  {
+    "id": "1745366400007",
+    "question": "Touch/Tact",
+    "answer": "Tatto",
+    "notes": "(TAHT-toh)",
+    "categories": [
+      "common-words"
+    ],
+    "correct": 2,
+    "incorrect": 1,
+    "dateAdded": "2026-04-23"
+  },
+  {
+    "id": "1745366400008",
+    "question": "Tree",
+    "answer": "Albero",
+    "notes": "(ahl-BEH-roh)",
+    "categories": [
+      "nature",
+      "common-words"
+    ],
+    "correct": 3,
+    "incorrect": 1,
+    "dateAdded": "2026-04-23"
+  },
+  {
+    "id": "1745366400009",
+    "question": "I was / He was / She was / It was",
+    "answer": "Era",
+    "notes": "(EH-rah)\n\nAlso: he/she/it was (from essere)",
+    "categories": [
+      "common-words"
+    ],
+    "correct": 2,
+    "incorrect": 0,
+    "dateAdded": "2026-04-23"
+  },
+  {
+    "id": "1745366400010",
+    "question": "glass",
+    "answer": "Vetro",
+    "notes": "(VEH-troh)",
+    "categories": [
+      "common-words"
+    ],
+    "correct": 1,
+    "incorrect": 2,
+    "dateAdded": "2026-04-23"
+  },
+  {
+    "id": "1745366400011",
+    "question": "Rivers",
+    "answer": "Fiumi",
+    "notes": "(FYOO-mee)\n\nPlural of fiume (river)",
+    "categories": [
+      "nature",
+      "common-words"
+    ],
+    "correct": 2,
+    "incorrect": 1,
+    "dateAdded": "2026-04-23"
   }
 ]
