@@ -1376,5 +1376,111 @@
     ],
     "infinitive_correct": 2,
     "infinitive_incorrect": 0
+  },
+  {
+    "id": "bere",
+    "infinitive": "bere",
+    "english": "to drink",
+    "pronunciation": "(BEH-reh)",
+    "package": 6,
+    "forms": [
+      {
+        "subject": "io",
+        "italian": "bevo",
+        "english": "I drink",
+        "pronunciation": "BEH-voh",
+        "example": "Io bevo l'acqua. (I drink water.)"
+      },
+      {
+        "subject": "tu",
+        "italian": "bevi",
+        "english": "you drink (informal)",
+        "pronunciation": "BEH-vee",
+        "example": "Tu bevi il caffè. (You drink coffee.)"
+      },
+      {
+        "subject": "lui/lei",
+        "italian": "beve",
+        "english": "he/she drinks",
+        "pronunciation": "BEH-veh",
+        "example": "Lei beve il tè. (She drinks tea.)"
+      },
+      {
+        "subject": "noi",
+        "italian": "beviamo",
+        "english": "we drink",
+        "pronunciation": "beh-VYAH-moh",
+        "example": "Noi beviamo vino. (We drink wine.)"
+      },
+      {
+        "subject": "voi",
+        "italian": "bevete",
+        "english": "you drink (plural)",
+        "pronunciation": "beh-VEH-teh",
+        "example": "Voi bevete birra. (You drink beer.)"
+      },
+      {
+        "subject": "loro",
+        "italian": "bevono",
+        "english": "they drink",
+        "pronunciation": "BEH-voh-noh",
+        "example": "Loro bevono succo. (They drink juice.)"
+      }
+    ],
+    "infinitive_correct": 0,
+    "infinitive_incorrect": 0
+  },
+  {
+    "id": "conoscere",
+    "infinitive": "conoscere",
+    "english": "to know (a person/place)",
+    "pronunciation": "(koh-NOH-sheh-reh)",
+    "package": 6,
+    "forms": [
+      {
+        "subject": "io",
+        "italian": "conosco",
+        "english": "I know",
+        "pronunciation": "koh-NOH-skoh",
+        "example": "Io conosco Maria. (I know Maria.)"
+      },
+      {
+        "subject": "tu",
+        "italian": "conosci",
+        "english": "you know (informal)",
+        "pronunciation": "koh-NOH-shee",
+        "example": "Tu conosci Roma. (You know Rome.)"
+      },
+      {
+        "subject": "lui/lei",
+        "italian": "conosce",
+        "english": "he/she knows",
+        "pronunciation": "koh-NOH-sheh",
+        "example": "Lei conosce mio fratello. (She knows my brother.)"
+      },
+      {
+        "subject": "noi",
+        "italian": "conosciamo",
+        "english": "we know",
+        "pronunciation": "koh-noh-SHAH-moh",
+        "example": "Noi conosciamo questa città. (We know this city.)"
+      },
+      {
+        "subject": "voi",
+        "italian": "conoscete",
+        "english": "you know (plural)",
+        "pronunciation": "koh-noh-SHEH-teh",
+        "example": "Voi conoscete i miei amici. (You know my friends.)"
+      },
+      {
+        "subject": "loro",
+        "italian": "conoscono",
+        "english": "they know",
+        "pronunciation": "koh-NOH-skoh-noh",
+        "example": "Loro conoscono l'Italia. (They know Italy.)"
+      }
+    ],
+    "infinitive_correct": 0,
+    "infinitive_incorrect": 0
   }
 ]

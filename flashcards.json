@@ -3048,8 +3048,8 @@
       "appearance",
       "common-words"
     ],
-    "correct": 3,
-    "incorrect": 10,
+    "correct": 5,
+    "incorrect": 11,
     "dateAdded": "2026-04-17"
   },
   {
@@ -3061,8 +3061,8 @@
       "appearance",
       "common-words"
     ],
-    "correct": 3,
-    "incorrect": 4,
+    "correct": 5,
+    "incorrect": 5,
     "dateAdded": "2026-04-17"
   },
   {
@@ -3074,7 +3074,7 @@
       "appearance",
       "common-words"
     ],
-    "correct": 3,
+    "correct": 5,
     "incorrect": 9,
     "dateAdded": "2026-04-17"
   },
@@ -3087,7 +3087,7 @@
       "appearance",
       "common-words"
     ],
-    "correct": 3,
+    "correct": 5,
     "incorrect": 0,
     "dateAdded": "2026-04-17"
   },
@@ -3100,7 +3100,7 @@
       "appearance",
       "common-words"
     ],
-    "correct": 3,
+    "correct": 5,
     "incorrect": 8,
     "dateAdded": "2026-04-17"
   },
@@ -3113,7 +3113,7 @@
       "appearance",
       "common-words"
     ],
-    "correct": 3,
+    "correct": 5,
     "incorrect": 6,
     "dateAdded": "2026-04-17"
   },
@@ -3126,7 +3126,7 @@
       "appearance",
       "common-words"
     ],
-    "correct": 4,
+    "correct": 6,
     "incorrect": 0,
     "dateAdded": "2026-04-17"
   },
@@ -3139,8 +3139,8 @@
       "travel",
       "common-words"
     ],
-    "correct": 6,
-    "incorrect": 2,
+    "correct": 8,
+    "incorrect": 4,
     "dateAdded": "2026-04-21"
   },
   {
@@ -3152,8 +3152,8 @@
       "emotions",
       "common-words"
     ],
-    "correct": 6,
-    "incorrect": 3,
+    "correct": 8,
+    "incorrect": 6,
     "dateAdded": "2026-04-21"
   },
   {
@@ -3165,7 +3165,7 @@
       "animals",
       "common-words"
     ],
-    "correct": 6,
+    "correct": 8,
     "incorrect": 2,
     "dateAdded": "2026-04-21"
   },
@@ -3178,7 +3178,7 @@
       "emotions",
       "common-words"
     ],
-    "correct": 6,
+    "correct": 8,
     "incorrect": 1,
     "dateAdded": "2026-04-21"
   },
@@ -3191,8 +3191,8 @@
       "verbs",
       "common-words"
     ],
-    "correct": 6,
-    "incorrect": 1,
+    "correct": 8,
+    "incorrect": 2,
     "dateAdded": "2026-04-21"
   },
   {
@@ -3204,8 +3204,8 @@
       "adverbs",
       "common-words"
     ],
-    "correct": 5,
-    "incorrect": 3,
+    "correct": 7,
+    "incorrect": 6,
     "dateAdded": "2026-04-21"
   },
   {
@@ -3216,8 +3216,8 @@
     "categories": [
       "common-words"
     ],
-    "correct": 2,
-    "incorrect": 1,
+    "correct": 5,
+    "incorrect": 2,
     "dateAdded": "2026-04-23"
   },
   {
@@ -3229,8 +3229,8 @@
       "nature",
       "common-words"
     ],
-    "correct": 3,
-    "incorrect": 1,
+    "correct": 6,
+    "incorrect": 2,
     "dateAdded": "2026-04-23"
   },
   {
@@ -3241,8 +3241,8 @@
     "categories": [
       "common-words"
     ],
-    "correct": 2,
-    "incorrect": 0,
+    "correct": 5,
+    "incorrect": 1,
     "dateAdded": "2026-04-23"
   },
   {
@@ -3253,8 +3253,8 @@
     "categories": [
       "common-words"
     ],
-    "correct": 1,
-    "incorrect": 2,
+    "correct": 4,
+    "incorrect": 4,
     "dateAdded": "2026-04-23"
   },
   {
@@ -3266,8 +3266,339 @@
       "nature",
       "common-words"
     ],
+    "correct": 5,
+    "incorrect": 2,
+    "dateAdded": "2026-04-23"
+  },
+  {
+    "id": "1745452800001",
+    "question": "suitcase",
+    "answer": "valigia",
+    "notes": "(vah-LEE-jah)",
+    "categories": [
+      "common-words"
+    ],
+    "correct": 1,
+    "incorrect": 2,
+    "dateAdded": "2026-04-24"
+  },
+  {
+    "id": "1745452800002",
+    "question": "To Cut (verb)",
+    "answer": "Tagliare",
+    "notes": "(TAH-lyoh)",
+    "categories": [
+      "common-words"
+    ],
+    "correct": 1,
+    "incorrect": 0,
+    "dateAdded": "2026-04-24"
+  },
+  {
+    "id": "1712448000001",
+    "question": "vacation",
+    "answer": "vacanza",
+    "notes": "(vah-KAHN-tsah)",
+    "categories": [
+      "vocabulary",
+      "work"
+    ],
+    "correct": 1,
+    "incorrect": 1,
+    "dateAdded": "2026-04-27"
+  },
+  {
+    "id": "1712448000002",
+    "question": "Do you like your job?",
+    "answer": "Ti piace il tuo lavoro?",
+    "notes": "(tee PYAH-cheh eel TOO-oh lah-VOH-roh)",
+    "categories": [
+      "phrases",
+      "work"
+    ],
+    "correct": 1,
+    "incorrect": 1,
+    "dateAdded": "2026-04-27"
+  },
+  {
+    "id": "1712448000003",
+    "question": "In my free time I like to",
+    "answer": "Nel mio tempo libero mi piace",
+    "notes": "(nehl MEE-oh TEHM-poh LEE-beh-roh mee PYAH-cheh)",
+    "categories": [
+      "phrases",
+      "hobbies"
+    ],
+    "correct": 1,
+    "incorrect": 1,
+    "dateAdded": "2026-04-27"
+  },
+  {
+    "id": "1712448000004",
+    "question": "company (business)",
+    "answer": "azienda",
+    "notes": "(ah-zee-EHN-dah)",
+    "categories": [
+      "vocabulary",
+      "work"
+    ],
+    "correct": 1,
+    "incorrect": 0,
+    "dateAdded": "2026-04-27"
+  },
+  {
+    "id": "1712448000005",
+    "question": "your job (formal/plural)",
+    "answer": "il vostro lavoro",
+    "notes": "(eel VOH-stroh lah-VOH-roh)",
+    "categories": [
+      "phrases",
+      "work"
+    ],
+    "correct": 1,
+    "incorrect": 1,
+    "dateAdded": "2026-04-27"
+  },
+  {
+    "id": "1713571200001",
+    "question": "client/customer",
+    "answer": "cliente",
+    "notes": "(klee-EHN-teh)",
+    "categories": [
+      "vocabulary",
+      "work"
+    ],
+    "correct": 1,
+    "incorrect": 1,
+    "dateAdded": "2026-04-20"
+  },
+  {
+    "id": "1713571200003",
+    "question": "old (feminine)",
+    "answer": "vecchia",
+    "notes": "(VEH-kyah)",
+    "categories": [
+      "adjectives"
+    ],
+    "correct": 1,
+    "incorrect": 0,
+    "dateAdded": "2026-04-20"
+  },
+  {
+    "id": "1713571200004",
+    "question": "cough",
+    "answer": "tosse",
+    "notes": "(TOHS-seh)",
+    "categories": [
+      "vocabulary",
+      "health"
+    ],
+    "correct": 1,
+    "incorrect": 1,
+    "dateAdded": "2026-04-20"
+  },
+  {
+    "id": "1713571200005",
+    "question": "bad (plural masculine)",
+    "answer": "cattivi",
+    "notes": "(kaht-TEE-vee)",
+    "categories": [
+      "adjectives"
+    ],
+    "correct": 1,
+    "incorrect": 2,
+    "dateAdded": "2026-04-20"
+  },
+  {
+    "id": "1713744000001",
+    "question": "brown, chestnut (plural)",
+    "answer": "castani",
+    "notes": "(kah-STAH-nee)",
+    "categories": [
+      "adjectives",
+      "colors"
+    ],
+    "correct": 1,
+    "incorrect": 1,
+    "dateAdded": "2026-04-22"
+  },
+  {
+    "id": "1713744000002",
+    "question": "I have brown hair",
+    "answer": "Ho i capelli castani",
+    "notes": "(oh ee kah-PEL-lee kah-STAH-nee)",
+    "categories": [
+      "phrases",
+      "appearance"
+    ],
+    "correct": 1,
+    "incorrect": 0,
+    "dateAdded": "2026-04-22"
+  },
+  {
+    "id": "1713744000003",
+    "question": "brown eyes",
+    "answer": "occhi marroni",
+    "notes": "(OH-kee mah-ROH-nee)",
+    "categories": [
+      "phrases",
+      "appearance"
+    ],
+    "correct": 1,
+    "incorrect": 2,
+    "dateAdded": "2026-04-22"
+  },
+  {
+    "id": "1713744000004",
+    "question": "to wear, to carry",
+    "answer": "portare",
+    "notes": "(pohr-TAH-reh)",
+    "categories": [
+      "verbs",
+      "clothing"
+    ],
+    "correct": 1,
+    "incorrect": 0,
+    "dateAdded": "2026-04-22"
+  },
+  {
+    "id": "1713744000005",
+    "question": "a jacket",
+    "answer": "una giacca",
+    "notes": "(OO-nah JAHK-kah)",
+    "categories": [
+      "vocabulary",
+      "clothing"
+    ],
+    "correct": 1,
+    "incorrect": 2,
+    "dateAdded": "2026-04-22"
+  },
+  {
+    "id": "1714003200001",
+    "question": "a pair of pants",
+    "answer": "Un paio di pantaloni",
+    "notes": "(pahn-tah-LOH-nee)",
+    "categories": [
+      "vocabulary",
+      "clothing"
+    ],
     "correct": 2,
     "incorrect": 1,
-    "dateAdded": "2026-04-23"
+    "dateAdded": "2026-04-25"
+  },
+  {
+    "id": "1714003200002",
+    "question": "he/she wears pants",
+    "answer": "porta dei pantaloni",
+    "notes": "(POHR-tah day pahn-tah-LOH-nee)",
+    "categories": [
+      "phrases",
+      "clothing"
+    ],
+    "correct": 1,
+    "incorrect": 0,
+    "dateAdded": "2026-04-25"
+  },
+  {
+    "id": "1714003200003",
+    "question": "I wear a pair of blue pants",
+    "answer": "porto un paio di pantaloni azzurri",
+    "notes": "(POHR-toh oon PAH-yoh dee pahn-tah-LOH-nee ahd-DZOOR-ree)",
+    "categories": [
+      "phrases",
+      "clothing"
+    ],
+    "correct": 1,
+    "incorrect": 1,
+    "dateAdded": "2026-04-25"
+  },
+  {
+    "id": "1714003200004",
+    "question": "a skirt",
+    "answer": "una gonna",
+    "notes": "(OO-nah GOHN-nah)",
+    "categories": [
+      "vocabulary",
+      "clothing"
+    ],
+    "correct": 1,
+    "incorrect": 1,
+    "dateAdded": "2026-04-25"
+  },
+  {
+    "id": "1714003200005",
+    "question": "a shirt",
+    "answer": "una camicia",
+    "notes": "(OO-nah kah-MEE-chah)",
+    "categories": [
+      "vocabulary",
+      "clothing"
+    ],
+    "correct": 1,
+    "incorrect": 1,
+    "dateAdded": "2026-04-25"
+  },
+  {
+    "id": "1714089600001",
+    "question": "a blouse",
+    "answer": "una camicetta",
+    "notes": "(OO-nah kah-mee-CHEHT-tah)",
+    "categories": [
+      "vocabulary",
+      "clothing"
+    ],
+    "correct": 2,
+    "incorrect": 1,
+    "dateAdded": "2026-04-26"
+  },
+  {
+    "id": "1714089600002",
+    "question": "black shoes",
+    "answer": "scarpe nere",
+    "notes": "(SKAHR-peh NEH-reh)",
+    "categories": [
+      "phrases",
+      "clothing"
+    ],
+    "correct": 1,
+    "incorrect": 0,
+    "dateAdded": "2026-04-26"
+  },
+  {
+    "id": "1714089600003",
+    "question": "he/she wears black shoes",
+    "answer": "porta le scarpe nere",
+    "notes": "(POHR-tah leh SKAHR-peh NEH-reh)",
+    "categories": [
+      "phrases",
+      "clothing"
+    ],
+    "correct": 1,
+    "incorrect": 1,
+    "dateAdded": "2026-04-26"
+  },
+  {
+    "id": "1714089600004",
+    "question": "a dress",
+    "answer": "un vestito",
+    "notes": "(oon veh-STEE-toh)",
+    "categories": [
+      "vocabulary",
+      "clothing"
+    ],
+    "correct": 1,
+    "incorrect": 0,
+    "dateAdded": "2026-04-26"
+  },
+  {
+    "id": "1777227923284zbmzwoeh4",
+    "question": "some pants",
+    "answer": "dei pantaloni.",
+    "notes": "",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-04-26"
   }
 ]
