@@ -2394,7 +2394,7 @@
     "answer": "alto",
     "notes": "",
     "categories": [],
-    "correct": 0,
+    "correct": 1,
     "incorrect": 0,
     "dateAdded": "2026-01-01"
   },
@@ -2405,7 +2405,7 @@
     "notes": "",
     "categories": [],
     "correct": 0,
-    "incorrect": 0,
+    "incorrect": 1,
     "dateAdded": "2026-01-01"
   },
   {
@@ -2417,7 +2417,7 @@
       "time",
       "dates"
     ],
-    "correct": 2,
+    "correct": 3,
     "incorrect": 2,
     "dateAdded": "2026-01-01"
   },
@@ -2430,7 +2430,7 @@
       "time",
       "dates"
     ],
-    "correct": 3,
+    "correct": 5,
     "incorrect": 1,
     "dateAdded": "2026-01-01"
   },
@@ -2443,7 +2443,7 @@
       "time",
       "dates"
     ],
-    "correct": 3,
+    "correct": 5,
     "incorrect": 4,
     "dateAdded": "2026-01-01"
   },
@@ -2456,7 +2456,7 @@
       "time",
       "dates"
     ],
-    "correct": 3,
+    "correct": 5,
     "incorrect": 3,
     "dateAdded": "2026-01-01"
   },
@@ -2469,7 +2469,7 @@
       "time",
       "dates"
     ],
-    "correct": 4,
+    "correct": 6,
     "incorrect": 5,
     "dateAdded": "2026-01-01"
   },
@@ -2482,7 +2482,7 @@
       "time",
       "dates"
     ],
-    "correct": 4,
+    "correct": 6,
     "incorrect": 4,
     "dateAdded": "2026-01-01"
   },
@@ -2495,7 +2495,7 @@
       "time",
       "dates"
     ],
-    "correct": 3,
+    "correct": 5,
     "incorrect": 2,
     "dateAdded": "2026-01-01"
   },
@@ -2508,7 +2508,7 @@
       "time",
       "dates"
     ],
-    "correct": 3,
+    "correct": 5,
     "incorrect": 1,
     "dateAdded": "2026-01-01"
   },
@@ -2521,7 +2521,7 @@
       "time",
       "dates"
     ],
-    "correct": 3,
+    "correct": 5,
     "incorrect": 7,
     "dateAdded": "2026-01-01"
   },
@@ -2534,8 +2534,8 @@
       "time",
       "dates"
     ],
-    "correct": 2,
-    "incorrect": 7,
+    "correct": 4,
+    "incorrect": 9,
     "dateAdded": "2026-01-01"
   },
   {
@@ -2547,7 +2547,7 @@
       "time",
       "dates"
     ],
-    "correct": 4,
+    "correct": 6,
     "incorrect": 6,
     "dateAdded": "2026-01-01"
   },
@@ -2559,7 +2559,7 @@
     "categories": [
       "exercise"
     ],
-    "correct": 2,
+    "correct": 4,
     "incorrect": 0,
     "dateAdded": "2026-01-01"
   },
@@ -2571,7 +2571,7 @@
     "categories": [
       "household-items"
     ],
-    "correct": 28,
+    "correct": 30,
     "incorrect": 2,
     "dateAdded": "2026-04-09"
   },
@@ -2584,7 +2584,7 @@
       "household-items",
       "bedroom"
     ],
-    "correct": 21,
+    "correct": 23,
     "incorrect": 5,
     "dateAdded": "2026-04-09"
   },
@@ -2596,7 +2596,7 @@
     "categories": [
       "household-items"
     ],
-    "correct": 19,
+    "correct": 21,
     "incorrect": 5,
     "dateAdded": "2026-04-09"
   },
@@ -2609,7 +2609,7 @@
       "household-items",
       "kitchen"
     ],
-    "correct": 21,
+    "correct": 23,
     "incorrect": 2,
     "dateAdded": "2026-04-09"
   },
@@ -2621,7 +2621,7 @@
     "categories": [
       "household-items"
     ],
-    "correct": 20,
+    "correct": 22,
     "incorrect": 1,
     "dateAdded": "2026-04-08"
   },
@@ -2633,7 +2633,7 @@
     "categories": [
       "household-items"
     ],
-    "correct": 11,
+    "correct": 13,
     "incorrect": 0,
     "dateAdded": "2026-04-08"
   },
@@ -2645,7 +2645,7 @@
     "categories": [
       "household-items"
     ],
-    "correct": 11,
+    "correct": 13,
     "incorrect": 0,
     "dateAdded": "2026-04-08"
   },
@@ -2657,7 +2657,7 @@
     "categories": [
       "household-items"
     ],
-    "correct": 11,
+    "correct": 13,
     "incorrect": 2,
     "dateAdded": "2026-04-08"
   },
@@ -2670,7 +2670,7 @@
       "household-items",
       "bedroom"
     ],
-    "correct": 10,
+    "correct": 12,
     "incorrect": 4,
     "dateAdded": "2026-04-08"
   },
@@ -2683,8 +2683,8 @@
       "household-items",
       "kitchen"
     ],
-    "correct": 11,
-    "incorrect": 4,
+    "correct": 13,
+    "incorrect": 6,
     "dateAdded": "2026-04-08"
   },
   {
@@ -2696,7 +2696,7 @@
       "common-words",
       "quantity"
     ],
-    "correct": 13,
+    "correct": 15,
     "incorrect": 0,
     "dateAdded": "2026-04-10"
   },
@@ -2709,7 +2709,7 @@
       "common-words",
       "quantity"
     ],
-    "correct": 13,
+    "correct": 15,
     "incorrect": 4,
     "dateAdded": "2026-04-10"
   },
@@ -2721,7 +2721,7 @@
     "categories": [
       "common-words"
     ],
-    "correct": 12,
+    "correct": 14,
     "incorrect": 1,
     "dateAdded": "2026-04-10"
   },
@@ -2734,7 +2734,7 @@
       "common-words",
       "time"
     ],
-    "correct": 11,
+    "correct": 13,
     "incorrect": 0,
     "dateAdded": "2026-04-10"
   },
@@ -2746,7 +2746,7 @@
     "categories": [
       "common-words"
     ],
-    "correct": 11,
+    "correct": 13,
     "incorrect": 4,
     "dateAdded": "2026-04-10"
   },
@@ -2758,7 +2758,7 @@
     "categories": [
       "common-words"
     ],
-    "correct": 11,
+    "correct": 13,
     "incorrect": 7,
     "dateAdded": "2026-04-11"
   },
@@ -2770,7 +2770,7 @@
     "categories": [
       "common-words"
     ],
-    "correct": 10,
+    "correct": 12,
     "incorrect": 8,
     "dateAdded": "2026-04-11"
   },
@@ -2782,7 +2782,7 @@
     "categories": [
       "common-words"
     ],
-    "correct": 11,
+    "correct": 13,
     "incorrect": 5,
     "dateAdded": "2026-04-11"
   },
@@ -2795,7 +2795,7 @@
       "verb",
       "common-words"
     ],
-    "correct": 11,
+    "correct": 13,
     "incorrect": 0,
     "dateAdded": "2026-04-11"
   },
@@ -2807,7 +2807,7 @@
     "categories": [
       "common-words"
     ],
-    "correct": 9,
+    "correct": 11,
     "incorrect": 2,
     "dateAdded": "2026-04-13"
   },
@@ -2819,7 +2819,7 @@
     "categories": [
       "common-words"
     ],
-    "correct": 9,
+    "correct": 11,
     "incorrect": 1,
     "dateAdded": "2026-04-13"
   },
@@ -2831,7 +2831,7 @@
     "categories": [
       "common-words"
     ],
-    "correct": 6,
+    "correct": 8,
     "incorrect": 14,
     "dateAdded": "2026-04-13"
   },
@@ -2843,7 +2843,7 @@
     "categories": [
       "common-words"
     ],
-    "correct": 5,
+    "correct": 7,
     "incorrect": 22,
     "dateAdded": "2026-04-13"
   },
@@ -2855,7 +2855,7 @@
     "categories": [
       "common-words"
     ],
-    "correct": 8,
+    "correct": 10,
     "incorrect": 2,
     "dateAdded": "2026-04-13"
   },
@@ -2867,7 +2867,7 @@
     "categories": [
       "common-words"
     ],
-    "correct": 7,
+    "correct": 9,
     "incorrect": 6,
     "dateAdded": "2026-04-13"
   },
@@ -2879,7 +2879,7 @@
     "categories": [
       "common-words"
     ],
-    "correct": 5,
+    "correct": 7,
     "incorrect": 8,
     "dateAdded": "2026-04-13"
   },
@@ -2891,7 +2891,7 @@
     "categories": [
       "colors"
     ],
-    "correct": 4,
+    "correct": 6,
     "incorrect": 2,
     "dateAdded": "2026-04-16"
   },
@@ -2903,7 +2903,7 @@
     "categories": [
       "colors"
     ],
-    "correct": 3,
+    "correct": 5,
     "incorrect": 1,
     "dateAdded": "2026-04-16"
   },
@@ -2915,8 +2915,8 @@
     "categories": [
       "colors"
     ],
-    "correct": 2,
-    "incorrect": 5,
+    "correct": 4,
+    "incorrect": 7,
     "dateAdded": "2026-04-16"
   },
   {
@@ -2927,7 +2927,7 @@
     "categories": [
       "colors"
     ],
-    "correct": 3,
+    "correct": 5,
     "incorrect": 1,
     "dateAdded": "2026-04-16"
   },
@@ -2939,7 +2939,7 @@
     "categories": [
       "colors"
     ],
-    "correct": 3,
+    "correct": 5,
     "incorrect": 2,
     "dateAdded": "2026-04-16"
   },
@@ -2951,7 +2951,7 @@
     "categories": [
       "colors"
     ],
-    "correct": 2,
+    "correct": 4,
     "incorrect": 0,
     "dateAdded": "2026-04-16"
   },
@@ -2963,7 +2963,7 @@
     "categories": [
       "colors"
     ],
-    "correct": 2,
+    "correct": 4,
     "incorrect": 0,
     "dateAdded": "2026-04-16"
   },
@@ -2975,7 +2975,7 @@
     "categories": [
       "colors"
     ],
-    "correct": 2,
+    "correct": 4,
     "incorrect": 0,
     "dateAdded": "2026-04-16"
   },
@@ -2987,8 +2987,8 @@
     "categories": [
       "colors"
     ],
-    "correct": 1,
-    "incorrect": 0,
+    "correct": 3,
+    "incorrect": 1,
     "dateAdded": "2026-04-08"
   },
   {
@@ -2999,7 +2999,7 @@
     "categories": [
       "colors"
     ],
-    "correct": 1,
+    "correct": 3,
     "incorrect": 1,
     "dateAdded": "2026-04-08"
   },
@@ -3011,7 +3011,7 @@
     "categories": [
       "colors"
     ],
-    "correct": 1,
+    "correct": 3,
     "incorrect": 1,
     "dateAdded": "2026-04-08"
   },
@@ -3023,8 +3023,8 @@
     "categories": [
       "colors"
     ],
-    "correct": 1,
-    "incorrect": 2,
+    "correct": 3,
+    "incorrect": 3,
     "dateAdded": "2026-04-08"
   },
   {
@@ -3035,8 +3035,8 @@
     "categories": [
       "colors"
     ],
-    "correct": 1,
-    "incorrect": 0,
+    "correct": 3,
+    "incorrect": 1,
     "dateAdded": "2026-04-08"
   },
   {
@@ -3048,7 +3048,7 @@
       "appearance",
       "common-words"
     ],
-    "correct": 5,
+    "correct": 7,
     "incorrect": 11,
     "dateAdded": "2026-04-17"
   },
@@ -3061,7 +3061,7 @@
       "appearance",
       "common-words"
     ],
-    "correct": 5,
+    "correct": 7,
     "incorrect": 5,
     "dateAdded": "2026-04-17"
   },
@@ -3074,8 +3074,8 @@
       "appearance",
       "common-words"
     ],
-    "correct": 5,
-    "incorrect": 9,
+    "correct": 7,
+    "incorrect": 10,
     "dateAdded": "2026-04-17"
   },
   {
@@ -3087,7 +3087,7 @@
       "appearance",
       "common-words"
     ],
-    "correct": 5,
+    "correct": 7,
     "incorrect": 0,
     "dateAdded": "2026-04-17"
   },
@@ -3100,7 +3100,7 @@
       "appearance",
       "common-words"
     ],
-    "correct": 5,
+    "correct": 7,
     "incorrect": 8,
     "dateAdded": "2026-04-17"
   },
@@ -3113,7 +3113,7 @@
       "appearance",
       "common-words"
     ],
-    "correct": 5,
+    "correct": 7,
     "incorrect": 6,
     "dateAdded": "2026-04-17"
   },
@@ -3126,7 +3126,7 @@
       "appearance",
       "common-words"
     ],
-    "correct": 6,
+    "correct": 8,
     "incorrect": 0,
     "dateAdded": "2026-04-17"
   },
@@ -3139,8 +3139,8 @@
       "travel",
       "common-words"
     ],
-    "correct": 8,
-    "incorrect": 4,
+    "correct": 10,
+    "incorrect": 5,
     "dateAdded": "2026-04-21"
   },
   {
@@ -3152,7 +3152,7 @@
       "emotions",
       "common-words"
     ],
-    "correct": 8,
+    "correct": 10,
     "incorrect": 6,
     "dateAdded": "2026-04-21"
   },
@@ -3165,7 +3165,7 @@
       "animals",
       "common-words"
     ],
-    "correct": 8,
+    "correct": 10,
     "incorrect": 2,
     "dateAdded": "2026-04-21"
   },
@@ -3178,7 +3178,7 @@
       "emotions",
       "common-words"
     ],
-    "correct": 8,
+    "correct": 10,
     "incorrect": 1,
     "dateAdded": "2026-04-21"
   },
@@ -3191,7 +3191,7 @@
       "verbs",
       "common-words"
     ],
-    "correct": 8,
+    "correct": 11,
     "incorrect": 2,
     "dateAdded": "2026-04-21"
   },
@@ -3204,8 +3204,8 @@
       "adverbs",
       "common-words"
     ],
-    "correct": 7,
-    "incorrect": 6,
+    "correct": 10,
+    "incorrect": 7,
     "dateAdded": "2026-04-21"
   },
   {
@@ -3216,7 +3216,7 @@
     "categories": [
       "common-words"
     ],
-    "correct": 5,
+    "correct": 8,
     "incorrect": 2,
     "dateAdded": "2026-04-23"
   },
@@ -3229,7 +3229,7 @@
       "nature",
       "common-words"
     ],
-    "correct": 6,
+    "correct": 9,
     "incorrect": 2,
     "dateAdded": "2026-04-23"
   },
@@ -3241,7 +3241,7 @@
     "categories": [
       "common-words"
     ],
-    "correct": 5,
+    "correct": 8,
     "incorrect": 1,
     "dateAdded": "2026-04-23"
   },
@@ -3253,8 +3253,8 @@
     "categories": [
       "common-words"
     ],
-    "correct": 4,
-    "incorrect": 4,
+    "correct": 7,
+    "incorrect": 6,
     "dateAdded": "2026-04-23"
   },
   {
@@ -3266,8 +3266,8 @@
       "nature",
       "common-words"
     ],
-    "correct": 5,
-    "incorrect": 2,
+    "correct": 8,
+    "incorrect": 3,
     "dateAdded": "2026-04-23"
   },
   {
@@ -3278,8 +3278,8 @@
     "categories": [
       "common-words"
     ],
-    "correct": 1,
-    "incorrect": 2,
+    "correct": 3,
+    "incorrect": 10,
     "dateAdded": "2026-04-24"
   },
   {
@@ -3290,8 +3290,8 @@
     "categories": [
       "common-words"
     ],
-    "correct": 1,
-    "incorrect": 0,
+    "correct": 4,
+    "incorrect": 1,
     "dateAdded": "2026-04-24"
   },
   {
@@ -3303,7 +3303,7 @@
       "vocabulary",
       "work"
     ],
-    "correct": 1,
+    "correct": 4,
     "incorrect": 1,
     "dateAdded": "2026-04-27"
   },
@@ -3316,8 +3316,8 @@
       "phrases",
       "work"
     ],
-    "correct": 1,
-    "incorrect": 1,
+    "correct": 4,
+    "incorrect": 3,
     "dateAdded": "2026-04-27"
   },
   {
@@ -3329,8 +3329,8 @@
       "phrases",
       "hobbies"
     ],
-    "correct": 1,
-    "incorrect": 1,
+    "correct": 4,
+    "incorrect": 3,
     "dateAdded": "2026-04-27"
   },
   {
@@ -3342,8 +3342,8 @@
       "vocabulary",
       "work"
     ],
-    "correct": 1,
-    "incorrect": 0,
+    "correct": 4,
+    "incorrect": 2,
     "dateAdded": "2026-04-27"
   },
   {
@@ -3355,8 +3355,8 @@
       "phrases",
       "work"
     ],
-    "correct": 1,
-    "incorrect": 1,
+    "correct": 4,
+    "incorrect": 3,
     "dateAdded": "2026-04-27"
   },
   {
@@ -3368,8 +3368,8 @@
       "vocabulary",
       "work"
     ],
-    "correct": 1,
-    "incorrect": 1,
+    "correct": 5,
+    "incorrect": 2,
     "dateAdded": "2026-04-20"
   },
   {
@@ -3380,7 +3380,7 @@
     "categories": [
       "adjectives"
     ],
-    "correct": 1,
+    "correct": 5,
     "incorrect": 0,
     "dateAdded": "2026-04-20"
   },
@@ -3393,8 +3393,8 @@
       "vocabulary",
       "health"
     ],
-    "correct": 1,
-    "incorrect": 1,
+    "correct": 5,
+    "incorrect": 12,
     "dateAdded": "2026-04-20"
   },
   {
@@ -3405,8 +3405,8 @@
     "categories": [
       "adjectives"
     ],
-    "correct": 1,
-    "incorrect": 2,
+    "correct": 5,
+    "incorrect": 4,
     "dateAdded": "2026-04-20"
   },
   {
@@ -3418,8 +3418,8 @@
       "adjectives",
       "colors"
     ],
-    "correct": 1,
-    "incorrect": 1,
+    "correct": 4,
+    "incorrect": 6,
     "dateAdded": "2026-04-22"
   },
   {
@@ -3431,8 +3431,8 @@
       "phrases",
       "appearance"
     ],
-    "correct": 1,
-    "incorrect": 0,
+    "correct": 5,
+    "incorrect": 7,
     "dateAdded": "2026-04-22"
   },
   {
@@ -3444,8 +3444,8 @@
       "phrases",
       "appearance"
     ],
-    "correct": 1,
-    "incorrect": 2,
+    "correct": 5,
+    "incorrect": 3,
     "dateAdded": "2026-04-22"
   },
   {
@@ -3457,7 +3457,7 @@
       "verbs",
       "clothing"
     ],
-    "correct": 1,
+    "correct": 5,
     "incorrect": 0,
     "dateAdded": "2026-04-22"
   },
@@ -3470,8 +3470,8 @@
       "vocabulary",
       "clothing"
     ],
-    "correct": 1,
-    "incorrect": 2,
+    "correct": 5,
+    "incorrect": 5,
     "dateAdded": "2026-04-22"
   },
   {
@@ -3483,8 +3483,8 @@
       "vocabulary",
       "clothing"
     ],
-    "correct": 2,
-    "incorrect": 1,
+    "correct": 6,
+    "incorrect": 2,
     "dateAdded": "2026-04-25"
   },
   {
@@ -3496,7 +3496,7 @@
       "phrases",
       "clothing"
     ],
-    "correct": 1,
+    "correct": 5,
     "incorrect": 0,
     "dateAdded": "2026-04-25"
   },
@@ -3509,8 +3509,8 @@
       "phrases",
       "clothing"
     ],
-    "correct": 1,
-    "incorrect": 1,
+    "correct": 5,
+    "incorrect": 5,
     "dateAdded": "2026-04-25"
   },
   {
@@ -3522,8 +3522,8 @@
       "vocabulary",
       "clothing"
     ],
-    "correct": 1,
-    "incorrect": 1,
+    "correct": 5,
+    "incorrect": 3,
     "dateAdded": "2026-04-25"
   },
   {
@@ -3535,8 +3535,8 @@
       "vocabulary",
       "clothing"
     ],
-    "correct": 1,
-    "incorrect": 1,
+    "correct": 5,
+    "incorrect": 8,
     "dateAdded": "2026-04-25"
   },
   {
@@ -3548,7 +3548,7 @@
       "vocabulary",
       "clothing"
     ],
-    "correct": 2,
+    "correct": 6,
     "incorrect": 1,
     "dateAdded": "2026-04-26"
   },
@@ -3561,8 +3561,8 @@
       "phrases",
       "clothing"
     ],
-    "correct": 1,
-    "incorrect": 0,
+    "correct": 5,
+    "incorrect": 1,
     "dateAdded": "2026-04-26"
   },
   {
@@ -3574,8 +3574,8 @@
       "phrases",
       "clothing"
     ],
-    "correct": 1,
-    "incorrect": 1,
+    "correct": 5,
+    "incorrect": 3,
     "dateAdded": "2026-04-26"
   },
   {
@@ -3587,8 +3587,8 @@
       "vocabulary",
       "clothing"
     ],
-    "correct": 1,
-    "incorrect": 0,
+    "correct": 5,
+    "incorrect": 2,
     "dateAdded": "2026-04-26"
   },
   {
@@ -3597,7 +3597,7 @@
     "answer": "dei pantaloni.",
     "notes": "",
     "categories": [],
-    "correct": 0,
+    "correct": 4,
     "incorrect": 0,
     "dateAdded": "2026-04-26"
   }

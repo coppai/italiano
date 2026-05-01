@@ -1427,8 +1427,8 @@
         "example": "Loro bevono succo. (They drink juice.)"
       }
     ],
-    "infinitive_correct": 0,
-    "infinitive_incorrect": 0
+    "infinitive_correct": 3,
+    "infinitive_incorrect": 2
   },
   {
     "id": "conoscere",
@@ -1440,47 +1440,153 @@
       {
         "subject": "io",
         "italian": "conosco",
-        "english": "I know",
+        "english": "I know a person/place",
         "pronunciation": "koh-NOH-skoh",
         "example": "Io conosco Maria. (I know Maria.)"
       },
       {
         "subject": "tu",
         "italian": "conosci",
-        "english": "you know (informal)",
+        "english": "you know a person/place (informal)",
         "pronunciation": "koh-NOH-shee",
         "example": "Tu conosci Roma. (You know Rome.)"
       },
       {
         "subject": "lui/lei",
         "italian": "conosce",
-        "english": "he/she knows",
+        "english": "he/she knows a person/place",
         "pronunciation": "koh-NOH-sheh",
         "example": "Lei conosce mio fratello. (She knows my brother.)"
       },
       {
         "subject": "noi",
         "italian": "conosciamo",
-        "english": "we know",
+        "english": "we know a person/place",
         "pronunciation": "koh-noh-SHAH-moh",
         "example": "Noi conosciamo questa città. (We know this city.)"
       },
       {
         "subject": "voi",
         "italian": "conoscete",
-        "english": "you know (plural)",
+        "english": "you know a person/place (plural)",
         "pronunciation": "koh-noh-SHEH-teh",
         "example": "Voi conoscete i miei amici. (You know my friends.)"
       },
       {
         "subject": "loro",
         "italian": "conoscono",
-        "english": "they know",
+        "english": "they know a person/place",
         "pronunciation": "koh-NOH-skoh-noh",
         "example": "Loro conoscono l'Italia. (They know Italy.)"
       }
     ],
-    "infinitive_correct": 0,
-    "infinitive_incorrect": 0
+    "infinitive_correct": 3,
+    "infinitive_incorrect": 3
+  },
+  {
+    "id": "sentire",
+    "infinitive": "sentire",
+    "english": "to hear / to feel",
+    "pronunciation": "(sen-TEE-reh)",
+    "package": 6,
+    "forms": [
+      {
+        "subject": "io",
+        "italian": "sento",
+        "english": "I hear / I feel",
+        "pronunciation": "SEN-toh",
+        "example": "Io sento la musica. (I hear the music.)"
+      },
+      {
+        "subject": "tu",
+        "italian": "senti",
+        "english": "you hear (informal)",
+        "pronunciation": "SEN-tee",
+        "example": "Tu senti il rumore. (You hear the noise.)"
+      },
+      {
+        "subject": "lui/lei",
+        "italian": "sente",
+        "english": "he/she hears",
+        "pronunciation": "SEN-teh",
+        "example": "Lei sente freddo. (She feels cold.)"
+      },
+      {
+        "subject": "noi",
+        "italian": "sentiamo",
+        "english": "we hear",
+        "pronunciation": "sen-TYAH-moh",
+        "example": "Noi sentiamo la voce. (We hear the voice.)"
+      },
+      {
+        "subject": "voi",
+        "italian": "sentite",
+        "english": "you hear (plural)",
+        "pronunciation": "sen-TEE-teh",
+        "example": "Voi sentite fame. (You feel hungry.)"
+      },
+      {
+        "subject": "loro",
+        "italian": "sentono",
+        "english": "they hear",
+        "pronunciation": "SEN-toh-noh",
+        "example": "Loro sentono il mare. (They hear the sea.)"
+      }
+    ],
+    "infinitive_correct": 2,
+    "infinitive_incorrect": 4
+  },
+  {
+    "id": "cercare",
+    "infinitive": "cercare",
+    "english": "to look for / to search",
+    "pronunciation": "(cher-KAH-reh)",
+    "package": 6,
+    "forms": [
+      {
+        "subject": "io",
+        "italian": "cerco",
+        "english": "I look for",
+        "pronunciation": "CHER-koh",
+        "example": "Io cerco le chiavi. (I look for the keys.)"
+      },
+      {
+        "subject": "tu",
+        "italian": "cerchi",
+        "english": "you look for (informal)",
+        "pronunciation": "CHER-kee",
+        "example": "Tu cerchi lavoro. (You look for work.)"
+      },
+      {
+        "subject": "lui/lei",
+        "italian": "cerca",
+        "english": "he/she looks for",
+        "pronunciation": "CHER-kah",
+        "example": "Lei cerca un libro. (She looks for a book.)"
+      },
+      {
+        "subject": "noi",
+        "italian": "cerchiamo",
+        "english": "we look for",
+        "pronunciation": "cher-KYAH-moh",
+        "example": "Noi cerchiamo un ristorante. (We look for a restaurant.)"
+      },
+      {
+        "subject": "voi",
+        "italian": "cercate",
+        "english": "you look for (plural)",
+        "pronunciation": "cher-KAH-teh",
+        "example": "Voi cercate aiuto. (You look for help.)"
+      },
+      {
+        "subject": "loro",
+        "italian": "cercano",
+        "english": "they look for",
+        "pronunciation": "CHER-kah-noh",
+        "example": "Loro cercano casa. (They look for a house.)"
+      }
+    ],
+    "infinitive_correct": 2,
+    "infinitive_incorrect": 3
   }
 ]
