@@ -49,8 +49,8 @@
         "example": "Loro hanno molti amici. (They have many friends.)"
       }
     ],
-    "infinitive_correct": 3,
-    "infinitive_incorrect": 0
+    "infinitive_correct": 4,
+    "infinitive_incorrect": 1
   },
   {
     "id": "fare",
@@ -102,7 +102,7 @@
         "example": "Loro fanno una festa. (They are having a party.)"
       }
     ],
-    "infinitive_correct": 3,
+    "infinitive_correct": 4,
     "infinitive_incorrect": 0
   },
   {
@@ -155,7 +155,7 @@
         "example": "Loro dicono no. (They say no.)"
       }
     ],
-    "infinitive_correct": 3,
+    "infinitive_correct": 4,
     "infinitive_incorrect": 0
   },
   {
@@ -208,7 +208,7 @@
         "example": "Loro possono restare. (They can stay.)"
       }
     ],
-    "infinitive_correct": 3,
+    "infinitive_correct": 4,
     "infinitive_incorrect": 0
   },
   {
@@ -261,7 +261,7 @@
         "example": "Loro vanno in vacanza. (They go on vacation.)"
       }
     ],
-    "infinitive_correct": 3,
+    "infinitive_correct": 4,
     "infinitive_incorrect": 1
   },
   {
@@ -314,7 +314,7 @@
         "example": "Loro vedono tutto. (They see everything.)"
       }
     ],
-    "infinitive_correct": 3,
+    "infinitive_correct": 4,
     "infinitive_incorrect": 0
   },
   {
@@ -367,7 +367,7 @@
         "example": "Loro danno aiuto. (They give help.)"
       }
     ],
-    "infinitive_correct": 2,
+    "infinitive_correct": 3,
     "infinitive_incorrect": 0
   },
   {
@@ -420,7 +420,7 @@
         "example": "Loro vogliono viaggiare. (They want to travel.)"
       }
     ],
-    "infinitive_correct": 3,
+    "infinitive_correct": 4,
     "infinitive_incorrect": 0
   },
   {
@@ -473,7 +473,7 @@
         "example": "Loro sanno nuotare. (They know how to swim.)"
       }
     ],
-    "infinitive_correct": 2,
+    "infinitive_correct": 3,
     "infinitive_incorrect": 0
   },
   {
@@ -526,7 +526,7 @@
         "example": "Loro stanno qui. (They stay here.)"
       }
     ],
-    "infinitive_correct": 2,
+    "infinitive_correct": 3,
     "infinitive_incorrect": 0
   },
   {
@@ -579,7 +579,7 @@
         "example": "Loro devono pagare. (They must pay.)"
       }
     ],
-    "infinitive_correct": 2,
+    "infinitive_correct": 3,
     "infinitive_incorrect": 1
   },
   {
@@ -632,7 +632,7 @@
         "example": "Loro prendono il sole. (They sunbathe.)"
       }
     ],
-    "infinitive_correct": 2,
+    "infinitive_correct": 3,
     "infinitive_incorrect": 0
   },
   {
@@ -685,7 +685,7 @@
         "example": "Loro mettono ordine. (They put things in order.)"
       }
     ],
-    "infinitive_correct": 2,
+    "infinitive_correct": 3,
     "infinitive_incorrect": 0
   },
   {
@@ -738,7 +738,7 @@
         "example": "Loro trovano un tesoro. (They find a treasure.)"
       }
     ],
-    "infinitive_correct": 8,
+    "infinitive_correct": 9,
     "infinitive_incorrect": 0
   },
   {
@@ -791,7 +791,7 @@
         "example": "Loro lasciano presto. (They leave early.)"
       }
     ],
-    "infinitive_correct": 9,
+    "infinitive_correct": 10,
     "infinitive_incorrect": 4
   },
   {
@@ -844,7 +844,7 @@
         "example": "Loro capiscono la musica. (They understand music.)"
       }
     ],
-    "infinitive_correct": 1,
+    "infinitive_correct": 2,
     "infinitive_incorrect": 1
   },
   {
@@ -897,7 +897,7 @@
         "example": "Loro guardano lo spettacolo. (They watch the show.)"
       }
     ],
-    "infinitive_correct": 8,
+    "infinitive_correct": 9,
     "infinitive_incorrect": 1
   },
   {
@@ -950,7 +950,7 @@
         "example": "Loro vengono dall'Italia. (They come from Italy.)"
       }
     ],
-    "infinitive_correct": 4,
+    "infinitive_correct": 5,
     "infinitive_incorrect": 2
   },
   {
@@ -1003,7 +1003,7 @@
         "example": "Loro pensano sempre. (They always think.)"
       }
     ],
-    "infinitive_correct": 5,
+    "infinitive_correct": 6,
     "infinitive_incorrect": 0
   },
   {
@@ -1056,7 +1056,7 @@
         "example": "Loro partono in aereo. (They leave by plane.)"
       }
     ],
-    "infinitive_correct": 4,
+    "infinitive_correct": 5,
     "infinitive_incorrect": 0
   },
   {
@@ -1109,7 +1109,7 @@
         "example": "Loro mangiano la frutta. (They eat fruit.)"
       }
     ],
-    "infinitive_correct": 2,
+    "infinitive_correct": 3,
     "infinitive_incorrect": 0
   },
   {
@@ -1162,7 +1162,7 @@
         "example": "Loro vivono a Milano. (They live in Milan.)"
       }
     ],
-    "infinitive_correct": 2,
+    "infinitive_correct": 3,
     "infinitive_incorrect": 0
   },
   {
@@ -1215,7 +1215,7 @@
         "example": "Loro arrivano dall'America. (They arrive from America.)"
       }
     ],
-    "infinitive_correct": 1,
+    "infinitive_correct": 2,
     "infinitive_incorrect": 0
   },
   {
@@ -1268,7 +1268,7 @@
         "example": "Loro portano i regali. (They bring the gifts.)"
       }
     ],
-    "infinitive_correct": 2,
+    "infinitive_correct": 3,
     "infinitive_incorrect": 1
   },
   {
@@ -1321,7 +1321,7 @@
         "example": "Loro chiamano la polizia. (They call the police.)"
       }
     ],
-    "infinitive_correct": 2,
+    "infinitive_correct": 3,
     "infinitive_incorrect": 1
   },
   {
@@ -1374,7 +1374,7 @@
         "example": "Loro lavorano da casa. (They work from home.)"
       }
     ],
-    "infinitive_correct": 2,
+    "infinitive_correct": 3,
     "infinitive_incorrect": 0
   },
   {
@@ -1427,7 +1427,7 @@
         "example": "Loro bevono succo. (They drink juice.)"
       }
     ],
-    "infinitive_correct": 3,
+    "infinitive_correct": 5,
     "infinitive_incorrect": 2
   },
   {
@@ -1480,7 +1480,7 @@
         "example": "Loro conoscono l'Italia. (They know Italy.)"
       }
     ],
-    "infinitive_correct": 3,
+    "infinitive_correct": 5,
     "infinitive_incorrect": 3
   },
   {
@@ -1533,8 +1533,8 @@
         "example": "Loro sentono il mare. (They hear the sea.)"
       }
     ],
-    "infinitive_correct": 2,
-    "infinitive_incorrect": 4
+    "infinitive_correct": 4,
+    "infinitive_incorrect": 5
   },
   {
     "id": "cercare",
@@ -1586,7 +1586,166 @@
         "example": "Loro cercano casa. (They look for a house.)"
       }
     ],
-    "infinitive_correct": 2,
-    "infinitive_incorrect": 3
-  }
+    "infinitive_correct": 4,
+    "infinitive_incorrect": 4
+  },
+  {
+    "id": "giocare",
+    "infinitive": "giocare",
+    "english": "to play",
+    "pronunciation": "(joh-KAH-reh)",
+    "package": 6,
+    "forms": [
+      {
+        "subject": "io",
+        "italian": "gioco",
+        "english": "I play",
+        "pronunciation": "JOH-koh",
+        "example": "Io gioco a calcio. (I play soccer.)"
+      },
+      {
+        "subject": "tu",
+        "italian": "giochi",
+        "english": "you play (informal)",
+        "pronunciation": "JOH-kee",
+        "example": "Tu giochi a tennis. (You play tennis.)"
+      },
+      {
+        "subject": "lui/lei",
+        "italian": "gioca",
+        "english": "he/she plays",
+        "pronunciation": "JOH-kah",
+        "example": "Lei gioca a carte. (She plays cards.)"
+      },
+      {
+        "subject": "noi",
+        "italian": "giochiamo",
+        "english": "we play",
+        "pronunciation": "joh-KYAH-moh",
+        "example": "Noi giochiamo insieme. (We play together.)"
+      },
+      {
+        "subject": "voi",
+        "italian": "giocate",
+        "english": "you play (plural)",
+        "pronunciation": "joh-KAH-teh",
+        "example": "Voi giocate a pallavolo. (You play volleyball.)"
+      },
+      {
+        "subject": "loro",
+        "italian": "giocano",
+        "english": "they play",
+        "pronunciation": "JOH-kah-noh",
+        "example": "Loro giocano a scacchi. (They play chess.)"
+      }
+    ],
+    "infinitive_correct": 0,
+    "infinitive_incorrect": 0
+  },
+	{
+  "id": "chiedere",
+  "infinitive": "chiedere",
+  "english": "to ask",
+  "pronunciation": "(KYEH-deh-reh)",
+  "package": 6,
+  "forms": [
+    {
+      "subject": "io",
+      "italian": "chiedo",
+      "english": "I ask",
+      "pronunciation": "KYEH-doh",
+      "example": "Io chiedo una domanda. (I ask a question.)"
+    },
+    {
+      "subject": "tu",
+      "italian": "chiedi",
+      "english": "you ask (informal)",
+      "pronunciation": "KYEH-dee",
+      "example": "Tu chiedi aiuto. (You ask for help.)"
+    },
+    {
+      "subject": "lui/lei",
+      "italian": "chiede",
+      "english": "he/she asks",
+      "pronunciation": "KYEH-deh",
+      "example": "Lei chiede informazioni. (She asks for information.)"
+    },
+    {
+      "subject": "noi",
+      "italian": "chiediamo",
+      "english": "we ask",
+      "pronunciation": "kyeh-DYAH-moh",
+      "example": "Noi chiediamo scusa. (We ask for forgiveness/apologize.)"
+    },
+    {
+      "subject": "voi",
+      "italian": "chiedete",
+      "english": "you ask (plural)",
+      "pronunciation": "kyeh-DEH-teh",
+      "example": "Voi chiedete il permesso. (You ask for permission.)"
+    },
+    {
+      "subject": "loro",
+      "italian": "chiedono",
+      "english": "they ask",
+      "pronunciation": "KYEH-doh-noh",
+      "example": "Loro chiedono il conto. (They ask for the bill.)"
+    }
+  ],
+  "infinitive_correct": 0,
+  "infinitive_incorrect": 0
+},
+{
+  "id": "aiutare",
+  "infinitive": "aiutare",
+  "english": "to help",
+  "pronunciation": "(eye-yoo-TAH-reh)",
+  "package": 7,
+  "forms": [
+    {
+      "subject": "io",
+      "italian": "aiuto",
+      "english": "I help",
+      "pronunciation": "eye-YOO-toh",
+      "example": "Io aiuto mia madre. (I help my mother.)"
+    },
+    {
+      "subject": "tu",
+      "italian": "aiuti",
+      "english": "you help (informal)",
+      "pronunciation": "eye-YOO-tee",
+      "example": "Tu aiuti i tuoi amici. (You help your friends.)"
+    },
+    {
+      "subject": "lui/lei",
+      "italian": "aiuta",
+      "english": "he/she helps",
+      "pronunciation": "eye-YOO-tah",
+      "example": "Lei aiuta i bambini. (She helps the children.)"
+    },
+    {
+      "subject": "noi",
+      "italian": "aiutiamo",
+      "english": "we help",
+      "pronunciation": "eye-yoo-TYAH-moh",
+      "example": "Noi aiutiamo sempre. (We always help.)"
+    },
+    {
+      "subject": "voi",
+      "italian": "aiutate",
+      "english": "you help (plural)",
+      "pronunciation": "eye-yoo-TAH-teh",
+      "example": "Voi aiutate il professore. (You help the teacher.)"
+    },
+    {
+      "subject": "loro",
+      "italian": "aiutano",
+      "english": "they help",
+      "pronunciation": "eye-YOO-tah-noh",
+      "example": "Loro aiutano i poveri. (They help the poor.)"
+    }
+  ],
+  "infinitive_correct": 0,
+  "infinitive_incorrect": 0
+}
 ]
