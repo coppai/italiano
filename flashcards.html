@@ -15,6 +15,11 @@
 <body class="flashcards-page">
 
 <div class="container">
+    <div class="back-link" style="margin-bottom: 20px;">
+        <a href="/">← Back to Home</a>
+        <a href="flashcard-stats.html" style="margin-left: 20px;">📊 View Stats</a>
+    </div>
+    
     <div class="header">
         <h1>Italian Flashcards</h1>
     </div>
@@ -81,31 +86,17 @@
         <div class="tap-hint">👆 Tap card to flip</div>
 
         <div class="controls">
-            <button id="prevBtn" class="btn-secondary">
-                <span>← Previous</span>
-            </button>
-						<button id="nextBtn" class="btn-primary">
-                <span>Next →</span>
-            </button>
             <button id="shuffleBtn" class="btn-secondary">
                 <span>🔀 Shuffle</span>
             </button>
             <button id="reverseOrderBtn" class="btn-secondary">
                 <span>⬇️ Reverse Order</span>
             </button>
-            <button id="theFiveBtn" class="btn-secondary">
-                <span>✋ The Five</span>
-            </button>
             <button id="reverseBtn" class="btn-secondary reverse-btn">
                 <span>🔄 Reverse Cards</span>
             </button>
             
         </div>
-    </div>
-
-    <div class="back-link">
-        <a href="/">← Back to Home</a>
-        <a href="flashcard-stats.html" style="margin-left: 20px;">📊 View Stats</a>
     </div>
 </div>
 
@@ -118,9 +109,6 @@
     let isReverseOrder = false;  // Track if card order is reversed (last to first)
     let completedCards = new Set();  // Track cards marked as correct (by card.id)
     let selectedCategories = new Set();  // Track selected category filters
-    let theFiveMode = false;         // Track if "The Five" mode is active
-    let theFiveOffset = 0;           // Track which batch of 5 we're showing
-    let theFiveCompleted = 0;        // Track how many of current batch are completed
     let sortMode = null;             // 'date' or 'shuffle' - default to null (show all cards)
     let selectedDate = null;         // Currently selected date for date mode
     let dateCompletedCards = new Set(); // Track cards completed in current date session
@@ -130,8 +118,6 @@
     const answerEl = document.getElementById('answer');
     const currentCardEl = document.getElementById('currentCard');
     const totalCardsEl = document.getElementById('totalCards');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
     const pronounceBtn = document.getElementById('pronounceBtn');
     const shuffleBtn = document.getElementById('shuffleBtn');
     const flashcardArea = document.getElementById('flashcardArea');
@@ -149,7 +135,6 @@
     const categoryCount = document.getElementById('categoryCount');
     const reverseBtn = document.getElementById('reverseBtn');
     const reverseOrderBtn = document.getElementById('reverseOrderBtn');
-    const theFiveBtn = document.getElementById('theFiveBtn');
     const datePicker = document.getElementById('datePicker');
     const dateProgress = document.getElementById('dateProgress');
 
@@ -414,13 +399,7 @@
             });
         }
         
-        // If "The Five" mode is active, only show 5 cards at a time
-        if (theFiveMode) {
-            flashcards = filteredCards.slice(theFiveOffset, theFiveOffset + 5);
-            theFiveCompleted = 0;
-        } else {
-            flashcards = filteredCards;
-        }
+        flashcards = filteredCards;
         
         if (flashcards.length === 0) {
             noCardsArea.querySelector('h2').textContent = 'No Cards Match Selected Categories';
@@ -431,19 +410,17 @@
             noCardsArea.style.display = 'none';
             flashcardArea.style.display = 'block';
             totalCardsEl.textContent = flashcards.length;
-            // Apply current sort mode when filters change (but not in The Five mode)
-            if (!theFiveMode) {
-                if (sortMode === 'date') {
-                    sortByDate();
-                } else if (sortMode === 'shuffle') {
-                    shuffleCards();
-                }
-                // If sortMode is null, keep cards in their natural order
-                
-                // Apply reverse order if active
-                if (isReverseOrder) {
-                    flashcards.reverse();
-                }
+            // Apply current sort mode when filters change
+            if (sortMode === 'date') {
+                sortByDate();
+            } else if (sortMode === 'shuffle') {
+                shuffleCards();
+            }
+            // If sortMode is null, keep cards in their natural order
+            
+            // Apply reverse order if active
+            if (isReverseOrder) {
+                flashcards.reverse();
             }
             showCard(0);
         }
@@ -516,10 +493,6 @@
             flashcardEl.classList.remove('flipped');
             isFlipped = false;
         }
-        
-        // Update button states
-        prevBtn.disabled = currentIndex === 0;
-        nextBtn.disabled = currentIndex === flashcards.length - 1;
     }
 
     // Flip card
@@ -528,19 +501,6 @@
         if (e.target.tagName === 'BUTTON') return;
         flashcardEl.classList.toggle('flipped');
         isFlipped = !isFlipped;
-    });
-
-    // Navigation
-    prevBtn.addEventListener('click', () => {
-        if (currentIndex > 0) {
-            showCard(currentIndex - 1);
-        }
-    });
-
-    nextBtn.addEventListener('click', () => {
-        if (currentIndex < flashcards.length - 1) {
-            showCard(currentIndex + 1);
-        }
     });
 
     // Pronounce
@@ -589,23 +549,6 @@
         isReversed = !isReversed;
         reverseBtn.querySelector('span').textContent = isReversed ? '🔄 Normal Cards' : '🔄 Reverse Cards';
         showCard(currentIndex);
-    });
-
-    // The Five button
-    theFiveBtn.addEventListener('click', () => {
-        theFiveMode = !theFiveMode;
-        
-        if (theFiveMode) {
-            theFiveOffset = 0;
-            theFiveCompleted = 0;
-            theFiveBtn.querySelector('span').textContent = '✋ Exit The Five';
-            theFiveBtn.classList.add('selected');
-        } else {
-            theFiveBtn.querySelector('span').textContent = '✋ The Five';
-            theFiveBtn.classList.remove('selected');
-        }
-        
-        applyFilters();
     });
 
     // Set up date picker range without selecting a default date
@@ -959,41 +902,13 @@
         // Remove this card from the deck
         flashcards.splice(currentIndex, 1);
         
-        // If in "The Five" mode, track completion
-        if (theFiveMode) {
-            theFiveCompleted++;
-            
-            // Check if we've completed all 5 cards in this batch
-            if (flashcards.length === 0 && theFiveCompleted >= 5) {
-                // Move to next batch of 5
-                theFiveOffset += 5;
-                theFiveCompleted = 0;
-                
-                // Apply filters to load next 5 cards
-                applyFilters();
-                
-                // Check if there are more cards
-                if (flashcards.length === 0) {
-                    alert('🎉 Congratulations! You\'ve completed all cards in this category!');
-                    theFiveMode = false;
-                    theFiveOffset = 0;
-                    theFiveBtn.querySelector('span').textContent = '✋ The Five';
-                    theFiveBtn.classList.remove('selected');
-                    applyFilters();
-                } else {
-                    alert(`Great job! Moving to the next 5 cards (${flashcards.length} remaining in this batch).`);
-                }
-                return;
-            }
-        }
-        
         // Check if all cards completed
         if (flashcards.length === 0) {
             if (sortMode === 'date') {
                 // In date mode, move to next date
                 moveToNextDate();
                 return;
-            } else if (!theFiveMode) {
+            } else {
                 alert('🎉 Congratulations! You\'ve completed all cards!');
             }
             return;
@@ -1059,11 +974,7 @@
 
     // Keyboard navigation
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowLeft' && currentIndex > 0) {
-            showCard(currentIndex - 1);
-        } else if (e.key === 'ArrowRight' && currentIndex < flashcards.length - 1) {
-            showCard(currentIndex + 1);
-        } else if (e.key === ' ' || e.key === 'Enter') {
+        if (e.key === ' ' || e.key === 'Enter') {
             e.preventDefault();
             flashcardEl.click();
         }

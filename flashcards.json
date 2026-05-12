@@ -3640,5 +3640,185 @@
     "correct": 0,
     "incorrect": 0,
     "dateAdded": "2026-05-05"
+  },
+  {
+    "id": "177798850517471a1nsy6fg",
+    "question": "I am getting dressed",
+    "answer": "Mi sto vestendo",
+    "notes": "Present progressive using 'stare' + gerund",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-09"
+  },
+  {
+    "id": "177798850517472b2mxy7gh",
+    "question": "I am going grocery shopping",
+    "answer": "Sto andando a fare la spesa",
+    "notes": "Present progressive: stare + andando",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-09"
+  },
+  {
+    "id": "177798850517473c3kzy8hi",
+    "question": "I'm going grocery shopping",
+    "answer": "Vado a fare la spesa",
+    "notes": "Simple present (compare with 'sto andando' - progressive form)",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-09"
+  },
+  {
+    "id": "177798850517474d4jxy9ij",
+    "question": "I'm going grocery shopping by car",
+    "answer": "Vado a fare la spesa in macchina",
+    "notes": "'in macchina' = by car",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-10"
+  },
+  {
+    "id": "177798850517475e5hxz0jk",
+    "question": "I am driving home",
+    "answer": "Sto guidando a casa",
+    "notes": "Present progressive",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-10"
+  },
+  {
+    "id": "177798850517476f6gyz1kl",
+    "question": "I am home",
+    "answer": "Sono a casa",
+    "notes": "Literally 'I am at home'",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-10"
+  },
+  {
+    "id": "177798850517477g7fxz2lm",
+    "question": "I am cooking dinner",
+    "answer": "Sto cucinando la cena",
+    "notes": "Present progressive",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-10"
+  },
+  {
+    "id": "177798850517478h8eyz3mn",
+    "question": "First I have to wash the cutting board",
+    "answer": "Prima devo lavare il tagliere",
+    "notes": "'tagliere' = cutting board",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-10"
+  },
+  {
+    "id": "177798850517479i9dxz4no",
+    "question": "I have to put away the groceries and tidy up the kitchen",
+    "answer": "Devo mettere a posto la spesa e la cucina",
+    "notes": "'mettere a posto' = to put away/tidy up",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-11"
+  },
+  {
+    "id": "177798850517480j0cyz5op",
+    "question": "Then I'll cook dinner",
+    "answer": "Quindi cucino la cena",
+    "notes": "Future implied by context despite present tense",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 1,
+    "dateAdded": "2026-05-11"
+  },
+  {
+    "id": "177798850517481k1bxz6pq",
+    "question": "I am done doing the dishes",
+    "answer": "Ho finito di lavare i piatti",
+    "notes": "'ho finito di' = I am done/finished (+ infinitive)",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 1,
+    "dateAdded": "2026-05-11"
+  },
+  {
+    "id": "177798850517482l2ayz7qr",
+    "question": "I am done cleaning the kitchen",
+    "answer": "Ho finito di pulire la cucina",
+    "notes": "Past action completed",
+    "categories": [],
+    "correct": 1,
+    "incorrect": 0,
+    "dateAdded": "2026-05-11"
+  },
+  {
+    "id": "177798850517483m3zxz8rs",
+    "question": "I am done cooking",
+    "answer": "Ho finito di cucinare",
+    "notes": "",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 1,
+    "dateAdded": "2026-05-11"
+  },
+  {
+    "id": "177798850517484n4yyz9st",
+    "question": "I am done eating",
+    "answer": "Ho finito di mangiare",
+    "notes": "",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 2,
+    "dateAdded": "2026-05-12"
+  },
+  {
+    "id": "177798850517485o5xxz0tu",
+    "question": "First/Before",
+    "answer": "Prima",
+    "notes": "Adverb of time",
+    "categories": [],
+    "correct": 1,
+    "incorrect": 1,
+    "dateAdded": "2026-05-12"
+  },
+  {
+    "id": "177798850517486p6wyz1uv",
+    "question": "So/Then/Therefore",
+    "answer": "Quindi",
+    "notes": "Conjunction for sequence or consequence",
+    "categories": [],
+    "correct": 2,
+    "incorrect": 0,
+    "dateAdded": "2026-05-12"
+  },
+  {
+    "id": "177798850517487q7vxz2vw",
+    "question": "I must/I have to",
+    "answer": "Devo",
+    "notes": "From 'dovere' - expressing obligation",
+    "categories": [],
+    "correct": 2,
+    "incorrect": 0,
+    "dateAdded": "2026-05-12"
+  },
+  {
+    "id": "177798850517488r8uyz3wx",
+    "question": "I need",
+    "answer": "Ho bisogno di",
+    "notes": "Literally 'I have need of' - requires 'di' before object",
+    "categories": [],
+    "correct": 3,
+    "incorrect": 0,
+    "dateAdded": "2026-05-12"
   }
 ]
