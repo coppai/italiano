@@ -8,8 +8,21 @@
     <!-- Flatpickr CSS - Default Light Theme -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <style>
+        /* Filter section styling */
+        .filter-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
         /* Mobile-specific improvements */
         @media (max-width: 768px) {
+            .filter-section {
+                width: 100%;
+                padding: 0 10px;
+            }
+            
             .flatpickr-calendar {
                 font-size: 16px; /* Prevent iOS zoom on input focus */
             }
@@ -22,9 +35,12 @@
             
             /* Make date picker input more touch-friendly */
             .date-picker-input {
+                width: 100%;
+                max-width: 100%;
                 min-height: 44px; /* iOS recommended touch target */
                 font-size: 16px; /* Prevent zoom on focus */
                 padding: 10px 12px;
+                box-sizing: border-box;
             }
             
             /* Ensure calendar is properly positioned on mobile */

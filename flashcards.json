@@ -3677,8 +3677,8 @@
     "answer": "Vado a fare la spesa in macchina",
     "notes": "'in macchina' = by car",
     "categories": [],
-    "correct": 0,
-    "incorrect": 0,
+    "correct": 1,
+    "incorrect": 1,
     "dateAdded": "2026-05-10"
   },
   {
@@ -3687,7 +3687,7 @@
     "answer": "Sto guidando a casa",
     "notes": "Present progressive",
     "categories": [],
-    "correct": 0,
+    "correct": 1,
     "incorrect": 0,
     "dateAdded": "2026-05-10"
   },
@@ -3697,7 +3697,7 @@
     "answer": "Sono a casa",
     "notes": "Literally 'I am at home'",
     "categories": [],
-    "correct": 0,
+    "correct": 1,
     "incorrect": 0,
     "dateAdded": "2026-05-10"
   },
@@ -3707,7 +3707,7 @@
     "answer": "Sto cucinando la cena",
     "notes": "Present progressive",
     "categories": [],
-    "correct": 0,
+    "correct": 1,
     "incorrect": 0,
     "dateAdded": "2026-05-10"
   },
@@ -3717,7 +3717,7 @@
     "answer": "Prima devo lavare il tagliere",
     "notes": "'tagliere' = cutting board",
     "categories": [],
-    "correct": 0,
+    "correct": 1,
     "incorrect": 0,
     "dateAdded": "2026-05-10"
   },
