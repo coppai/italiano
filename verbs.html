@@ -9,6 +9,12 @@
 <body class="flashcards-page verbs-page">
 
 <div class="container">
+    <div class="back-link" style="margin-bottom: 20px;">
+        <a href="verbs-menu.html">← Back to Verb Drills</a>
+        <a href="verb-stats.html" style="margin-left: 20px;">📊 View Stats</a>
+        <a href="/" style="margin-left: 20px;">🏠 Home</a>
+    </div>
+    
     <div class="header">
         <h1>Italian Verb Conjugation</h1>
         <p>Flip the card to see full present-tense conjugations of common Italian verbs, with English meanings and pronunciation help.</p>
@@ -59,22 +65,10 @@
         </div>
 
         <div class="controls">
-            <button id="prevVerbBtn" class="btn-secondary">
-                <span>← Previous</span>
-            </button>
             <button id="shuffleVerbsBtn" class="btn-secondary">
                 <span>🔀 Shuffle</span>
             </button>
-            <button id="nextVerbBtn" class="btn-primary">
-                <span>Next →</span>
-            </button>
         </div>
-    </div>
-
-    <div class="back-link">
-        <a href="verbs-menu.html">← Back to Verb Drills</a>
-        <a href="verb-stats.html" style="margin-left: 20px;">📊 View Stats</a>
-        <a href="/" style="margin-left: 20px;">🏠 Home</a>
     </div>
 </div>
 
@@ -99,8 +93,6 @@
     const exampleSentenceEl = document.getElementById('exampleSentence');
     const totalVerbsEl = document.getElementById('totalVerbs');
     const packageSelect = document.getElementById('packageSelect');
-    const prevVerbBtn = document.getElementById('prevVerbBtn');
-    const nextVerbBtn = document.getElementById('nextVerbBtn');
     const shuffleVerbsBtn = document.getElementById('shuffleVerbsBtn');
     const pronounceBtn = document.getElementById('pronounceBtn');
     const copyBtn = document.getElementById('copyBtn');
@@ -362,27 +354,12 @@
             verbCard.classList.remove('flipped');
             isFlipped = false;
         }
-
-        prevVerbBtn.disabled = currentIndex === 0;
-        nextVerbBtn.disabled = currentIndex === cards.length - 1;
     }
 
     verbCard.addEventListener('click', (e) => {
         if (e.target.tagName === 'BUTTON') return;
         verbCard.classList.toggle('flipped');
         isFlipped = !isFlipped;
-    });
-
-    prevVerbBtn.addEventListener('click', () => {
-        if (currentIndex > 0) {
-            showCard(currentIndex - 1);
-        }
-    });
-
-    nextVerbBtn.addEventListener('click', () => {
-        if (currentIndex < cards.length - 1) {
-            showCard(currentIndex + 1);
-        }
     });
 
     shuffleVerbsBtn.addEventListener('click', () => {
