@@ -3727,7 +3727,7 @@
     "answer": "Devo mettere a posto la spesa e la cucina",
     "notes": "'mettere a posto' = to put away/tidy up",
     "categories": [],
-    "correct": 0,
+    "correct": 2,
     "incorrect": 0,
     "dateAdded": "2026-05-11"
   },
@@ -3737,7 +3737,7 @@
     "answer": "Quindi cucino la cena",
     "notes": "Future implied by context despite present tense",
     "categories": [],
-    "correct": 0,
+    "correct": 2,
     "incorrect": 1,
     "dateAdded": "2026-05-11"
   },
@@ -3747,8 +3747,8 @@
     "answer": "Ho finito di lavare i piatti",
     "notes": "'ho finito di' = I am done/finished (+ infinitive)",
     "categories": [],
-    "correct": 0,
-    "incorrect": 1,
+    "correct": 2,
+    "incorrect": 2,
     "dateAdded": "2026-05-11"
   },
   {
@@ -3757,8 +3757,8 @@
     "answer": "Ho finito di pulire la cucina",
     "notes": "Past action completed",
     "categories": [],
-    "correct": 1,
-    "incorrect": 0,
+    "correct": 2,
+    "incorrect": 2,
     "dateAdded": "2026-05-11"
   },
   {
@@ -3767,8 +3767,8 @@
     "answer": "Ho finito di cucinare",
     "notes": "",
     "categories": [],
-    "correct": 0,
-    "incorrect": 1,
+    "correct": 2,
+    "incorrect": 3,
     "dateAdded": "2026-05-11"
   },
   {
@@ -3777,7 +3777,7 @@
     "answer": "Ho finito di mangiare",
     "notes": "",
     "categories": [],
-    "correct": 0,
+    "correct": 2,
     "incorrect": 2,
     "dateAdded": "2026-05-12"
   },
@@ -3787,7 +3787,7 @@
     "answer": "Prima",
     "notes": "Adverb of time",
     "categories": [],
-    "correct": 1,
+    "correct": 3,
     "incorrect": 1,
     "dateAdded": "2026-05-12"
   },
@@ -3797,7 +3797,7 @@
     "answer": "Quindi",
     "notes": "Conjunction for sequence or consequence",
     "categories": [],
-    "correct": 2,
+    "correct": 3,
     "incorrect": 0,
     "dateAdded": "2026-05-12"
   },
@@ -3807,7 +3807,7 @@
     "answer": "Devo",
     "notes": "From 'dovere' - expressing obligation",
     "categories": [],
-    "correct": 2,
+    "correct": 3,
     "incorrect": 0,
     "dateAdded": "2026-05-12"
   },
@@ -3817,7 +3817,7 @@
     "answer": "Ho bisogno di",
     "notes": "Literally 'I have need of' - requires 'di' before object",
     "categories": [],
-    "correct": 3,
+    "correct": 4,
     "incorrect": 0,
     "dateAdded": "2026-05-12"
   }

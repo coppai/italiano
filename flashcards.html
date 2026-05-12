@@ -5,10 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Italian Flashcards</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Flatpickr CSS - Default Light Theme -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <style>
-        #datePicker::-webkit-calendar-picker-indicator {
-            filter: invert(1);
-            cursor: pointer;
+        /* Mobile-specific improvements */
+        @media (max-width: 768px) {
+            .flatpickr-calendar {
+                font-size: 16px; /* Prevent iOS zoom on input focus */
+            }
+            
+            .flatpickr-day {
+                height: 39px;
+                line-height: 39px;
+                max-width: 39px;
+            }
+            
+            /* Make date picker input more touch-friendly */
+            .date-picker-input {
+                min-height: 44px; /* iOS recommended touch target */
+                font-size: 16px; /* Prevent zoom on focus */
+                padding: 10px 12px;
+            }
+            
+            /* Ensure calendar is properly positioned on mobile */
+            .flatpickr-calendar.open {
+                z-index: 10001;
+            }
         }
     </style>
 </head>
@@ -32,25 +54,7 @@
 
     <div id="flashcardArea" style="display: none;">
         <div class="filter-section">
-            <button id="categoryFilterBtn" class="category-filter-btn">
-                📁 Categories <span id="categoryCount"></span>
-            </button>
             <input type="date" id="datePicker" class="date-picker-input">
-        </div>
-
-        <!-- Category Filter Modal -->
-        <div id="categoryModal" class="category-modal" style="display: none;">
-            <div class="category-modal-content">
-                <div class="category-modal-header">
-                    <h3>Select Categories</h3>
-                    <button id="closeModal" class="close-modal">✕</button>
-                </div>
-                <div id="categoryList" class="category-list"></div>
-                <div class="category-modal-footer">
-                    <button id="clearAllBtn" class="btn-secondary">Clear All</button>
-                    <button id="applyFiltersBtn" class="btn-primary">Apply Filters</button>
-                </div>
-            </div>
         </div>
 
         <div id="dateProgress" style="margin: 10px 0; text-align: center; color: #3498db; font-weight: bold; display: none;"></div>
@@ -100,6 +104,9 @@
     </div>
 </div>
 
+<!-- Flatpickr JS -->
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
 <script>
     let allFlashcards = [];  // Store all cards
     let flashcards = [];  // Currently displayed cards (shuffled/filtered view)
@@ -126,17 +133,13 @@
     const incorrectBtn = document.getElementById('incorrectBtn');
     const cardStatsEl = document.getElementById('cardStats');
     const cardNotesEl = document.getElementById('cardNotes');
-    const categoryFilterBtn = document.getElementById('categoryFilterBtn');
-    const categoryModal = document.getElementById('categoryModal');
-    const categoryList = document.getElementById('categoryList');
-    const closeModal = document.getElementById('closeModal');
-    const clearAllBtn = document.getElementById('clearAllBtn');
-    const applyFiltersBtn = document.getElementById('applyFiltersBtn');
-    const categoryCount = document.getElementById('categoryCount');
     const reverseBtn = document.getElementById('reverseBtn');
     const reverseOrderBtn = document.getElementById('reverseOrderBtn');
     const datePicker = document.getElementById('datePicker');
     const dateProgress = document.getElementById('dateProgress');
+    
+    let validDates = new Set(); // Track dates that have flashcards
+    let flatpickrInstance = null; // Store Flatpickr instance
 
     console.log('DOM elements:', {
         datePicker: !!datePicker,
@@ -225,9 +228,6 @@
             // Load filters from URL parameters
             loadURLParams();
             
-            // Populate category filter
-            populateCategoryFilter();
-            
             // Show all cards initially
             flashcards = [...allFlashcards];
             
@@ -274,110 +274,6 @@
         }
     }
 
-    // Populate category filter checkboxes in modal
-    function populateCategoryFilter() {
-        const categories = new Set();
-        let hasUncategorized = false;
-        
-        allFlashcards.forEach(card => {
-            if (card.categories && card.categories.length > 0) {
-                card.categories.forEach(cat => categories.add(cat));
-            } else {
-                hasUncategorized = true;
-            }
-        });
-        
-        // Clear existing list
-        categoryList.innerHTML = '';
-        
-        // Add "uncategorized" checkbox first if there are uncategorized cards
-        if (hasUncategorized) {
-            const item = createCategoryCheckbox('uncategorized');
-            categoryList.appendChild(item);
-        }
-        
-        // Add category checkboxes sorted alphabetically
-        Array.from(categories).sort().forEach(category => {
-            const item = createCategoryCheckbox(category);
-            categoryList.appendChild(item);
-        });
-        
-        updateCategoryCount();
-    }
-
-    // Create a checkbox item for a category
-    function createCategoryCheckbox(category) {
-        const label = document.createElement('label');
-        label.className = 'category-checkbox-item';
-        
-        const checkbox = document.createElement('input');
-        checkbox.type = 'checkbox';
-        checkbox.value = category;
-        checkbox.checked = selectedCategories.has(category);
-        checkbox.addEventListener('change', () => {
-            if (checkbox.checked) {
-                selectedCategories.add(category);
-            } else {
-                selectedCategories.delete(category);
-            }
-            updateCategoryCount();
-        });
-        
-        const span = document.createElement('span');
-        span.textContent = category;
-        
-        label.appendChild(checkbox);
-        label.appendChild(span);
-        
-        return label;
-    }
-
-    // Update the category count indicator on the button
-    function updateCategoryCount() {
-        if (selectedCategories.size > 0) {
-            categoryCount.textContent = ` (${selectedCategories.size})`;
-            categoryFilterBtn.classList.add('has-filters');
-        } else {
-            categoryCount.textContent = '';
-            categoryFilterBtn.classList.remove('has-filters');
-        }
-    }
-
-    // Open category modal
-    categoryFilterBtn.addEventListener('click', () => {
-        categoryModal.style.display = 'flex';
-    });
-
-    // Close category modal
-    function closeCategoryModal() {
-        categoryModal.style.display = 'none';
-    }
-
-    closeModal.addEventListener('click', closeCategoryModal);
-    
-    // Close modal when clicking outside
-    categoryModal.addEventListener('click', (e) => {
-        if (e.target === categoryModal) {
-            closeCategoryModal();
-        }
-    });
-
-    // Clear all filters
-    clearAllBtn.addEventListener('click', () => {
-        selectedCategories.clear();
-        const checkboxes = categoryList.querySelectorAll('input[type="checkbox"]');
-        checkboxes.forEach(cb => cb.checked = false);
-        updateCategoryCount();
-        updateURLParams(); // Update URL to reflect cleared filters
-    });
-
-    // Apply filters and close modal
-    applyFiltersBtn.addEventListener('click', () => {
-        applyFilters();
-        updateURLParams();
-        closeCategoryModal();
-    });
-    
     // Filter flashcards by selected categories (OR logic)
     function applyFilters() {
         let filteredCards;
@@ -565,11 +461,58 @@
             return;
         }
         
-        // Set min and max dates for the picker
-        datePicker.min = dates[dates.length - 1]; // oldest
-        datePicker.max = dates[0]; // newest
+        // Store valid dates for validation
+        validDates = new Set(dates);
         
-        console.log('Date picker range:', datePicker.min, 'to', datePicker.max);
+        console.log('Date picker range:', dates[dates.length - 1], 'to', dates[0]);
+        console.log('Valid dates with flashcards:', Array.from(validDates));
+        
+        // Initialize Flatpickr with only valid dates enabled
+        if (flatpickrInstance) {
+            flatpickrInstance.destroy();
+        }
+        
+        flatpickrInstance = flatpickr(datePicker, {
+            dateFormat: 'Y-m-d',
+            minDate: dates[dates.length - 1], // oldest
+            maxDate: dates[0], // newest
+            enable: Array.from(validDates), // Only enable dates with flashcards
+            disableMobile: false, // Use Flatpickr on all devices to enforce date restrictions
+            defaultDate: selectedDate || null,
+            onChange: function(selectedDates, dateStr, instance) {
+                console.log('Flatpickr date changed to:', dateStr);
+                
+                if (!dateStr) {
+                    // Date cleared - show all cards
+                    sortMode = null;
+                    selectedDate = null;
+                    dateProgress.style.display = 'none';
+                    flashcards = [...allFlashcards];
+                    
+                    // Apply reverse order if active
+                    if (isReverseOrder) {
+                        flashcards.reverse();
+                    }
+                    
+                    totalCardsEl.textContent = flashcards.length;
+                    updateURLParams();
+                    showCard(0);
+                    return;
+                }
+                
+                selectedDate = dateStr;
+                sortMode = 'date';
+                dateProgress.style.display = 'block';
+                dateCompletedCards.clear();
+                filterBySelectedDate();
+                updateURLParams();
+                showCard(0);
+            },
+            onReady: function(selectedDates, dateStr, instance) {
+                // Style adjustments after calendar is ready
+                console.log('Flatpickr ready');
+            }
+        });
         
         // Don't set a default value - let user choose when they want to filter by date
     }
@@ -607,46 +550,28 @@
         dateProgress.textContent = `${completedForDate} / ${cardsForDate.length} completed`;
     }
     
-    // Handle date picker change
-    datePicker.addEventListener('change', () => {
-        console.log('Date changed to:', datePicker.value);
+    // Note: Date picker change is now handled by Flatpickr's onChange callback in setupDatePickerRange()
+    // On mobile, native picker is used, so add validation listener
+    datePicker.addEventListener('change', (e) => {
+        // This handles mobile native picker (when disableMobile: true)
+        const selectedValue = e.target.value;
         
-        if (!datePicker.value) {
-            // Date cleared - show all cards
-            sortMode = null;
-            selectedDate = null;
-            dateProgress.style.display = 'none';
-            flashcards = [...allFlashcards];
+        if (selectedValue && !validDates.has(selectedValue)) {
+            // Invalid date selected on native picker (no flashcards for this date)
+            e.target.value = selectedDate || ''; // Reset to previous valid date or empty
             
-            // Apply reverse order if active
-            if (isReverseOrder) {
-                flashcards.reverse();
-            }
+            // Show a brief message
+            const message = document.createElement('div');
+            message.textContent = 'No flashcards for this date';
+            message.style.cssText = 'position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(231, 76, 60, 0.95); color: white; padding: 12px 24px; border-radius: 8px; font-weight: bold; z-index: 10000; box-shadow: 0 4px 6px rgba(0,0,0,0.3);';
+            document.body.appendChild(message);
             
-            totalCardsEl.textContent = flashcards.length;
-            updateURLParams(); // Update URL to remove date parameter
-            showCard(0);
-            return;
+            setTimeout(() => {
+                message.style.transition = 'opacity 0.3s';
+                message.style.opacity = '0';
+                setTimeout(() => message.remove(), 300);
+            }, 1500);
         }
-        
-        selectedDate = datePicker.value;
-        
-        // Check if this date has cards
-        const cardsForDate = allFlashcards.filter(c => c.dateAdded === selectedDate);
-        if (cardsForDate.length === 0) {
-            alert('No cards found for this date. Please select a date when you added flashcards.');
-            datePicker.value = ''; // Clear the picker
-            selectedDate = null;
-            updateURLParams();
-            return;
-        }
-        
-        sortMode = 'date';
-        dateProgress.style.display = 'block';
-        dateCompletedCards.clear(); // Reset completion tracking for new date
-        filterBySelectedDate();
-        updateURLParams(); // Update URL with date parameter
-        showCard(0);
     });
     
     // Filter flashcards by selected date
@@ -681,6 +606,9 @@
             // Move to next date
             const nextDate = dates[currentIndex + 1];
             selectedDate = nextDate;
+            if (flatpickrInstance) {
+                flatpickrInstance.setDate(nextDate, false); // false = don't trigger onChange
+            }
             datePicker.value = nextDate;
             dateCompletedCards.clear();
             updateURLParams(); // Update URL with new date
