@@ -44,7 +44,7 @@ export default function Flashcards() {
 
   const [selectedDate, setSelectedDate] = useState('');
   const [reversed, setReversed] = useState(false);
-  const [reverseOrder, setReverseOrder] = useState(false);
+  const [reverseOrder, setReverseOrder] = useState(true);
 
   // Filtered, shuffled initial deck
   const initialDeck = useMemo(() => {
@@ -53,8 +53,8 @@ export default function Flashcards() {
     if (selectedDate) {
       filtered = filtered.filter(c => c.dateAdded === selectedDate);
     }
-    let result = weightedShuffle(filtered, c => stats.stats[c.id] || c);
-    if (reverseOrder) result = [...result].reverse();
+    let result = [...filtered];
+    if (reverseOrder) result.reverse();
     return result;
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cards, selectedDate, reverseOrder]);
@@ -72,10 +72,12 @@ export default function Flashcards() {
       question: current.question,
       answer: current.answer,
     }, true);
-    const newDeck = deck.slice(0, index).concat(deck.slice(index + 1));
-    setDeck(newDeck);
     setFlipped(false);
-    setIndex(i => Math.min(i, Math.max(0, newDeck.length - 1)));
+    setTimeout(() => {
+      const newDeck = deck.slice(0, index).concat(deck.slice(index + 1));
+      setDeck(newDeck);
+      setIndex(i => Math.min(i, Math.max(0, newDeck.length - 1)));
+    }, 600);
   }
 
   function markIncorrect() {
@@ -84,8 +86,10 @@ export default function Flashcards() {
       question: current.question,
       answer: current.answer,
     }, false);
-    setDeck(prev => requeueAhead(prev, index));
     setFlipped(false);
+    setTimeout(() => {
+      setDeck(prev => requeueAhead(prev, index));
+    }, 600);
   }
 
   if (deck.length === 0) {
@@ -114,19 +118,6 @@ export default function Flashcards() {
     <div className="container">
       <div className="header">
         <h1>Italian Flashcards</h1>
-      </div>
-
-      <div className="filter-section" style={{ flexWrap: 'wrap', gap: 12 }}>
-        <input
-          type="date"
-          value={selectedDate}
-          min={allDates[0]}
-          max={allDates[allDates.length - 1]}
-          onChange={e => setSelectedDate(e.target.value)}
-        />
-        {selectedDate ? (
-          <button className="btn-secondary" onClick={() => setSelectedDate('')}>Clear date</button>
-        ) : null}
       </div>
 
       <FlipDeck
@@ -164,8 +155,7 @@ export default function Flashcards() {
         )}
       />
 
-      <div className="tap-hint">👆 Tap card to flip</div>
-
+  
       <div className="progress">
         <span>{deck.length}</span> cards remaining
       </div>
@@ -183,6 +173,18 @@ export default function Flashcards() {
           className="btn-secondary"
           onClick={() => setReversed(r => !r)}
         >🔄 {reversed ? 'Normal' : 'Reverse'} Cards</button>
+      </div>
+			      <div className="filter-section" style={{ flexWrap: 'wrap', gap: 12 }}>
+        <input
+          type="date"
+          value={selectedDate}
+          min={allDates[0]}
+          max={allDates[allDates.length - 1]}
+          onChange={e => setSelectedDate(e.target.value)}
+        />
+        {selectedDate ? (
+          <button className="btn-secondary" onClick={() => setSelectedDate('')}>Clear date</button>
+        ) : null}
       </div>
     </div>
   );

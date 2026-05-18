@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:italiano-6nr0.onrender.com)",
+      "Bash(grep -rn 'className=\"progress\"\\\\|className={`progress' /Users/iancoppa/Desktop/italian-flashcards/src/)"
+    ]
+  }
+}

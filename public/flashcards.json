@@ -3810,5 +3810,183 @@
     "correct": 4,
     "incorrect": 0,
     "dateAdded": "2026-05-12"
-  }
+  },
+	{
+    "id": "177798850517488paese001",
+    "question": "country / village / town",
+    "answer": "paese",
+    "notes": "Can mean country, village, town, or hometown depending on context",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-18"
+},
+{
+    "id": "177798850517488piccolo01",
+    "question": "small / little",
+    "answer": "piccolo",
+    "notes": "Adjective - feminine: piccola, plural: piccoli/piccole",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-18"
+},
+{
+    "id": "177798850517488onde0001",
+    "question": "waves",
+    "answer": "onde",
+    "notes": "Plural noun (singular: onda)",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-18"
+},
+{
+    "id": "177798850517488sabbia01",
+    "question": "sand",
+    "answer": "sabbia",
+    "notes": "Feminine noun - la sabbia",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-18"
+},{
+    "id": "177798850517488gridare01",
+    "question": "to shout / to scream / to yell",
+    "answer": "gridare",
+    "notes": "Pronunciation: gree-DAH-reh. Regular -are verb",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-18"
+},{
+    "id": "177798850517488addosso01",
+    "question": "on / upon (oneself)",
+    "answer": "addosso",
+    "notes": "Pronunciation: ahd-DOHS-soh. Adverb meaning 'on' in the sense of wearing/carrying. Common in phrases like 'addosso a' (on/upon) or 'mettersi addosso' (to put on oneself)",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-18"
+},
+{
+    "id": "177798850517488aspetta01",
+    "question": "wait / he/she waits",
+    "answer": "aspetta",
+    "notes": "Pronunciation: ah-SPEHT-tah. From verb 'aspettare' (to wait). Imperative: 'Wait!' or 3rd person present: 'he/she waits'",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-18"
+},
+{
+    "id": "177798850517488cambiare01",
+    "question": "to change",
+    "answer": "cambiare",
+    "notes": "Pronunciation: kahm-bee-AH-reh. Regular -are verb",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-18"
+},
+{
+    "id": "177798850517488andiamo01",
+    "question": "let's go / we go",
+    "answer": "andiamo",
+    "notes": "Pronunciation: ahn-dee-AH-moh. From verb 'andare' (to go). 1st person plural present",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-18"
+},
+{
+    "id": "177798850517488preoccupata01",
+    "question": "worried (feminine)",
+    "answer": "preoccupata",
+    "notes": "Pronunciation: preh-ohk-koo-PAH-tah. Adjective - masculine: preoccupato",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-18"
+},
+{
+    "id": "177798850517488cappelli01",
+    "question": "hats",
+    "answer": "cappelli",
+    "notes": "Pronunciation: kahp-PEHL-lee. Plural of 'cappello' (hat)",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-18"
+},
+{
+    "id": "177798850517488ogni00001",
+    "question": "every / each",
+    "answer": "ogni",
+    "notes": "Pronunciation: OH-nyee. Invariable adjective (doesn't change form)",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-18"
+},
+{
+    "id": "177798850517488perde0001",
+    "question": "he/she loses / is losing",
+    "answer": "perde",
+    "notes": "Pronunciation: PEHR-deh. From verb 'perdere' (to lose). 3rd person singular present",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-18"
+},
+{
+    "id": "177798850517488rumore001",
+    "question": "noise / sound",
+    "answer": "rumore",
+    "notes": "Pronunciation: roo-MOH-reh. Masculine noun - il rumore",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-18"
+},
+{
+    "id": "177798850517488morbida001",
+    "question": "soft (feminine)",
+    "answer": "morbida",
+    "notes": "Pronunciation: MOHR-bee-dah. Adjective - masculine: morbido",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-18"
+},
+{
+    "id": "177798850517488dopounpo01",
+    "question": "after a while / after a bit",
+    "answer": "dopo un po'",
+    "notes": "Pronunciation: DOH-poh oon POH. Common phrase meaning 'after a while'",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-18"
+},
+{
+    "id": "177798850517488edivertente01",
+    "question": "it's fun / it's amusing",
+    "answer": "è divertente",
+    "notes": "Pronunciation: eh dee-vehr-TEHN-teh. 'Divertente' = fun/amusing",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-18"
+},
+{
+    "id": "177798850517488faccia001",
+    "question": "face",
+    "answer": "faccia",
+    "notes": "Pronunciation: FAH-chah. Feminine noun - la faccia. Also subjunctive form of 'fare' (to do/make)",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-18"
+}
 ]
