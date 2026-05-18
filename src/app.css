@@ -1,0 +1,33 @@
+/* React-app-only body overrides. Legacy /public/legacy/*.html pages
+   have their own <body> without the .app class and keep the original
+   centered-single-container layout from /public/styles.css. */
+body.app {
+  display: block;
+  padding: 0;
+  align-items: stretch;
+  justify-content: flex-start;
+  height: auto;
+  min-height: 100vh;
+}
+
+/* Restore project's max-width over Bootstrap's wider .container.
+   Specificity (0,1,0) — page-specific rules like .article-page .container
+   (0,2,0) and .flashcards-page .container (0,2,0) still win. */
+.container {
+  max-width: 800px;
+}
+
+body.app .app-main {
+  padding: 20px 0;
+}
+
+/* Article drill pages were viewport-locked (height: 100vh + container 90vh)
+   for a one-screen layout. With a sticky navbar consuming top space, let
+   content flow naturally instead of overflowing. */
+body.app.article-page {
+  height: auto;
+}
+body.app.article-page .container {
+  height: auto;
+  min-height: calc(100vh - 56px - 40px); /* navbar height + app-main padding */
+}

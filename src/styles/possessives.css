@@ -1,0 +1,39 @@
+/* Lifted from legacy/possessives.html inline <style> block. */
+.chart {
+  margin: 20px 0;
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.chart h3 {
+  margin-top: 0;
+  color: var(--secondary);
+  text-align: center;
+}
+.chart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+.chart-table th,
+.chart-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+.chart-table th {
+  background-color: var(--primary);
+  color: white;
+  font-weight: bold;
+}
+.chart-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+.hint-text {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  text-align: center;
+}

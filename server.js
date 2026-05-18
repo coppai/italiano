@@ -1,6 +1,15 @@
 /**
  * to run this server, use the command:
  *    node server.js
+ *
+ * In development the server hosts files out of ./public so legacy pages and
+ * JSON data stay in sync with the Vite dev server (which serves the React app
+ * on :5173 and proxies /api/* here). In production it serves the Vite build
+ * output from ./dist with an SPA fallback for client-side routes.
+ *
+ * Admin write endpoints are gated by HTTP Basic Auth AND only accept requests
+ * when NODE_ENV !== 'production' so the deployed Render instance can never
+ * accept writes even if someone discovers the routes.
  */
 
 const http = require('http');
@@ -9,17 +18,31 @@ const path = require('path');
 const bcrypt = require('bcryptjs');
 
 const PORT = process.env.PORT || 3000;
+const IS_PROD = process.env.NODE_ENV === 'production';
+
+const ROOT_DIR = path.join(__dirname, IS_PROD ? 'dist' : 'public');
+const DATA_DIR = ROOT_DIR;
+const FLASHCARDS_FILE = path.join(DATA_DIR, 'flashcards.json');
+const SPA_INDEX = path.join(ROOT_DIR, 'index.html');
 
 const MIME_TYPES = {
     '.html': 'text/html',
     '.json': 'application/json',
     '.js': 'text/javascript',
-    '.css': 'text/css'
+    '.mjs': 'text/javascript',
+    '.css': 'text/css',
+    '.svg': 'image/svg+xml',
+    '.png': 'image/png',
+    '.jpg': 'image/jpeg',
+    '.jpeg': 'image/jpeg',
+    '.ico': 'image/x-icon',
+    '.woff': 'font/woff',
+    '.woff2': 'font/woff2',
+    '.map': 'application/json',
+    '.txt': 'text/plain',
 };
 
-// Very basic admin authentication (HTTP Basic Auth)
 const ADMIN_USER = process.env.ADMIN_USER || 'admin';
-// Prefer a hashed password from env; fall back to a hash of the default
 const ADMIN_PASS_HASH = process.env.ADMIN_PASS_HASH || bcrypt.hashSync('password123', 10);
 
 function requireAdminAuth(req, res) {
@@ -44,357 +67,138 @@ function requireAdminAuth(req, res) {
     return true;
 }
 
-const server = http.createServer((req, res) => {
-    // Protect admin page and admin APIs with basic auth
-    const isAdminRoute =
-        req.url === '/admin.html' ||
-        req.url === '/admin' ||
-        req.url === '/migrate-dates.html' ||
-        (req.method === 'POST' && req.url === '/api/add-flashcard') ||
-        (req.method === 'POST' && req.url === '/api/flashcards') ||
-        (req.method === 'PUT' && req.url === '/api/edit-flashcard') ||
-        (req.method === 'DELETE' && req.url === '/api/delete-flashcard');
+function refuseInProd(req, res) {
+    res.writeHead(404, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({ error: 'Not found' }));
+}
 
-    if (isAdminRoute && !requireAdminAuth(req, res)) {
-        return;
-    }
-
-    // Handle POST request for adding flashcards
-    if (req.method === 'POST' && req.url === '/api/add-flashcard') {
+function readBody(req) {
+    return new Promise((resolve, reject) => {
         let body = '';
-        
-        req.on('data', chunk => {
-            body += chunk.toString();
-        });
-        
-        req.on('end', () => {
-            try {
-                const newFlashcard = JSON.parse(body);
-                
-                // Read existing flashcards
-                fs.readFile('./flashcards.json', 'utf8', (err, data) => {
-                    if (err) {
-                        res.writeHead(500, { 'Content-Type': 'application/json' });
-                        res.end(JSON.stringify({ error: 'Failed to read flashcards file' }));
-                        return;
-                    }
-                    
-                    let flashcards = JSON.parse(data);
-                    flashcards.push(newFlashcard);
-                    
-                    // Write updated flashcards back to file
-                    fs.writeFile('./flashcards.json', JSON.stringify(flashcards, null, 2), 'utf8', (err) => {
-                        if (err) {
-                            res.writeHead(500, { 'Content-Type': 'application/json' });
-                            res.end(JSON.stringify({ error: 'Failed to save flashcard' }));
-                            return;
-                        }
-                        
-                        res.writeHead(200, { 'Content-Type': 'application/json' });
-                        res.end(JSON.stringify({ success: true, message: 'Flashcard added successfully' }));
-                    });
-                });
-            } catch (error) {
-                res.writeHead(400, { 'Content-Type': 'application/json' });
-                res.end(JSON.stringify({ error: 'Invalid JSON data' }));
-            }
-        });
-        
-        return;
-    }
+        req.on('data', chunk => { body += chunk.toString(); });
+        req.on('end', () => resolve(body));
+        req.on('error', reject);
+    });
+}
 
-    // Handle PUT request for editing flashcards
-    if (req.method === 'PUT' && req.url === '/api/edit-flashcard') {
-        let body = '';
-        
-        req.on('data', chunk => {
-            body += chunk.toString();
-        });
-        
-        req.on('end', () => {
-            try {
-                const { id, flashcard } = JSON.parse(body);
-                
-                // Read existing flashcards
-                fs.readFile('./flashcards.json', 'utf8', (err, data) => {
-                    if (err) {
-                        res.writeHead(500, { 'Content-Type': 'application/json' });
-                        res.end(JSON.stringify({ error: 'Failed to read flashcards file' }));
-                        return;
-                    }
-                    
-                    let flashcards = JSON.parse(data);
-                    
-                    // Find the card by ID
-                    const cardIndex = flashcards.findIndex(card => card.id === id);
-                    
-                    if (cardIndex === -1) {
-                        res.writeHead(400, { 'Content-Type': 'application/json' });
-                        res.end(JSON.stringify({ error: 'Card not found' }));
-                        return;
-                    }
-                    
-                    flashcards[cardIndex] = flashcard;
-                    
-                    // Write updated flashcards back to file
-                    fs.writeFile('./flashcards.json', JSON.stringify(flashcards, null, 2), 'utf8', (err) => {
-                        if (err) {
-                            res.writeHead(500, { 'Content-Type': 'application/json' });
-                            res.end(JSON.stringify({ error: 'Failed to save flashcard' }));
-                            return;
-                        }
-                        
-                        res.writeHead(200, { 'Content-Type': 'application/json' });
-                        res.end(JSON.stringify({ success: true, message: 'Flashcard updated successfully' }));
-                    });
-                });
-            } catch (error) {
-                res.writeHead(400, { 'Content-Type': 'application/json' });
-                res.end(JSON.stringify({ error: 'Invalid JSON data' }));
-            }
-        });
-        
-        return;
-    }
+function sendJson(res, status, payload) {
+    res.writeHead(status, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify(payload));
+}
 
-    // Handle PUT request for updating flashcard stats
-    if (req.method === 'PUT' && req.url === '/api/update-flashcard-stats') {
-        let body = '';
-        
-        req.on('data', chunk => {
-            body += chunk.toString();
-        });
-        
-        req.on('end', () => {
-            try {
-                const { id, correct, incorrect } = JSON.parse(body);
-                console.log('Updating flashcard stats:', { id, correct, incorrect });
-                
-                // Read existing flashcards
-                fs.readFile('./flashcards.json', 'utf8', (err, data) => {
-                    if (err) {
-                        console.error('Error reading file:', err);
-                        res.writeHead(500, { 'Content-Type': 'application/json' });
-                        res.end(JSON.stringify({ error: 'Failed to read flashcards file' }));
-                        return;
-                    }
-                    
-                    let flashcards = JSON.parse(data);
-                    
-                    // Find the card by ID
-                    const cardIndex = flashcards.findIndex(card => card.id === id);
-                    console.log('Found card at index:', cardIndex);
-                    
-                    if (cardIndex === -1) {
-                        console.error('Card not found with ID:', id);
-                        res.writeHead(400, { 'Content-Type': 'application/json' });
-                        res.end(JSON.stringify({ error: 'Card not found' }));
-                        return;
-                    }
-                    
-                    // Update only the stats
-                    flashcards[cardIndex].correct = correct;
-                    flashcards[cardIndex].incorrect = incorrect;
-                    console.log('Updated card:', flashcards[cardIndex]);
-                    
-                    // Write updated flashcards back to file
-                    fs.writeFile('./flashcards.json', JSON.stringify(flashcards, null, 2), 'utf8', (err) => {
-                        if (err) {
-                            console.error('Error writing file:', err);
-                            res.writeHead(500, { 'Content-Type': 'application/json' });
-                            res.end(JSON.stringify({ error: 'Failed to save flashcard stats' }));
-                            return;
-                        }
-                        
-                        console.log('Successfully saved stats to file');
-                        res.writeHead(200, { 'Content-Type': 'application/json' });
-                        res.end(JSON.stringify({ success: true, message: 'Stats updated successfully' }));
-                    });
-                });
-            } catch (error) {
-                res.writeHead(400, { 'Content-Type': 'application/json' });
-                res.end(JSON.stringify({ error: 'Invalid JSON data' }));
-            }
-        });
-        
-        return;
-    }
+// Stats writes now live in localStorage on the client; only admin CRUD remains.
+const ADMIN_WRITE_ROUTES = new Set([
+    'POST /api/add-flashcard',
+    'POST /api/flashcards',
+    'PUT /api/edit-flashcard',
+    'DELETE /api/delete-flashcard',
+]);
 
-    // Handle PUT request for updating verb infinitive stats
-    if (req.method === 'PUT' && req.url === '/api/update-verb-infinitive-stats') {
-        let body = '';
-        
-        req.on('data', chunk => {
-            body += chunk.toString();
-        });
-        
-        req.on('end', () => {
-            try {
-                const { id, correct, incorrect } = JSON.parse(body);
-                console.log('Updating verb infinitive stats:', { id, correct, incorrect });
-                
-                // Read existing verbs
-                fs.readFile('./verbs.json', 'utf8', (err, data) => {
-                    if (err) {
-                        console.error('Error reading file:', err);
-                        res.writeHead(500, { 'Content-Type': 'application/json' });
-                        res.end(JSON.stringify({ error: 'Failed to read verbs file' }));
-                        return;
-                    }
-                    
-                    let verbs = JSON.parse(data);
-                    
-                    // Find the verb by ID
-                    const verbIndex = verbs.findIndex(verb => verb.id === id || verb.infinitive === id);
-                    console.log('Found verb at index:', verbIndex);
-                    
-                    if (verbIndex === -1) {
-                        console.error('Verb not found with ID:', id);
-                        res.writeHead(400, { 'Content-Type': 'application/json' });
-                        res.end(JSON.stringify({ error: 'Verb not found' }));
-                        return;
-                    }
-                    
-                    // Update only the infinitive stats
-                    verbs[verbIndex].infinitive_correct = correct;
-                    verbs[verbIndex].infinitive_incorrect = incorrect;
-                    console.log('Updated verb:', verbs[verbIndex]);
-                    
-                    // Write updated verbs back to file
-                    fs.writeFile('./verbs.json', JSON.stringify(verbs, null, 2), 'utf8', (err) => {
-                        if (err) {
-                            console.error('Error writing file:', err);
-                            res.writeHead(500, { 'Content-Type': 'application/json' });
-                            res.end(JSON.stringify({ error: 'Failed to save verb stats' }));
-                            return;
-                        }
-                        
-                        console.log('Successfully saved verb stats to file');
-                        res.writeHead(200, { 'Content-Type': 'application/json' });
-                        res.end(JSON.stringify({ success: true, message: 'Stats updated successfully' }));
-                    });
-                });
-            } catch (error) {
-                res.writeHead(400, { 'Content-Type': 'application/json' });
-                res.end(JSON.stringify({ error: 'Invalid JSON data' }));
-            }
-        });
-        
-        return;
-    }
-
-    // Handle DELETE request for deleting flashcards
-    if (req.method === 'DELETE' && req.url === '/api/delete-flashcard') {
-        let body = '';
-        
-        req.on('data', chunk => {
-            body += chunk.toString();
-        });
-        
-        req.on('end', () => {
-            try {
-                const { id } = JSON.parse(body);
-                
-                // Read existing flashcards
-                fs.readFile('./flashcards.json', 'utf8', (err, data) => {
-                    if (err) {
-                        res.writeHead(500, { 'Content-Type': 'application/json' });
-                        res.end(JSON.stringify({ error: 'Failed to read flashcards file' }));
-                        return;
-                    }
-                    
-                    let flashcards = JSON.parse(data);
-                    
-                    // Find the card by ID
-                    const cardIndex = flashcards.findIndex(card => card.id === id);
-                    
-                    if (cardIndex === -1) {
-                        res.writeHead(400, { 'Content-Type': 'application/json' });
-                        res.end(JSON.stringify({ error: 'Card not found' }));
-                        return;
-                    }
-                    
-                    flashcards.splice(cardIndex, 1);
-                    
-                    // Write updated flashcards back to file
-                    fs.writeFile('./flashcards.json', JSON.stringify(flashcards, null, 2), 'utf8', (err) => {
-                        if (err) {
-                            res.writeHead(500, { 'Content-Type': 'application/json' });
-                            res.end(JSON.stringify({ error: 'Failed to save flashcard' }));
-                            return;
-                        }
-                        
-                        res.writeHead(200, { 'Content-Type': 'application/json' });
-                        res.end(JSON.stringify({ success: true, message: 'Flashcard deleted successfully' }));
-                    });
-                });
-            } catch (error) {
-                res.writeHead(400, { 'Content-Type': 'application/json' });
-                res.end(JSON.stringify({ error: 'Invalid JSON data' }));
-            }
-        });
-        
-        return;
-    }
-
-    // Handle POST request for bulk updating all flashcards (for migration)
-    if (req.method === 'POST' && req.url === '/api/flashcards') {
-        let body = '';
-        
-        req.on('data', chunk => {
-            body += chunk.toString();
-        });
-        
-        req.on('end', () => {
-            try {
-                const flashcards = JSON.parse(body);
-                
-                // Validate that it's an array
-                if (!Array.isArray(flashcards)) {
-                    res.writeHead(400, { 'Content-Type': 'application/json' });
-                    res.end(JSON.stringify({ error: 'Data must be an array of flashcards' }));
-                    return;
-                }
-                
-                // Write the entire flashcards array to file
-                fs.writeFile('./flashcards.json', JSON.stringify(flashcards, null, 2), 'utf8', (err) => {
-                    if (err) {
-                        res.writeHead(500, { 'Content-Type': 'application/json' });
-                        res.end(JSON.stringify({ error: 'Failed to save flashcards' }));
-                        return;
-                    }
-                    
-                    res.writeHead(200, { 'Content-Type': 'application/json' });
-                    res.end(JSON.stringify({ success: true, message: 'All flashcards updated successfully' }));
-                });
-            } catch (error) {
-                res.writeHead(400, { 'Content-Type': 'application/json' });
-                res.end(JSON.stringify({ error: 'Invalid JSON data' }));
-            }
-        });
-        
-        return;
-    }
-    
-    // Handle GET requests for static files
-    // Strip query parameters from URL before looking for file
+const server = http.createServer(async (req, res) => {
     const urlWithoutQuery = req.url.split('?')[0];
-    let filePath = urlWithoutQuery === '/' ? './index.html' : `.${urlWithoutQuery}`;
-    const extname = path.extname(filePath);
-    let contentType = MIME_TYPES[extname] || 'text/plain';
+    const routeKey = `${req.method} ${urlWithoutQuery}`;
+
+    const isAdminPage = urlWithoutQuery === '/admin' || urlWithoutQuery === '/admin.html';
+    const isAdminApi = ADMIN_WRITE_ROUTES.has(routeKey);
+
+    if (isAdminApi && IS_PROD) {
+        return refuseInProd(req, res);
+    }
+
+    if ((isAdminPage || isAdminApi) && !requireAdminAuth(req, res)) {
+        return;
+    }
+
+    if (routeKey === 'POST /api/add-flashcard') {
+        try {
+            const newFlashcard = JSON.parse(await readBody(req));
+            const flashcards = JSON.parse(fs.readFileSync(FLASHCARDS_FILE, 'utf8'));
+            flashcards.push(newFlashcard);
+            fs.writeFileSync(FLASHCARDS_FILE, JSON.stringify(flashcards, null, 2), 'utf8');
+            return sendJson(res, 200, { success: true, message: 'Flashcard added successfully' });
+        } catch (err) {
+            return sendJson(res, 400, { error: 'Invalid JSON data' });
+        }
+    }
+
+    if (routeKey === 'PUT /api/edit-flashcard') {
+        try {
+            const { id, flashcard } = JSON.parse(await readBody(req));
+            const flashcards = JSON.parse(fs.readFileSync(FLASHCARDS_FILE, 'utf8'));
+            const cardIndex = flashcards.findIndex(card => card.id === id);
+            if (cardIndex === -1) return sendJson(res, 400, { error: 'Card not found' });
+            flashcards[cardIndex] = flashcard;
+            fs.writeFileSync(FLASHCARDS_FILE, JSON.stringify(flashcards, null, 2), 'utf8');
+            return sendJson(res, 200, { success: true, message: 'Flashcard updated successfully' });
+        } catch (err) {
+            return sendJson(res, 400, { error: 'Invalid JSON data' });
+        }
+    }
+
+    if (routeKey === 'DELETE /api/delete-flashcard') {
+        try {
+            const { id } = JSON.parse(await readBody(req));
+            const flashcards = JSON.parse(fs.readFileSync(FLASHCARDS_FILE, 'utf8'));
+            const cardIndex = flashcards.findIndex(card => card.id === id);
+            if (cardIndex === -1) return sendJson(res, 400, { error: 'Card not found' });
+            flashcards.splice(cardIndex, 1);
+            fs.writeFileSync(FLASHCARDS_FILE, JSON.stringify(flashcards, null, 2), 'utf8');
+            return sendJson(res, 200, { success: true, message: 'Flashcard deleted successfully' });
+        } catch (err) {
+            return sendJson(res, 400, { error: 'Invalid JSON data' });
+        }
+    }
+
+    if (routeKey === 'POST /api/flashcards') {
+        try {
+            const flashcards = JSON.parse(await readBody(req));
+            if (!Array.isArray(flashcards)) return sendJson(res, 400, { error: 'Data must be an array of flashcards' });
+            fs.writeFileSync(FLASHCARDS_FILE, JSON.stringify(flashcards, null, 2), 'utf8');
+            return sendJson(res, 200, { success: true, message: 'All flashcards updated successfully' });
+        } catch (err) {
+            return sendJson(res, 400, { error: 'Invalid JSON data' });
+        }
+    }
+
+    // Static file serving with SPA fallback
+    const requestedPath = urlWithoutQuery === '/' ? '/index.html' : urlWithoutQuery;
+    const safePath = path.normalize(requestedPath).replace(/^(\.\.[/\\])+/, '');
+    const filePath = path.join(ROOT_DIR, safePath);
+
+    if (!filePath.startsWith(ROOT_DIR)) {
+        res.writeHead(403);
+        return res.end('Forbidden');
+    }
 
     fs.readFile(filePath, (error, content) => {
-        if (error) {
-            res.writeHead(404);
-            res.end('File not found');
-        } else {
+        if (!error) {
+            const contentType = MIME_TYPES[path.extname(filePath)] || 'application/octet-stream';
             res.writeHead(200, { 'Content-Type': contentType });
-            res.end(content, 'utf-8');
+            return res.end(content);
         }
+
+        // SPA fallback: extensionless paths that accept HTML get index.html
+        const hasExtension = path.extname(safePath) !== '';
+        const acceptsHtml = (req.headers.accept || '').includes('text/html');
+        if (!hasExtension && acceptsHtml) {
+            fs.readFile(SPA_INDEX, (fallbackErr, fallbackContent) => {
+                if (fallbackErr) {
+                    res.writeHead(404);
+                    return res.end('File not found');
+                }
+                res.writeHead(200, { 'Content-Type': 'text/html' });
+                res.end(fallbackContent);
+            });
+            return;
+        }
+
+        res.writeHead(404);
+        res.end('File not found');
     });
 });
 
 server.listen(PORT, '0.0.0.0', () => {
-    console.log(`Server running at http://0.0.0.0:${PORT}/`);
-    console.log(`Press Ctrl+C to stop.`);
+    console.log(`Server running at http://0.0.0.0:${PORT}/ (${IS_PROD ? 'production' : 'development'})`);
+    console.log(`Serving from ${ROOT_DIR}`);
+    console.log('Press Ctrl+C to stop.');
 });

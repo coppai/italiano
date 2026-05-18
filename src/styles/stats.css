@@ -1,0 +1,188 @@
+/* Lifted from the legacy article-stats / verb-stats / flashcard-stats inline <style> blocks.
+   The legacy pages referenced --card-bg, --text-secondary, --border, --primary-dark, --danger
+   without defining them, so they fell back to browser defaults. Define them here with
+   sensible values so the React stats pages look better than the legacy ones did. */
+:root {
+  --card-bg: #ffffff;
+  --text-secondary: #7f8c8d;
+  --border: #ecf0f1;
+  --primary-dark: #2980b9;
+  --danger: var(--error);
+}
+
+.stats-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.stats-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.stats-summary {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.summary-card {
+  background: var(--card-bg);
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  min-width: 150px;
+  text-align: center;
+}
+
+.summary-card h3 {
+  margin: 0 0 10px 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.summary-card .value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.stats-table-container {
+  background: var(--card-bg);
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.stats-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.stats-table th {
+  background: var(--primary);
+  color: white;
+  padding: 15px;
+  text-align: left;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+}
+
+.stats-table th:hover {
+  background: var(--primary-dark);
+}
+
+.stats-table th::after {
+  content: '⇅';
+  position: absolute;
+  right: 10px;
+  opacity: 0.5;
+}
+
+.stats-table th.sorted-asc::after {
+  content: '↑';
+  opacity: 1;
+}
+
+.stats-table th.sorted-desc::after {
+  content: '↓';
+  opacity: 1;
+}
+
+.stats-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid var(--border);
+}
+
+.stats-table tbody tr:hover {
+  background: rgba(78, 205, 196, 0.1);
+}
+
+.stats-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.correct-count { color: var(--success); font-weight: 600; }
+.incorrect-count { color: var(--danger); font-weight: 600; }
+.percent-correct { font-weight: 600; }
+.percent-high { color: var(--success); }
+.percent-medium { color: #f39c12; }
+.percent-low { color: var(--danger); }
+
+.type-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: var(--primary);
+  color: white;
+}
+.type-definite { background: #3498db; }
+.type-indefinite { background: #9b59b6; }
+.type-plural_definite { background: #e74c3c; }
+.type-partitive { background: #f39c12; }
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn-primary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(78, 205, 196, 0.3);
+}
+
+.btn-secondary {
+  background: #95a5a6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+.btn-secondary:hover { background: #7f8c8d; }
+
+.no-stats {
+  text-align: center;
+  padding: 60px 20px;
+}
+.no-stats h2 {
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.stats-controls {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .stats-table { font-size: 0.9rem; }
+  .stats-table th, .stats-table td { padding: 10px 8px; }
+  .summary-card { min-width: 120px; }
+  .summary-card .value { font-size: 1.5rem; }
+}
