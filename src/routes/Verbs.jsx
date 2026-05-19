@@ -109,6 +109,7 @@ export default function Verbs() {
       </div>
 
       <FlipDeck
+        key={current ? verbStatsKey(current) : 'empty'}
         current={current}
         flipped={flipped}
         onFlip={() => setFlipped(f => !f)}

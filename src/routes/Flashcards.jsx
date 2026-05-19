@@ -121,6 +121,7 @@ export default function Flashcards() {
       </div>
 
       <FlipDeck
+        key={current?.id || 'empty'}
         current={current}
         flipped={flipped}
         onFlip={() => setFlipped(f => !f)}

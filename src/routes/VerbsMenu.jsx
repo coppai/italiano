@@ -28,6 +28,15 @@ export default function VerbsMenu() {
           ]}
         />
         <MenuCard
+          to="/verbs/deep-dive"
+          title="Verb Deep Dive"
+          description="Drill every form of one verb at a time — gerund, present, imperfetto, and passato prossimo — then move on to the next."
+          stats={[
+            { label: '12', value: 'verbs (19 cards each)' },
+            { label: 'Level:', value: 'Intermediate' },
+          ]}
+        />
+        <MenuCard
           to="/verbs/stats"
           title="📊 Verb Stats"
           description="View your verb conjugation practice statistics with sortable performance metrics and focused practice mode."

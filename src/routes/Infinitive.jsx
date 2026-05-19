@@ -129,6 +129,7 @@ export default function Infinitive() {
       </div>
 
       <FlipDeck
+        key={current?.id || 'empty'}
         current={current}
         flipped={flipped}
         onFlip={() => setFlipped(f => !f)}

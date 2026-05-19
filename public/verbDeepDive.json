@@ -1,0 +1,446 @@
+[
+  {
+    "id": "avere",
+    "infinitive": "avere",
+    "english": "to have",
+    "pronunciation": "(ah-VEH-reh)",
+    "gerund": {
+      "italian": "avendo",
+      "english": "having",
+      "example": "Avendo fame, ho mangiato. (Being hungry, I ate.)"
+    },
+    "tenses": {
+      "present": [
+        { "subject": "io",      "italian": "ho",      "english": "I have",                  "example": "Io ho un cane. (I have a dog.)" },
+        { "subject": "tu",      "italian": "hai",     "english": "you have (informal)",     "example": "Tu hai ragione. (You are right.)" },
+        { "subject": "lui/lei", "italian": "ha",      "english": "he/she has",              "example": "Lei ha fame. (She is hungry.)" },
+        { "subject": "noi",     "italian": "abbiamo", "english": "we have",                 "example": "Noi abbiamo tempo. (We have time.)" },
+        { "subject": "voi",     "italian": "avete",   "english": "you have (plural)",       "example": "Voi avete molti amici. (You have many friends.)" },
+        { "subject": "loro",    "italian": "hanno",   "english": "they have",               "example": "Loro hanno una bella casa. (They have a nice house.)" }
+      ],
+      "imperfetto": [
+        { "subject": "io",      "italian": "avevo",    "english": "I used to have",                "example": "Avevo paura del buio. (I was afraid of the dark.)" },
+        { "subject": "tu",      "italian": "avevi",    "english": "you used to have (informal)",   "example": "Avevi sempre fretta. (You were always in a hurry.)" },
+        { "subject": "lui/lei", "italian": "aveva",    "english": "he/she used to have",           "example": "Aveva dieci anni. (He/She was ten years old.)" },
+        { "subject": "noi",     "italian": "avevamo",  "english": "we used to have",               "example": "Avevamo molti amici. (We had many friends.)" },
+        { "subject": "voi",     "italian": "avevate",  "english": "you used to have (plural)",     "example": "Avevate ragione. (You were right.)" },
+        { "subject": "loro",    "italian": "avevano",  "english": "they used to have",             "example": "Avevano una vecchia macchina. (They had an old car.)" }
+      ],
+      "passato_prossimo": [
+        { "subject": "io",      "italian": "ho avuto",      "english": "I have had",                 "example": "Ho avuto un'idea. (I had an idea.)" },
+        { "subject": "tu",      "italian": "hai avuto",     "english": "you have had (informal)",    "example": "Hai avuto fortuna. (You were lucky.)" },
+        { "subject": "lui/lei", "italian": "ha avuto",      "english": "he/she has had",             "example": "Ha avuto un incidente. (He/She had an accident.)" },
+        { "subject": "noi",     "italian": "abbiamo avuto", "english": "we have had",                "example": "Abbiamo avuto problemi. (We had problems.)" },
+        { "subject": "voi",     "italian": "avete avuto",   "english": "you have had (plural)",      "example": "Avete avuto pazienza. (You were patient.)" },
+        { "subject": "loro",    "italian": "hanno avuto",   "english": "they have had",              "example": "Hanno avuto successo. (They were successful.)" }
+      ]
+    }
+  },
+  {
+    "id": "fare",
+    "infinitive": "fare",
+    "english": "to do / to make",
+    "pronunciation": "(FAH-reh)",
+    "gerund": {
+      "italian": "facendo",
+      "english": "doing / making",
+      "example": "Sto facendo i compiti. (I am doing my homework.)"
+    },
+    "tenses": {
+      "present": [
+        { "subject": "io",      "italian": "faccio",   "english": "I do / I make",        "example": "Faccio colazione alle otto. (I have breakfast at eight.)" },
+        { "subject": "tu",      "italian": "fai",      "english": "you do (informal)",    "example": "Tu fai sport? (Do you do sports?)" },
+        { "subject": "lui/lei", "italian": "fa",       "english": "he/she does",          "example": "Fa caldo oggi. (It's hot today.)" },
+        { "subject": "noi",     "italian": "facciamo", "english": "we do",                "example": "Facciamo una passeggiata. (We're taking a walk.)" },
+        { "subject": "voi",     "italian": "fate",     "english": "you do (plural)",      "example": "Voi fate i compiti? (Are you doing homework?)" },
+        { "subject": "loro",    "italian": "fanno",    "english": "they do",              "example": "Fanno molto rumore. (They make a lot of noise.)" }
+      ],
+      "imperfetto": [
+        { "subject": "io",      "italian": "facevo",    "english": "I used to do",                "example": "Facevo sport ogni giorno. (I used to do sports every day.)" },
+        { "subject": "tu",      "italian": "facevi",    "english": "you used to do (informal)",   "example": "Cosa facevi da bambino? (What did you do as a child?)" },
+        { "subject": "lui/lei", "italian": "faceva",    "english": "he/she used to do",           "example": "Faceva freddo. (It was cold.)" },
+        { "subject": "noi",     "italian": "facevamo",  "english": "we used to do",               "example": "Facevamo lunghe passeggiate. (We used to take long walks.)" },
+        { "subject": "voi",     "italian": "facevate",  "english": "you used to do (plural)",     "example": "Voi facevate spesso festa. (You often used to throw parties.)" },
+        { "subject": "loro",    "italian": "facevano",  "english": "they used to do",             "example": "Facevano molto rumore. (They used to make a lot of noise.)" }
+      ],
+      "passato_prossimo": [
+        { "subject": "io",      "italian": "ho fatto",      "english": "I have done",                "example": "Ho fatto la spesa. (I did the shopping.)" },
+        { "subject": "tu",      "italian": "hai fatto",     "english": "you have done (informal)",   "example": "Hai fatto i compiti? (Have you done the homework?)" },
+        { "subject": "lui/lei", "italian": "ha fatto",      "english": "he/she has done",            "example": "Ha fatto un bel viaggio. (He/She took a nice trip.)" },
+        { "subject": "noi",     "italian": "abbiamo fatto", "english": "we have done",               "example": "Abbiamo fatto colazione. (We had breakfast.)" },
+        { "subject": "voi",     "italian": "avete fatto",   "english": "you have done (plural)",     "example": "Avete fatto tardi. (You were late.)" },
+        { "subject": "loro",    "italian": "hanno fatto",   "english": "they have done",             "example": "Hanno fatto un errore. (They made a mistake.)" }
+      ]
+    }
+  },
+  {
+    "id": "dire",
+    "infinitive": "dire",
+    "english": "to say / to tell",
+    "pronunciation": "(DEE-reh)",
+    "gerund": {
+      "italian": "dicendo",
+      "english": "saying / telling",
+      "example": "Sto dicendo la verità. (I am telling the truth.)"
+    },
+    "tenses": {
+      "present": [
+        { "subject": "io",      "italian": "dico",     "english": "I say",                "example": "Dico sempre la verità. (I always tell the truth.)" },
+        { "subject": "tu",      "italian": "dici",     "english": "you say (informal)",   "example": "Cosa dici? (What are you saying?)" },
+        { "subject": "lui/lei", "italian": "dice",     "english": "he/she says",          "example": "Dice che è stanco. (He says he's tired.)" },
+        { "subject": "noi",     "italian": "diciamo",  "english": "we say",               "example": "Diciamo di sì. (Let's say yes.)" },
+        { "subject": "voi",     "italian": "dite",     "english": "you say (plural)",     "example": "Cosa dite? (What do you say?)" },
+        { "subject": "loro",    "italian": "dicono",   "english": "they say",             "example": "Dicono sempre la stessa cosa. (They always say the same thing.)" }
+      ],
+      "imperfetto": [
+        { "subject": "io",      "italian": "dicevo",    "english": "I used to say",                "example": "Dicevo sempre la verità. (I always used to tell the truth.)" },
+        { "subject": "tu",      "italian": "dicevi",    "english": "you used to say (informal)",   "example": "Dicevi che venivi. (You said you were coming.)" },
+        { "subject": "lui/lei", "italian": "diceva",    "english": "he/she used to say",           "example": "Diceva sempre delle bugie. (He/She always used to tell lies.)" },
+        { "subject": "noi",     "italian": "dicevamo",  "english": "we used to say",               "example": "Dicevamo di andarcene. (We were saying to leave.)" },
+        { "subject": "voi",     "italian": "dicevate",  "english": "you used to say (plural)",     "example": "Voi dicevate di no. (You were saying no.)" },
+        { "subject": "loro",    "italian": "dicevano",  "english": "they used to say",             "example": "Dicevano che era pericoloso. (They said it was dangerous.)" }
+      ],
+      "passato_prossimo": [
+        { "subject": "io",      "italian": "ho detto",      "english": "I have said",                "example": "Ho detto la verità. (I told the truth.)" },
+        { "subject": "tu",      "italian": "hai detto",     "english": "you have said (informal)",   "example": "Cosa hai detto? (What did you say?)" },
+        { "subject": "lui/lei", "italian": "ha detto",      "english": "he/she has said",            "example": "Ha detto di sì. (He/She said yes.)" },
+        { "subject": "noi",     "italian": "abbiamo detto", "english": "we have said",               "example": "Abbiamo detto tutto. (We said everything.)" },
+        { "subject": "voi",     "italian": "avete detto",   "english": "you have said (plural)",     "example": "Avete detto la stessa cosa. (You said the same thing.)" },
+        { "subject": "loro",    "italian": "hanno detto",   "english": "they have said",             "example": "Hanno detto la verità. (They told the truth.)" }
+      ]
+    }
+  },
+  {
+    "id": "potere",
+    "infinitive": "potere",
+    "english": "to be able to / can",
+    "pronunciation": "(poh-TEH-reh)",
+    "gerund": {
+      "italian": "potendo",
+      "english": "being able to",
+      "example": "Potendo, ti aiuterei. (If I could, I would help you.)"
+    },
+    "tenses": {
+      "present": [
+        { "subject": "io",      "italian": "posso",    "english": "I can",                "example": "Posso entrare? (May I come in?)" },
+        { "subject": "tu",      "italian": "puoi",     "english": "you can (informal)",   "example": "Puoi aiutarmi? (Can you help me?)" },
+        { "subject": "lui/lei", "italian": "può",      "english": "he/she can",           "example": "Non può venire stasera. (He/She can't come tonight.)" },
+        { "subject": "noi",     "italian": "possiamo", "english": "we can",               "example": "Possiamo uscire più tardi. (We can go out later.)" },
+        { "subject": "voi",     "italian": "potete",   "english": "you can (plural)",     "example": "Potete aspettare un momento? (Can you wait a moment?)" },
+        { "subject": "loro",    "italian": "possono",  "english": "they can",             "example": "Non possono parlare adesso. (They can't talk now.)" }
+      ],
+      "imperfetto": [
+        { "subject": "io",      "italian": "potevo",    "english": "I used to be able to",               "example": "Non potevo dormire. (I couldn't sleep.)" },
+        { "subject": "tu",      "italian": "potevi",    "english": "you used to be able to (informal)",  "example": "Potevi chiamarmi. (You could have called me.)" },
+        { "subject": "lui/lei", "italian": "poteva",    "english": "he/she used to be able to",          "example": "Poteva farlo da solo. (He/She could do it alone.)" },
+        { "subject": "noi",     "italian": "potevamo",  "english": "we used to be able to",              "example": "Potevamo aiutarti. (We could have helped you.)" },
+        { "subject": "voi",     "italian": "potevate",  "english": "you used to be able to (plural)",    "example": "Potevate restare ancora. (You could have stayed longer.)" },
+        { "subject": "loro",    "italian": "potevano",  "english": "they used to be able to",            "example": "Non potevano crederci. (They couldn't believe it.)" }
+      ],
+      "passato_prossimo": [
+        { "subject": "io",      "italian": "ho potuto",      "english": "I have been able to",                 "example": "Non ho potuto chiamarti. (I wasn't able to call you.)" },
+        { "subject": "tu",      "italian": "hai potuto",     "english": "you have been able to (informal)",    "example": "Hai potuto finire il lavoro? (Were you able to finish the work?)" },
+        { "subject": "lui/lei", "italian": "ha potuto",      "english": "he/she has been able to",             "example": "Ha potuto vedere il film. (He/She was able to see the movie.)" },
+        { "subject": "noi",     "italian": "abbiamo potuto", "english": "we have been able to",                "example": "Abbiamo potuto parlare con lui. (We were able to talk with him.)" },
+        { "subject": "voi",     "italian": "avete potuto",   "english": "you have been able to (plural)",      "example": "Avete potuto venire? (Were you able to come?)" },
+        { "subject": "loro",    "italian": "hanno potuto",   "english": "they have been able to",              "example": "Hanno potuto partire presto. (They were able to leave early.)" }
+      ]
+    }
+  },
+  {
+    "id": "andare",
+    "infinitive": "andare",
+    "english": "to go",
+    "pronunciation": "(ahn-DAH-reh)",
+    "gerund": {
+      "italian": "andando",
+      "english": "going",
+      "example": "Sto andando al lavoro. (I am going to work.)"
+    },
+    "tenses": {
+      "present": [
+        { "subject": "io",      "italian": "vado",    "english": "I go",                "example": "Vado a scuola. (I go to school.)" },
+        { "subject": "tu",      "italian": "vai",     "english": "you go (informal)",   "example": "Dove vai? (Where are you going?)" },
+        { "subject": "lui/lei", "italian": "va",      "english": "he/she goes",         "example": "Va a Roma domani. (He/She is going to Rome tomorrow.)" },
+        { "subject": "noi",     "italian": "andiamo", "english": "we go",               "example": "Andiamo al cinema. (We're going to the cinema.)" },
+        { "subject": "voi",     "italian": "andate",  "english": "you go (plural)",     "example": "Voi andate in vacanza? (Are you going on vacation?)" },
+        { "subject": "loro",    "italian": "vanno",   "english": "they go",             "example": "Vanno in palestra. (They go to the gym.)" }
+      ],
+      "imperfetto": [
+        { "subject": "io",      "italian": "andavo",    "english": "I used to go",                "example": "Andavo a scuola in bicicletta. (I used to go to school by bike.)" },
+        { "subject": "tu",      "italian": "andavi",    "english": "you used to go (informal)",   "example": "Andavi spesso al mare. (You often used to go to the sea.)" },
+        { "subject": "lui/lei", "italian": "andava",    "english": "he/she used to go",           "example": "Andava a trovare i nonni. (He/She used to visit the grandparents.)" },
+        { "subject": "noi",     "italian": "andavamo",  "english": "we used to go",               "example": "Andavamo in montagna ogni estate. (We used to go to the mountains every summer.)" },
+        { "subject": "voi",     "italian": "andavate",  "english": "you used to go (plural)",     "example": "Andavate a teatro ogni settimana. (You used to go to the theater every week.)" },
+        { "subject": "loro",    "italian": "andavano",  "english": "they used to go",             "example": "Andavano a piedi al lavoro. (They used to walk to work.)" }
+      ],
+      "passato_prossimo": [
+        { "subject": "io",      "italian": "sono andato/a",  "english": "I have gone",                "example": "Sono andato/a al supermercato. (I went to the supermarket.)" },
+        { "subject": "tu",      "italian": "sei andato/a",   "english": "you have gone (informal)",   "example": "Sei andato/a a casa? (Did you go home?)" },
+        { "subject": "lui/lei", "italian": "è andato/a",     "english": "he/she has gone",            "example": "È andato/a in vacanza. (He/She went on vacation.)" },
+        { "subject": "noi",     "italian": "siamo andati/e", "english": "we have gone",               "example": "Siamo andati/e a Roma. (We went to Rome.)" },
+        { "subject": "voi",     "italian": "siete andati/e", "english": "you have gone (plural)",     "example": "Siete andati/e al concerto? (Did you go to the concert?)" },
+        { "subject": "loro",    "italian": "sono andati/e",  "english": "they have gone",             "example": "Sono andati/e via presto. (They left early.)" }
+      ]
+    }
+  },
+  {
+    "id": "vedere",
+    "infinitive": "vedere",
+    "english": "to see",
+    "pronunciation": "(veh-DEH-reh)",
+    "gerund": {
+      "italian": "vedendo",
+      "english": "seeing",
+      "example": "Vedendo la pioggia, sono rimasto a casa. (Seeing the rain, I stayed home.)"
+    },
+    "tenses": {
+      "present": [
+        { "subject": "io",      "italian": "vedo",     "english": "I see",                "example": "Vedo il mare dalla finestra. (I see the sea from the window.)" },
+        { "subject": "tu",      "italian": "vedi",     "english": "you see (informal)",   "example": "Vedi quell'uccello? (Do you see that bird?)" },
+        { "subject": "lui/lei", "italian": "vede",     "english": "he/she sees",          "example": "Non vede bene senza occhiali. (He/She doesn't see well without glasses.)" },
+        { "subject": "noi",     "italian": "vediamo",  "english": "we see",               "example": "Ci vediamo domani! (See you tomorrow!)" },
+        { "subject": "voi",     "italian": "vedete",   "english": "you see (plural)",     "example": "Vedete quella montagna? (Do you see that mountain?)" },
+        { "subject": "loro",    "italian": "vedono",   "english": "they see",             "example": "Vedono un film insieme. (They are watching a movie together.)" }
+      ],
+      "imperfetto": [
+        { "subject": "io",      "italian": "vedevo",    "english": "I used to see",                "example": "Vedevo gli amici ogni weekend. (I used to see friends every weekend.)" },
+        { "subject": "tu",      "italian": "vedevi",    "english": "you used to see (informal)",   "example": "Vedevi spesso i tuoi nonni? (Did you often see your grandparents?)" },
+        { "subject": "lui/lei", "italian": "vedeva",    "english": "he/she used to see",           "example": "Vedeva il mare dal balcone. (He/She could see the sea from the balcony.)" },
+        { "subject": "noi",     "italian": "vedevamo",  "english": "we used to see",               "example": "Vedevamo le stelle dalla montagna. (We could see the stars from the mountain.)" },
+        { "subject": "voi",     "italian": "vedevate",  "english": "you used to see (plural)",     "example": "Vedevate quel programma in TV? (Did you watch that TV show?)" },
+        { "subject": "loro",    "italian": "vedevano",  "english": "they used to see",             "example": "Vedevano un film ogni venerdì. (They used to watch a movie every Friday.)" }
+      ],
+      "passato_prossimo": [
+        { "subject": "io",      "italian": "ho visto",      "english": "I have seen",                "example": "Ho visto un bel film. (I saw a good movie.)" },
+        { "subject": "tu",      "italian": "hai visto",     "english": "you have seen (informal)",   "example": "Hai visto Marco oggi? (Have you seen Marco today?)" },
+        { "subject": "lui/lei", "italian": "ha visto",      "english": "he/she has seen",            "example": "Ha visto un incidente. (He/She saw an accident.)" },
+        { "subject": "noi",     "italian": "abbiamo visto", "english": "we have seen",               "example": "Abbiamo visto la mostra. (We saw the exhibition.)" },
+        { "subject": "voi",     "italian": "avete visto",   "english": "you have seen (plural)",     "example": "Avete visto la partita? (Did you watch the game?)" },
+        { "subject": "loro",    "italian": "hanno visto",   "english": "they have seen",             "example": "Hanno visto le stelle cadenti. (They saw the shooting stars.)" }
+      ]
+    }
+  },
+  {
+    "id": "volere",
+    "infinitive": "volere",
+    "english": "to want",
+    "pronunciation": "(voh-LEH-reh)",
+    "gerund": {
+      "italian": "volendo",
+      "english": "wanting",
+      "example": "Volendo, possiamo uscire stasera. (If we want, we can go out tonight.)"
+    },
+    "tenses": {
+      "present": [
+        { "subject": "io",      "italian": "voglio",   "english": "I want",                "example": "Voglio un caffè. (I want a coffee.)" },
+        { "subject": "tu",      "italian": "vuoi",     "english": "you want (informal)",   "example": "Cosa vuoi mangiare? (What do you want to eat?)" },
+        { "subject": "lui/lei", "italian": "vuole",    "english": "he/she wants",          "example": "Vuole andare a casa. (He/She wants to go home.)" },
+        { "subject": "noi",     "italian": "vogliamo", "english": "we want",               "example": "Vogliamo viaggiare. (We want to travel.)" },
+        { "subject": "voi",     "italian": "volete",   "english": "you want (plural)",     "example": "Volete venire con noi? (Do you want to come with us?)" },
+        { "subject": "loro",    "italian": "vogliono", "english": "they want",             "example": "Vogliono comprare una casa. (They want to buy a house.)" }
+      ],
+      "imperfetto": [
+        { "subject": "io",      "italian": "volevo",    "english": "I used to want",                "example": "Volevo dirti una cosa. (I wanted to tell you something.)" },
+        { "subject": "tu",      "italian": "volevi",    "english": "you used to want (informal)",   "example": "Cosa volevi? (What did you want?)" },
+        { "subject": "lui/lei", "italian": "voleva",    "english": "he/she used to want",           "example": "Voleva venire ma non poteva. (He/She wanted to come but couldn't.)" },
+        { "subject": "noi",     "italian": "volevamo",  "english": "we used to want",               "example": "Volevamo vederti. (We wanted to see you.)" },
+        { "subject": "voi",     "italian": "volevate",  "english": "you used to want (plural)",     "example": "Volevate uscire stasera? (Did you want to go out tonight?)" },
+        { "subject": "loro",    "italian": "volevano",  "english": "they used to want",             "example": "Volevano fare un viaggio. (They wanted to take a trip.)" }
+      ],
+      "passato_prossimo": [
+        { "subject": "io",      "italian": "ho voluto",      "english": "I have wanted",                "example": "Ho voluto dirti la verità. (I wanted to tell you the truth.)" },
+        { "subject": "tu",      "italian": "hai voluto",     "english": "you have wanted (informal)",   "example": "Hai voluto provare? (Did you want to try?)" },
+        { "subject": "lui/lei", "italian": "ha voluto",      "english": "he/she has wanted",            "example": "Ha voluto pagare il conto. (He/She wanted to pay the bill.)" },
+        { "subject": "noi",     "italian": "abbiamo voluto", "english": "we have wanted",               "example": "Abbiamo voluto aspettare. (We wanted to wait.)" },
+        { "subject": "voi",     "italian": "avete voluto",   "english": "you have wanted (plural)",     "example": "Avete voluto fare di testa vostra. (You wanted to do things your way.)" },
+        { "subject": "loro",    "italian": "hanno voluto",   "english": "they have wanted",             "example": "Hanno voluto restare a casa. (They wanted to stay home.)" }
+      ]
+    }
+  },
+  {
+    "id": "stare",
+    "infinitive": "stare",
+    "english": "to stay / to be",
+    "pronunciation": "(STAH-reh)",
+    "gerund": {
+      "italian": "stando",
+      "english": "staying / being",
+      "example": "Stando attento, ho evitato l'errore. (By paying attention, I avoided the mistake.)"
+    },
+    "tenses": {
+      "present": [
+        { "subject": "io",      "italian": "sto",     "english": "I stay / I am",          "example": "Sto bene, grazie. (I'm well, thanks.)" },
+        { "subject": "tu",      "italian": "stai",    "english": "you stay (informal)",    "example": "Come stai? (How are you?)" },
+        { "subject": "lui/lei", "italian": "sta",     "english": "he/she stays",           "example": "Sta dormendo. (He/She is sleeping.)" },
+        { "subject": "noi",     "italian": "stiamo",  "english": "we stay",                "example": "Stiamo arrivando. (We're arriving.)" },
+        { "subject": "voi",     "italian": "state",   "english": "you stay (plural)",      "example": "State zitti! (Be quiet!)" },
+        { "subject": "loro",    "italian": "stanno",  "english": "they stay",              "example": "Stanno mangiando. (They are eating.)" }
+      ],
+      "imperfetto": [
+        { "subject": "io",      "italian": "stavo",    "english": "I used to stay",                "example": "Stavo male ieri. (I was unwell yesterday.)" },
+        { "subject": "tu",      "italian": "stavi",    "english": "you used to stay (informal)",   "example": "Stavi guardando la TV? (Were you watching TV?)" },
+        { "subject": "lui/lei", "italian": "stava",    "english": "he/she used to stay",           "example": "Stava piovendo. (It was raining.)" },
+        { "subject": "noi",     "italian": "stavamo",  "english": "we used to stay",               "example": "Stavamo per uscire. (We were about to go out.)" },
+        { "subject": "voi",     "italian": "stavate",  "english": "you used to stay (plural)",     "example": "Stavate dormendo. (You were sleeping.)" },
+        { "subject": "loro",    "italian": "stavano",  "english": "they used to stay",             "example": "Stavano studiando. (They were studying.)" }
+      ],
+      "passato_prossimo": [
+        { "subject": "io",      "italian": "sono stato/a",  "english": "I have stayed / I have been",   "example": "Sono stato/a a Firenze. (I have been to Florence.)" },
+        { "subject": "tu",      "italian": "sei stato/a",   "english": "you have stayed (informal)",    "example": "Sei stato/a malato/a? (Have you been sick?)" },
+        { "subject": "lui/lei", "italian": "è stato/a",     "english": "he/she has stayed",             "example": "È stato/a un piacere. (It has been a pleasure.)" },
+        { "subject": "noi",     "italian": "siamo stati/e", "english": "we have stayed",                "example": "Siamo stati/e a casa tutto il giorno. (We stayed home all day.)" },
+        { "subject": "voi",     "italian": "siete stati/e", "english": "you have stayed (plural)",      "example": "Siete stati/e in Italia? (Have you been to Italy?)" },
+        { "subject": "loro",    "italian": "sono stati/e",  "english": "they have stayed",              "example": "Sono stati/e molto gentili. (They have been very kind.)" }
+      ]
+    }
+  },
+  {
+    "id": "dovere",
+    "infinitive": "dovere",
+    "english": "to have to / must",
+    "pronunciation": "(doh-VEH-reh)",
+    "gerund": {
+      "italian": "dovendo",
+      "english": "having to",
+      "example": "Dovendo partire presto, sono andato a letto. (Having to leave early, I went to bed.)"
+    },
+    "tenses": {
+      "present": [
+        { "subject": "io",      "italian": "devo",     "english": "I must / I have to",       "example": "Devo studiare. (I have to study.)" },
+        { "subject": "tu",      "italian": "devi",     "english": "you must (informal)",      "example": "Devi mangiare di più. (You need to eat more.)" },
+        { "subject": "lui/lei", "italian": "deve",     "english": "he/she must",              "example": "Deve lavorare oggi. (He/She has to work today.)" },
+        { "subject": "noi",     "italian": "dobbiamo", "english": "we must",                  "example": "Dobbiamo partire presto. (We have to leave early.)" },
+        { "subject": "voi",     "italian": "dovete",   "english": "you must (plural)",        "example": "Dovete fare attenzione. (You must pay attention.)" },
+        { "subject": "loro",    "italian": "devono",   "english": "they must",                "example": "Devono finire i compiti. (They have to finish their homework.)" }
+      ],
+      "imperfetto": [
+        { "subject": "io",      "italian": "dovevo",    "english": "I had to / I used to have to",            "example": "Dovevo andare al lavoro. (I had to go to work.)" },
+        { "subject": "tu",      "italian": "dovevi",    "english": "you had to (informal)",                   "example": "Cosa dovevi fare? (What were you supposed to do?)" },
+        { "subject": "lui/lei", "italian": "doveva",    "english": "he/she had to",                           "example": "Doveva arrivare alle otto. (He/She was supposed to arrive at eight.)" },
+        { "subject": "noi",     "italian": "dovevamo",  "english": "we had to",                               "example": "Dovevamo chiamarli. (We were supposed to call them.)" },
+        { "subject": "voi",     "italian": "dovevate",  "english": "you had to (plural)",                     "example": "Dovevate stare zitti. (You were supposed to stay quiet.)" },
+        { "subject": "loro",    "italian": "dovevano",  "english": "they had to",                             "example": "Dovevano finire entro venerdì. (They had to finish by Friday.)" }
+      ],
+      "passato_prossimo": [
+        { "subject": "io",      "italian": "ho dovuto",      "english": "I have had to",                "example": "Ho dovuto cambiare i piani. (I had to change my plans.)" },
+        { "subject": "tu",      "italian": "hai dovuto",     "english": "you have had to (informal)",   "example": "Hai dovuto aspettare? (Did you have to wait?)" },
+        { "subject": "lui/lei", "italian": "ha dovuto",      "english": "he/she has had to",            "example": "Ha dovuto lavorare di sabato. (He/She had to work on Saturday.)" },
+        { "subject": "noi",     "italian": "abbiamo dovuto", "english": "we have had to",               "example": "Abbiamo dovuto rinunciare. (We had to give up.)" },
+        { "subject": "voi",     "italian": "avete dovuto",   "english": "you have had to (plural)",     "example": "Avete dovuto pagare di più? (Did you have to pay more?)" },
+        { "subject": "loro",    "italian": "hanno dovuto",   "english": "they have had to",             "example": "Hanno dovuto partire subito. (They had to leave immediately.)" }
+      ]
+    }
+  },
+  {
+    "id": "venire",
+    "infinitive": "venire",
+    "english": "to come",
+    "pronunciation": "(veh-NEE-reh)",
+    "gerund": {
+      "italian": "venendo",
+      "english": "coming",
+      "example": "Venendo a casa, ho visto un incidente. (Coming home, I saw an accident.)"
+    },
+    "tenses": {
+      "present": [
+        { "subject": "io",      "italian": "vengo",    "english": "I come",                "example": "Vengo subito. (I'm coming right away.)" },
+        { "subject": "tu",      "italian": "vieni",    "english": "you come (informal)",   "example": "Vieni con me? (Are you coming with me?)" },
+        { "subject": "lui/lei", "italian": "viene",    "english": "he/she comes",          "example": "Viene da Roma. (He/She comes from Rome.)" },
+        { "subject": "noi",     "italian": "veniamo",  "english": "we come",               "example": "Veniamo a trovarvi domani. (We're coming to visit you tomorrow.)" },
+        { "subject": "voi",     "italian": "venite",   "english": "you come (plural)",     "example": "Da dove venite? (Where are you from?)" },
+        { "subject": "loro",    "italian": "vengono",  "english": "they come",             "example": "Vengono alla festa. (They're coming to the party.)" }
+      ],
+      "imperfetto": [
+        { "subject": "io",      "italian": "venivo",    "english": "I used to come",                "example": "Venivo a trovarti spesso. (I used to come visit you often.)" },
+        { "subject": "tu",      "italian": "venivi",    "english": "you used to come (informal)",   "example": "Da dove venivi? (Where were you coming from?)" },
+        { "subject": "lui/lei", "italian": "veniva",    "english": "he/she used to come",           "example": "Veniva qui ogni domenica. (He/She used to come here every Sunday.)" },
+        { "subject": "noi",     "italian": "venivamo",  "english": "we used to come",               "example": "Venivamo da una lunga riunione. (We were coming from a long meeting.)" },
+        { "subject": "voi",     "italian": "venivate",  "english": "you used to come (plural)",     "example": "Venivate sempre in ritardo. (You always used to come late.)" },
+        { "subject": "loro",    "italian": "venivano",  "english": "they used to come",             "example": "Venivano dal paese vicino. (They used to come from the nearby village.)" }
+      ],
+      "passato_prossimo": [
+        { "subject": "io",      "italian": "sono venuto/a",  "english": "I have come",                "example": "Sono venuto/a a piedi. (I came on foot.)" },
+        { "subject": "tu",      "italian": "sei venuto/a",   "english": "you have come (informal)",   "example": "Sei venuto/a alla festa? (Did you come to the party?)" },
+        { "subject": "lui/lei", "italian": "è venuto/a",     "english": "he/she has come",            "example": "È venuto/a a salutarmi. (He/She came to say hi.)" },
+        { "subject": "noi",     "italian": "siamo venuti/e", "english": "we have come",               "example": "Siamo venuti/e in treno. (We came by train.)" },
+        { "subject": "voi",     "italian": "siete venuti/e", "english": "you have come (plural)",     "example": "Siete venuti/e da soli? (Did you come alone?)" },
+        { "subject": "loro",    "italian": "sono venuti/e",  "english": "they have come",             "example": "Sono venuti/e ieri sera. (They came last night.)" }
+      ]
+    }
+  },
+  {
+    "id": "mangiare",
+    "infinitive": "mangiare",
+    "english": "to eat",
+    "pronunciation": "(mahn-JAH-reh)",
+    "gerund": {
+      "italian": "mangiando",
+      "english": "eating",
+      "example": "Sto mangiando una pizza. (I am eating a pizza.)"
+    },
+    "tenses": {
+      "present": [
+        { "subject": "io",      "italian": "mangio",    "english": "I eat",                "example": "Mangio una mela. (I'm eating an apple.)" },
+        { "subject": "tu",      "italian": "mangi",     "english": "you eat (informal)",   "example": "Cosa mangi a pranzo? (What do you eat for lunch?)" },
+        { "subject": "lui/lei", "italian": "mangia",    "english": "he/she eats",          "example": "Mangia troppo. (He/She eats too much.)" },
+        { "subject": "noi",     "italian": "mangiamo",  "english": "we eat",               "example": "Mangiamo insieme? (Shall we eat together?)" },
+        { "subject": "voi",     "italian": "mangiate",  "english": "you eat (plural)",     "example": "Mangiate spesso fuori? (Do you often eat out?)" },
+        { "subject": "loro",    "italian": "mangiano",  "english": "they eat",             "example": "Mangiano la pasta ogni giorno. (They eat pasta every day.)" }
+      ],
+      "imperfetto": [
+        { "subject": "io",      "italian": "mangiavo",    "english": "I used to eat",                "example": "Mangiavo sempre i biscotti della nonna. (I always used to eat grandma's cookies.)" },
+        { "subject": "tu",      "italian": "mangiavi",    "english": "you used to eat (informal)",   "example": "Mangiavi le verdure da bambino? (Did you eat vegetables as a child?)" },
+        { "subject": "lui/lei", "italian": "mangiava",    "english": "he/she used to eat",           "example": "Mangiava velocemente. (He/She used to eat quickly.)" },
+        { "subject": "noi",     "italian": "mangiavamo",  "english": "we used to eat",               "example": "Mangiavamo al ristorante ogni venerdì. (We used to eat at the restaurant every Friday.)" },
+        { "subject": "voi",     "italian": "mangiavate",  "english": "you used to eat (plural)",     "example": "Mangiavate molto pesce. (You used to eat a lot of fish.)" },
+        { "subject": "loro",    "italian": "mangiavano",  "english": "they used to eat",             "example": "Mangiavano insieme la domenica. (They used to eat together on Sundays.)" }
+      ],
+      "passato_prossimo": [
+        { "subject": "io",      "italian": "ho mangiato",      "english": "I have eaten",                "example": "Ho mangiato troppo. (I ate too much.)" },
+        { "subject": "tu",      "italian": "hai mangiato",     "english": "you have eaten (informal)",   "example": "Hai mangiato la pizza? (Did you eat the pizza?)" },
+        { "subject": "lui/lei", "italian": "ha mangiato",      "english": "he/she has eaten",            "example": "Ha mangiato tutto. (He/She ate everything.)" },
+        { "subject": "noi",     "italian": "abbiamo mangiato", "english": "we have eaten",               "example": "Abbiamo mangiato bene. (We ate well.)" },
+        { "subject": "voi",     "italian": "avete mangiato",   "english": "you have eaten (plural)",     "example": "Avete mangiato il dolce? (Did you eat dessert?)" },
+        { "subject": "loro",    "italian": "hanno mangiato",   "english": "they have eaten",             "example": "Hanno mangiato in fretta. (They ate quickly.)" }
+      ]
+    }
+  },
+  {
+    "id": "bere",
+    "infinitive": "bere",
+    "english": "to drink",
+    "pronunciation": "(BEH-reh)",
+    "gerund": {
+      "italian": "bevendo",
+      "english": "drinking",
+      "example": "Sto bevendo un caffè. (I am drinking a coffee.)"
+    },
+    "tenses": {
+      "present": [
+        { "subject": "io",      "italian": "bevo",     "english": "I drink",                "example": "Bevo molta acqua. (I drink a lot of water.)" },
+        { "subject": "tu",      "italian": "bevi",     "english": "you drink (informal)",   "example": "Cosa bevi? (What are you drinking?)" },
+        { "subject": "lui/lei", "italian": "beve",     "english": "he/she drinks",          "example": "Beve sempre il tè. (He/She always drinks tea.)" },
+        { "subject": "noi",     "italian": "beviamo",  "english": "we drink",               "example": "Beviamo un bicchiere di vino? (Shall we have a glass of wine?)" },
+        { "subject": "voi",     "italian": "bevete",   "english": "you drink (plural)",     "example": "Bevete caffè la mattina? (Do you drink coffee in the morning?)" },
+        { "subject": "loro",    "italian": "bevono",   "english": "they drink",             "example": "Bevono solo acqua frizzante. (They only drink sparkling water.)" }
+      ],
+      "imperfetto": [
+        { "subject": "io",      "italian": "bevevo",    "english": "I used to drink",                "example": "Bevevo il latte da bambino. (I used to drink milk as a child.)" },
+        { "subject": "tu",      "italian": "bevevi",    "english": "you used to drink (informal)",   "example": "Bevevi tanto caffè all'università? (Did you drink a lot of coffee in college?)" },
+        { "subject": "lui/lei", "italian": "beveva",    "english": "he/she used to drink",           "example": "Beveva una birra ogni sera. (He/She used to drink a beer every evening.)" },
+        { "subject": "noi",     "italian": "bevevamo",  "english": "we used to drink",               "example": "Bevevamo il vino della nonna. (We used to drink grandma's wine.)" },
+        { "subject": "voi",     "italian": "bevevate",  "english": "you used to drink (plural)",     "example": "Bevevate il tè ogni pomeriggio. (You used to drink tea every afternoon.)" },
+        { "subject": "loro",    "italian": "bevevano",  "english": "they used to drink",             "example": "Bevevano sempre acqua del rubinetto. (They always used to drink tap water.)" }
+      ],
+      "passato_prossimo": [
+        { "subject": "io",      "italian": "ho bevuto",      "english": "I have drunk",                "example": "Ho bevuto troppo caffè. (I drank too much coffee.)" },
+        { "subject": "tu",      "italian": "hai bevuto",     "english": "you have drunk (informal)",   "example": "Hai bevuto abbastanza acqua? (Have you drunk enough water?)" },
+        { "subject": "lui/lei", "italian": "ha bevuto",      "english": "he/she has drunk",            "example": "Ha bevuto un bicchiere di vino. (He/She drank a glass of wine.)" },
+        { "subject": "noi",     "italian": "abbiamo bevuto", "english": "we have drunk",               "example": "Abbiamo bevuto alla tua salute. (We drank to your health.)" },
+        { "subject": "voi",     "italian": "avete bevuto",   "english": "you have drunk (plural)",     "example": "Avete bevuto il caffè italiano? (Have you tried Italian coffee?)" },
+        { "subject": "loro",    "italian": "hanno bevuto",   "english": "they have drunk",             "example": "Hanno bevuto tutta la bottiglia. (They drank the whole bottle.)" }
+      ]
+    }
+  }
+]

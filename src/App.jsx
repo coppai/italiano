@@ -13,6 +13,7 @@ import ArticleStats from './routes/ArticleStats.jsx';
 import Possessives from './routes/Possessives.jsx';
 import PossessiveFlashcards from './routes/PossessiveFlashcards.jsx';
 import Verbs from './routes/Verbs.jsx';
+import VerbDeepDive from './routes/VerbDeepDive.jsx';
 import Infinitive from './routes/Infinitive.jsx';
 import VerbStats from './routes/VerbStats.jsx';
 import Flashcards from './routes/Flashcards.jsx';
@@ -42,6 +43,7 @@ export default function App() {
           <Route path="/possessives/flashcards" element={<PossessiveFlashcards />} />
           <Route path="/verbs" element={<VerbsMenu />} />
           <Route path="/verbs/conjugation" element={<Verbs />} />
+          <Route path="/verbs/deep-dive" element={<VerbDeepDive />} />
           <Route path="/verbs/infinitive" element={<Infinitive />} />
           <Route path="/verbs/stats" element={<VerbStats />} />
           <Route path="/flashcards" element={<Flashcards />} />
