@@ -1,10 +1,12 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import FlipDeck from '../components/flip/FlipDeck.jsx';
 import SelfRateButtons from '../components/flip/SelfRateButtons.jsx';
 import { useJsonResource } from '../hooks/useJsonResource.js';
 import { useBodyClass } from '../hooks/useBodyClass.js';
 import { speakItalian } from '../lib/speak.js';
+import { requeueAhead } from '../lib/verbHelpers.js';
+import { shuffle } from '../lib/shuffle.js';
 
 const TENSE_ORDER = ['present', 'imperfetto', 'passato_prossimo', 'gerund'];
 
@@ -173,8 +175,9 @@ export default function VerbDeepDive() {
 
   const [currentVerb, setCurrentVerb] = useState(null);
   const [currentTense, setCurrentTense] = useState('present');
-  const [phase, setPhase] = useState('cards'); // 'cards' | 'tense-intro' | 'verb-complete'
+  const [phase, setPhase] = useState('cards'); // 'cards' | 'tense-intro' | 'stage-complete' | 'verb-complete'
   const [tenseStats, setTenseStats] = useState({}); // { tense: { correct, incorrect, misses, completed } }
+  const [deck, setDeck] = useState([]);
   const [index, setIndex] = useState(0);
   const [flipped, setFlipped] = useState(false);
   const [query, setQuery] = useState('');
@@ -191,6 +194,18 @@ export default function VerbDeepDive() {
     () => (currentVerb ? buildCardsByTense(currentVerb) : {}),
     [currentVerb],
   );
+
+  // When the user enters the cards phase for a tense (initial load, "Start" on
+  // the intro, or naturally after finishing the previous tense's intro), seed
+  // the deck with that tense's cards. The deck mutates during play: correct
+  // removes; incorrect requeues 3-5 ahead.
+  useEffect(() => {
+    if (phase !== 'cards' || !currentVerb) return;
+    setDeck(cardsByTense[currentTense] || []);
+    setIndex(0);
+    setFlipped(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [phase, currentTense, currentVerb?.id]);
 
   if (loading) return <Status>Loading...</Status>;
   if (error || !verbs?.length) return <Status>Failed to load verbDeepDive.json</Status>;
@@ -229,56 +244,69 @@ export default function VerbDeepDive() {
     setFlipped(false);
   }
 
-  const matches = query.trim()
-    ? verbs.filter(v => v.infinitive.toLowerCase().startsWith(query.trim().toLowerCase()))
-    : [];
-
-  const deck = cardsByTense[currentTense] || [];
   const current = deck[index];
 
-  function advanceAfterMark(isCorrect, missInfo) {
+  function markCorrect() {
+    if (!current) return;
+    const newDeck = deck.slice(0, index).concat(deck.slice(index + 1));
+    setDeck(newDeck);
+    setFlipped(false);
+    const stageDone = newDeck.length === 0;
+
     setTenseStats(prev => {
       const cur = prev[currentTense] || emptyStat();
-      const lastCard = index + 1 >= deck.length;
       return {
         ...prev,
         [currentTense]: {
-          correct: cur.correct + (isCorrect ? 1 : 0),
-          incorrect: cur.incorrect + (isCorrect ? 0 : 1),
-          misses: isCorrect ? cur.misses : [...cur.misses, missInfo],
-          completed: lastCard || cur.completed,
+          correct: cur.correct + 1,
+          incorrect: cur.incorrect,
+          misses: cur.misses,
+          completed: stageDone || cur.completed,
         },
       };
     });
 
-    const lastCard = index + 1 >= deck.length;
-    if (lastCard) {
+    if (stageDone) {
       const tenseIdx = TENSE_ORDER.indexOf(currentTense);
       if (tenseIdx + 1 < TENSE_ORDER.length) {
-        setCurrentTense(TENSE_ORDER[tenseIdx + 1]);
-        setPhase('tense-intro');
+        setPhase('stage-complete');
       } else {
         setPhase('verb-complete');
       }
-    } else {
-      setIndex(i => i + 1);
-      setFlipped(false);
+    } else if (index >= newDeck.length) {
+      // Removed the tail card — pull index back so deck[index] is valid.
+      setIndex(newDeck.length - 1);
     }
-  }
-
-  function markCorrect() {
-    if (!current) return;
-    advanceAfterMark(true, null);
+    // Otherwise index stays: deck[index] is now the card that followed.
   }
 
   function markIncorrect() {
     if (!current) return;
-    advanceAfterMark(false, {
+    const missInfo = {
       tense: current.tense,
       subject: current.subject,
       english: current.english,
       italian: current.italian,
+    };
+    const newDeck = requeueAhead(deck, index);
+    setDeck(newDeck);
+    setFlipped(false);
+
+    setTenseStats(prev => {
+      const cur = prev[currentTense] || emptyStat();
+      const alreadyMissed = cur.misses.some(m => m.italian === missInfo.italian && m.subject === missInfo.subject);
+      return {
+        ...prev,
+        [currentTense]: {
+          correct: cur.correct,
+          incorrect: cur.incorrect + 1,
+          misses: alreadyMissed ? cur.misses : [...cur.misses, missInfo],
+          completed: cur.completed,
+        },
+      };
     });
+    // requeueAhead returns a same-length deck with the missed card moved later,
+    // so deck[index] is now the next unanswered card.
   }
 
   return (
@@ -290,7 +318,6 @@ export default function VerbDeepDive() {
         verbs={verbs}
         query={query}
         setQuery={setQuery}
-        matches={matches}
         currentId={currentVerb?.id}
         onSelect={startVerb}
         onRandom={nextRandomVerb}
@@ -305,12 +332,27 @@ export default function VerbDeepDive() {
         />
       )}
 
+      {phase === 'stage-complete' && currentVerb && (
+        <StageComplete
+          tense={currentTense}
+          stat={tenseStats[currentTense]}
+          nextTense={TENSE_ORDER[TENSE_ORDER.indexOf(currentTense) + 1]}
+          onContinue={() => {
+            const nextIdx = TENSE_ORDER.indexOf(currentTense) + 1;
+            if (nextIdx < TENSE_ORDER.length) {
+              setCurrentTense(TENSE_ORDER[nextIdx]);
+              setPhase('tense-intro');
+            } else {
+              setPhase('verb-complete');
+            }
+          }}
+        />
+      )}
+
       {phase === 'tense-intro' && currentVerb && (
         <TenseIntro
           tense={currentTense}
           verb={currentVerb}
-          prevTenseStat={tenseStats[TENSE_ORDER[TENSE_ORDER.indexOf(currentTense) - 1]]}
-          prevTenseLabel={TENSE_LABELS[TENSE_ORDER[TENSE_ORDER.indexOf(currentTense) - 1]]}
           onStart={startTenseFromIntro}
         />
       )}
@@ -326,7 +368,7 @@ export default function VerbDeepDive() {
       {phase === 'cards' && current && (
         <>
           <FlipDeck
-            key={`${currentVerb?.id}-${currentTense}-${index}`}
+            key={`${currentVerb?.id}-${current?.italian}-${current?.subject || ''}-${deck.length}`}
             current={current}
             flipped={flipped}
             onFlip={() => setFlipped(f => !f)}
@@ -361,12 +403,30 @@ export default function VerbDeepDive() {
           <div className="tap-hint">👆 Tap card to flip</div>
 
           <div className="progress">
-            {TENSE_LABELS[currentTense]} · card <strong>{index + 1}</strong> of {deck.length}
-            {' · '}
-            <span style={{ color: 'var(--success)' }}>✓ {tenseStats[currentTense]?.correct || 0}</span>
-            {' / '}
-            <span style={{ color: 'var(--danger)' }}>✗ {tenseStats[currentTense]?.incorrect || 0}</span>
+            {TENSE_LABELS[currentTense]} · <span>{deck.length}</span>{' '}
+            {deck.length === 1 ? 'card' : 'cards'} left · ✓
+            {' '}<span style={{ color: '#b6f5c5' }}>{tenseStats[currentTense]?.correct || 0}</span>
+            {' / '}✗
+            {' '}<span style={{ color: '#ffc1c1' }}>{tenseStats[currentTense]?.incorrect || 0}</span>
           </div>
+          {(tenseStats[currentTense]?.incorrect || 0) > 0 && (
+            <div style={{ textAlign: 'center', fontSize: '0.9em', color: '#666', marginTop: -10, marginBottom: 20 }}>
+              Missed cards come back later in this stage — keep going.
+            </div>
+          )}
+
+          {deck.length > 1 && (
+            <div className="controls" style={{ textAlign: 'center' }}>
+              <button
+                className="btn-secondary"
+                onClick={() => {
+                  setDeck(d => shuffle(d));
+                  setIndex(0);
+                  setFlipped(false);
+                }}
+              >🔀 Shuffle {TENSE_LABELS[currentTense]}</button>
+            </div>
+          )}
         </>
       )}
 
@@ -450,27 +510,10 @@ function TenseNavigator({ currentTense, tenseStats, phase, onJump }) {
   );
 }
 
-function TenseIntro({ tense, verb, prevTenseStat, prevTenseLabel, onStart }) {
+function TenseIntro({ tense, verb, onStart }) {
   const intro = TENSE_INTROS[tense];
-  const showRecap = prevTenseStat?.completed && (prevTenseStat.correct + prevTenseStat.incorrect) > 0;
-  const recapTotal = showRecap ? prevTenseStat.correct + prevTenseStat.incorrect : 0;
-  const recapPct = showRecap && recapTotal > 0 ? Math.round((prevTenseStat.correct / recapTotal) * 100) : 0;
   return (
     <div className="card" style={{ padding: 24, maxWidth: 640, margin: '0 auto' }}>
-      {showRecap && (
-        <div
-          style={{
-            padding: 14,
-            background: 'rgba(40,167,69,0.10)',
-            borderRadius: 8,
-            marginBottom: 18,
-            textAlign: 'center',
-          }}
-        >
-          <strong>Nice work on {prevTenseLabel}!</strong>{' '}
-          You got <span style={{ color: 'var(--success)' }}>{prevTenseStat.correct}</span> / {recapTotal} ({recapPct}%) right.
-        </div>
-      )}
       {intro ? (
         <>
           <h2 style={{ marginTop: 0 }}>{intro.title}</h2>
@@ -489,6 +532,48 @@ function TenseIntro({ tense, verb, prevTenseStat, prevTenseLabel, onStart }) {
           style={{ padding: '10px 22px', fontSize: '1.05em' }}
         >▶️ Start {TENSE_LABELS[tense]}</button>
       </div>
+    </div>
+  );
+}
+
+function StageComplete({ tense, stat, nextTense, onContinue }) {
+  const correct = stat?.correct || 0;
+  const incorrect = stat?.incorrect || 0;
+  const total = correct + incorrect;
+  const pct = total > 0 ? Math.round((correct / total) * 100) : 0;
+  const headline =
+    pct === 100 && incorrect === 0 ? '🌟 Nailed it!' :
+    pct >= 80 ? '🎉 Great work!' :
+    pct >= 60 ? '👍 Solid — keep at it!' :
+    '💪 Practice makes perfect!';
+  return (
+    <div className="card" style={{ padding: 28, maxWidth: 560, margin: '0 auto', textAlign: 'center' }}>
+      <h2 style={{ marginTop: 0 }}>{headline}</h2>
+      <p style={{ fontSize: '1.1em', color: '#444', marginBottom: 18 }}>
+        You finished <strong>{TENSE_LABELS[tense]}</strong>.
+      </p>
+      <div style={{ padding: 18, background: 'rgba(40,167,69,0.10)', borderRadius: 10, marginBottom: 22 }}>
+        <p style={{ fontSize: '1.1em', margin: '6px 0' }}>
+          <span style={{ color: 'var(--success)', fontWeight: 'bold' }}>✓ Correct: {correct}</span>
+          {' · '}
+          <span style={{ color: 'var(--danger)', fontWeight: 'bold' }}>✗ Incorrect: {incorrect}</span>
+        </p>
+        <p style={{ fontSize: '1.8em', fontWeight: 'bold', color: 'var(--primary)', margin: '8px 0 0' }}>
+          {pct}%
+        </p>
+        {incorrect > 0 && (
+          <p style={{ fontSize: '0.9em', color: '#666', marginTop: 8, marginBottom: 0 }}>
+            You got every card right eventually — that's how this stage works.
+          </p>
+        )}
+      </div>
+      <button
+        className="btn-secondary"
+        onClick={onContinue}
+        style={{ padding: '10px 22px', fontSize: '1.05em' }}
+      >
+        {nextTense ? <>▶️ Continue to {TENSE_LABELS[nextTense]}</> : <>🏁 See verb summary</>}
+      </button>
     </div>
   );
 }
@@ -634,17 +719,58 @@ function Header({ verb }) {
   );
 }
 
-function VerbPicker({ verbs, query, setQuery, matches, currentId, onSelect, onRandom }) {
+function VerbPicker({ verbs, query, setQuery, currentId, onSelect, onRandom }) {
+  const [open, setOpen] = useState(false);
+  const wrapperRef = useRef(null);
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    if (!open) return;
+    function onMouseDown(e) {
+      if (wrapperRef.current && !wrapperRef.current.contains(e.target)) {
+        setOpen(false);
+      }
+    }
+    function onKey(e) {
+      if (e.key === 'Escape') setOpen(false);
+    }
+    document.addEventListener('mousedown', onMouseDown);
+    document.addEventListener('keydown', onKey);
+    return () => {
+      document.removeEventListener('mousedown', onMouseDown);
+      document.removeEventListener('keydown', onKey);
+    };
+  }, [open]);
+
+  // Focus the input once the panel opens so the user can start typing immediately.
+  useEffect(() => {
+    if (open) inputRef.current?.focus();
+  }, [open]);
+
+  const q = query.trim().toLowerCase();
+  const filtered = (q
+    ? verbs.filter(v =>
+        v.infinitive.toLowerCase().startsWith(q) ||
+        v.english.toLowerCase().includes(q)
+      )
+    : verbs
+  ).slice().sort((a, b) => a.infinitive.localeCompare(b.infinitive));
+
+  const currentVerb = verbs.find(v => v.id === currentId);
+
   return (
-    <div className="filter-section" style={{ position: 'relative' }}>
-      <input
-        type="text"
-        placeholder="Search a verb (e.g. mang…)"
-        value={query}
-        onChange={e => setQuery(e.target.value)}
-        style={{ padding: '6px 10px', minWidth: 240 }}
-        aria-label="Search verbs"
-      />
+    <div className="filter-section" style={{ position: 'relative' }} ref={wrapperRef}>
+      <button
+        type="button"
+        className="btn-secondary"
+        onClick={() => setOpen(o => !o)}
+        aria-haspopup="listbox"
+        aria-expanded={open}
+        style={{ minWidth: 240, textAlign: 'left' }}
+      >
+        {currentVerb ? <><strong>{currentVerb.infinitive}</strong> — {currentVerb.english}</> : 'Pick a verb'}
+        <span style={{ float: 'right', marginLeft: 8 }}>▾</span>
+      </button>
       <button
         className="btn-secondary"
         onClick={onRandom}
@@ -653,47 +779,83 @@ function VerbPicker({ verbs, query, setQuery, matches, currentId, onSelect, onRa
       <span style={{ marginLeft: 10, color: '#666', fontSize: '0.9em' }}>
         {verbs.length} verbs available
       </span>
-      {matches.length > 0 && (
-        <ul
+
+      {open && (
+        <div
           style={{
             position: 'absolute',
             top: '100%',
             left: 0,
             marginTop: 4,
-            padding: 4,
-            listStyle: 'none',
             background: 'white',
             border: '1px solid #ccc',
-            borderRadius: 4,
-            boxShadow: '0 2px 6px rgba(0,0,0,0.1)',
+            borderRadius: 6,
+            boxShadow: '0 6px 18px rgba(0,0,0,0.15)',
             zIndex: 10,
-            minWidth: 260,
-            maxHeight: 260,
-            overflowY: 'auto',
+            width: 320,
+            maxWidth: 'calc(100vw - 32px)',
+            display: 'flex',
+            flexDirection: 'column',
+            overflow: 'hidden',
           }}
+          role="listbox"
         >
-          {matches.map(v => (
-            <li key={v.id}>
-              <button
-                onClick={() => onSelect(v)}
-                disabled={v.id === currentId}
-                style={{
-                  display: 'block',
-                  width: '100%',
-                  textAlign: 'left',
-                  padding: '6px 10px',
-                  background: 'none',
-                  border: 'none',
-                  cursor: v.id === currentId ? 'default' : 'pointer',
-                  opacity: v.id === currentId ? 0.5 : 1,
-                }}
-              >
-                <strong>{v.infinitive}</strong> — {v.english}
-                {v.id === currentId ? ' (current)' : ''}
-              </button>
-            </li>
-          ))}
-        </ul>
+          <input
+            ref={inputRef}
+            type="text"
+            placeholder="Type to filter…"
+            value={query}
+            onChange={e => setQuery(e.target.value)}
+            aria-label="Filter verbs"
+            style={{
+              padding: '8px 10px',
+              border: 'none',
+              borderBottom: '1px solid #eee',
+              outline: 'none',
+              fontSize: '0.95em',
+            }}
+          />
+          <ul
+            style={{
+              listStyle: 'none',
+              margin: 0,
+              padding: 0,
+              maxHeight: 280,
+              overflowY: 'auto',
+            }}
+          >
+            {filtered.map(v => (
+              <li key={v.id}>
+                <button
+                  type="button"
+                  onClick={() => {
+                    onSelect(v);
+                    setQuery('');
+                    setOpen(false);
+                  }}
+                  style={{
+                    display: 'block',
+                    width: '100%',
+                    textAlign: 'left',
+                    padding: '8px 12px',
+                    background: v.id === currentId ? 'rgba(102,126,234,0.10)' : 'none',
+                    border: 'none',
+                    cursor: 'pointer',
+                    fontSize: '0.95em',
+                  }}
+                >
+                  <strong>{v.infinitive}</strong> — {v.english}
+                  {v.id === currentId ? ' (current)' : ''}
+                </button>
+              </li>
+            ))}
+            {filtered.length === 0 && (
+              <li style={{ padding: '10px 12px', color: '#999', fontStyle: 'italic' }}>
+                No verbs match “{query}”
+              </li>
+            )}
+          </ul>
+        </div>
       )}
     </div>
   );

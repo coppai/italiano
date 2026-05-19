@@ -442,5 +442,782 @@
         { "subject": "loro",    "italian": "hanno bevuto",   "english": "they have drunk",             "example": "Hanno bevuto tutta la bottiglia. (They drank the whole bottle.)" }
       ]
     }
+  },
+  {
+    "id": "sapere",
+    "infinitive": "sapere",
+    "english": "to know (a fact)",
+    "pronunciation": "(sah-PEH-reh)",
+    "gerund": {
+      "italian": "sapendo",
+      "english": "knowing",
+      "example": "Sapendo questo, ho cambiato idea. (Knowing this, I changed my mind.)"
+    },
+    "tenses": {
+      "present": [
+        { "subject": "io",      "italian": "so",       "english": "I know",                "example": "So la risposta. (I know the answer.)" },
+        { "subject": "tu",      "italian": "sai",      "english": "you know (informal)",   "example": "Sai dove andare. (You know where to go.)" },
+        { "subject": "lui/lei", "italian": "sa",       "english": "he/she knows",          "example": "Sa parlare inglese. (He/She knows how to speak English.)" },
+        { "subject": "noi",     "italian": "sappiamo", "english": "we know",               "example": "Sappiamo la verità. (We know the truth.)" },
+        { "subject": "voi",     "italian": "sapete",   "english": "you know (plural)",     "example": "Sapete tutto. (You know everything.)" },
+        { "subject": "loro",    "italian": "sanno",    "english": "they know",             "example": "Sanno nuotare. (They know how to swim.)" }
+      ],
+      "imperfetto": [
+        { "subject": "io",      "italian": "sapevo",    "english": "I used to know",                "example": "Non sapevo la risposta. (I didn't know the answer.)" },
+        { "subject": "tu",      "italian": "sapevi",    "english": "you used to know (informal)",   "example": "Sapevi guidare? (Did you know how to drive?)" },
+        { "subject": "lui/lei", "italian": "sapeva",    "english": "he/she used to know",           "example": "Sapeva tutto di me. (He/She knew everything about me.)" },
+        { "subject": "noi",     "italian": "sapevamo",  "english": "we used to know",               "example": "Sapevamo che venivi. (We knew you were coming.)" },
+        { "subject": "voi",     "italian": "sapevate",  "english": "you used to know (plural)",     "example": "Sapevate la verità? (Did you know the truth?)" },
+        { "subject": "loro",    "italian": "sapevano",  "english": "they used to know",             "example": "Non sapevano nuotare. (They didn't know how to swim.)" }
+      ],
+      "passato_prossimo": [
+        { "subject": "io",      "italian": "ho saputo",      "english": "I have known / I found out",         "example": "Ho saputo la notizia ieri. (I found out the news yesterday.)" },
+        { "subject": "tu",      "italian": "hai saputo",     "english": "you have known (informal)",          "example": "Hai saputo cosa è successo? (Did you find out what happened?)" },
+        { "subject": "lui/lei", "italian": "ha saputo",      "english": "he/she has known",                   "example": "Ha saputo la verità. (He/She found out the truth.)" },
+        { "subject": "noi",     "italian": "abbiamo saputo", "english": "we have known",                      "example": "Abbiamo saputo tutto da lui. (We found out everything from him.)" },
+        { "subject": "voi",     "italian": "avete saputo",   "english": "you have known (plural)",            "example": "Avete saputo del suo matrimonio? (Did you hear about his/her wedding?)" },
+        { "subject": "loro",    "italian": "hanno saputo",   "english": "they have known",                    "example": "Hanno saputo gestire la situazione. (They knew how to handle the situation.)" }
+      ]
+    }
+  },
+  {
+    "id": "dare",
+    "infinitive": "dare",
+    "english": "to give",
+    "pronunciation": "(DAH-reh)",
+    "gerund": {
+      "italian": "dando",
+      "english": "giving",
+      "example": "Dando una mano, ho aiutato. (By giving a hand, I helped.)"
+    },
+    "tenses": {
+      "present": [
+        { "subject": "io",      "italian": "do",     "english": "I give",                "example": "Do un regalo. (I give a gift.)" },
+        { "subject": "tu",      "italian": "dai",    "english": "you give (informal)",   "example": "Dai l'acqua. (You give the water.)" },
+        { "subject": "lui/lei", "italian": "dà",     "english": "he/she gives",          "example": "Dà una mano. (He/She gives a hand.)" },
+        { "subject": "noi",     "italian": "diamo",  "english": "we give",               "example": "Diamo i soldi. (We give the money.)" },
+        { "subject": "voi",     "italian": "date",   "english": "you give (plural)",     "example": "Date un consiglio. (You give advice.)" },
+        { "subject": "loro",    "italian": "danno",  "english": "they give",             "example": "Danno aiuto. (They give help.)" }
+      ],
+      "imperfetto": [
+        { "subject": "io",      "italian": "davo",    "english": "I used to give",                "example": "Davo lezioni di piano. (I used to give piano lessons.)" },
+        { "subject": "tu",      "italian": "davi",    "english": "you used to give (informal)",   "example": "Davi sempre una mano. (You always used to lend a hand.)" },
+        { "subject": "lui/lei", "italian": "dava",    "english": "he/she used to give",           "example": "Dava il meglio di sé. (He/She used to give his/her best.)" },
+        { "subject": "noi",     "italian": "davamo",  "english": "we used to give",               "example": "Davamo da mangiare al gatto. (We used to feed the cat.)" },
+        { "subject": "voi",     "italian": "davate",  "english": "you used to give (plural)",     "example": "Davate sempre buoni consigli. (You always gave good advice.)" },
+        { "subject": "loro",    "italian": "davano",  "english": "they used to give",             "example": "Davano feste ogni mese. (They used to throw parties every month.)" }
+      ],
+      "passato_prossimo": [
+        { "subject": "io",      "italian": "ho dato",      "english": "I have given",                "example": "Ho dato un regalo a mia madre. (I gave a gift to my mother.)" },
+        { "subject": "tu",      "italian": "hai dato",     "english": "you have given (informal)",   "example": "Hai dato la risposta giusta. (You gave the right answer.)" },
+        { "subject": "lui/lei", "italian": "ha dato",      "english": "he/she has given",            "example": "Ha dato un esame difficile. (He/She took a difficult exam.)" },
+        { "subject": "noi",     "italian": "abbiamo dato", "english": "we have given",               "example": "Abbiamo dato il nostro meglio. (We gave our best.)" },
+        { "subject": "voi",     "italian": "avete dato",   "english": "you have given (plural)",     "example": "Avete dato una bella festa. (You threw a nice party.)" },
+        { "subject": "loro",    "italian": "hanno dato",   "english": "they have given",             "example": "Hanno dato tutto per vincere. (They gave everything to win.)" }
+      ]
+    }
+  },
+  {
+    "id": "prendere",
+    "infinitive": "prendere",
+    "english": "to take",
+    "pronunciation": "(PREHN-deh-reh)",
+    "gerund": {
+      "italian": "prendendo",
+      "english": "taking",
+      "example": "Prendendo il treno, arrivo prima. (By taking the train, I arrive sooner.)"
+    },
+    "tenses": {
+      "present": [
+        { "subject": "io",      "italian": "prendo",    "english": "I take",                "example": "Prendo il treno. (I take the train.)" },
+        { "subject": "tu",      "italian": "prendi",    "english": "you take (informal)",   "example": "Prendi il bus. (You take the bus.)" },
+        { "subject": "lui/lei", "italian": "prende",    "english": "he/she takes",          "example": "Prende un caffè. (He/She takes a coffee.)" },
+        { "subject": "noi",     "italian": "prendiamo", "english": "we take",               "example": "Prendiamo l'aereo. (We take the plane.)" },
+        { "subject": "voi",     "italian": "prendete",  "english": "you take (plural)",     "example": "Prendete la macchina. (You take the car.)" },
+        { "subject": "loro",    "italian": "prendono",  "english": "they take",             "example": "Prendono il sole. (They sunbathe.)" }
+      ],
+      "imperfetto": [
+        { "subject": "io",      "italian": "prendevo",    "english": "I used to take",                "example": "Prendevo sempre il caffè al bar. (I always used to have coffee at the bar.)" },
+        { "subject": "tu",      "italian": "prendevi",    "english": "you used to take (informal)",   "example": "Prendevi l'autobus ogni giorno. (You used to take the bus every day.)" },
+        { "subject": "lui/lei", "italian": "prendeva",    "english": "he/she used to take",           "example": "Prendeva sempre buoni voti. (He/She always used to get good grades.)" },
+        { "subject": "noi",     "italian": "prendevamo",  "english": "we used to take",               "example": "Prendevamo il treno per andare al lavoro. (We used to take the train to work.)" },
+        { "subject": "voi",     "italian": "prendevate",  "english": "you used to take (plural)",     "example": "Prendevate lezioni di piano? (Did you use to take piano lessons?)" },
+        { "subject": "loro",    "italian": "prendevano",  "english": "they used to take",             "example": "Prendevano le vacanze in agosto. (They used to take vacation in August.)" }
+      ],
+      "passato_prossimo": [
+        { "subject": "io",      "italian": "ho preso",      "english": "I have taken",                "example": "Ho preso un caffè. (I had a coffee.)" },
+        { "subject": "tu",      "italian": "hai preso",     "english": "you have taken (informal)",   "example": "Hai preso la decisione giusta. (You made the right decision.)" },
+        { "subject": "lui/lei", "italian": "ha preso",      "english": "he/she has taken",            "example": "Ha preso un brutto voto. (He/She got a bad grade.)" },
+        { "subject": "noi",     "italian": "abbiamo preso", "english": "we have taken",               "example": "Abbiamo preso l'aereo. (We took the plane.)" },
+        { "subject": "voi",     "italian": "avete preso",   "english": "you have taken (plural)",     "example": "Avete preso freddo? (Did you catch a cold?)" },
+        { "subject": "loro",    "italian": "hanno preso",   "english": "they have taken",             "example": "Hanno preso la macchina. (They took the car.)" }
+      ]
+    }
+  },
+  {
+    "id": "capire",
+    "infinitive": "capire",
+    "english": "to understand",
+    "pronunciation": "(cah-PEE-reh)",
+    "gerund": {
+      "italian": "capendo",
+      "english": "understanding",
+      "example": "Capendo il problema, l'ho risolto. (Understanding the problem, I solved it.)"
+    },
+    "tenses": {
+      "present": [
+        { "subject": "io",      "italian": "capisco",   "english": "I understand",                "example": "Capisco tutto. (I understand everything.)" },
+        { "subject": "tu",      "italian": "capisci",   "english": "you understand (informal)",   "example": "Capisci l'italiano. (You understand Italian.)" },
+        { "subject": "lui/lei", "italian": "capisce",   "english": "he/she understands",          "example": "Capisce la lezione. (He/She understands the lesson.)" },
+        { "subject": "noi",     "italian": "capiamo",   "english": "we understand",               "example": "Capiamo il problema. (We understand the problem.)" },
+        { "subject": "voi",     "italian": "capite",    "english": "you understand (plural)",     "example": "Capite bene. (You understand well.)" },
+        { "subject": "loro",    "italian": "capiscono", "english": "they understand",             "example": "Capiscono la musica. (They understand music.)" }
+      ],
+      "imperfetto": [
+        { "subject": "io",      "italian": "capivo",    "english": "I used to understand",                "example": "Non capivo niente. (I didn't understand anything.)" },
+        { "subject": "tu",      "italian": "capivi",    "english": "you used to understand (informal)",   "example": "Capivi sempre le mie battute. (You always understood my jokes.)" },
+        { "subject": "lui/lei", "italian": "capiva",    "english": "he/she used to understand",           "example": "Capiva subito tutto. (He/She understood everything immediately.)" },
+        { "subject": "noi",     "italian": "capivamo",  "english": "we used to understand",               "example": "Capivamo solo l'italiano. (We only understood Italian.)" },
+        { "subject": "voi",     "italian": "capivate",  "english": "you used to understand (plural)",     "example": "Non capivate l'inglese. (You didn't understand English.)" },
+        { "subject": "loro",    "italian": "capivano",  "english": "they used to understand",             "example": "Capivano le istruzioni. (They understood the instructions.)" }
+      ],
+      "passato_prossimo": [
+        { "subject": "io",      "italian": "ho capito",      "english": "I have understood",                "example": "Ho capito tutto. (I understood everything.)" },
+        { "subject": "tu",      "italian": "hai capito",     "english": "you have understood (informal)",   "example": "Hai capito la lezione? (Did you understand the lesson?)" },
+        { "subject": "lui/lei", "italian": "ha capito",      "english": "he/she has understood",            "example": "Ha capito subito il problema. (He/She immediately understood the problem.)" },
+        { "subject": "noi",     "italian": "abbiamo capito", "english": "we have understood",               "example": "Abbiamo capito male. (We misunderstood.)" },
+        { "subject": "voi",     "italian": "avete capito",   "english": "you have understood (plural)",     "example": "Avete capito la domanda? (Did you understand the question?)" },
+        { "subject": "loro",    "italian": "hanno capito",   "english": "they have understood",             "example": "Hanno capito l'errore. (They understood the mistake.)" }
+      ]
+    }
+  },
+  {
+    "id": "mettere",
+    "infinitive": "mettere",
+    "english": "to put",
+    "pronunciation": "(MEHT-teh-reh)",
+    "gerund": {
+      "italian": "mettendo",
+      "english": "putting",
+      "example": "Mettendo ordine, ho trovato le chiavi. (By tidying up, I found the keys.)"
+    },
+    "tenses": {
+      "present": [
+        { "subject": "io",      "italian": "metto",    "english": "I put",                "example": "Metto il libro sul tavolo. (I put the book on the table.)" },
+        { "subject": "tu",      "italian": "metti",    "english": "you put (informal)",   "example": "Metti la giacca. (You put on the jacket.)" },
+        { "subject": "lui/lei", "italian": "mette",    "english": "he/she puts",          "example": "Mette lo zucchero. (He/She puts sugar.)" },
+        { "subject": "noi",     "italian": "mettiamo", "english": "we put",               "example": "Mettiamo i fiori. (We put the flowers.)" },
+        { "subject": "voi",     "italian": "mettete",  "english": "you put (plural)",     "example": "Mettete i piatti. (You put the plates.)" },
+        { "subject": "loro",    "italian": "mettono",  "english": "they put",             "example": "Mettono ordine. (They put things in order.)" }
+      ],
+      "imperfetto": [
+        { "subject": "io",      "italian": "mettevo",    "english": "I used to put",                "example": "Mettevo sempre le chiavi qui. (I always used to put the keys here.)" },
+        { "subject": "tu",      "italian": "mettevi",    "english": "you used to put (informal)",   "example": "Mettevi troppo sale. (You used to put too much salt.)" },
+        { "subject": "lui/lei", "italian": "metteva",    "english": "he/she used to put",           "example": "Metteva i soldi in banca. (He/She used to put money in the bank.)" },
+        { "subject": "noi",     "italian": "mettevamo",  "english": "we used to put",               "example": "Mettevamo i bambini a letto alle otto. (We used to put the kids to bed at eight.)" },
+        { "subject": "voi",     "italian": "mettevate",  "english": "you used to put (plural)",     "example": "Mettevate sempre musica. (You always used to put on music.)" },
+        { "subject": "loro",    "italian": "mettevano",  "english": "they used to put",             "example": "Mettevano i fiori sul tavolo. (They used to put flowers on the table.)" }
+      ],
+      "passato_prossimo": [
+        { "subject": "io",      "italian": "ho messo",      "english": "I have put",                "example": "Ho messo la borsa qui. (I put the bag here.)" },
+        { "subject": "tu",      "italian": "hai messo",     "english": "you have put (informal)",   "example": "Hai messo il cappotto? (Did you put on your coat?)" },
+        { "subject": "lui/lei", "italian": "ha messo",      "english": "he/she has put",            "example": "Ha messo troppo zucchero. (He/She put too much sugar.)" },
+        { "subject": "noi",     "italian": "abbiamo messo", "english": "we have put",               "example": "Abbiamo messo tutto in ordine. (We put everything in order.)" },
+        { "subject": "voi",     "italian": "avete messo",   "english": "you have put (plural)",     "example": "Avete messo il sale? (Did you put salt?)" },
+        { "subject": "loro",    "italian": "hanno messo",   "english": "they have put",             "example": "Hanno messo la giacca. (They put on their jackets.)" }
+      ]
+    }
+  },
+  {
+    "id": "trovare",
+    "infinitive": "trovare",
+    "english": "to find",
+    "pronunciation": "(troh-VAH-reh)",
+    "gerund": {
+      "italian": "trovando",
+      "english": "finding",
+      "example": "Trovando le chiavi, sono uscito. (Finding the keys, I went out.)"
+    },
+    "tenses": {
+      "present": [
+        { "subject": "io",      "italian": "trovo",    "english": "I find",                "example": "Trovo le chiavi. (I find the keys.)" },
+        { "subject": "tu",      "italian": "trovi",    "english": "you find (informal)",   "example": "Trovi un lavoro. (You find a job.)" },
+        { "subject": "lui/lei", "italian": "trova",    "english": "he/she finds",          "example": "Trova la strada. (He/She finds the way.)" },
+        { "subject": "noi",     "italian": "troviamo", "english": "we find",               "example": "Troviamo un posto. (We find a place.)" },
+        { "subject": "voi",     "italian": "trovate",  "english": "you find (plural)",     "example": "Trovate la soluzione. (You find the solution.)" },
+        { "subject": "loro",    "italian": "trovano",  "english": "they find",             "example": "Trovano un tesoro. (They find a treasure.)" }
+      ],
+      "imperfetto": [
+        { "subject": "io",      "italian": "trovavo",    "english": "I used to find",                "example": "Trovavo sempre parcheggio. (I always used to find parking.)" },
+        { "subject": "tu",      "italian": "trovavi",    "english": "you used to find (informal)",   "example": "Trovavi difficile la matematica. (You used to find math difficult.)" },
+        { "subject": "lui/lei", "italian": "trovava",    "english": "he/she used to find",           "example": "Trovava sempre scuse. (He/She always used to find excuses.)" },
+        { "subject": "noi",     "italian": "trovavamo",  "english": "we used to find",               "example": "Trovavamo funghi nel bosco. (We used to find mushrooms in the woods.)" },
+        { "subject": "voi",     "italian": "trovavate",  "english": "you used to find (plural)",     "example": "Trovavate tutto complicato. (You used to find everything complicated.)" },
+        { "subject": "loro",    "italian": "trovavano",  "english": "they used to find",             "example": "Trovavano il corso interessante. (They used to find the course interesting.)" }
+      ],
+      "passato_prossimo": [
+        { "subject": "io",      "italian": "ho trovato",      "english": "I have found",                "example": "Ho trovato le chiavi. (I found the keys.)" },
+        { "subject": "tu",      "italian": "hai trovato",     "english": "you have found (informal)",   "example": "Hai trovato lavoro? (Did you find a job?)" },
+        { "subject": "lui/lei", "italian": "ha trovato",      "english": "he/she has found",            "example": "Ha trovato un tesoro. (He/She found a treasure.)" },
+        { "subject": "noi",     "italian": "abbiamo trovato", "english": "we have found",               "example": "Abbiamo trovato la soluzione. (We found the solution.)" },
+        { "subject": "voi",     "italian": "avete trovato",   "english": "you have found (plural)",     "example": "Avete trovato un posto? (Did you find a place?)" },
+        { "subject": "loro",    "italian": "hanno trovato",   "english": "they have found",             "example": "Hanno trovato la strada. (They found the way.)" }
+      ]
+    }
+  },
+  {
+    "id": "lasciare",
+    "infinitive": "lasciare",
+    "english": "to leave / to let",
+    "pronunciation": "(lah-SHYAH-reh)",
+    "gerund": {
+      "italian": "lasciando",
+      "english": "leaving / letting",
+      "example": "Lasciando la porta aperta, è entrato il gatto. (By leaving the door open, the cat came in.)"
+    },
+    "tenses": {
+      "present": [
+        { "subject": "io",      "italian": "lascio",    "english": "I leave",                "example": "Lascio la città. (I leave the city.)" },
+        { "subject": "tu",      "italian": "lasci",     "english": "you leave (informal)",   "example": "Lasci un messaggio. (You leave a message.)" },
+        { "subject": "lui/lei", "italian": "lascia",    "english": "he/she leaves",          "example": "Lascia il lavoro. (He/She leaves work.)" },
+        { "subject": "noi",     "italian": "lasciamo",  "english": "we leave",               "example": "Lasciamo la porta aperta. (We leave the door open.)" },
+        { "subject": "voi",     "italian": "lasciate",  "english": "you leave (plural)",     "example": "Lasciate tutto qui. (You leave everything here.)" },
+        { "subject": "loro",    "italian": "lasciano",  "english": "they leave",             "example": "Lasciano presto. (They leave early.)" }
+      ],
+      "imperfetto": [
+        { "subject": "io",      "italian": "lasciavo",    "english": "I used to leave",                "example": "Lasciavo sempre la finestra aperta. (I always used to leave the window open.)" },
+        { "subject": "tu",      "italian": "lasciavi",    "english": "you used to leave (informal)",   "example": "Lasciavi tutto in disordine. (You used to leave everything messy.)" },
+        { "subject": "lui/lei", "italian": "lasciava",    "english": "he/she used to leave",           "example": "Lasciava il cane solo. (He/She used to leave the dog alone.)" },
+        { "subject": "noi",     "italian": "lasciavamo",  "english": "we used to leave",               "example": "Lasciavamo la macchina in garage. (We used to leave the car in the garage.)" },
+        { "subject": "voi",     "italian": "lasciavate",  "english": "you used to leave (plural)",     "example": "Lasciavate sempre la luce accesa. (You always used to leave the light on.)" },
+        { "subject": "loro",    "italian": "lasciavano",  "english": "they used to leave",             "example": "Lasciavano i bambini dai nonni. (They used to leave the kids with grandparents.)" }
+      ],
+      "passato_prossimo": [
+        { "subject": "io",      "italian": "ho lasciato",      "english": "I have left",                "example": "Ho lasciato le chiavi a casa. (I left the keys at home.)" },
+        { "subject": "tu",      "italian": "hai lasciato",     "english": "you have left (informal)",   "example": "Hai lasciato un messaggio? (Did you leave a message?)" },
+        { "subject": "lui/lei", "italian": "ha lasciato",      "english": "he/she has left",            "example": "Ha lasciato il lavoro. (He/She quit the job.)" },
+        { "subject": "noi",     "italian": "abbiamo lasciato", "english": "we have left",               "example": "Abbiamo lasciato tutto in ordine. (We left everything tidy.)" },
+        { "subject": "voi",     "italian": "avete lasciato",   "english": "you have left (plural)",     "example": "Avete lasciato la porta aperta. (You left the door open.)" },
+        { "subject": "loro",    "italian": "hanno lasciato",   "english": "they have left",             "example": "Hanno lasciato la città. (They left the city.)" }
+      ]
+    }
+  },
+  {
+    "id": "guardare",
+    "infinitive": "guardare",
+    "english": "to look / to watch",
+    "pronunciation": "(gwar-DAH-reh)",
+    "gerund": {
+      "italian": "guardando",
+      "english": "looking / watching",
+      "example": "Guardando il tramonto, ho pensato a te. (Watching the sunset, I thought of you.)"
+    },
+    "tenses": {
+      "present": [
+        { "subject": "io",      "italian": "guardo",    "english": "I look",                "example": "Guardo la TV. (I watch TV.)" },
+        { "subject": "tu",      "italian": "guardi",    "english": "you look (informal)",   "example": "Guardi il cielo. (You look at the sky.)" },
+        { "subject": "lui/lei", "italian": "guarda",    "english": "he/she looks",          "example": "Guarda un film. (He/She watches a movie.)" },
+        { "subject": "noi",     "italian": "guardiamo", "english": "we look",               "example": "Guardiamo le foto. (We look at the photos.)" },
+        { "subject": "voi",     "italian": "guardate",  "english": "you look (plural)",     "example": "Guardate avanti. (You look ahead.)" },
+        { "subject": "loro",    "italian": "guardano",  "english": "they look",             "example": "Guardano lo spettacolo. (They watch the show.)" }
+      ],
+      "imperfetto": [
+        { "subject": "io",      "italian": "guardavo",    "english": "I used to look",                "example": "Guardavo la TV ogni sera. (I used to watch TV every evening.)" },
+        { "subject": "tu",      "italian": "guardavi",    "english": "you used to look (informal)",   "example": "Guardavi sempre le stelle. (You always used to look at the stars.)" },
+        { "subject": "lui/lei", "italian": "guardava",    "english": "he/she used to look",           "example": "Guardava fuori dalla finestra. (He/She used to look out the window.)" },
+        { "subject": "noi",     "italian": "guardavamo",  "english": "we used to look",               "example": "Guardavamo i film insieme. (We used to watch movies together.)" },
+        { "subject": "voi",     "italian": "guardavate",  "english": "you used to look (plural)",     "example": "Guardavate il telegiornale? (Did you use to watch the news?)" },
+        { "subject": "loro",    "italian": "guardavano",  "english": "they used to look",             "example": "Guardavano il mare ogni giorno. (They used to look at the sea every day.)" }
+      ],
+      "passato_prossimo": [
+        { "subject": "io",      "italian": "ho guardato",      "english": "I have looked",                "example": "Ho guardato un bel film. (I watched a good movie.)" },
+        { "subject": "tu",      "italian": "hai guardato",     "english": "you have looked (informal)",   "example": "Hai guardato le notizie? (Did you watch the news?)" },
+        { "subject": "lui/lei", "italian": "ha guardato",      "english": "he/she has looked",            "example": "Ha guardato l'orologio. (He/She looked at the watch.)" },
+        { "subject": "noi",     "italian": "abbiamo guardato", "english": "we have looked",               "example": "Abbiamo guardato le foto insieme. (We looked at the photos together.)" },
+        { "subject": "voi",     "italian": "avete guardato",   "english": "you have looked (plural)",     "example": "Avete guardato il tramonto? (Did you watch the sunset?)" },
+        { "subject": "loro",    "italian": "hanno guardato",   "english": "they have looked",             "example": "Hanno guardato tutta la serie. (They watched the whole series.)" }
+      ]
+    }
+  },
+  {
+    "id": "pensare",
+    "infinitive": "pensare",
+    "english": "to think",
+    "pronunciation": "(pen-SAH-reh)",
+    "gerund": {
+      "italian": "pensando",
+      "english": "thinking",
+      "example": "Pensando a te, ho sorriso. (Thinking of you, I smiled.)"
+    },
+    "tenses": {
+      "present": [
+        { "subject": "io",      "italian": "penso",    "english": "I think",                "example": "Penso a te. (I think of you.)" },
+        { "subject": "tu",      "italian": "pensi",    "english": "you think (informal)",   "example": "Pensi troppo. (You think too much.)" },
+        { "subject": "lui/lei", "italian": "pensa",    "english": "he/she thinks",          "example": "Pensa al futuro. (He/She thinks about the future.)" },
+        { "subject": "noi",     "italian": "pensiamo", "english": "we think",               "example": "Pensiamo la stessa cosa. (We think the same thing.)" },
+        { "subject": "voi",     "italian": "pensate",  "english": "you think (plural)",     "example": "Pensate bene. (You think well.)" },
+        { "subject": "loro",    "italian": "pensano",  "english": "they think",             "example": "Pensano sempre. (They always think.)" }
+      ],
+      "imperfetto": [
+        { "subject": "io",      "italian": "pensavo",    "english": "I used to think",                "example": "Pensavo a te ogni giorno. (I used to think of you every day.)" },
+        { "subject": "tu",      "italian": "pensavi",    "english": "you used to think (informal)",   "example": "Pensavi sempre al lavoro. (You always used to think about work.)" },
+        { "subject": "lui/lei", "italian": "pensava",    "english": "he/she used to think",           "example": "Pensava di partire. (He/She was thinking of leaving.)" },
+        { "subject": "noi",     "italian": "pensavamo",  "english": "we used to think",               "example": "Pensavamo di comprare una casa. (We were thinking of buying a house.)" },
+        { "subject": "voi",     "italian": "pensavate",  "english": "you used to think (plural)",     "example": "Pensavate che fosse facile. (You used to think it was easy.)" },
+        { "subject": "loro",    "italian": "pensavano",  "english": "they used to think",             "example": "Pensavano alla famiglia. (They used to think about family.)" }
+      ],
+      "passato_prossimo": [
+        { "subject": "io",      "italian": "ho pensato",      "english": "I have thought",                "example": "Ho pensato a una soluzione. (I thought of a solution.)" },
+        { "subject": "tu",      "italian": "hai pensato",     "english": "you have thought (informal)",   "example": "Hai pensato a me? (Did you think of me?)" },
+        { "subject": "lui/lei", "italian": "ha pensato",      "english": "he/she has thought",            "example": "Ha pensato bene prima di decidere. (He/She thought carefully before deciding.)" },
+        { "subject": "noi",     "italian": "abbiamo pensato", "english": "we have thought",               "example": "Abbiamo pensato a tutto. (We thought of everything.)" },
+        { "subject": "voi",     "italian": "avete pensato",   "english": "you have thought (plural)",     "example": "Avete pensato alle conseguenze? (Did you think about the consequences?)" },
+        { "subject": "loro",    "italian": "hanno pensato",   "english": "they have thought",             "example": "Hanno pensato alla stessa cosa. (They thought of the same thing.)" }
+      ]
+    }
+  },
+  {
+    "id": "partire",
+    "infinitive": "partire",
+    "english": "to leave / to depart",
+    "pronunciation": "(par-TEE-reh)",
+    "gerund": {
+      "italian": "partendo",
+      "english": "leaving / departing",
+      "example": "Partendo presto, eviteremo il traffico. (By leaving early, we'll avoid traffic.)"
+    },
+    "tenses": {
+      "present": [
+        { "subject": "io",      "italian": "parto",    "english": "I leave",                "example": "Parto domani. (I leave tomorrow.)" },
+        { "subject": "tu",      "italian": "parti",    "english": "you leave (informal)",   "example": "Parti per Roma. (You leave for Rome.)" },
+        { "subject": "lui/lei", "italian": "parte",    "english": "he/she leaves",          "example": "Parte alle otto. (He/She leaves at eight.)" },
+        { "subject": "noi",     "italian": "partiamo", "english": "we leave",               "example": "Partiamo insieme. (We leave together.)" },
+        { "subject": "voi",     "italian": "partite",  "english": "you leave (plural)",     "example": "Partite in treno. (You leave by train.)" },
+        { "subject": "loro",    "italian": "partono",  "english": "they leave",             "example": "Partono in aereo. (They leave by plane.)" }
+      ],
+      "imperfetto": [
+        { "subject": "io",      "italian": "partivo",    "english": "I used to leave",                "example": "Partivo sempre presto. (I always used to leave early.)" },
+        { "subject": "tu",      "italian": "partivi",    "english": "you used to leave (informal)",   "example": "Partivi ogni estate. (You used to leave every summer.)" },
+        { "subject": "lui/lei", "italian": "partiva",    "english": "he/she used to leave",           "example": "Partiva per lavoro ogni settimana. (He/She used to leave for work every week.)" },
+        { "subject": "noi",     "italian": "partivamo",  "english": "we used to leave",               "example": "Partivamo in vacanza a luglio. (We used to leave on vacation in July.)" },
+        { "subject": "voi",     "italian": "partivate",  "english": "you used to leave (plural)",     "example": "Partivate sempre insieme. (You always used to leave together.)" },
+        { "subject": "loro",    "italian": "partivano",  "english": "they used to leave",             "example": "Partivano dal sud Italia. (They used to leave from southern Italy.)" }
+      ],
+      "passato_prossimo": [
+        { "subject": "io",      "italian": "sono partito/a",  "english": "I have left",                "example": "Sono partito/a ieri. (I left yesterday.)" },
+        { "subject": "tu",      "italian": "sei partito/a",   "english": "you have left (informal)",   "example": "Sei partito/a per Milano? (Did you leave for Milan?)" },
+        { "subject": "lui/lei", "italian": "è partito/a",     "english": "he/she has left",            "example": "È partito/a stamattina. (He/She left this morning.)" },
+        { "subject": "noi",     "italian": "siamo partiti/e", "english": "we have left",               "example": "Siamo partiti/e presto. (We left early.)" },
+        { "subject": "voi",     "italian": "siete partiti/e", "english": "you have left (plural)",     "example": "Siete partiti/e in treno? (Did you leave by train?)" },
+        { "subject": "loro",    "italian": "sono partiti/e",  "english": "they have left",             "example": "Sono partiti/e per le vacanze. (They left for vacation.)" }
+      ]
+    }
+  },
+  {
+    "id": "vivere",
+    "infinitive": "vivere",
+    "english": "to live",
+    "pronunciation": "(VEE-veh-reh)",
+    "gerund": {
+      "italian": "vivendo",
+      "english": "living",
+      "example": "Vivendo a Roma, ho imparato l'italiano. (Living in Rome, I learned Italian.)"
+    },
+    "tenses": {
+      "present": [
+        { "subject": "io",      "italian": "vivo",    "english": "I live",                "example": "Vivo a Roma. (I live in Rome.)" },
+        { "subject": "tu",      "italian": "vivi",    "english": "you live (informal)",   "example": "Vivi in Italia. (You live in Italy.)" },
+        { "subject": "lui/lei", "italian": "vive",    "english": "he/she lives",          "example": "Vive qui. (He/She lives here.)" },
+        { "subject": "noi",     "italian": "viviamo", "english": "we live",               "example": "Viviamo insieme. (We live together.)" },
+        { "subject": "voi",     "italian": "vivete",  "english": "you live (plural)",     "example": "Vivete bene. (You live well.)" },
+        { "subject": "loro",    "italian": "vivono",  "english": "they live",             "example": "Vivono a Milano. (They live in Milan.)" }
+      ],
+      "imperfetto": [
+        { "subject": "io",      "italian": "vivevo",    "english": "I used to live",                "example": "Vivevo a Firenze. (I used to live in Florence.)" },
+        { "subject": "tu",      "italian": "vivevi",    "english": "you used to live (informal)",   "example": "Vivevi da solo? (Did you live alone?)" },
+        { "subject": "lui/lei", "italian": "viveva",    "english": "he/she used to live",           "example": "Viveva in campagna. (He/She used to live in the countryside.)" },
+        { "subject": "noi",     "italian": "vivevamo",  "english": "we used to live",               "example": "Vivevamo felici. (We used to live happily.)" },
+        { "subject": "voi",     "italian": "vivevate",  "english": "you used to live (plural)",     "example": "Vivevate vicino al mare. (You used to live near the sea.)" },
+        { "subject": "loro",    "italian": "vivevano",  "english": "they used to live",             "example": "Vivevano in un piccolo paese. (They used to live in a small village.)" }
+      ],
+      "passato_prossimo": [
+        { "subject": "io",      "italian": "ho vissuto",      "english": "I have lived",                "example": "Ho vissuto a Londra per tre anni. (I lived in London for three years.)" },
+        { "subject": "tu",      "italian": "hai vissuto",     "english": "you have lived (informal)",   "example": "Hai vissuto all'estero? (Have you lived abroad?)" },
+        { "subject": "lui/lei", "italian": "ha vissuto",      "english": "he/she has lived",            "example": "Ha vissuto una bella vita. (He/She lived a good life.)" },
+        { "subject": "noi",     "italian": "abbiamo vissuto", "english": "we have lived",               "example": "Abbiamo vissuto momenti indimenticabili. (We lived unforgettable moments.)" },
+        { "subject": "voi",     "italian": "avete vissuto",   "english": "you have lived (plural)",     "example": "Avete vissuto qui a lungo? (Have you lived here for long?)" },
+        { "subject": "loro",    "italian": "hanno vissuto",   "english": "they have lived",             "example": "Hanno vissuto in Italia. (They lived in Italy.)" }
+      ]
+    }
+  },
+  {
+    "id": "arrivare",
+    "infinitive": "arrivare",
+    "english": "to arrive",
+    "pronunciation": "(ahr-ree-VAH-reh)",
+    "gerund": {
+      "italian": "arrivando",
+      "english": "arriving",
+      "example": "Arrivando tardi, ho perso il treno. (By arriving late, I missed the train.)"
+    },
+    "tenses": {
+      "present": [
+        { "subject": "io",      "italian": "arrivo",    "english": "I arrive",                "example": "Arrivo alle sette. (I arrive at seven.)" },
+        { "subject": "tu",      "italian": "arrivi",    "english": "you arrive (informal)",   "example": "Arrivi presto. (You arrive early.)" },
+        { "subject": "lui/lei", "italian": "arriva",    "english": "he/she arrives",          "example": "Arriva domani. (He/She arrives tomorrow.)" },
+        { "subject": "noi",     "italian": "arriviamo", "english": "we arrive",               "example": "Arriviamo in treno. (We arrive by train.)" },
+        { "subject": "voi",     "italian": "arrivate",  "english": "you arrive (plural)",     "example": "Arrivate tardi. (You arrive late.)" },
+        { "subject": "loro",    "italian": "arrivano",  "english": "they arrive",             "example": "Arrivano dall'America. (They arrive from America.)" }
+      ],
+      "imperfetto": [
+        { "subject": "io",      "italian": "arrivavo",    "english": "I used to arrive",                "example": "Arrivavo sempre in ritardo. (I always used to arrive late.)" },
+        { "subject": "tu",      "italian": "arrivavi",    "english": "you used to arrive (informal)",   "example": "Arrivavi puntuale ogni giorno. (You used to arrive on time every day.)" },
+        { "subject": "lui/lei", "italian": "arrivava",    "english": "he/she used to arrive",           "example": "Arrivava quando tutti partivano. (He/She used to arrive when everyone was leaving.)" },
+        { "subject": "noi",     "italian": "arrivavamo",  "english": "we used to arrive",               "example": "Arrivavamo stanchi dopo il viaggio. (We used to arrive tired after the trip.)" },
+        { "subject": "voi",     "italian": "arrivavate",  "english": "you used to arrive (plural)",     "example": "Arrivavate sempre prima di noi. (You always used to arrive before us.)" },
+        { "subject": "loro",    "italian": "arrivavano",  "english": "they used to arrive",             "example": "Arrivavano col treno delle otto. (They used to arrive on the eight o'clock train.)" }
+      ],
+      "passato_prossimo": [
+        { "subject": "io",      "italian": "sono arrivato/a",  "english": "I have arrived",                "example": "Sono arrivato/a ieri sera. (I arrived last night.)" },
+        { "subject": "tu",      "italian": "sei arrivato/a",   "english": "you have arrived (informal)",   "example": "Sei arrivato/a in orario? (Did you arrive on time?)" },
+        { "subject": "lui/lei", "italian": "è arrivato/a",     "english": "he/she has arrived",            "example": "È arrivato/a stamattina. (He/She arrived this morning.)" },
+        { "subject": "noi",     "italian": "siamo arrivati/e", "english": "we have arrived",               "example": "Siamo arrivati/e sani e salvi. (We arrived safe and sound.)" },
+        { "subject": "voi",     "italian": "siete arrivati/e", "english": "you have arrived (plural)",     "example": "Siete arrivati/e presto. (You arrived early.)" },
+        { "subject": "loro",    "italian": "sono arrivati/e",  "english": "they have arrived",             "example": "Sono arrivati/e da poco. (They just arrived.)" }
+      ]
+    }
+  },
+  {
+    "id": "portare",
+    "infinitive": "portare",
+    "english": "to bring / to carry / to wear",
+    "pronunciation": "(por-TAH-reh)",
+    "gerund": {
+      "italian": "portando",
+      "english": "bringing / carrying / wearing",
+      "example": "Portando gli occhiali, vedo meglio. (By wearing glasses, I see better.)"
+    },
+    "tenses": {
+      "present": [
+        { "subject": "io",      "italian": "porto",    "english": "I bring",                "example": "Porto i libri. (I bring the books.)" },
+        { "subject": "tu",      "italian": "porti",    "english": "you bring (informal)",   "example": "Porti gli occhiali. (You wear glasses.)" },
+        { "subject": "lui/lei", "italian": "porta",    "english": "he/she brings",          "example": "Porta il cibo. (He/She brings the food.)" },
+        { "subject": "noi",     "italian": "portiamo", "english": "we bring",               "example": "Portiamo le valigie. (We carry the suitcases.)" },
+        { "subject": "voi",     "italian": "portate",  "english": "you bring (plural)",     "example": "Portate fortuna. (You bring luck.)" },
+        { "subject": "loro",    "italian": "portano",  "english": "they bring",             "example": "Portano i regali. (They bring the gifts.)" }
+      ],
+      "imperfetto": [
+        { "subject": "io",      "italian": "portavo",    "english": "I used to bring",                "example": "Portavo sempre la merenda a scuola. (I always used to bring a snack to school.)" },
+        { "subject": "tu",      "italian": "portavi",    "english": "you used to bring (informal)",   "example": "Portavi sempre vestiti eleganti. (You always used to wear elegant clothes.)" },
+        { "subject": "lui/lei", "italian": "portava",    "english": "he/she used to bring",           "example": "Portava i capelli lunghi. (He/She used to have long hair.)" },
+        { "subject": "noi",     "italian": "portavamo",  "english": "we used to bring",               "example": "Portavamo i bambini al parco. (We used to take the kids to the park.)" },
+        { "subject": "voi",     "italian": "portavate",  "english": "you used to bring (plural)",     "example": "Portavate sempre il cane a passeggio. (You always used to take the dog for a walk.)" },
+        { "subject": "loro",    "italian": "portavano",  "english": "they used to bring",             "example": "Portavano fiori alla nonna. (They used to bring flowers to grandma.)" }
+      ],
+      "passato_prossimo": [
+        { "subject": "io",      "italian": "ho portato",      "english": "I have brought",                "example": "Ho portato il vino. (I brought the wine.)" },
+        { "subject": "tu",      "italian": "hai portato",     "english": "you have brought (informal)",   "example": "Hai portato l'ombrello? (Did you bring the umbrella?)" },
+        { "subject": "lui/lei", "italian": "ha portato",      "english": "he/she has brought",            "example": "Ha portato buone notizie. (He/She brought good news.)" },
+        { "subject": "noi",     "italian": "abbiamo portato", "english": "we have brought",               "example": "Abbiamo portato un regalo. (We brought a gift.)" },
+        { "subject": "voi",     "italian": "avete portato",   "english": "you have brought (plural)",     "example": "Avete portato tutto? (Did you bring everything?)" },
+        { "subject": "loro",    "italian": "hanno portato",   "english": "they have brought",             "example": "Hanno portato i bambini. (They brought the children.)" }
+      ]
+    }
+  },
+  {
+    "id": "chiamare",
+    "infinitive": "chiamare",
+    "english": "to call",
+    "pronunciation": "(kyah-MAH-reh)",
+    "gerund": {
+      "italian": "chiamando",
+      "english": "calling",
+      "example": "Chiamando il dottore, ho risolto il problema. (By calling the doctor, I solved the problem.)"
+    },
+    "tenses": {
+      "present": [
+        { "subject": "io",      "italian": "chiamo",    "english": "I call",                "example": "Chiamo mia madre. (I call my mother.)" },
+        { "subject": "tu",      "italian": "chiami",    "english": "you call (informal)",   "example": "Chiami il dottore. (You call the doctor.)" },
+        { "subject": "lui/lei", "italian": "chiama",    "english": "he/she calls",          "example": "Chiama un taxi. (He/She calls a taxi.)" },
+        { "subject": "noi",     "italian": "chiamiamo", "english": "we call",               "example": "Chiamiamo i nostri amici. (We call our friends.)" },
+        { "subject": "voi",     "italian": "chiamate",  "english": "you call (plural)",     "example": "Chiamate spesso. (You call often.)" },
+        { "subject": "loro",    "italian": "chiamano",  "english": "they call",             "example": "Chiamano la polizia. (They call the police.)" }
+      ],
+      "imperfetto": [
+        { "subject": "io",      "italian": "chiamavo",    "english": "I used to call",                "example": "Chiamavo sempre prima di venire. (I always used to call before coming.)" },
+        { "subject": "tu",      "italian": "chiamavi",    "english": "you used to call (informal)",   "example": "Mi chiamavi ogni sera. (You used to call me every evening.)" },
+        { "subject": "lui/lei", "italian": "chiamava",    "english": "he/she used to call",           "example": "Chiamava i genitori ogni domenica. (He/She used to call parents every Sunday.)" },
+        { "subject": "noi",     "italian": "chiamavamo",  "english": "we used to call",               "example": "Chiamavamo il cane Fido. (We used to call the dog Fido.)" },
+        { "subject": "voi",     "italian": "chiamavate",  "english": "you used to call (plural)",     "example": "Chiamavate a quest'ora? (Did you use to call at this time?)" },
+        { "subject": "loro",    "italian": "chiamavano",  "english": "they used to call",             "example": "Chiamavano sempre quando ero occupato. (They always used to call when I was busy.)" }
+      ],
+      "passato_prossimo": [
+        { "subject": "io",      "italian": "ho chiamato",      "english": "I have called",                "example": "Ho chiamato il dottore. (I called the doctor.)" },
+        { "subject": "tu",      "italian": "hai chiamato",     "english": "you have called (informal)",   "example": "Hai chiamato Maria? (Did you call Maria?)" },
+        { "subject": "lui/lei", "italian": "ha chiamato",      "english": "he/she has called",            "example": "Ha chiamato tre volte. (He/She called three times.)" },
+        { "subject": "noi",     "italian": "abbiamo chiamato", "english": "we have called",               "example": "Abbiamo chiamato un taxi. (We called a taxi.)" },
+        { "subject": "voi",     "italian": "avete chiamato",   "english": "you have called (plural)",     "example": "Avete chiamato la polizia? (Did you call the police?)" },
+        { "subject": "loro",    "italian": "hanno chiamato",   "english": "they have called",             "example": "Hanno chiamato per confermare. (They called to confirm.)" }
+      ]
+    }
+  },
+  {
+    "id": "lavorare",
+    "infinitive": "lavorare",
+    "english": "to work",
+    "pronunciation": "(lah-voh-RAH-reh)",
+    "gerund": {
+      "italian": "lavorando",
+      "english": "working",
+      "example": "Lavorando duro, ha avuto successo. (By working hard, he/she was successful.)"
+    },
+    "tenses": {
+      "present": [
+        { "subject": "io",      "italian": "lavoro",    "english": "I work",                "example": "Lavoro in ufficio. (I work in an office.)" },
+        { "subject": "tu",      "italian": "lavori",    "english": "you work (informal)",   "example": "Lavori molto. (You work a lot.)" },
+        { "subject": "lui/lei", "italian": "lavora",    "english": "he/she works",          "example": "Lavora in banca. (He/She works in a bank.)" },
+        { "subject": "noi",     "italian": "lavoriamo", "english": "we work",               "example": "Lavoriamo insieme. (We work together.)" },
+        { "subject": "voi",     "italian": "lavorate",  "english": "you work (plural)",     "example": "Lavorate il sabato. (You work on Saturdays.)" },
+        { "subject": "loro",    "italian": "lavorano",  "english": "they work",             "example": "Lavorano da casa. (They work from home.)" }
+      ],
+      "imperfetto": [
+        { "subject": "io",      "italian": "lavoravo",    "english": "I used to work",                "example": "Lavoravo in un negozio. (I used to work in a shop.)" },
+        { "subject": "tu",      "italian": "lavoravi",    "english": "you used to work (informal)",   "example": "Lavoravi di notte. (You used to work at night.)" },
+        { "subject": "lui/lei", "italian": "lavorava",    "english": "he/she used to work",           "example": "Lavorava troppo. (He/She used to work too much.)" },
+        { "subject": "noi",     "italian": "lavoravamo",  "english": "we used to work",               "example": "Lavoravamo nella stessa azienda. (We used to work in the same company.)" },
+        { "subject": "voi",     "italian": "lavoravate",  "english": "you used to work (plural)",     "example": "Lavoravate insieme? (Did you use to work together?)" },
+        { "subject": "loro",    "italian": "lavoravano",  "english": "they used to work",             "example": "Lavoravano fino a tardi. (They used to work until late.)" }
+      ],
+      "passato_prossimo": [
+        { "subject": "io",      "italian": "ho lavorato",      "english": "I have worked",                "example": "Ho lavorato tutto il giorno. (I worked all day.)" },
+        { "subject": "tu",      "italian": "hai lavorato",     "english": "you have worked (informal)",   "example": "Hai lavorato ieri? (Did you work yesterday?)" },
+        { "subject": "lui/lei", "italian": "ha lavorato",      "english": "he/she has worked",            "example": "Ha lavorato per dieci anni qui. (He/She worked here for ten years.)" },
+        { "subject": "noi",     "italian": "abbiamo lavorato", "english": "we have worked",               "example": "Abbiamo lavorato sodo. (We worked hard.)" },
+        { "subject": "voi",     "italian": "avete lavorato",   "english": "you have worked (plural)",     "example": "Avete lavorato abbastanza. (You worked enough.)" },
+        { "subject": "loro",    "italian": "hanno lavorato",   "english": "they have worked",             "example": "Hanno lavorato insieme per anni. (They worked together for years.)" }
+      ]
+    }
+  },
+  {
+    "id": "conoscere",
+    "infinitive": "conoscere",
+    "english": "to know (a person/place)",
+    "pronunciation": "(koh-NOH-sheh-reh)",
+    "gerund": {
+      "italian": "conoscendo",
+      "english": "knowing",
+      "example": "Conoscendo la strada, arriviamo presto. (Knowing the way, we arrive soon.)"
+    },
+    "tenses": {
+      "present": [
+        { "subject": "io",      "italian": "conosco",    "english": "I know",                "example": "Conosco Maria. (I know Maria.)" },
+        { "subject": "tu",      "italian": "conosci",    "english": "you know (informal)",   "example": "Conosci Roma. (You know Rome.)" },
+        { "subject": "lui/lei", "italian": "conosce",    "english": "he/she knows",          "example": "Conosce mio fratello. (He/She knows my brother.)" },
+        { "subject": "noi",     "italian": "conosciamo", "english": "we know",               "example": "Conosciamo questa città. (We know this city.)" },
+        { "subject": "voi",     "italian": "conoscete",  "english": "you know (plural)",     "example": "Conoscete i miei amici. (You know my friends.)" },
+        { "subject": "loro",    "italian": "conoscono",  "english": "they know",             "example": "Conoscono l'Italia. (They know Italy.)" }
+      ],
+      "imperfetto": [
+        { "subject": "io",      "italian": "conoscevo",    "english": "I used to know",                "example": "Conoscevo tutti nel quartiere. (I used to know everyone in the neighborhood.)" },
+        { "subject": "tu",      "italian": "conoscevi",    "english": "you used to know (informal)",   "example": "Conoscevi quella ragazza? (Did you know that girl?)" },
+        { "subject": "lui/lei", "italian": "conosceva",    "english": "he/she used to know",           "example": "Conosceva bene la città. (He/She knew the city well.)" },
+        { "subject": "noi",     "italian": "conoscevamo",  "english": "we used to know",               "example": "Conoscevamo un buon ristorante. (We knew a good restaurant.)" },
+        { "subject": "voi",     "italian": "conoscevate",  "english": "you used to know (plural)",     "example": "Conoscevate il proprietario? (Did you know the owner?)" },
+        { "subject": "loro",    "italian": "conoscevano",  "english": "they used to know",             "example": "Conoscevano tutti i segreti. (They knew all the secrets.)" }
+      ],
+      "passato_prossimo": [
+        { "subject": "io",      "italian": "ho conosciuto",      "english": "I have known / I met",          "example": "Ho conosciuto mia moglie a Roma. (I met my wife in Rome.)" },
+        { "subject": "tu",      "italian": "hai conosciuto",     "english": "you have known (informal)",     "example": "Hai conosciuto i suoi genitori? (Have you met his/her parents?)" },
+        { "subject": "lui/lei", "italian": "ha conosciuto",      "english": "he/she has known",              "example": "Ha conosciuto molte persone interessanti. (He/She met many interesting people.)" },
+        { "subject": "noi",     "italian": "abbiamo conosciuto", "english": "we have known",                 "example": "Abbiamo conosciuto un nuovo amico. (We met a new friend.)" },
+        { "subject": "voi",     "italian": "avete conosciuto",   "english": "you have known (plural)",       "example": "Avete conosciuto il nuovo vicino? (Have you met the new neighbor?)" },
+        { "subject": "loro",    "italian": "hanno conosciuto",   "english": "they have known",               "example": "Hanno conosciuto la vera amicizia. (They experienced true friendship.)" }
+      ]
+    }
+  },
+  {
+    "id": "sentire",
+    "infinitive": "sentire",
+    "english": "to hear / to feel",
+    "pronunciation": "(sen-TEE-reh)",
+    "gerund": {
+      "italian": "sentendo",
+      "english": "hearing / feeling",
+      "example": "Sentendo il rumore, mi sono svegliato. (Hearing the noise, I woke up.)"
+    },
+    "tenses": {
+      "present": [
+        { "subject": "io",      "italian": "sento",    "english": "I hear / I feel",        "example": "Sento la musica. (I hear the music.)" },
+        { "subject": "tu",      "italian": "senti",    "english": "you hear (informal)",    "example": "Senti il rumore. (You hear the noise.)" },
+        { "subject": "lui/lei", "italian": "sente",    "english": "he/she hears",           "example": "Sente freddo. (He/She feels cold.)" },
+        { "subject": "noi",     "italian": "sentiamo", "english": "we hear",                "example": "Sentiamo la voce. (We hear the voice.)" },
+        { "subject": "voi",     "italian": "sentite",  "english": "you hear (plural)",      "example": "Sentite fame. (You feel hungry.)" },
+        { "subject": "loro",    "italian": "sentono",  "english": "they hear",              "example": "Sentono il mare. (They hear the sea.)" }
+      ],
+      "imperfetto": [
+        { "subject": "io",      "italian": "sentivo",    "english": "I used to hear",                "example": "Sentivo sempre quella canzone. (I always used to hear that song.)" },
+        { "subject": "tu",      "italian": "sentivi",    "english": "you used to hear (informal)",   "example": "Sentivi nostalgia di casa. (You used to feel homesick.)" },
+        { "subject": "lui/lei", "italian": "sentiva",    "english": "he/she used to hear",           "example": "Sentiva la mancanza degli amici. (He/She used to miss friends.)" },
+        { "subject": "noi",     "italian": "sentivamo",  "english": "we used to hear",               "example": "Sentivamo i vicini litigare. (We used to hear the neighbors arguing.)" },
+        { "subject": "voi",     "italian": "sentivate",  "english": "you used to hear (plural)",     "example": "Sentivate il bisogno di cambiare. (You used to feel the need to change.)" },
+        { "subject": "loro",    "italian": "sentivano",  "english": "they used to hear",             "example": "Sentivano gli uccelli cantare. (They used to hear the birds singing.)" }
+      ],
+      "passato_prossimo": [
+        { "subject": "io",      "italian": "ho sentito",      "english": "I have heard / I felt",         "example": "Ho sentito un rumore strano. (I heard a strange noise.)" },
+        { "subject": "tu",      "italian": "hai sentito",     "english": "you have heard (informal)",     "example": "Hai sentito le notizie? (Have you heard the news?)" },
+        { "subject": "lui/lei", "italian": "ha sentito",      "english": "he/she has heard",              "example": "Ha sentito dolore. (He/She felt pain.)" },
+        { "subject": "noi",     "italian": "abbiamo sentito", "english": "we have heard",                 "example": "Abbiamo sentito la tua mancanza. (We missed you.)" },
+        { "subject": "voi",     "italian": "avete sentito",   "english": "you have heard (plural)",       "example": "Avete sentito quella storia? (Have you heard that story?)" },
+        { "subject": "loro",    "italian": "hanno sentito",   "english": "they have heard",               "example": "Hanno sentito un grido. (They heard a scream.)" }
+      ]
+    }
+  },
+  {
+    "id": "cercare",
+    "infinitive": "cercare",
+    "english": "to look for / to search",
+    "pronunciation": "(cher-KAH-reh)",
+    "gerund": {
+      "italian": "cercando",
+      "english": "looking for / searching",
+      "example": "Cercando bene, ho trovato le chiavi. (By looking carefully, I found the keys.)"
+    },
+    "tenses": {
+      "present": [
+        { "subject": "io",      "italian": "cerco",     "english": "I look for",                "example": "Cerco le chiavi. (I look for the keys.)" },
+        { "subject": "tu",      "italian": "cerchi",    "english": "you look for (informal)",   "example": "Cerchi lavoro. (You look for work.)" },
+        { "subject": "lui/lei", "italian": "cerca",     "english": "he/she looks for",          "example": "Cerca un libro. (He/She looks for a book.)" },
+        { "subject": "noi",     "italian": "cerchiamo", "english": "we look for",               "example": "Cerchiamo un ristorante. (We look for a restaurant.)" },
+        { "subject": "voi",     "italian": "cercate",   "english": "you look for (plural)",     "example": "Cercate aiuto. (You look for help.)" },
+        { "subject": "loro",    "italian": "cercano",   "english": "they look for",             "example": "Cercano casa. (They look for a house.)" }
+      ],
+      "imperfetto": [
+        { "subject": "io",      "italian": "cercavo",    "english": "I used to look for",                "example": "Cercavo sempre scuse. (I always used to look for excuses.)" },
+        { "subject": "tu",      "italian": "cercavi",    "english": "you used to look for (informal)",   "example": "Cosa cercavi? (What were you looking for?)" },
+        { "subject": "lui/lei", "italian": "cercava",    "english": "he/she used to look for",           "example": "Cercava un appartamento. (He/She was looking for an apartment.)" },
+        { "subject": "noi",     "italian": "cercavamo",  "english": "we used to look for",               "example": "Cercavamo di capire. (We were trying to understand.)" },
+        { "subject": "voi",     "italian": "cercavate",  "english": "you used to look for (plural)",     "example": "Cercavate di aiutare. (You were trying to help.)" },
+        { "subject": "loro",    "italian": "cercavano",  "english": "they used to look for",             "example": "Cercavano una soluzione. (They were looking for a solution.)" }
+      ],
+      "passato_prossimo": [
+        { "subject": "io",      "italian": "ho cercato",      "english": "I have looked for",                "example": "Ho cercato dappertutto. (I looked everywhere.)" },
+        { "subject": "tu",      "italian": "hai cercato",     "english": "you have looked for (informal)",   "example": "Hai cercato le chiavi? (Did you look for the keys?)" },
+        { "subject": "lui/lei", "italian": "ha cercato",      "english": "he/she has looked for",            "example": "Ha cercato di chiamarti. (He/She tried to call you.)" },
+        { "subject": "noi",     "italian": "abbiamo cercato", "english": "we have looked for",               "example": "Abbiamo cercato un buon ristorante. (We looked for a good restaurant.)" },
+        { "subject": "voi",     "italian": "avete cercato",   "english": "you have looked for (plural)",     "example": "Avete cercato in cucina? (Did you look in the kitchen?)" },
+        { "subject": "loro",    "italian": "hanno cercato",   "english": "they have looked for",             "example": "Hanno cercato di capire. (They tried to understand.)" }
+      ]
+    }
+  },
+  {
+    "id": "giocare",
+    "infinitive": "giocare",
+    "english": "to play",
+    "pronunciation": "(joh-KAH-reh)",
+    "gerund": {
+      "italian": "giocando",
+      "english": "playing",
+      "example": "Giocando a calcio, mi sono fatto male. (While playing soccer, I got hurt.)"
+    },
+    "tenses": {
+      "present": [
+        { "subject": "io",      "italian": "gioco",     "english": "I play",                "example": "Gioco a calcio. (I play soccer.)" },
+        { "subject": "tu",      "italian": "giochi",    "english": "you play (informal)",   "example": "Giochi a tennis. (You play tennis.)" },
+        { "subject": "lui/lei", "italian": "gioca",     "english": "he/she plays",          "example": "Gioca a carte. (He/She plays cards.)" },
+        { "subject": "noi",     "italian": "giochiamo", "english": "we play",               "example": "Giochiamo insieme. (We play together.)" },
+        { "subject": "voi",     "italian": "giocate",   "english": "you play (plural)",     "example": "Giocate a pallavolo. (You play volleyball.)" },
+        { "subject": "loro",    "italian": "giocano",   "english": "they play",             "example": "Giocano a scacchi. (They play chess.)" }
+      ],
+      "imperfetto": [
+        { "subject": "io",      "italian": "giocavo",    "english": "I used to play",                "example": "Giocavo a calcio da bambino. (I used to play soccer as a child.)" },
+        { "subject": "tu",      "italian": "giocavi",    "english": "you used to play (informal)",   "example": "Giocavi con le bambole? (Did you use to play with dolls?)" },
+        { "subject": "lui/lei", "italian": "giocava",    "english": "he/she used to play",           "example": "Giocava sempre all'aperto. (He/She always used to play outside.)" },
+        { "subject": "noi",     "italian": "giocavamo",  "english": "we used to play",               "example": "Giocavamo ogni pomeriggio. (We used to play every afternoon.)" },
+        { "subject": "voi",     "italian": "giocavate",  "english": "you used to play (plural)",     "example": "Giocavate a nascondino. (You used to play hide-and-seek.)" },
+        { "subject": "loro",    "italian": "giocavano",  "english": "they used to play",             "example": "Giocavano nel cortile. (They used to play in the courtyard.)" }
+      ],
+      "passato_prossimo": [
+        { "subject": "io",      "italian": "ho giocato",      "english": "I have played",                "example": "Ho giocato a tennis ieri. (I played tennis yesterday.)" },
+        { "subject": "tu",      "italian": "hai giocato",     "english": "you have played (informal)",   "example": "Hai giocato bene. (You played well.)" },
+        { "subject": "lui/lei", "italian": "ha giocato",      "english": "he/she has played",            "example": "Ha giocato tutta la partita. (He/She played the whole game.)" },
+        { "subject": "noi",     "italian": "abbiamo giocato", "english": "we have played",               "example": "Abbiamo giocato insieme. (We played together.)" },
+        { "subject": "voi",     "italian": "avete giocato",   "english": "you have played (plural)",     "example": "Avete giocato a carte? (Did you play cards?)" },
+        { "subject": "loro",    "italian": "hanno giocato",   "english": "they have played",             "example": "Hanno giocato fino a tardi. (They played until late.)" }
+      ]
+    }
+  },
+  {
+    "id": "chiedere",
+    "infinitive": "chiedere",
+    "english": "to ask",
+    "pronunciation": "(KYEH-deh-reh)",
+    "gerund": {
+      "italian": "chiedendo",
+      "english": "asking",
+      "example": "Chiedendo aiuto, ho risolto il problema. (By asking for help, I solved the problem.)"
+    },
+    "tenses": {
+      "present": [
+        { "subject": "io",      "italian": "chiedo",    "english": "I ask",                "example": "Chiedo una domanda. (I ask a question.)" },
+        { "subject": "tu",      "italian": "chiedi",    "english": "you ask (informal)",   "example": "Chiedi aiuto. (You ask for help.)" },
+        { "subject": "lui/lei", "italian": "chiede",    "english": "he/she asks",          "example": "Chiede informazioni. (He/She asks for information.)" },
+        { "subject": "noi",     "italian": "chiediamo", "english": "we ask",               "example": "Chiediamo scusa. (We apologize.)" },
+        { "subject": "voi",     "italian": "chiedete",  "english": "you ask (plural)",     "example": "Chiedete il permesso. (You ask for permission.)" },
+        { "subject": "loro",    "italian": "chiedono",  "english": "they ask",             "example": "Chiedono il conto. (They ask for the bill.)" }
+      ],
+      "imperfetto": [
+        { "subject": "io",      "italian": "chiedevo",    "english": "I used to ask",                "example": "Chiedevo sempre il perché. (I always used to ask why.)" },
+        { "subject": "tu",      "italian": "chiedevi",    "english": "you used to ask (informal)",   "example": "Chiedevi troppo. (You used to ask for too much.)" },
+        { "subject": "lui/lei", "italian": "chiedeva",    "english": "he/she used to ask",           "example": "Chiedeva sempre consigli. (He/She always used to ask for advice.)" },
+        { "subject": "noi",     "italian": "chiedevamo",  "english": "we used to ask",               "example": "Chiedevamo aiuto quando necessario. (We used to ask for help when necessary.)" },
+        { "subject": "voi",     "italian": "chiedevate",  "english": "you used to ask (plural)",     "example": "Chiedevate spiegazioni. (You used to ask for explanations.)" },
+        { "subject": "loro",    "italian": "chiedevano",  "english": "they used to ask",             "example": "Chiedevano sempre favori. (They always used to ask for favors.)" }
+      ],
+      "passato_prossimo": [
+        { "subject": "io",      "italian": "ho chiesto",      "english": "I have asked",                "example": "Ho chiesto scusa. (I apologized.)" },
+        { "subject": "tu",      "italian": "hai chiesto",     "english": "you have asked (informal)",   "example": "Hai chiesto informazioni? (Did you ask for information?)" },
+        { "subject": "lui/lei", "italian": "ha chiesto",      "english": "he/she has asked",            "example": "Ha chiesto un favore. (He/She asked for a favor.)" },
+        { "subject": "noi",     "italian": "abbiamo chiesto", "english": "we have asked",               "example": "Abbiamo chiesto il conto. (We asked for the bill.)" },
+        { "subject": "voi",     "italian": "avete chiesto",   "english": "you have asked (plural)",     "example": "Avete chiesto il permesso? (Did you ask for permission?)" },
+        { "subject": "loro",    "italian": "hanno chiesto",   "english": "they have asked",             "example": "Hanno chiesto aiuto. (They asked for help.)" }
+      ]
+    }
+  },
+  {
+    "id": "aiutare",
+    "infinitive": "aiutare",
+    "english": "to help",
+    "pronunciation": "(eye-yoo-TAH-reh)",
+    "gerund": {
+      "italian": "aiutando",
+      "english": "helping",
+      "example": "Aiutando gli altri, mi sento meglio. (By helping others, I feel better.)"
+    },
+    "tenses": {
+      "present": [
+        { "subject": "io",      "italian": "aiuto",    "english": "I help",                "example": "Aiuto mia madre. (I help my mother.)" },
+        { "subject": "tu",      "italian": "aiuti",    "english": "you help (informal)",   "example": "Aiuti i tuoi amici. (You help your friends.)" },
+        { "subject": "lui/lei", "italian": "aiuta",    "english": "he/she helps",          "example": "Aiuta i bambini. (He/She helps the children.)" },
+        { "subject": "noi",     "italian": "aiutiamo", "english": "we help",               "example": "Aiutiamo sempre. (We always help.)" },
+        { "subject": "voi",     "italian": "aiutate",  "english": "you help (plural)",     "example": "Aiutate il professore. (You help the teacher.)" },
+        { "subject": "loro",    "italian": "aiutano",  "english": "they help",             "example": "Aiutano i poveri. (They help the poor.)" }
+      ],
+      "imperfetto": [
+        { "subject": "io",      "italian": "aiutavo",    "english": "I used to help",                "example": "Aiutavo sempre mio padre. (I always used to help my father.)" },
+        { "subject": "tu",      "italian": "aiutavi",    "english": "you used to help (informal)",   "example": "Aiutavi volentieri. (You used to help willingly.)" },
+        { "subject": "lui/lei", "italian": "aiutava",    "english": "he/she used to help",           "example": "Aiutava chi era in difficoltà. (He/She used to help those in difficulty.)" },
+        { "subject": "noi",     "italian": "aiutavamo",  "english": "we used to help",               "example": "Aiutavamo i vicini. (We used to help the neighbors.)" },
+        { "subject": "voi",     "italian": "aiutavate",  "english": "you used to help (plural)",     "example": "Aiutavate in casa. (You used to help at home.)" },
+        { "subject": "loro",    "italian": "aiutavano",  "english": "they used to help",             "example": "Aiutavano tutti. (They used to help everyone.)" }
+      ],
+      "passato_prossimo": [
+        { "subject": "io",      "italian": "ho aiutato",      "english": "I have helped",                "example": "Ho aiutato mia sorella. (I helped my sister.)" },
+        { "subject": "tu",      "italian": "hai aiutato",     "english": "you have helped (informal)",   "example": "Hai aiutato molto. (You helped a lot.)" },
+        { "subject": "lui/lei", "italian": "ha aiutato",      "english": "he/she has helped",            "example": "Ha aiutato un amico. (He/She helped a friend.)" },
+        { "subject": "noi",     "italian": "abbiamo aiutato", "english": "we have helped",               "example": "Abbiamo aiutato i bambini. (We helped the children.)" },
+        { "subject": "voi",     "italian": "avete aiutato",   "english": "you have helped (plural)",     "example": "Avete aiutato abbastanza. (You helped enough.)" },
+        { "subject": "loro",    "italian": "hanno aiutato",   "english": "they have helped",             "example": "Hanno aiutato la comunità. (They helped the community.)" }
+      ]
+    }
   }
 ]
