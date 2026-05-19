@@ -4078,5 +4078,85 @@
     "correct": 0,
     "incorrect": 0,
     "dateAdded": "2026-05-19"
+},
+{
+    "id": "177798850517498venti001",
+    "question": "twenty",
+    "answer": "venti",
+    "notes": "Pronunciation: VEN-tee. Used as base for 21-29 (ventuno, ventidue, etc.). Drops the final 'i' before 'uno' and 'otto' (ventuno, ventotto).",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-20"
+},
+{
+    "id": "177798850517499trenta001",
+    "question": "thirty",
+    "answer": "trenta",
+    "notes": "Pronunciation: TREN-tah. Used as base for 31-39 (trentuno, trentadue, etc.). Drops the final 'a' before 'uno' and 'otto' (trentuno, trentotto).",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-20"
+},
+{
+    "id": "177798850517500quaranta001",
+    "question": "forty",
+    "answer": "quaranta",
+    "notes": "Pronunciation: kwah-RAHN-tah. Used as base for 41-49. Drops the final 'a' before 'uno' and 'otto' (quarantuno, quarantotto).",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-20"
+},
+{
+    "id": "177798850517501cinquanta001",
+    "question": "fifty",
+    "answer": "cinquanta",
+    "notes": "Pronunciation: cheen-KWAHN-tah. Used as base for 51-59. Drops the final 'a' before 'uno' and 'otto' (cinquantuno, cinquantotto).",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-20"
+},
+{
+    "id": "177798850517502sessanta001",
+    "question": "sixty",
+    "answer": "sessanta",
+    "notes": "Pronunciation: ses-SAHN-tah. Used as base for 61-69. Drops the final 'a' before 'uno' and 'otto' (sessantuno, sessantotto).",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-20"
+},
+{
+    "id": "177798850517503settanta001",
+    "question": "seventy",
+    "answer": "settanta",
+    "notes": "Pronunciation: set-TAHN-tah. Used as base for 71-79. Drops the final 'a' before 'uno' and 'otto' (settantuno, settantotto).",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-20"
+},
+{
+    "id": "177798850517504ottanta001",
+    "question": "eighty",
+    "answer": "ottanta",
+    "notes": "Pronunciation: oh-TAHN-tah. Used as base for 81-89. Drops the final 'a' before 'uno' and 'otto' (ottantuno, ottantotto).",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-20"
+},
+{
+    "id": "177798850517505novanta001",
+    "question": "ninety",
+    "answer": "novanta",
+    "notes": "Pronunciation: noh-VAHN-tah. Used as base for 91-99. Drops the final 'a' before 'uno' and 'otto' (novantuno, novantotto).",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-20"
 }
 ]
