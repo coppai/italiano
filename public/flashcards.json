@@ -3988,5 +3988,95 @@
     "correct": 0,
     "incorrect": 0,
     "dateAdded": "2026-05-18"
+},
+{
+    "id": "177798850517489lunedi001",
+    "question": "Monday",
+    "answer": "lunedì",
+    "notes": "Pronunciation: loo-neh-DEE. Masculine noun - il lunedì. From Latin 'dies lunae' (day of the moon). No capital letter in Italian.",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-19"
+},
+{
+    "id": "177798850517490martedi001",
+    "question": "Tuesday",
+    "answer": "martedì",
+    "notes": "Pronunciation: mar-teh-DEE. Masculine noun - il martedì. From Latin 'dies Martis' (day of Mars).",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-19"
+},
+{
+    "id": "177798850517491mercoledi001",
+    "question": "Wednesday",
+    "answer": "mercoledì",
+    "notes": "Pronunciation: mehr-koh-leh-DEE. Masculine noun - il mercoledì. From Latin 'dies Mercurii' (day of Mercury).",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-19"
+},
+{
+    "id": "177798850517492giovedi001",
+    "question": "Thursday",
+    "answer": "giovedì",
+    "notes": "Pronunciation: joh-veh-DEE. Masculine noun - il giovedì. From Latin 'dies Jovis' (day of Jupiter).",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-19"
+},
+{
+    "id": "177798850517493venerdi001",
+    "question": "Friday",
+    "answer": "venerdì",
+    "notes": "Pronunciation: veh-nehr-DEE. Masculine noun - il venerdì. From Latin 'dies Veneris' (day of Venus).",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-19"
+},
+{
+    "id": "177798850517494sabato001",
+    "question": "Saturday",
+    "answer": "sabato",
+    "notes": "Pronunciation: SAH-bah-toh. Masculine noun - il sabato. From Hebrew 'Shabbat' via Latin. Note: no accent mark unlike other days.",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-19"
+},
+{
+    "id": "177798850517495domenica001",
+    "question": "Sunday",
+    "answer": "domenica",
+    "notes": "Pronunciation: doh-MEH-nee-kah. Feminine noun - la domenica. From Latin 'dies Dominica' (Lord's day).",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-19"
+},
+{
+    "id": "177798850517496duro001",
+    "question": "hard (physical texture/tough)",
+    "answer": "duro",
+    "notes": "Pronunciation: DOO-roh. Adjective - duro/dura/duri/dure. Use for physical hardness (hard surface, hard bread). For difficult, use 'difficile'.",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-19"
+},
+{
+    "id": "177798850517497difficile001",
+    "question": "hard (difficult)",
+    "answer": "difficile",
+    "notes": "Pronunciation: deef-FEE-chee-leh. Adjective - difficile/difficili. Use for difficulty/complexity (hard exam, hard to do). For physical hardness, use 'duro'.",
+    "categories": [],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-19"
 }
 ]

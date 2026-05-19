@@ -1,15 +1,65 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
-import FlipDeck, { useDeck } from '../components/flip/FlipDeck.jsx';
+import FlipDeck from '../components/flip/FlipDeck.jsx';
 import SelfRateButtons from '../components/flip/SelfRateButtons.jsx';
 import { useJsonResource } from '../hooks/useJsonResource.js';
 import { useBodyClass } from '../hooks/useBodyClass.js';
 import { speakItalian } from '../lib/speak.js';
 
+const TENSE_ORDER = ['present', 'imperfetto', 'passato_prossimo', 'gerund'];
+
 const TENSE_LABELS = {
   present: 'Present',
   imperfetto: 'Imperfetto',
   passato_prossimo: 'Passato Prossimo',
+  gerund: 'Gerund',
+};
+
+// Between-stage screens: what does this tense MEAN, plus a quick formation reminder.
+// Distinct from TENSE_RULES below (which is the in-card "ⓘ" modal — formation only).
+const TENSE_INTROS = {
+  present: {
+    title: 'Present (Presente Indicativo) — what is / what happens',
+    body: (
+      <>
+        <p>The everyday present. Used for what’s <strong>happening now</strong> (“I eat”), <strong>habitual actions</strong> (“I always eat at 8”), <strong>scheduled near-future events</strong> (“I’m leaving tomorrow”), and <strong>general truths</strong> (“water boils at 100°C”).</p>
+        <p>Formation: drop -are / -ere / -ire and add:</p>
+        <ul>
+          <li><strong>-are</strong>: -o, -i, -a, -iamo, -ate, -ano</li>
+          <li><strong>-ere</strong>: -o, -i, -e, -iamo, -ete, -ono</li>
+          <li><strong>-ire</strong>: -o, -i, -e, -iamo, -ite, -ono</li>
+        </ul>
+        <p>Many common verbs (<em>essere, avere, andare, fare, stare, dire</em>) are irregular and must be memorized.</p>
+      </>
+    ),
+  },
+  imperfetto: {
+    title: 'Imperfetto — the "used to" past',
+    body: (
+      <>
+        <p>Used for past actions that were <strong>habitual</strong> (“I used to eat pizza on Fridays”) or <strong>ongoing</strong> (“I was eating when she called”). Also sets the scene — describing weather, age, feelings, or background details in the past.</p>
+        <p>Formation: drop <strong>-re</strong> from the infinitive, add <code>-vo, -vi, -va, -vamo, -vate, -vano</code>.</p>
+      </>
+    ),
+  },
+  passato_prossimo: {
+    title: 'Passato Prossimo — the completed past',
+    body: (
+      <>
+        <p>The everyday past tense for <strong>completed actions</strong>. Translates to either the simple past (“I ate”) or the present perfect (“I have eaten”) in English.</p>
+        <p>Formation: <strong>auxiliary</strong> (avere or essere) in the present + <strong>past participle</strong>. With <em>essere</em>, the participle agrees with the subject in gender and number.</p>
+      </>
+    ),
+  },
+  gerund: {
+    title: 'Gerund — the "-ing" form',
+    body: (
+      <>
+        <p>The Italian equivalent of the English “-ing”. Most often paired with <em>stare</em> to make the present progressive: <em>sto mangiando</em> = “I am eating (right now)”.</p>
+        <p>Formation: -are → <strong>-ando</strong>, -ere/-ire → <strong>-endo</strong>.</p>
+      </>
+    ),
+  },
 };
 
 const TENSE_RULES = {
@@ -79,31 +129,36 @@ const TENSE_RULES = {
   },
 };
 
-function buildCardsForVerb(verb) {
-  const cards = [];
-  if (verb.gerund) {
-    cards.push({
-      tense: 'Gerund',
-      english: verb.gerund.english,
-      italian: verb.gerund.italian,
-      example: verb.gerund.example,
-      infinitive: verb.infinitive,
-    });
-  }
-  for (const [key, forms] of Object.entries(verb.tenses || {})) {
-    const label = TENSE_LABELS[key] || key;
-    for (const form of forms) {
-      cards.push({
-        tense: label,
-        subject: form.subject,
-        english: form.english,
-        italian: form.italian,
-        example: form.example,
+function buildCardsByTense(verb) {
+  const map = {};
+  for (const t of TENSE_ORDER) {
+    if (t === 'gerund') {
+      map.gerund = verb.gerund
+        ? [{
+            tense: 'Gerund',
+            english: verb.gerund.english,
+            italian: verb.gerund.italian,
+            example: verb.gerund.example,
+            infinitive: verb.infinitive,
+          }]
+        : [];
+    } else {
+      const forms = verb.tenses?.[t] || [];
+      map[t] = forms.map(f => ({
+        tense: TENSE_LABELS[t],
+        subject: f.subject,
+        english: f.english,
+        italian: f.italian,
+        example: f.example,
         infinitive: verb.infinitive,
-      });
+      }));
     }
   }
-  return cards;
+  return map;
+}
+
+function emptyStat() {
+  return { correct: 0, incorrect: 0, misses: [], completed: false };
 }
 
 function pickRandom(list, excludeId) {
@@ -117,9 +172,11 @@ export default function VerbDeepDive() {
   const { data: verbs, loading, error } = useJsonResource('/verbDeepDive.json');
 
   const [currentVerb, setCurrentVerb] = useState(null);
-  const [sessionCorrect, setSessionCorrect] = useState(0);
-  const [sessionIncorrect, setSessionIncorrect] = useState(0);
-  const [sessionMisses, setSessionMisses] = useState([]);
+  const [currentTense, setCurrentTense] = useState('present');
+  const [phase, setPhase] = useState('cards'); // 'cards' | 'tense-intro' | 'verb-complete'
+  const [tenseStats, setTenseStats] = useState({}); // { tense: { correct, incorrect, misses, completed } }
+  const [index, setIndex] = useState(0);
+  const [flipped, setFlipped] = useState(false);
   const [query, setQuery] = useState('');
   const [openRule, setOpenRule] = useState(null);
 
@@ -130,51 +187,98 @@ export default function VerbDeepDive() {
     }
   }, [verbs, currentVerb]);
 
-  const initialDeck = useMemo(
-    () => (currentVerb ? buildCardsForVerb(currentVerb) : []),
+  const cardsByTense = useMemo(
+    () => (currentVerb ? buildCardsByTense(currentVerb) : {}),
     [currentVerb],
   );
-
-  const { deck, setDeck, index, setIndex, flipped, setFlipped } = useDeck(initialDeck);
 
   if (loading) return <Status>Loading...</Status>;
   if (error || !verbs?.length) return <Status>Failed to load verbDeepDive.json</Status>;
 
+  function resetVerbState() {
+    setCurrentTense('present');
+    setPhase('cards');
+    setTenseStats({});
+    setIndex(0);
+    setFlipped(false);
+  }
+
   function startVerb(verb) {
     setCurrentVerb(verb);
-    setSessionCorrect(0);
-    setSessionIncorrect(0);
-    setSessionMisses([]);
     setQuery('');
+    resetVerbState();
   }
 
   function nextRandomVerb() {
     startVerb(pickRandom(verbs, currentVerb?.id));
   }
 
+  function jumpToTense(tense) {
+    // Reset that tense's stats so the user can re-practice it cleanly,
+    // then drop them on the tense's overview screen.
+    setTenseStats(prev => ({ ...prev, [tense]: emptyStat() }));
+    setCurrentTense(tense);
+    setPhase('tense-intro');
+    setIndex(0);
+    setFlipped(false);
+  }
+
+  function startTenseFromIntro() {
+    setPhase('cards');
+    setIndex(0);
+    setFlipped(false);
+  }
+
   const matches = query.trim()
     ? verbs.filter(v => v.infinitive.toLowerCase().startsWith(query.trim().toLowerCase()))
     : [];
 
+  const deck = cardsByTense[currentTense] || [];
   const current = deck[index];
-  const verbDone = currentVerb && deck.length > 0 && index >= deck.length;
+
+  function advanceAfterMark(isCorrect, missInfo) {
+    setTenseStats(prev => {
+      const cur = prev[currentTense] || emptyStat();
+      const lastCard = index + 1 >= deck.length;
+      return {
+        ...prev,
+        [currentTense]: {
+          correct: cur.correct + (isCorrect ? 1 : 0),
+          incorrect: cur.incorrect + (isCorrect ? 0 : 1),
+          misses: isCorrect ? cur.misses : [...cur.misses, missInfo],
+          completed: lastCard || cur.completed,
+        },
+      };
+    });
+
+    const lastCard = index + 1 >= deck.length;
+    if (lastCard) {
+      const tenseIdx = TENSE_ORDER.indexOf(currentTense);
+      if (tenseIdx + 1 < TENSE_ORDER.length) {
+        setCurrentTense(TENSE_ORDER[tenseIdx + 1]);
+        setPhase('tense-intro');
+      } else {
+        setPhase('verb-complete');
+      }
+    } else {
+      setIndex(i => i + 1);
+      setFlipped(false);
+    }
+  }
 
   function markCorrect() {
     if (!current) return;
-    setSessionCorrect(c => c + 1);
-    setFlipped(false);
-    setIndex(i => i + 1);
+    advanceAfterMark(true, null);
   }
 
   function markIncorrect() {
     if (!current) return;
-    setSessionIncorrect(c => c + 1);
-    setSessionMisses(prev => [
-      ...prev,
-      { tense: current.tense, subject: current.subject, english: current.english, italian: current.italian },
-    ]);
-    setFlipped(false);
-    setIndex(i => i + 1);
+    advanceAfterMark(false, {
+      tense: current.tense,
+      subject: current.subject,
+      english: current.english,
+      italian: current.italian,
+    });
   }
 
   return (
@@ -192,18 +296,37 @@ export default function VerbDeepDive() {
         onRandom={nextRandomVerb}
       />
 
-      {verbDone ? (
+      {currentVerb && (
+        <TenseNavigator
+          currentTense={currentTense}
+          tenseStats={tenseStats}
+          phase={phase}
+          onJump={jumpToTense}
+        />
+      )}
+
+      {phase === 'tense-intro' && currentVerb && (
+        <TenseIntro
+          tense={currentTense}
+          verb={currentVerb}
+          prevTenseStat={tenseStats[TENSE_ORDER[TENSE_ORDER.indexOf(currentTense) - 1]]}
+          prevTenseLabel={TENSE_LABELS[TENSE_ORDER[TENSE_ORDER.indexOf(currentTense) - 1]]}
+          onStart={startTenseFromIntro}
+        />
+      )}
+
+      {phase === 'verb-complete' && currentVerb && (
         <VerbSummary
           verb={currentVerb}
-          correct={sessionCorrect}
-          incorrect={sessionIncorrect}
-          misses={sessionMisses}
+          tenseStats={tenseStats}
           onNext={nextRandomVerb}
         />
-      ) : current ? (
+      )}
+
+      {phase === 'cards' && current && (
         <>
           <FlipDeck
-            key={`${currentVerb?.id}-${index}`}
+            key={`${currentVerb?.id}-${currentTense}-${index}`}
             current={current}
             flipped={flipped}
             onFlip={() => setFlipped(f => !f)}
@@ -211,53 +334,13 @@ export default function VerbDeepDive() {
             onArrowRight={() => { setIndex(i => (i + 1 < deck.length ? i + 1 : i)); setFlipped(false); }}
             renderFront={c => (
               <>
-                <div className="flashcard-label">
-                  <button
-                    type="button"
-                    onClick={e => { e.stopPropagation(); setOpenRule(c.tense); }}
-                    style={{
-                      background: 'rgba(255,255,255,0.18)',
-                      border: '1px solid rgba(255,255,255,0.4)',
-                      color: 'inherit',
-                      font: 'inherit',
-                      letterSpacing: 'inherit',
-                      textTransform: 'inherit',
-                      padding: '2px 8px',
-                      borderRadius: 4,
-                      cursor: 'pointer',
-                    }}
-                    title="Show the rule for this tense"
-                  >
-                    {c.tense} ⓘ
-                  </button>
-                  {c.subject ? <span> — {c.subject}</span> : null}
-                </div>
+                <CardLabel card={c} onOpenRule={setOpenRule} />
                 <div className="flashcard-content">{c.english}</div>
               </>
             )}
             renderBack={c => (
               <>
-                <div className="flashcard-label">
-                  <button
-                    type="button"
-                    onClick={e => { e.stopPropagation(); setOpenRule(c.tense); }}
-                    style={{
-                      background: 'rgba(255,255,255,0.18)',
-                      border: '1px solid rgba(255,255,255,0.4)',
-                      color: 'inherit',
-                      font: 'inherit',
-                      letterSpacing: 'inherit',
-                      textTransform: 'inherit',
-                      padding: '2px 8px',
-                      borderRadius: 4,
-                      cursor: 'pointer',
-                    }}
-                    title="Show the rule for this tense"
-                  >
-                    {c.tense} ⓘ
-                  </button>
-                  {c.subject ? <span> — {c.subject}</span> : null}
-                </div>
+                <CardLabel card={c} onOpenRule={setOpenRule} />
                 <div className="flashcard-content">{c.italian}</div>
                 {c.example ? <div className="example-sentence">{c.example}</div> : null}
                 <SelfRateButtons
@@ -278,14 +361,14 @@ export default function VerbDeepDive() {
           <div className="tap-hint">👆 Tap card to flip</div>
 
           <div className="progress">
-            Card <strong>{index + 1}</strong> of {deck.length}
+            {TENSE_LABELS[currentTense]} · card <strong>{index + 1}</strong> of {deck.length}
             {' · '}
-            <span style={{ color: 'var(--success)' }}>✓ {sessionCorrect}</span>
+            <span style={{ color: 'var(--success)' }}>✓ {tenseStats[currentTense]?.correct || 0}</span>
             {' / '}
-            <span style={{ color: 'var(--danger)' }}>✗ {sessionIncorrect}</span>
+            <span style={{ color: 'var(--danger)' }}>✗ {tenseStats[currentTense]?.incorrect || 0}</span>
           </div>
         </>
-      ) : null}
+      )}
 
       {openRule && (
         <RuleModal
@@ -293,6 +376,179 @@ export default function VerbDeepDive() {
           onClose={() => setOpenRule(null)}
         />
       )}
+    </div>
+  );
+}
+
+function CardLabel({ card, onOpenRule }) {
+  return (
+    <div className="flashcard-label">
+      <button
+        type="button"
+        onClick={e => { e.stopPropagation(); onOpenRule(card.tense); }}
+        style={{
+          background: 'rgba(255,255,255,0.18)',
+          border: '1px solid rgba(255,255,255,0.4)',
+          color: 'inherit',
+          font: 'inherit',
+          letterSpacing: 'inherit',
+          textTransform: 'inherit',
+          padding: '2px 8px',
+          borderRadius: 4,
+          cursor: 'pointer',
+        }}
+        title="Show the rule for this tense"
+      >
+        {card.tense} ⓘ
+      </button>
+      {card.subject ? <span> — {card.subject}</span> : null}
+    </div>
+  );
+}
+
+function TenseNavigator({ currentTense, tenseStats, phase, onJump }) {
+  return (
+    <div
+      style={{
+        display: 'flex',
+        gap: 8,
+        margin: '12px 0 18px',
+        flexWrap: 'wrap',
+        alignItems: 'center',
+      }}
+    >
+      <span style={{ fontSize: '0.85em', color: '#555', marginRight: 4 }}>Jump to:</span>
+      {TENSE_ORDER.map(t => {
+        const stat = tenseStats[t];
+        const done = stat?.completed;
+        const isCurrent = t === currentTense && phase !== 'verb-complete';
+        return (
+          <button
+            key={t}
+            type="button"
+            onClick={() => onJump(t)}
+            style={{
+              padding: '5px 12px',
+              borderRadius: 16,
+              border: '1px solid',
+              borderColor: isCurrent ? 'var(--primary, #667eea)' : (done ? 'var(--success, #28a745)' : '#ccc'),
+              background: isCurrent
+                ? 'var(--primary, #667eea)'
+                : (done ? 'rgba(40,167,69,0.12)' : 'white'),
+              color: isCurrent ? 'white' : '#333',
+              cursor: 'pointer',
+              fontSize: '0.9em',
+              fontWeight: isCurrent ? 600 : 400,
+            }}
+            title={isCurrent ? 'Currently practicing' : (done ? 'Done — click to practice again' : 'Skip ahead to this tense')}
+          >
+            {done ? '✓ ' : ''}{TENSE_LABELS[t]}
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
+function TenseIntro({ tense, verb, prevTenseStat, prevTenseLabel, onStart }) {
+  const intro = TENSE_INTROS[tense];
+  const showRecap = prevTenseStat?.completed && (prevTenseStat.correct + prevTenseStat.incorrect) > 0;
+  const recapTotal = showRecap ? prevTenseStat.correct + prevTenseStat.incorrect : 0;
+  const recapPct = showRecap && recapTotal > 0 ? Math.round((prevTenseStat.correct / recapTotal) * 100) : 0;
+  return (
+    <div className="card" style={{ padding: 24, maxWidth: 640, margin: '0 auto' }}>
+      {showRecap && (
+        <div
+          style={{
+            padding: 14,
+            background: 'rgba(40,167,69,0.10)',
+            borderRadius: 8,
+            marginBottom: 18,
+            textAlign: 'center',
+          }}
+        >
+          <strong>Nice work on {prevTenseLabel}!</strong>{' '}
+          You got <span style={{ color: 'var(--success)' }}>{prevTenseStat.correct}</span> / {recapTotal} ({recapPct}%) right.
+        </div>
+      )}
+      {intro ? (
+        <>
+          <h2 style={{ marginTop: 0 }}>{intro.title}</h2>
+          <div style={{ lineHeight: 1.55 }}>{intro.body}</div>
+          <p style={{ marginTop: 18, color: '#666', fontSize: '0.95em' }}>
+            Up next for <strong>{verb.infinitive}</strong> ({verb.english}): {TENSE_LABELS[tense]}.
+          </p>
+        </>
+      ) : (
+        <h2>{TENSE_LABELS[tense]}</h2>
+      )}
+      <div style={{ textAlign: 'center', marginTop: 18 }}>
+        <button
+          className="btn-secondary"
+          onClick={onStart}
+          style={{ padding: '10px 22px', fontSize: '1.05em' }}
+        >▶️ Start {TENSE_LABELS[tense]}</button>
+      </div>
+    </div>
+  );
+}
+
+function VerbSummary({ verb, tenseStats, onNext }) {
+  let totalCorrect = 0;
+  let totalIncorrect = 0;
+  const allMisses = [];
+  for (const t of TENSE_ORDER) {
+    const s = tenseStats[t];
+    if (!s) continue;
+    totalCorrect += s.correct;
+    totalIncorrect += s.incorrect;
+    allMisses.push(...s.misses);
+  }
+  const total = totalCorrect + totalIncorrect;
+  const pct = total > 0 ? Math.round((totalCorrect / total) * 100) : 0;
+  return (
+    <div className="completion-message">
+      <h2>✅ Finished {verb.infinitive}</h2>
+      <div style={{ margin: '20px 0', padding: 20, background: 'rgba(40,167,69,0.1)', borderRadius: 8 }}>
+        <h3 style={{ marginTop: 0 }}>Results for {verb.infinitive} ({verb.english})</h3>
+        <p style={{ fontSize: '1.2em', margin: '10px 0' }}>
+          <span style={{ color: 'var(--success)', fontWeight: 'bold' }}>✓ Correct: {totalCorrect}</span>{' | '}
+          <span style={{ color: 'var(--danger)', fontWeight: 'bold' }}>✗ Incorrect: {totalIncorrect}</span>
+        </p>
+        <p style={{ fontSize: '1.5em', fontWeight: 'bold', color: 'var(--primary)' }}>Score: {pct}%</p>
+        <div style={{ marginTop: 14, fontSize: '0.95em', color: '#444' }}>
+          {TENSE_ORDER.map(t => {
+            const s = tenseStats[t];
+            if (!s) return null;
+            const tot = s.correct + s.incorrect;
+            if (tot === 0) return null;
+            const p = Math.round((s.correct / tot) * 100);
+            return (
+              <div key={t} style={{ margin: '4px 0' }}>
+                <strong>{TENSE_LABELS[t]}:</strong> {s.correct}/{tot} ({p}%)
+              </div>
+            );
+          })}
+        </div>
+      </div>
+      {allMisses.length > 0 && (
+        <div style={{ marginTop: 20, textAlign: 'left', maxWidth: 560, marginLeft: 'auto', marginRight: 'auto' }}>
+          <h3 style={{ color: 'var(--danger)', marginBottom: 10 }}>Cards to Review:</h3>
+          <ul style={{ listStyle: 'none', padding: 0 }}>
+            {allMisses.map((m, i) => (
+              <li key={i} style={{ padding: 8, margin: '5px 0', background: 'rgba(220,53,69,0.1)', borderRadius: 4 }}>
+                <em style={{ color: '#666' }}>{m.tense}{m.subject ? ` — ${m.subject}` : ''}:</em>{' '}
+                <strong>{m.english}</strong> → {m.italian}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+      <button
+        className="btn-secondary"
+        onClick={onNext}
+        style={{ display: 'inline-block', marginTop: 10 }}
+      >➡️ Next verb (random)</button>
     </div>
   );
 }
@@ -371,8 +627,8 @@ function Header({ verb }) {
       <h1>Verb Deep Dive</h1>
       <p>
         {verb
-          ? <>Drilling <strong>{verb.infinitive}</strong> ({verb.english}) — gerund, present, imperfetto, passato prossimo.</>
-          : 'All forms and tenses of a single verb, one verb at a time.'}
+          ? <>Drilling <strong>{verb.infinitive}</strong> ({verb.english}) — one tense at a time.</>
+          : 'All forms and tenses of a single verb, one tense at a time.'}
       </p>
     </div>
   );
@@ -439,42 +695,6 @@ function VerbPicker({ verbs, query, setQuery, matches, currentId, onSelect, onRa
           ))}
         </ul>
       )}
-    </div>
-  );
-}
-
-function VerbSummary({ verb, correct, incorrect, misses, onNext }) {
-  const total = correct + incorrect;
-  const pct = total > 0 ? Math.round((correct / total) * 100) : 0;
-  return (
-    <div className="completion-message">
-      <h2>✅ Finished {verb.infinitive}</h2>
-      <div style={{ margin: '20px 0', padding: 20, background: 'rgba(40,167,69,0.1)', borderRadius: 8 }}>
-        <h3 style={{ marginTop: 0 }}>Results for {verb.infinitive} ({verb.english})</h3>
-        <p style={{ fontSize: '1.2em', margin: '10px 0' }}>
-          <span style={{ color: 'var(--success)', fontWeight: 'bold' }}>✓ Correct: {correct}</span>{' | '}
-          <span style={{ color: 'var(--danger)', fontWeight: 'bold' }}>✗ Incorrect: {incorrect}</span>
-        </p>
-        <p style={{ fontSize: '1.5em', fontWeight: 'bold', color: 'var(--primary)' }}>Score: {pct}%</p>
-      </div>
-      {misses.length > 0 && (
-        <div style={{ marginTop: 20, textAlign: 'left', maxWidth: 560, marginLeft: 'auto', marginRight: 'auto' }}>
-          <h3 style={{ color: 'var(--danger)', marginBottom: 10 }}>Cards to Review:</h3>
-          <ul style={{ listStyle: 'none', padding: 0 }}>
-            {misses.map((m, i) => (
-              <li key={i} style={{ padding: 8, margin: '5px 0', background: 'rgba(220,53,69,0.1)', borderRadius: 4 }}>
-                <em style={{ color: '#666' }}>{m.tense}{m.subject ? ` — ${m.subject}` : ''}:</em>{' '}
-                <strong>{m.english}</strong> → {m.italian}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
-      <button
-        className="btn-secondary"
-        onClick={onNext}
-        style={{ display: 'inline-block', marginTop: 10 }}
-      >➡️ Next verb (random)</button>
     </div>
   );
 }
