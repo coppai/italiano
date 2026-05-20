@@ -9,6 +9,13 @@
       "english": "having",
       "example": "Avendo fame, ho mangiato. (Being hungry, I ate.)"
     },
+    "past_participle": {
+      "italian": "avuto",
+      "english": "had",
+      "irregular": false,
+      "auxiliary": "avere",
+      "example": "Ho avuto fortuna. (I had luck.)"
+    },
     "tenses": {
       "present": [
         { "subject": "io",      "italian": "ho",      "english": "I have",                  "example": "Io ho un cane. (I have a dog.)" },
@@ -45,6 +52,13 @@
       "italian": "facendo",
       "english": "doing / making",
       "example": "Sto facendo i compiti. (I am doing my homework.)"
+    },
+    "past_participle": {
+      "italian": "fatto",
+      "english": "done / made",
+      "irregular": true,
+      "auxiliary": "avere",
+      "example": "Ho fatto un errore. (I made a mistake.)"
     },
     "tenses": {
       "present": [
@@ -83,6 +97,13 @@
       "english": "saying / telling",
       "example": "Sto dicendo la verità. (I am telling the truth.)"
     },
+    "past_participle": {
+      "italian": "detto",
+      "english": "said / told",
+      "irregular": true,
+      "auxiliary": "avere",
+      "example": "Ho detto la verità. (I told the truth.)"
+    },
     "tenses": {
       "present": [
         { "subject": "io",      "italian": "dico",     "english": "I say",                "example": "Dico sempre la verità. (I always tell the truth.)" },
@@ -119,6 +140,13 @@
       "italian": "potendo",
       "english": "being able to",
       "example": "Potendo, ti aiuterei. (If I could, I would help you.)"
+    },
+    "past_participle": {
+      "italian": "potuto",
+      "english": "been able",
+      "irregular": false,
+      "auxiliary": "avere",
+      "example": "Non ho potuto venire. (I wasn't able to come.)"
     },
     "tenses": {
       "present": [
@@ -157,6 +185,13 @@
       "english": "going",
       "example": "Sto andando al lavoro. (I am going to work.)"
     },
+    "past_participle": {
+      "italian": "andato",
+      "english": "gone",
+      "irregular": false,
+      "auxiliary": "essere",
+      "example": "Sono andato a Roma. (I went to Rome.)"
+    },
     "tenses": {
       "present": [
         { "subject": "io",      "italian": "vado",    "english": "I go",                "example": "Vado a scuola. (I go to school.)" },
@@ -193,6 +228,13 @@
       "italian": "vedendo",
       "english": "seeing",
       "example": "Vedendo la pioggia, sono rimasto a casa. (Seeing the rain, I stayed home.)"
+    },
+    "past_participle": {
+      "italian": "visto",
+      "english": "seen",
+      "irregular": true,
+      "auxiliary": "avere",
+      "example": "Ho visto un film. (I saw a movie.)"
     },
     "tenses": {
       "present": [
@@ -231,6 +273,13 @@
       "english": "wanting",
       "example": "Volendo, possiamo uscire stasera. (If we want, we can go out tonight.)"
     },
+    "past_participle": {
+      "italian": "voluto",
+      "english": "wanted",
+      "irregular": false,
+      "auxiliary": "avere",
+      "example": "Ho voluto provare. (I wanted to try.)"
+    },
     "tenses": {
       "present": [
         { "subject": "io",      "italian": "voglio",   "english": "I want",                "example": "Voglio un caffè. (I want a coffee.)" },
@@ -267,6 +316,13 @@
       "italian": "stando",
       "english": "staying / being",
       "example": "Stando attento, ho evitato l'errore. (By paying attention, I avoided the mistake.)"
+    },
+    "past_participle": {
+      "italian": "stato",
+      "english": "been / stayed",
+      "irregular": true,
+      "auxiliary": "essere",
+      "example": "Sono stato bene. (I have been well.)"
     },
     "tenses": {
       "present": [
@@ -305,6 +361,13 @@
       "english": "having to",
       "example": "Dovendo partire presto, sono andato a letto. (Having to leave early, I went to bed.)"
     },
+    "past_participle": {
+      "italian": "dovuto",
+      "english": "had to",
+      "irregular": false,
+      "auxiliary": "avere",
+      "example": "Ho dovuto partire. (I had to leave.)"
+    },
     "tenses": {
       "present": [
         { "subject": "io",      "italian": "devo",     "english": "I must / I have to",       "example": "Devo studiare. (I have to study.)" },
@@ -341,6 +404,13 @@
       "italian": "venendo",
       "english": "coming",
       "example": "Venendo a casa, ho visto un incidente. (Coming home, I saw an accident.)"
+    },
+    "past_participle": {
+      "italian": "venuto",
+      "english": "come",
+      "irregular": true,
+      "auxiliary": "essere",
+      "example": "Sono venuto presto. (I came early.)"
     },
     "tenses": {
       "present": [
@@ -379,6 +449,13 @@
       "english": "eating",
       "example": "Sto mangiando una pizza. (I am eating a pizza.)"
     },
+    "past_participle": {
+      "italian": "mangiato",
+      "english": "eaten",
+      "irregular": false,
+      "auxiliary": "avere",
+      "example": "Ho mangiato la pizza. (I ate the pizza.)"
+    },
     "tenses": {
       "present": [
         { "subject": "io",      "italian": "mangio",    "english": "I eat",                "example": "Mangio una mela. (I'm eating an apple.)" },
@@ -415,6 +492,13 @@
       "italian": "bevendo",
       "english": "drinking",
       "example": "Sto bevendo un caffè. (I am drinking a coffee.)"
+    },
+    "past_participle": {
+      "italian": "bevuto",
+      "english": "drunk",
+      "irregular": true,
+      "auxiliary": "avere",
+      "example": "Ho bevuto un caffè. (I drank a coffee.)"
     },
     "tenses": {
       "present": [
@@ -453,6 +537,13 @@
       "english": "knowing",
       "example": "Sapendo questo, ho cambiato idea. (Knowing this, I changed my mind.)"
     },
+    "past_participle": {
+      "italian": "saputo",
+      "english": "known",
+      "irregular": false,
+      "auxiliary": "avere",
+      "example": "Ho saputo la notizia. (I heard the news.)"
+    },
     "tenses": {
       "present": [
         { "subject": "io",      "italian": "so",       "english": "I know",                "example": "So la risposta. (I know the answer.)" },
@@ -489,6 +580,13 @@
       "italian": "dando",
       "english": "giving",
       "example": "Dando una mano, ho aiutato. (By giving a hand, I helped.)"
+    },
+    "past_participle": {
+      "italian": "dato",
+      "english": "given",
+      "irregular": false,
+      "auxiliary": "avere",
+      "example": "Ho dato un libro a Marco. (I gave a book to Marco.)"
     },
     "tenses": {
       "present": [
@@ -527,6 +625,13 @@
       "english": "taking",
       "example": "Prendendo il treno, arrivo prima. (By taking the train, I arrive sooner.)"
     },
+    "past_participle": {
+      "italian": "preso",
+      "english": "taken",
+      "irregular": true,
+      "auxiliary": "avere",
+      "example": "Ho preso il treno. (I took the train.)"
+    },
     "tenses": {
       "present": [
         { "subject": "io",      "italian": "prendo",    "english": "I take",                "example": "Prendo il treno. (I take the train.)" },
@@ -563,6 +668,13 @@
       "italian": "capendo",
       "english": "understanding",
       "example": "Capendo il problema, l'ho risolto. (Understanding the problem, I solved it.)"
+    },
+    "past_participle": {
+      "italian": "capito",
+      "english": "understood",
+      "irregular": false,
+      "auxiliary": "avere",
+      "example": "Ho capito tutto. (I understood everything.)"
     },
     "tenses": {
       "present": [
@@ -601,6 +713,13 @@
       "english": "putting",
       "example": "Mettendo ordine, ho trovato le chiavi. (By tidying up, I found the keys.)"
     },
+    "past_participle": {
+      "italian": "messo",
+      "english": "put",
+      "irregular": true,
+      "auxiliary": "avere",
+      "example": "Ho messo le chiavi sul tavolo. (I put the keys on the table.)"
+    },
     "tenses": {
       "present": [
         { "subject": "io",      "italian": "metto",    "english": "I put",                "example": "Metto il libro sul tavolo. (I put the book on the table.)" },
@@ -637,6 +756,13 @@
       "italian": "trovando",
       "english": "finding",
       "example": "Trovando le chiavi, sono uscito. (Finding the keys, I went out.)"
+    },
+    "past_participle": {
+      "italian": "trovato",
+      "english": "found",
+      "irregular": false,
+      "auxiliary": "avere",
+      "example": "Ho trovato le chiavi. (I found the keys.)"
     },
     "tenses": {
       "present": [
@@ -675,6 +801,13 @@
       "english": "leaving / letting",
       "example": "Lasciando la porta aperta, è entrato il gatto. (By leaving the door open, the cat came in.)"
     },
+    "past_participle": {
+      "italian": "lasciato",
+      "english": "left",
+      "irregular": false,
+      "auxiliary": "avere",
+      "example": "Ho lasciato il lavoro. (I left the job.)"
+    },
     "tenses": {
       "present": [
         { "subject": "io",      "italian": "lascio",    "english": "I leave",                "example": "Lascio la città. (I leave the city.)" },
@@ -711,6 +844,13 @@
       "italian": "guardando",
       "english": "looking / watching",
       "example": "Guardando il tramonto, ho pensato a te. (Watching the sunset, I thought of you.)"
+    },
+    "past_participle": {
+      "italian": "guardato",
+      "english": "watched",
+      "irregular": false,
+      "auxiliary": "avere",
+      "example": "Ho guardato la TV. (I watched TV.)"
     },
     "tenses": {
       "present": [
@@ -749,6 +889,13 @@
       "english": "thinking",
       "example": "Pensando a te, ho sorriso. (Thinking of you, I smiled.)"
     },
+    "past_participle": {
+      "italian": "pensato",
+      "english": "thought",
+      "irregular": false,
+      "auxiliary": "avere",
+      "example": "Ho pensato a te. (I thought about you.)"
+    },
     "tenses": {
       "present": [
         { "subject": "io",      "italian": "penso",    "english": "I think",                "example": "Penso a te. (I think of you.)" },
@@ -785,6 +932,13 @@
       "italian": "partendo",
       "english": "leaving / departing",
       "example": "Partendo presto, eviteremo il traffico. (By leaving early, we'll avoid traffic.)"
+    },
+    "past_participle": {
+      "italian": "partito",
+      "english": "departed",
+      "irregular": false,
+      "auxiliary": "essere",
+      "example": "Sono partito alle otto. (I left at eight.)"
     },
     "tenses": {
       "present": [
@@ -823,6 +977,13 @@
       "english": "living",
       "example": "Vivendo a Roma, ho imparato l'italiano. (Living in Rome, I learned Italian.)"
     },
+    "past_participle": {
+      "italian": "vissuto",
+      "english": "lived",
+      "irregular": true,
+      "auxiliary": "avere",
+      "example": "Ho vissuto a Milano. (I lived in Milan.)"
+    },
     "tenses": {
       "present": [
         { "subject": "io",      "italian": "vivo",    "english": "I live",                "example": "Vivo a Roma. (I live in Rome.)" },
@@ -859,6 +1020,13 @@
       "italian": "arrivando",
       "english": "arriving",
       "example": "Arrivando tardi, ho perso il treno. (By arriving late, I missed the train.)"
+    },
+    "past_participle": {
+      "italian": "arrivato",
+      "english": "arrived",
+      "irregular": false,
+      "auxiliary": "essere",
+      "example": "Sono arrivato in ritardo. (I arrived late.)"
     },
     "tenses": {
       "present": [
@@ -897,6 +1065,13 @@
       "english": "bringing / carrying / wearing",
       "example": "Portando gli occhiali, vedo meglio. (By wearing glasses, I see better.)"
     },
+    "past_participle": {
+      "italian": "portato",
+      "english": "brought",
+      "irregular": false,
+      "auxiliary": "avere",
+      "example": "Ho portato il pane. (I brought the bread.)"
+    },
     "tenses": {
       "present": [
         { "subject": "io",      "italian": "porto",    "english": "I bring",                "example": "Porto i libri. (I bring the books.)" },
@@ -933,6 +1108,13 @@
       "italian": "chiamando",
       "english": "calling",
       "example": "Chiamando il dottore, ho risolto il problema. (By calling the doctor, I solved the problem.)"
+    },
+    "past_participle": {
+      "italian": "chiamato",
+      "english": "called",
+      "irregular": false,
+      "auxiliary": "avere",
+      "example": "Ho chiamato mia madre. (I called my mother.)"
     },
     "tenses": {
       "present": [
@@ -971,6 +1153,13 @@
       "english": "working",
       "example": "Lavorando duro, ha avuto successo. (By working hard, he/she was successful.)"
     },
+    "past_participle": {
+      "italian": "lavorato",
+      "english": "worked",
+      "irregular": false,
+      "auxiliary": "avere",
+      "example": "Ho lavorato tutto il giorno. (I worked all day.)"
+    },
     "tenses": {
       "present": [
         { "subject": "io",      "italian": "lavoro",    "english": "I work",                "example": "Lavoro in ufficio. (I work in an office.)" },
@@ -1007,6 +1196,13 @@
       "italian": "conoscendo",
       "english": "knowing",
       "example": "Conoscendo la strada, arriviamo presto. (Knowing the way, we arrive soon.)"
+    },
+    "past_participle": {
+      "italian": "conosciuto",
+      "english": "known / met",
+      "irregular": false,
+      "auxiliary": "avere",
+      "example": "Ho conosciuto Maria ieri. (I met Maria yesterday.)"
     },
     "tenses": {
       "present": [
@@ -1045,6 +1241,13 @@
       "english": "hearing / feeling",
       "example": "Sentendo il rumore, mi sono svegliato. (Hearing the noise, I woke up.)"
     },
+    "past_participle": {
+      "italian": "sentito",
+      "english": "heard / felt",
+      "irregular": false,
+      "auxiliary": "avere",
+      "example": "Ho sentito un rumore. (I heard a noise.)"
+    },
     "tenses": {
       "present": [
         { "subject": "io",      "italian": "sento",    "english": "I hear / I feel",        "example": "Sento la musica. (I hear the music.)" },
@@ -1081,6 +1284,13 @@
       "italian": "cercando",
       "english": "looking for / searching",
       "example": "Cercando bene, ho trovato le chiavi. (By looking carefully, I found the keys.)"
+    },
+    "past_participle": {
+      "italian": "cercato",
+      "english": "searched",
+      "irregular": false,
+      "auxiliary": "avere",
+      "example": "Ho cercato le chiavi. (I looked for the keys.)"
     },
     "tenses": {
       "present": [
@@ -1119,6 +1329,13 @@
       "english": "playing",
       "example": "Giocando a calcio, mi sono fatto male. (While playing soccer, I got hurt.)"
     },
+    "past_participle": {
+      "italian": "giocato",
+      "english": "played",
+      "irregular": false,
+      "auxiliary": "avere",
+      "example": "Ho giocato a calcio. (I played soccer.)"
+    },
     "tenses": {
       "present": [
         { "subject": "io",      "italian": "gioco",     "english": "I play",                "example": "Gioco a calcio. (I play soccer.)" },
@@ -1156,6 +1373,13 @@
       "english": "asking",
       "example": "Chiedendo aiuto, ho risolto il problema. (By asking for help, I solved the problem.)"
     },
+    "past_participle": {
+      "italian": "chiesto",
+      "english": "asked",
+      "irregular": true,
+      "auxiliary": "avere",
+      "example": "Ho chiesto aiuto. (I asked for help.)"
+    },
     "tenses": {
       "present": [
         { "subject": "io",      "italian": "chiedo",    "english": "I ask",                "example": "Chiedo una domanda. (I ask a question.)" },
@@ -1192,6 +1416,13 @@
       "italian": "aiutando",
       "english": "helping",
       "example": "Aiutando gli altri, mi sento meglio. (By helping others, I feel better.)"
+    },
+    "past_participle": {
+      "italian": "aiutato",
+      "english": "helped",
+      "irregular": false,
+      "auxiliary": "avere",
+      "example": "Ho aiutato mia sorella. (I helped my sister.)"
     },
     "tenses": {
       "present": [

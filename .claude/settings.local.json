@@ -4,7 +4,8 @@
       "WebFetch(domain:italiano-6nr0.onrender.com)",
       "Bash(grep -rn 'className=\"progress\"\\\\|className={`progress' /Users/iancoppa/Desktop/italian-flashcards/src/)",
       "Bash(grep -n \"</div>$\\\\|return \\(\" /Users/iancoppa/Desktop/italian-flashcards/src/routes/VerbDeepDive.jsx)",
-      "Bash(python3 -c \"import json; d=json.load\\(open\\('public/verbDeepDive.json'\\)\\); print\\(f'verbs: {len\\(d\\)}, total cards: {sum\\(1 + sum\\(len\\(t\\) for t in v[\\\\\"tenses\\\\\"].values\\(\\)\\) for v in d\\)}'\\)\")"
+      "Bash(python3 -c \"import json; d=json.load\\(open\\('public/verbDeepDive.json'\\)\\); print\\(f'verbs: {len\\(d\\)}, total cards: {sum\\(1 + sum\\(len\\(t\\) for t in v[\\\\\"tenses\\\\\"].values\\(\\)\\) for v in d\\)}'\\)\")",
+      "Bash(python3 *)"
     ]
   }
 }

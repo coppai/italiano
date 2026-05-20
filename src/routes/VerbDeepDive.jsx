@@ -8,11 +8,12 @@ import { speakItalian } from '../lib/speak.js';
 import { requeueAhead } from '../lib/verbHelpers.js';
 import { shuffle } from '../lib/shuffle.js';
 
-const TENSE_ORDER = ['present', 'imperfetto', 'passato_prossimo', 'gerund'];
+const TENSE_ORDER = ['present', 'imperfetto', 'past_participle', 'passato_prossimo', 'gerund'];
 
 const TENSE_LABELS = {
   present: 'Present',
   imperfetto: 'Imperfetto',
+  past_participle: 'Past Participle',
   passato_prossimo: 'Passato Prossimo',
   gerund: 'Gerund',
 };
@@ -44,12 +45,27 @@ const TENSE_INTROS = {
       </>
     ),
   },
+  past_participle: {
+    title: 'Past Participle — the building block for passato prossimo',
+    body: (
+      <>
+        <p>The past participle is half of the passato prossimo (the other half is the auxiliary). Practicing it on its own first means the only thing left to think about in the next stage is which auxiliary to use.</p>
+        <p>Regular endings:</p>
+        <ul>
+          <li><strong>-are</strong> → <strong>-ato</strong> (parlare → parlato)</li>
+          <li><strong>-ere</strong> → <strong>-uto</strong> (vendere → venduto)</li>
+          <li><strong>-ire</strong> → <strong>-ito</strong> (sentire → sentito)</li>
+        </ul>
+        <p>Many common <em>-ere</em> verbs are irregular: <em>fatto, detto, preso, visto, scritto, letto, messo, chiesto, vissuto…</em> These have to be memorized.</p>
+      </>
+    ),
+  },
   passato_prossimo: {
     title: 'Passato Prossimo — the completed past',
     body: (
       <>
         <p>The everyday past tense for <strong>completed actions</strong>. Translates to either the simple past (“I ate”) or the present perfect (“I have eaten”) in English.</p>
-        <p>Formation: <strong>auxiliary</strong> (avere or essere) in the present + <strong>past participle</strong>. With <em>essere</em>, the participle agrees with the subject in gender and number.</p>
+        <p>Formation: <strong>auxiliary</strong> (avere or essere) in the present + the past participle you just practiced. With <em>essere</em>, the participle agrees with the subject in gender and number (<em>andato / andata / andati / andate</em>).</p>
       </>
     ),
   },
@@ -95,17 +111,31 @@ const TENSE_RULES = {
       </>
     ),
   },
+  'Past Participle': {
+    title: 'Past Participle',
+    body: (
+      <>
+        <p>Drop the infinitive ending and add:</p>
+        <ul>
+          <li><strong>-are</strong> → <strong>-ato</strong> (parlare → parlato)</li>
+          <li><strong>-ere</strong> → <strong>-uto</strong> (vendere → venduto)</li>
+          <li><strong>-ire</strong> → <strong>-ito</strong> (sentire → sentito)</li>
+        </ul>
+        <p>Common irregular participles to memorize:</p>
+        <ul>
+          <li><em>fare</em> → fatto · <em>dire</em> → detto · <em>vedere</em> → visto</li>
+          <li><em>prendere</em> → preso · <em>mettere</em> → messo · <em>chiedere</em> → chiesto</li>
+          <li><em>vivere</em> → vissuto · <em>bere</em> → bevuto · <em>venire</em> → venuto</li>
+          <li><em>essere / stare</em> → stato</li>
+        </ul>
+      </>
+    ),
+  },
   'Passato Prossimo': {
     title: 'Passato Prossimo',
     body: (
       <>
-        <p><strong>Auxiliary</strong> (avere / essere) in the present + <strong>past participle</strong>.</p>
-        <p>Past participle endings:</p>
-        <ul>
-          <li>-are → <strong>-ato</strong> (parlare → parlato)</li>
-          <li>-ere → <strong>-uto</strong> (vendere → venduto) — many irregulars: <em>fatto, detto, preso, visto, scritto, letto…</em></li>
-          <li>-ire → <strong>-ito</strong> (sentire → sentito)</li>
-        </ul>
+        <p><strong>Auxiliary</strong> (avere / essere) in the present + past participle.</p>
         <p><strong>Pick the auxiliary:</strong></p>
         <ul>
           <li><strong>avere</strong> — most verbs (especially transitive). Participle is invariant: <em>ho mangiato, abbiamo mangiato</em>.</li>
@@ -141,6 +171,16 @@ function buildCardsByTense(verb) {
             english: verb.gerund.english,
             italian: verb.gerund.italian,
             example: verb.gerund.example,
+            infinitive: verb.infinitive,
+          }]
+        : [];
+    } else if (t === 'past_participle') {
+      map.past_participle = verb.past_participle
+        ? [{
+            tense: 'Past Participle',
+            english: verb.past_participle.english,
+            italian: verb.past_participle.italian,
+            example: verb.past_participle.example,
             infinitive: verb.infinitive,
           }]
         : [];
