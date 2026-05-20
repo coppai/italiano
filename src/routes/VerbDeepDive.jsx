@@ -56,7 +56,31 @@ const TENSE_INTROS = {
           <li><strong>-ere</strong> → <strong>-uto</strong> (vendere → venduto)</li>
           <li><strong>-ire</strong> → <strong>-ito</strong> (sentire → sentito)</li>
         </ul>
-        <p>Many common <em>-ere</em> verbs are irregular: <em>fatto, detto, preso, visto, scritto, letto, messo, chiesto, vissuto…</em> These have to be memorized.</p>
+        <p>Many common verbs have irregular participles — these have to be memorized:</p>
+        <table style={{ borderCollapse: 'collapse', margin: '8px 0', width: '100%' }}>
+          <tbody>
+            <tr>
+              <td style={{ padding: '3px 24px 3px 0' }}><em>fare</em> → fatto</td>
+              <td style={{ padding: '3px 0' }}><em>dire</em> → detto</td>
+            </tr>
+            <tr>
+              <td style={{ padding: '3px 24px 3px 0' }}><em>prendere</em> → preso</td>
+              <td style={{ padding: '3px 0' }}><em>vedere</em> → visto</td>
+            </tr>
+            <tr>
+              <td style={{ padding: '3px 24px 3px 0' }}><em>scrivere</em> → scritto</td>
+              <td style={{ padding: '3px 0' }}><em>leggere</em> → letto</td>
+            </tr>
+            <tr>
+              <td style={{ padding: '3px 24px 3px 0' }}><em>mettere</em> → messo</td>
+              <td style={{ padding: '3px 0' }}><em>chiedere</em> → chiesto</td>
+            </tr>
+            <tr>
+              <td style={{ padding: '3px 24px 3px 0' }}><em>vivere</em> → vissuto</td>
+              <td style={{ padding: '3px 0' }}><em>venire</em> → venuto</td>
+            </tr>
+          </tbody>
+        </table>
       </>
     ),
   },
