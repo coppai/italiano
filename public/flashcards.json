@@ -4159,104 +4159,104 @@
     "incorrect": 0,
     "dateAdded": "2026-05-20"
 },
-{
-  "id": "1747689600001fatto001",
-  "question": "to do (past tense of to do)",
-  "answer": "fatto",
-  "notes": "Past participle of 'fare' (to do/make). Irregular form.",
-  "categories": ["past participle"],
-  "correct": 0,
-  "incorrect": 0,
-  "dateAdded": "2026-05-20"
-},
-{
-  "id": "1747689600002detto001",
-  "question": "said (past tense of say)",
-  "answer": "detto",
-  "notes": "Past participle of 'dire' (to say/tell). Irregular form.",
-  "categories": ["past participle"],
-  "correct": 0,
-  "incorrect": 0,
-  "dateAdded": "2026-05-20"
-},
-{
-  "id": "1747689600003preso001",
-  "question": "taken (past tense of take)",
-  "answer": "preso",
-  "notes": "Past participle of 'prendere' (to take). Irregular form.",
-  "categories": ["past participle"],
-  "correct": 0,
-  "incorrect": 0,
-  "dateAdded": "2026-05-20"
-},
-{
-  "id": "1747689600004visto001",
-  "question": "seen (past tense of see)",
-  "answer": "visto",
-  "notes": "Past participle of 'vedere' (to see). Irregular form.",
-  "categories": ["past participle"],
-  "correct": 0,
-  "incorrect": 0,
-  "dateAdded": "2026-05-20"
-},
-{
-  "id": "1747689600005scritto001",
-  "question": "written (past tense of write)",
-  "answer": "scritto",
-  "notes": "Past participle of 'scrivere' (to write). Irregular form.",
-  "categories": ["past participle"],
-  "correct": 0,
-  "incorrect": 0,
-  "dateAdded": "2026-05-20"
-},
-{
-  "id": "1747689600006letto001",
-  "question": "read (past tense of read)",
-  "answer": "letto",
-  "notes": "Past participle of 'leggere' (to read). Irregular form.",
-  "categories": ["past participle"],
-  "correct": 0,
-  "incorrect": 0,
-  "dateAdded": "2026-05-20"
-},
-{
-  "id": "1747689600007messo001",
-  "question": "put (past tense of put)",
-  "answer": "messo",
-  "notes": "Past participle of 'mettere' (to put/place). Irregular form.",
-  "categories": ["past participle"],
-  "correct": 0,
-  "incorrect": 0,
-  "dateAdded": "2026-05-20"
-},
-{
-  "id": "1747689600008chiesto001",
-  "question": "asked (past tense of ask)",
-  "answer": "chiesto",
-  "notes": "Past participle of 'chiedere' (to ask). Irregular form.",
-  "categories": ["past participle"],
-  "correct": 0,
-  "incorrect": 0,
-  "dateAdded": "2026-05-20"
-},
-{
-  "id": "1747689600009vissuto001",
-  "question": "lived (past tense of live)",
-  "answer": "vissuto",
-  "notes": "Past participle of 'vivere' (to live). Irregular form.",
-  "categories": ["past participle"],
-  "correct": 0,
-  "incorrect": 0,
-  "dateAdded": "2026-05-20"
-},
-{
-  "id": "1747689600010venuto001",
-  "question": "come (past tense of come)",
-  "answer": "venuto",
-  "notes": "Past participle of 'venire' (to come). Irregular form.",
-  "categories": ["past participle"],
-  "correct": 0,
-  "incorrect": 0,
-  "dateAdded": "2026-05-20"
-}
+  {
+    "id": "1747689600001fatto001",
+    "question": "I did",
+    "answer": "ho fatto",
+    "notes": "Passato prossimo of 'fare' (to do/make). Uses avere.",
+    "categories": ["passato prossimo"],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-20"
+  },
+  {
+    "id": "1747689600002detto001",
+    "question": "I said",
+    "answer": "ho detto",
+    "notes": "Passato prossimo of 'dire' (to say/tell). Uses avere.",
+    "categories": ["passato prossimo"],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-20"
+  },
+  {
+    "id": "1747689600003preso001",
+    "question": "I took",
+    "answer": "ho preso",
+    "notes": "Passato prossimo of 'prendere' (to take). Uses avere.",
+    "categories": ["passato prossimo"],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-20"
+  },
+  {
+    "id": "1747689600004visto001",
+    "question": "I saw",
+    "answer": "ho visto",
+    "notes": "Passato prossimo of 'vedere' (to see). Uses avere.",
+    "categories": ["passato prossimo"],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-20"
+  },
+  {
+    "id": "1747689600005scritto001",
+    "question": "I wrote",
+    "answer": "ho scritto",
+    "notes": "Passato prossimo of 'scrivere' (to write). Uses avere.",
+    "categories": ["passato prossimo"],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-20"
+  },
+  {
+    "id": "1747689600006letto001",
+    "question": "I read",
+    "answer": "ho letto",
+    "notes": "Passato prossimo of 'leggere' (to read). Uses avere.",
+    "categories": ["passato prossimo"],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-20"
+  },
+  {
+    "id": "1747689600007messo001",
+    "question": "I put",
+    "answer": "ho messo",
+    "notes": "Passato prossimo of 'mettere' (to put/place). Uses avere.",
+    "categories": ["passato prossimo"],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-20"
+  },
+  {
+    "id": "1747689600008chiesto001",
+    "question": "I asked",
+    "answer": "ho chiesto",
+    "notes": "Passato prossimo of 'chiedere' (to ask). Uses avere.",
+    "categories": ["passato prossimo"],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-20"
+  },
+  {
+    "id": "1747689600009vissuto001",
+    "question": "I lived",
+    "answer": "ho vissuto",
+    "notes": "Passato prossimo of 'vivere' (to live). Usually uses avere.",
+    "categories": ["passato prossimo"],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-20"
+  },
+  {
+    "id": "1747689600010venuto001",
+    "question": "I came",
+    "answer": "sono venuto",
+    "notes": "Passato prossimo of 'venire' (to come). Uses essere.",
+    "categories": ["passato prossimo"],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-20"
+  }
 ]
