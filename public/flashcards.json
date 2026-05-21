@@ -4258,5 +4258,105 @@
     "correct": 0,
     "incorrect": 0,
     "dateAdded": "2026-05-20"
-  }
+  },
+	{
+  "id": "1747776000001lentamente",
+  "question": "slowly",
+  "answer": "lentamente",
+  "notes": "Pronunciation: len-tah-MEN-teh. Adverb.\n\nParla lentamente, per favore. → Speak slowly, please.",
+  "categories": ["adverbs", "common-words"],
+  "correct": 0,
+  "incorrect": 0,
+  "dateAdded": "2026-05-21"
+},
+{
+  "id": "1747776000002funicolare",
+  "question": "funicular / cable car",
+  "answer": "funicolare",
+  "notes": "Pronunciation: foo-nee-koh-LAH-reh. Feminine noun - la funicolare.\n\nPrendiamo la funicolare per salire. → Let's take the funicular to go up.",
+  "categories": ["transportation", "common-words"],
+  "correct": 0,
+  "incorrect": 0,
+  "dateAdded": "2026-05-21"
+},
+{
+  "id": "1747776000003sbagliato",
+  "question": "wrong / mistaken / incorrect",
+  "answer": "sbagliato",
+  "notes": "Pronunciation: zbah-LYAH-toh. Adjective or past participle of 'sbagliare' (to make a mistake).\n\nHo sbagliato strada. → I took the wrong road.",
+  "categories": ["adjectives", "common-words"],
+  "correct": 0,
+  "incorrect": 0,
+  "dateAdded": "2026-05-21"
+},
+{
+  "id": "1747776000004panchina",
+  "question": "bench",
+  "answer": "panchina",
+  "notes": "Pronunciation: pahn-KEE-nah. Feminine noun - la panchina.\n\nSediamoci sulla panchina. → Let's sit on the bench.",
+  "categories": ["furniture", "common-words"],
+  "correct": 0,
+  "incorrect": 0,
+  "dateAdded": "2026-05-21"
+},
+{
+  "id": "1747776000005nuotare",
+  "question": "to swim",
+  "answer": "nuotare",
+  "notes": "Pronunciation: nwoh-TAH-reh. Regular -are verb.\n\nMi piace nuotare in mare. → I like to swim in the sea.",
+  "categories": ["verbs", "sports"],
+  "correct": 0,
+  "incorrect": 0,
+  "dateAdded": "2026-05-21"
+},
+{
+  "id": "1747776000006domanda",
+  "question": "I have a question",
+  "answer": "Ho una domanda",
+  "notes": "Pronunciation: oh OO-nah doh-MAHN-dah. Common phrase.\n\nScusa, ho una domanda per te. → Excuse me, I have a question for you.",
+  "categories": ["phrases", "common-words"],
+  "correct": 0,
+  "incorrect": 0,
+  "dateAdded": "2026-05-21"
+},
+{
+  "id": "1747776000007chiuso",
+  "question": "closed",
+  "answer": "chiuso",
+  "notes": "Pronunciation: KYOO-zoh. Adjective or past participle of 'chiudere' (to close). Masculine: chiuso / Feminine: chiusa.\n\nIl negozio è chiuso oggi. → The store is closed today.",
+  "categories": ["adjectives", "common-words"],
+  "correct": 0,
+  "incorrect": 0,
+  "dateAdded": "2026-05-21"
+},
+{
+  "id": "1747776000008scusate",
+  "question": "excuse me / sorry (plural/informal or formal)",
+  "answer": "scusate",
+  "notes": "Pronunciation: skoo-ZAH-teh. Imperative plural form of 'scusare'. Use for addressing multiple people informally or one person formally.\n\nScusate il ritardo. → Excuse me for being late.",
+  "categories": ["phrases", "common-words"],
+  "correct": 0,
+  "incorrect": 0,
+  "dateAdded": "2026-05-21"
+},
+{
+  "id": "1747776000009avetevisto",
+  "question": "have you seen / did you see (plural)",
+  "answer": "avete visto",
+  "notes": "Pronunciation: ah-VEH-teh VEE-stoh. Passato prossimo of 'vedere' (to see), 2nd person plural.\n\nAvete visto il mio telefono? → Have you seen my phone?",
+  "categories": ["passato prossimo", "phrases"],
+  "correct": 0,
+  "incorrect": 0,
+  "dateAdded": "2026-05-21"
+},
+{
+  "id": "1747776000010lafila",
+  "question": "the line / the queue",
+  "answer": "la fila",
+  "notes": "Pronunciation: lah FEE-lah. Feminine noun - la fila.\n\nDobbiamo fare la fila. → We have to wait in line.",
+  "categories": ["common-words"],
+  "correct": 0,
+  "incorrect": 0,
+  "dateAdded": "2026-05-21"
+}
 ]
