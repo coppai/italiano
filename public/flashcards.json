@@ -4270,20 +4270,10 @@
   "dateAdded": "2026-05-21"
 },
 {
-  "id": "1747776000002funicolare",
-  "question": "funicular / cable car",
-  "answer": "funicolare",
-  "notes": "Pronunciation: foo-nee-koh-LAH-reh. Feminine noun - la funicolare.\n\nPrendiamo la funicolare per salire. → Let's take the funicular to go up.",
-  "categories": ["transportation", "common-words"],
-  "correct": 0,
-  "incorrect": 0,
-  "dateAdded": "2026-05-21"
-},
-{
   "id": "1747776000003sbagliato",
   "question": "wrong / mistaken / incorrect",
   "answer": "sbagliato",
-  "notes": "Pronunciation: zbah-LYAH-toh. Adjective or past participle of 'sbagliare' (to make a mistake).\n\nHo sbagliato strada. → I took the wrong road.",
+  "notes": "Pronunciation: \nsba → 'zbah' \nglià → 'LYAH' (stressed) \nto → 'toh'.\n Adjective or past participle of 'sbagliare' (to make a mistake).\n\nHo sbagliato strada. → I took the wrong road.",
   "categories": ["adjectives", "common-words"],
   "correct": 0,
   "incorrect": 0,
@@ -4303,7 +4293,7 @@
   "id": "1747776000005nuotare",
   "question": "to swim",
   "answer": "nuotare",
-  "notes": "Pronunciation: nwoh-TAH-reh. Regular -are verb.\n\nMi piace nuotare in mare. → I like to swim in the sea.",
+  "notes": "Pronunciation: \nnuo → sounds like 'nwoh'\nta → stressed syllable, 'TAH'\nre → 'reh' Regular -are verb.\n\nMi piace nuotare in mare. → I like to swim in the sea.",
   "categories": ["verbs", "sports"],
   "correct": 0,
   "incorrect": 0,
