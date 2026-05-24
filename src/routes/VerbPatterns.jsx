@@ -137,7 +137,7 @@ export default function VerbPatterns() {
           {showChart ? '▼ Hide' : '▶ Show'} Conjugation Reference Chart
         </button>
         
-        {showChart && (
+{showChart && (
           <div style={{ 
             background: '#fff', 
             padding: '1.5rem', 
@@ -152,21 +152,73 @@ export default function VerbPatterns() {
             }}>
               <thead>
                 <tr style={{ background: '#f8f9fa', borderBottom: '2px solid #dee2e6' }}>
-                  <th style={{ padding: '0.75rem', textAlign: 'left', fontWeight: 'bold' }}>Verb Type</th>
                   <th style={{ padding: '0.75rem', textAlign: 'left', fontWeight: 'bold' }}>Pronoun</th>
-                  <th style={{ padding: '0.75rem', textAlign: 'left', fontWeight: 'bold' }}>Conjugation Rule</th>
+                  <th style={{ padding: '0.75rem', textAlign: 'left', fontWeight: 'bold' }}>Verb Types</th>
+                  <th style={{ padding: '0.75rem', textAlign: 'left', fontWeight: 'bold' }}>Ending</th>
                   <th style={{ padding: '0.75rem', textAlign: 'left', fontWeight: 'bold' }}>Pronunciation</th>
                 </tr>
               </thead>
               <tbody>
-                {VERB_PATTERNS.map((pattern, i) => (
-                  <tr key={i} style={{ borderBottom: '1px solid #dee2e6' }}>
-                    <td style={{ padding: '0.75rem', fontWeight: 'bold', color: '#2c3e50' }}>{pattern.type}</td>
-                    <td style={{ padding: '0.75rem', fontStyle: 'italic', color: '#7f8c8d' }}>{pattern.pronoun}</td>
-                    <td style={{ padding: '0.75rem', color: '#27ae60' }}>{pattern.rule}</td>
-                    <td style={{ padding: '0.75rem', color: '#2980b9' }}>{pattern.pronunciation}</td>
-                  </tr>
-                ))}
+                <tr style={{ borderBottom: '1px solid #dee2e6' }}>
+                  <td style={{ padding: '0.75rem', fontStyle: 'italic', color: '#7f8c8d' }}>noi</td>
+                  <td style={{ padding: '0.75rem', fontWeight: 'bold', color: '#2c3e50' }}>ARE, ERE, IRE, IRE (-isc-)</td>
+                  <td style={{ padding: '0.75rem', color: '#27ae60' }}>-iamo</td>
+                  <td style={{ padding: '0.75rem', color: '#2980b9' }}>ee-AH-moh</td>
+                </tr>
+                <tr style={{ borderBottom: '1px solid #dee2e6' }}>
+                  <td style={{ padding: '0.75rem', fontStyle: 'italic', color: '#7f8c8d' }}>voi</td>
+                  <td style={{ padding: '0.75rem', fontWeight: 'bold', color: '#2c3e50' }}>ARE</td>
+                  <td style={{ padding: '0.75rem', color: '#27ae60' }}>-ate</td>
+                  <td style={{ padding: '0.75rem', color: '#2980b9' }}>AH-teh</td>
+                </tr>
+                <tr style={{ borderBottom: '1px solid #dee2e6' }}>
+                  <td style={{ padding: '0.75rem', fontStyle: 'italic', color: '#7f8c8d' }}>voi</td>
+                  <td style={{ padding: '0.75rem', fontWeight: 'bold', color: '#2c3e50' }}>ERE</td>
+                  <td style={{ padding: '0.75rem', color: '#27ae60' }}>-ete</td>
+                  <td style={{ padding: '0.75rem', color: '#2980b9' }}>EH-teh</td>
+                </tr>
+                <tr style={{ borderBottom: '1px solid #dee2e6' }}>
+                  <td style={{ padding: '0.75rem', fontStyle: 'italic', color: '#7f8c8d' }}>voi</td>
+                  <td style={{ padding: '0.75rem', fontWeight: 'bold', color: '#2c3e50' }}>IRE, IRE (-isc-)</td>
+                  <td style={{ padding: '0.75rem', color: '#27ae60' }}>-ite</td>
+                  <td style={{ padding: '0.75rem', color: '#2980b9' }}>EE-teh</td>
+                </tr>
+                <tr style={{ borderBottom: '1px solid #dee2e6' }}>
+                  <td style={{ padding: '0.75rem', fontStyle: 'italic', color: '#7f8c8d' }}>loro</td>
+                  <td style={{ padding: '0.75rem', fontWeight: 'bold', color: '#2c3e50' }}>ARE</td>
+                  <td style={{ padding: '0.75rem', color: '#27ae60' }}>-ano</td>
+                  <td style={{ padding: '0.75rem', color: '#2980b9' }}>AH-noh</td>
+                </tr>
+                <tr style={{ borderBottom: '1px solid #dee2e6' }}>
+                  <td style={{ padding: '0.75rem', fontStyle: 'italic', color: '#7f8c8d' }}>loro</td>
+                  <td style={{ padding: '0.75rem', fontWeight: 'bold', color: '#2c3e50' }}>ERE, IRE</td>
+                  <td style={{ padding: '0.75rem', color: '#27ae60' }}>-ono</td>
+                  <td style={{ padding: '0.75rem', color: '#2980b9' }}>OH-noh</td>
+                </tr>
+                <tr style={{ borderBottom: '1px solid #dee2e6', background: '#f9f9f9' }}>
+                  <td style={{ padding: '0.75rem', fontStyle: 'italic', color: '#7f8c8d' }}>io</td>
+                  <td style={{ padding: '0.75rem', fontWeight: 'bold', color: '#2c3e50' }}>IRE (-isc-)</td>
+                  <td style={{ padding: '0.75rem', color: '#27ae60' }}>-isco</td>
+                  <td style={{ padding: '0.75rem', color: '#2980b9' }}>EE-skoh</td>
+                </tr>
+                <tr style={{ borderBottom: '1px solid #dee2e6', background: '#f9f9f9' }}>
+                  <td style={{ padding: '0.75rem', fontStyle: 'italic', color: '#7f8c8d' }}>tu</td>
+                  <td style={{ padding: '0.75rem', fontWeight: 'bold', color: '#2c3e50' }}>IRE (-isc-)</td>
+                  <td style={{ padding: '0.75rem', color: '#27ae60' }}>-isci</td>
+                  <td style={{ padding: '0.75rem', color: '#2980b9' }}>EE-shee</td>
+                </tr>
+                <tr style={{ borderBottom: '1px solid #dee2e6', background: '#f9f9f9' }}>
+                  <td style={{ padding: '0.75rem', fontStyle: 'italic', color: '#7f8c8d' }}>lui/lei</td>
+                  <td style={{ padding: '0.75rem', fontWeight: 'bold', color: '#2c3e50' }}>IRE (-isc-)</td>
+                  <td style={{ padding: '0.75rem', color: '#27ae60' }}>-isce</td>
+                  <td style={{ padding: '0.75rem', color: '#2980b9' }}>EE-sheh</td>
+                </tr>
+                <tr style={{ borderBottom: '1px solid #dee2e6', background: '#f9f9f9' }}>
+                  <td style={{ padding: '0.75rem', fontStyle: 'italic', color: '#7f8c8d' }}>loro</td>
+                  <td style={{ padding: '0.75rem', fontWeight: 'bold', color: '#2c3e50' }}>IRE (-isc-)</td>
+                  <td style={{ padding: '0.75rem', color: '#27ae60' }}>-iscono</td>
+                  <td style={{ padding: '0.75rem', color: '#2980b9' }}>EE-skoh-noh</td>
+                </tr>
               </tbody>
             </table>
           </div>
