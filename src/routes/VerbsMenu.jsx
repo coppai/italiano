@@ -19,6 +19,15 @@ export default function VerbsMenu() {
           ]}
         />
         <MenuCard
+          to="/verbs/patterns"
+          title="Conjugation Patterns"
+          description="Learn the conjugation rules for regular -ARE, -ERE, and -IRE verbs with pronunciation guides and examples."
+          stats={[
+            { label: '15', value: 'patterns' },
+            { label: 'Level:', value: 'Beginner' },
+          ]}
+        />
+        <MenuCard
           to="/verbs/infinitive"
           title="Verb Infinitives"
           description="Practice recognizing Italian verb infinitives. Match the conjugated form to its infinitive."
