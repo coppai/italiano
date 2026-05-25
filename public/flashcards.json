@@ -4358,5 +4358,15 @@
   "correct": 0,
   "incorrect": 0,
   "dateAdded": "2026-05-21"
+},
+{
+    "id": "1748131200000chiesto",
+    "question": "asked / requested (past tense)",
+    "answer": "chiesto",
+    "notes": "Pronunciation: \nchi → 'kee-EH' (stressed) \nsto → 'stoh'.\nPast participle of 'chiedere' (to ask).\n\nHo chiesto aiuto. → I asked for help.",
+    "categories": ["verbs", "past-participles"],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-25"
 }
 ]
