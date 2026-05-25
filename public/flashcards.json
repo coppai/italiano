@@ -4368,5 +4368,15 @@
     "correct": 0,
     "incorrect": 0,
     "dateAdded": "2026-05-25"
+},
+{
+    "id": "1748131200001chiedendo",
+    "question": "asking / while asking",
+    "answer": "chiedendo",
+    "notes": "Pronunciation: \nchi → 'kee-eh' \nden → 'DEN' (stressed) \ndo → 'doh'.\nGerund of 'chiedere' (to ask).\n\nSto chiedendo un favore. → I'm asking for a favor.",
+    "categories": ["verbs", "gerunds"],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-25"
 }
 ]
