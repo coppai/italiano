@@ -4378,5 +4378,25 @@
     "correct": 0,
     "incorrect": 0,
     "dateAdded": "2026-05-25"
+},
+{
+    "id": "1748131200002dicevaimperfetto",
+    "question": "imperfetto forms of dire (to say/tell)",
+    "answer": "dicevo, dicevi, diceva, dicevamo, dicevate, dicevano",
+    "notes": "Pronunciation: \ndi → 'dee' \nce → 'CHEH' (stressed for singular forms) \nva → 'VAH' (stressed for plural forms).\n\nImperfetto conjugations:\nio dicevo → I was saying/used to say\ntu dicevi → you were saying/used to say\nlui/lei diceva → he/she was saying/used to say\nnoi dicevamo → we were saying/used to say\nvoi dicevate → you all were saying/used to say\nloro dicevano → they were saying/used to say\n\nDicevo sempre la verità. → I always used to tell the truth.",
+    "categories": ["verbs", "imperfetto"],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-25"
+},
+{
+    "id": "1748131200003stodicendo",
+    "question": "I am saying",
+    "answer": "sto dicendo",
+    "notes": "Pronunciation: \nsto → 'stoh' \ndi → 'dee' \ncen → 'CHEN' (stressed) \ndo → 'doh'.\nPresent progressive: stare + gerund of 'dire' (to say/tell).\n\nSto dicendo la verità. → I am telling the truth.",
+    "categories": ["verbs", "present-progressive"],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-25"
 }
 ]
