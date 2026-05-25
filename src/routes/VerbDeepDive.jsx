@@ -185,6 +185,98 @@ const TENSE_RULES = {
   },
 };
 
+// Helper function to generate the construction breakdown for the answer
+function getConstruction(card, verbData) {
+  const { infinitive, italian, tense } = card;
+  
+  // For passato prossimo, extract the auxiliary and participle
+  if (tense === 'Passato Prossimo') {
+    const parts = italian.split(' ');
+    if (parts.length >= 2) {
+      const auxiliary = parts[0];
+      const participle = parts.slice(1).join(' ');
+      
+      // Determine which auxiliary verb is being used
+      const auxVerb = ['ho', 'hai', 'ha', 'abbiamo', 'avete', 'hanno'].includes(auxiliary) 
+        ? 'avere' 
+        : 'essere';
+      
+      // Get the past participle construction
+      let ppConstruction = '';
+      if (verbData?.past_participle?.irregular) {
+        ppConstruction = `${infinitive} → ${participle}`;
+      } else {
+        const ppEnding = infinitive.endsWith('are') ? 'ato' 
+                       : infinitive.endsWith('ere') ? 'uto' 
+                       : 'ito';
+        const infEnding = infinitive.endsWith('are') ? 'are'
+                        : infinitive.endsWith('ere') ? 'ere'
+                        : 'ire';
+        const stem = infinitive.slice(0, -infEnding.length);
+        ppConstruction = `${infinitive} - ${infEnding} + ${ppEnding} = ${participle}`;
+      }
+      
+      return `${auxVerb} (${auxiliary}) + ${participle}\n${ppConstruction}`;
+    }
+  }
+  
+  // For imperfetto
+  if (tense === 'Imperfetto') {
+    const stem = infinitive.slice(0, -2); // Remove 're'
+    const ending = italian.slice(stem.length);
+    return `${infinitive} - re + ${ending} = ${italian}`;
+  }
+  
+  // For past participle
+  if (tense === 'Past Participle') {
+    if (verbData?.past_participle?.irregular) {
+      return `${infinitive} → ${italian} (irregular)`;
+    }
+    const ending = infinitive.endsWith('are') ? 'ato' 
+                 : infinitive.endsWith('ere') ? 'uto' 
+                 : 'ito';
+    const infEnding = infinitive.endsWith('are') ? 'are'
+                    : infinitive.endsWith('ere') ? 'ere'
+                    : 'ire';
+    const stem = infinitive.slice(0, -infEnding.length);
+    return `${infinitive} - ${infEnding} + ${ending} = ${italian}`;
+  }
+  
+  // For gerund
+  if (tense === 'Gerund') {
+    const ending = infinitive.endsWith('are') ? 'ando' : 'endo';
+    const infEnding = infinitive.endsWith('are') ? 'are'
+                    : infinitive.endsWith('ere') ? 'ere'
+                    : 'ire';
+    const stem = infinitive.slice(0, -infEnding.length);
+    
+    // Check for irregular stems (fare → facendo, dire → dicendo, bere → bevendo)
+    if (italian !== stem + ending) {
+      return `${infinitive} → ${italian} (irregular stem)`;
+    }
+    return `${infinitive} - ${infEnding} + ${ending} = ${italian}`;
+  }
+  
+  // For present tense
+  if (tense === 'Present') {
+    const infEnding = infinitive.endsWith('are') ? 'are'
+                    : infinitive.endsWith('ere') ? 'ere'
+                    : 'ire';
+    const stem = infinitive.slice(0, -infEnding.length);
+    const ending = italian.slice(stem.length);
+    
+    // Check if it's a regular formation
+    if (italian.startsWith(stem)) {
+      return `${infinitive} - ${infEnding} + ${ending} = ${italian}`;
+    } else {
+      // Irregular
+      return `${infinitive} → ${italian} (irregular)`;
+    }
+  }
+  
+  return null;
+}
+
 function buildCardsByTense(verb) {
   const map = {};
   for (const t of TENSE_ORDER) {
@@ -444,24 +536,42 @@ export default function VerbDeepDive() {
                 <div className="flashcard-content">{c.english}</div>
               </>
             )}
-            renderBack={c => (
-              <>
-                <CardLabel card={c} onOpenRule={setOpenRule} />
-                <div className="flashcard-content">{c.italian}</div>
-                {c.example ? <div className="example-sentence">{c.example}</div> : null}
-                <SelfRateButtons
-                  onCorrect={markCorrect}
-                  onIncorrect={markIncorrect}
-                  labels={{ correct: '✓ Correct', incorrect: '✗ Incorrect' }}
-                />
-                <div className="card-actions">
-                  <button
-                    className="btn-play-large"
-                    onClick={e => { e.stopPropagation(); speakItalian(c.italian, { rate: 0.9 }); }}
-                  >🔊 Pronounce</button>
-                </div>
-              </>
-            )}
+            renderBack={c => {
+              const construction = getConstruction(c, currentVerb);
+              return (
+                <>
+                  <CardLabel card={c} onOpenRule={setOpenRule} />
+                  <div className="flashcard-content">{c.italian}</div>
+                  {construction && (
+                    <div style={{
+                      margin: '12px 0',
+                      padding: '10px 12px',
+                      backgroundColor: '#f8f9fa',
+                      borderRadius: '6px',
+                      fontSize: '0.9em',
+                      color: '#555',
+                      fontFamily: 'monospace',
+                      whiteSpace: 'pre-line',
+                      border: '1px solid #e0e0e0'
+                    }}>
+                      {construction}
+                    </div>
+                  )}
+                  {c.example ? <div className="example-sentence">{c.example}</div> : null}
+                  <SelfRateButtons
+                    onCorrect={markCorrect}
+                    onIncorrect={markIncorrect}
+                    labels={{ correct: '✓ Correct', incorrect: '✗ Incorrect' }}
+                  />
+                  <div className="card-actions">
+                    <button
+                      className="btn-play-large"
+                      onClick={e => { e.stopPropagation(); speakItalian(c.italian, { rate: 0.9 }); }}
+                    >🔊 Pronounce</button>
+                  </div>
+                </>
+              );
+            }}
           />
 
           <div className="tap-hint">👆 Tap card to flip</div>
