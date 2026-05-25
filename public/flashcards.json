@@ -4348,5 +4348,15 @@
   "correct": 0,
   "incorrect": 0,
   "dateAdded": "2026-05-21"
+},
+{
+  "id": "1747776000003sbagliato",
+  "question": "wrong / mistaken / incorrect",
+  "answer": "sbagliato",
+  "notes": "Pronunciation: \nsba → 'zbah' \nglià → 'LYAH' (stressed) \nto → 'toh'.\n Adjective or past participle of 'sbagliare' (to make a mistake).\n\nHo sbagliato strada. → I took the wrong road.",
+  "categories": ["adjectives", "common-words"],
+  "correct": 0,
+  "incorrect": 0,
+  "dateAdded": "2026-05-21"
 }
 ]
