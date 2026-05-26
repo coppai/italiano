@@ -4398,5 +4398,65 @@
     "correct": 0,
     "incorrect": 0,
     "dateAdded": "2026-05-25"
-}
+}, 
+{
+    "id": "1748217600001misonodimenticatodi",
+    "question": "I forgot to",
+    "answer": "mi sono dimenticato di",
+    "notes": "Pronunciation: \nmi → 'mee' \nso → 'soh' \nno → 'noh' \ndi → 'dee' \nmen → 'men' \nti → 'tee' \nca → 'KAH' \nto → 'toh' \ndi → 'dee'.\nReflexive verb 'dimenticarsi' in passato prossimo. Use 'dimenticata' for feminine subject.\n\nMi sono dimenticato di chiamarti. → I forgot to call you.",
+    "categories": ["verbs", "reflexive", "past-tense"],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-26"
+  },
+  {
+    "id": "1748217600002maiale",
+    "question": "pig",
+    "answer": "il maiale",
+    "notes": "Pronunciation: \nmai → 'MAH-yah' (stressed) \nle → 'leh'.\nMasculine noun. Plural: i maiali.\n\nIl maiale è nel fienile. → The pig is in the barn.",
+    "categories": ["nouns", "animals"],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-26"
+  },
+  {
+    "id": "1748217600003volta",
+    "question": "time (occurrence)",
+    "answer": "la volta",
+    "notes": "Pronunciation: \nvol → 'VOHL' (stressed) \nta → 'tah'.\nFeminine noun. Plural: le volte. Used for counting occurrences.\n\nUna volta al giorno. → Once a day.\nQuesta volta vinco io. → This time I win.",
+    "categories": ["nouns", "common-words"],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-26"
+  },
+  {
+    "id": "1748217600004sud",
+    "question": "south",
+    "answer": "il sud",
+    "notes": "Pronunciation: \nsud → 'sood' (like English 'mood').\nMasculine noun. Cardinal direction. Invariable (no plural change).\n\nViaggio verso sud. → I'm traveling south.\nIl sud Italia è bellissimo. → Southern Italy is beautiful.",
+    "categories": ["nouns", "directions", "geography"],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-26"
+  },
+  {
+    "id": "1748217600005contadino",
+    "question": "farmer / peasant",
+    "answer": "il contadino",
+    "notes": "Pronunciation: \ncon → 'kohn' \nta → 'tah' \ndi → 'DEE' (stressed) \nno → 'noh'.\nMasculine noun. Feminine: la contadina. Plural: i contadini / le contadine.\n\nIl contadino lavora nei campi. → The farmer works in the fields.",
+    "categories": ["nouns", "occupations"],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-26"
+  },
+  {
+    "id": "1748217600006fammi",
+    "question": "let me",
+    "answer": "fammi",
+    "notes": "Pronunciation: \nfam → 'FAHM' (stressed) \nmi → 'mee'.\nImperative form: 'fa' + 'mi' (do + me). From verb 'fare' (to do/make).\n\nFammi vedere. → Let me see.\nFammi sapere. → Let me know.",
+    "categories": ["verbs", "imperative", "common-phrases"],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-26"
+  }
 ]
