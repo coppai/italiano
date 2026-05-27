@@ -4458,5 +4458,35 @@
     "correct": 0,
     "incorrect": 0,
     "dateAdded": "2026-05-26"
+  },
+  {
+    "id": "1748390400001are",
+    "question": "Past participle of -are verbs (Example: mangiare)",
+    "answer": "-ato (mangiare → mangiato)",
+    "notes": "Regular pattern for -are verbs:\nRemove -are and add -ato\n\nExamples:\nmangiare → mangiato (to eat → eaten)\nparlare → parlato (to speak → spoken)\namare → amato (to love → loved)",
+    "categories": ["verbs", "past-participle", "grammar"],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-27"
+  },
+  {
+    "id": "1748390400002ere",
+    "question": "Past participle of -ere verbs (Example: ricevere)",
+    "answer": "-uto (ricevere → ricevuto)",
+    "notes": "Regular pattern for -ere verbs:\nRemove -ere and add -uto\n\nExamples:\nricevere → ricevuto (to receive → received)\navere → avuto (to have → had)\ncredere → creduto (to believe → believed)",
+    "categories": ["verbs", "past-participle", "grammar"],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-27"
+  },
+  {
+    "id": "1748390400003ire",
+    "question": "Past participle of -ire verbs (Example: dormire)",
+    "answer": "-ito (dormire → dormito)",
+    "notes": "Regular pattern for -ire verbs:\nRemove -ire and add -ito\n\nExamples:\ndormire → dormito (to sleep → slept)\nfinire → finito (to finish → finished)\nsentire → sentito (to hear/feel → heard/felt)",
+    "categories": ["verbs", "past-participle", "grammar"],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-27"
   }
 ]
