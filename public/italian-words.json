@@ -185,7 +185,7 @@
     "id": "20260527_0015_si",
     "question": "oneself",
     "answer": "si",
-    "notes": "Italian: si\nEnglish: oneself\nPart of speech: pron",
+    "notes": "Si lava le mani.\n\"He/she washes their hands.\" (literally: washes the hands for oneself)",
     "categories": [
       "vocabulary",
       "pronouns"
@@ -445,7 +445,7 @@
     "id": "20260527_0035_così",
     "question": "so / like this / in this way",
     "answer": "così",
-    "notes": "Italian: così\nEnglish: so / thus\nPart of speech: adv",
+    "notes": "È così semplice.\n\"It's so simple.\"",
     "categories": [
       "vocabulary",
       "adverbs"
@@ -1030,7 +1030,7 @@
     "id": "20260527_0080_proprio",
     "question": "really / own",
     "answer": "proprio",
-    "notes": "Italian: proprio\nEnglish: really / own\nPart of speech: adv",
+    "notes": "È proprio bello!\n\"It's really beautiful!\"",
     "categories": [
       "vocabulary",
       "adverbs"
@@ -1082,7 +1082,7 @@
     "id": "20260527_0084_modo",
     "question": "way / manner",
     "answer": "modo",
-    "notes": "Italian: modo\nEnglish: way / manner\nPart of speech: noun",
+    "notes": "Fallo a modo tuo.\n\"Do it your way.\"",
     "categories": [
       "vocabulary",
       "nouns"

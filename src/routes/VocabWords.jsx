@@ -12,6 +12,7 @@ import { seedStatsOnce } from '../lib/seedStats.js';
 
 const STORAGE_KEY = 'vocabWordsStats';
 const BATCH_KEY = 'vocabWordsBatch';
+const FLAGGED_KEY = 'vocabWordsFlagged';
 const WORDS_PER_BATCH = 7;
 const UNLOCK_THRESHOLD = 0.8; // 80% accuracy to unlock next batch
 
@@ -50,7 +51,29 @@ export default function VocabWords() {
   const stats = useLocalStorageStats(STORAGE_KEY);
 
   const [reversed, setReversed] = useState(false);
-  const [selectedBatch, setSelectedBatch] = useState('current'); // 'current', 'all', or batch number
+  const [selectedBatch, setSelectedBatch] = useState('current'); // 'current', 'all', 'flagged', or batch number
+
+  // Flagged words management
+  const [flaggedWords, setFlaggedWords] = useState(() => {
+    const stored = localStorage.getItem(FLAGGED_KEY);
+    return stored ? new Set(JSON.parse(stored)) : new Set();
+  });
+
+  useEffect(() => {
+    localStorage.setItem(FLAGGED_KEY, JSON.stringify(Array.from(flaggedWords)));
+  }, [flaggedWords]);
+
+  function toggleFlag(wordId) {
+    setFlaggedWords(prev => {
+      const next = new Set(prev);
+      if (next.has(wordId)) {
+        next.delete(wordId);
+      } else {
+        next.add(wordId);
+      }
+      return next;
+    });
+  }
 
   // Calculate unlocked words (only show words from unlocked batches)
   const unlockedWords = useMemo(() => {
@@ -63,6 +86,10 @@ export default function VocabWords() {
   const batchWords = useMemo(() => {
     if (!words?.length) return [];
     
+    if (selectedBatch === 'flagged') {
+      return unlockedWords.filter(w => flaggedWords.has(w.id));
+    }
+    
     if (selectedBatch === 'all') {
       return unlockedWords;
     }
@@ -71,7 +98,7 @@ export default function VocabWords() {
     const start = (batchNum - 1) * WORDS_PER_BATCH;
     const end = batchNum * WORDS_PER_BATCH;
     return words.slice(start, Math.min(end, unlockedBatches * WORDS_PER_BATCH));
-  }, [words, unlockedWords, selectedBatch, unlockedBatches]);
+  }, [words, unlockedWords, selectedBatch, unlockedBatches, flaggedWords]);
 
   // Calculate current batch stats
   const currentBatchStats = useMemo(() => {
@@ -159,6 +186,10 @@ export default function VocabWords() {
   }
 
   if (deck.length === 0) {
+    const message = selectedBatch === 'flagged' 
+      ? 'No flagged words yet! Flag words during practice by clicking "🏴 Flag for Review" on the back of any card.'
+      : 'All words in this batch completed!';
+    
     return (
       <div className="container">
         <div className="header">
@@ -176,14 +207,17 @@ export default function VocabWords() {
           unlockedBatches={unlockedBatches}
           selectedBatch={selectedBatch}
           onSelectBatch={setSelectedBatch}
+          flaggedCount={flaggedWords.size}
         />
         <div className="completion-message" style={{ textAlign: 'center', padding: 40 }}>
-          <h2>🎉 All words in this batch completed!</h2>
-          <p>
-            <button className="btn-secondary" onClick={() => setDeck([...batchWords])}>
-              Restart this batch
-            </button>
-          </p>
+          <h2>🎉 {message}</h2>
+          {selectedBatch !== 'flagged' && (
+            <p>
+              <button className="btn-secondary" onClick={() => setDeck([...batchWords])}>
+                Restart this batch
+              </button>
+            </p>
+          )}
         </div>
       </div>
     );
@@ -212,6 +246,7 @@ export default function VocabWords() {
         unlockedBatches={unlockedBatches}
         selectedBatch={selectedBatch}
         onSelectBatch={setSelectedBatch}
+        flaggedCount={flaggedWords.size}
       />
 
       <FlipDeck
@@ -234,7 +269,7 @@ export default function VocabWords() {
             {c.notes ? <div className="card-notes">{c.notes}</div> : null}
             <SelfRateButtons onCorrect={markCorrect} onIncorrect={markIncorrect} labels={{ correct: '✓ Correct', incorrect: '✗ Incorrect' }} />
             <div className="card-stats">✓ {cardStat.correct}  ✗ {cardStat.incorrect}</div>
-            <div className="card-actions">
+            <div className="card-actions" style={{ display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap' }}>
               <button
                 className="btn-success"
                 onClick={e => {
@@ -242,6 +277,16 @@ export default function VocabWords() {
                   speakItalian(c.answer, { rate: 0.9 });
                 }}
               >🔊 Pronounce Italian</button>
+              <button
+                className={flaggedWords.has(c.id) ? 'btn-primary' : 'btn-secondary'}
+                onClick={e => {
+                  e.stopPropagation();
+                  toggleFlag(c.id);
+                }}
+                style={flaggedWords.has(c.id) ? { background: '#FF9800', color: 'white', border: '2px solid #FF9800' } : {}}
+              >
+                {flaggedWords.has(c.id) ? '🚩 Flagged' : '🏴 Flag for Review'}
+              </button>
             </div>
           </>
         )}
@@ -266,7 +311,7 @@ export default function VocabWords() {
   );
 }
 
-function BatchSelector({ unlockedBatches, selectedBatch, onSelectBatch }) {
+function BatchSelector({ unlockedBatches, selectedBatch, onSelectBatch, flaggedCount }) {
   const batches = Array.from({ length: unlockedBatches }, (_, i) => i + 1);
   
   return (
@@ -292,6 +337,14 @@ function BatchSelector({ unlockedBatches, selectedBatch, onSelectBatch }) {
           style={selectedBatch === 'all' ? { background: 'var(--primary)', color: 'white' } : {}}
         >
           All Unlocked ({unlockedBatches * WORDS_PER_BATCH} words)
+        </button>
+        <button
+          className={selectedBatch === 'flagged' ? 'btn-primary' : 'btn-hint'}
+          onClick={() => onSelectBatch('flagged')}
+          style={selectedBatch === 'flagged' ? { background: '#FF9800', color: 'white' } : {}}
+          disabled={flaggedCount === 0}
+        >
+          🚩 Flagged Words ({flaggedCount})
         </button>
         {batches.length > 1 && (
           <div style={{ width: '100%', borderTop: '1px solid var(--border-color)', margin: '8px 0', paddingTop: 8 }}>
