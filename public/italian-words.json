@@ -391,7 +391,7 @@
   },
   {
     "id": "20260527_0031_mi",
-    "question": "me / myself",
+    "question": "me / myself (possessive)",
     "answer": "mi",
     "notes": "Italian: mi\nEnglish: me / myself\nPart of speech: pron",
     "categories": [
@@ -443,7 +443,7 @@
   },
   {
     "id": "20260527_0035_così",
-    "question": "so / thus",
+    "question": "so / like this / in this way",
     "answer": "così",
     "notes": "Italian: così\nEnglish: so / thus\nPart of speech: adv",
     "categories": [
@@ -521,9 +521,9 @@
   },
   {
     "id": "20260527_0041_al",
-    "question": "to the (m.)",
+    "question": "to the (m.) / at the (m.)",
     "answer": "al",
-    "notes": "Italian: al\nEnglish: to the (m.)\nPart of speech: prep",
+    "notes": "Al is the mandatory contraction of a + il, meaning 'to the' or 'at the' before masculine singular nouns.",
     "categories": [
       "vocabulary",
       "prepositions"
@@ -534,9 +534,9 @@
   },
   {
     "id": "20260527_0042_dei",
-    "question": "of the (m.pl.)",
+    "question": "of the / some (m.pl.)",
     "answer": "dei",
-    "notes": "Italian: dei\nEnglish: of the (m.pl.)\nPart of speech: prep",
+    "notes": "Dei is the contraction of di + i, meaning 'of the' or 'some' before masculine plural nouns.",
     "categories": [
       "vocabulary",
       "prepositions"
@@ -549,7 +549,7 @@
     "id": "20260527_0043_gli",
     "question": "the (m.pl.) / him",
     "answer": "gli",
-    "notes": "Italian: gli\nEnglish: the (m.pl.) / him\nPart of speech: art",
+    "notes": "before masculine plural nouns starting with z, s+consonant, gn, ps, or a vowel",
     "categories": [
       "vocabulary",
       "articles"
@@ -573,9 +573,9 @@
   },
   {
     "id": "20260527_0045_alla",
-    "question": "to the (f.)",
+    "question": "to the / at the (f.)",
     "answer": "alla",
-    "notes": "Italian: alla\nEnglish: to the (f.)\nPart of speech: prep",
+    "notes": "Contraction of a + la, meaning \"to the\" or \"at the\" before feminine singular nouns.",
     "categories": [
       "vocabulary",
       "prepositions"
@@ -666,7 +666,7 @@
     "id": "20260527_0052_del",
     "question": "of the (m.)",
     "answer": "del",
-    "notes": "Italian: del\nEnglish: of the (m.)\nPart of speech: prep",
+    "notes": "Del means \"of the\" or \"some\" before masculine singular nouns — for example, voglio del pane means \"I want some bread,\" where del = di + il collapsed into one word.",
     "categories": [
       "vocabulary",
       "prepositions"
@@ -729,8 +729,8 @@
   },
   {
     "id": "20260527_0057_ti",
-    "question": "you (obj.)",
-    "answer": "ti",
+    "question": "you (obj.). 'I see you' ",
+    "answer": "ti - ti vedo",
     "notes": "Italian: ti\nEnglish: you (obj.)\nPart of speech: pron",
     "categories": [
       "vocabulary",
@@ -872,9 +872,9 @@
   },
   {
     "id": "20260527_0068_suo",
-    "question": "his/her (m.)",
+    "question": "his/her (m.) \n\n possessive adjective/pronoun meaning \"his,\" \"her,\" or \"your\"",
     "answer": "suo",
-    "notes": "Italian: suo\nEnglish: his/her (m.)\nPart of speech: adj",
+    "notes": "Ho parlato con il suo capo ",
     "categories": [
       "vocabulary",
       "adjectives"
@@ -924,9 +924,9 @@
   },
   {
     "id": "20260527_0072_tuo",
-    "question": "your (m.)",
+    "question": "your (m.)\n\n(Your coffee is ready)",
     "answer": "tuo",
-    "notes": "Italian: tuo\nEnglish: your (m.)\nPart of speech: adj",
+    "notes": "Il tuo caffè è pronto",
     "categories": [
       "vocabulary",
       "adjectives"

@@ -97,17 +97,6 @@ export default function VocabWords() {
     return { accuracy, correct, incorrect, total };
   }, [words, unlockedBatches, stats.stats]);
 
-  // Check if we should unlock the next batch
-  useEffect(() => {
-    if (!words?.length) return;
-    const totalBatches = Math.ceil(words.length / WORDS_PER_BATCH);
-    if (unlockedBatches >= totalBatches) return; // All batches unlocked
-    
-    if (currentBatchStats.total >= WORDS_PER_BATCH * 2 && currentBatchStats.accuracy >= UNLOCK_THRESHOLD) {
-      setUnlockedBatches(prev => prev + 1);
-    }
-  }, [currentBatchStats, words, unlockedBatches]);
-
   // Initial deck from selected batch
   const initialDeck = useMemo(() => {
     return [...batchWords];
