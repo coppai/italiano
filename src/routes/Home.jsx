@@ -27,6 +27,15 @@ export default function Home() {
           ]}
         />
         <MenuCard
+          to="/vocab-words"
+          title="📚 1000 Italian Words"
+          description="Master the 1000 most common Italian words. Filter by category and track your progress!"
+          stats={[
+            { label: '1000+', value: 'words' },
+            { label: 'Level:', value: 'All Levels' },
+          ]}
+        />
+        <MenuCard
           to="/verbs"
           title="🔤 Verbs"
           description="Practice Italian verb conjugations, infinitives, and track your progress with detailed statistics."

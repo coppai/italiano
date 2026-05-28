@@ -4463,7 +4463,7 @@
     "id": "1748390400001are",
     "question": "Past participle of -are verbs (Example: mangiare)",
     "answer": "-ato (mangiare → mangiato)",
-    "notes": "Regular pattern for -are verbs:\nRemove -are and add -ato\n\nExamples:\nmangiare → mangiato (to eat → eaten)\nparlare → parlato (to speak → spoken)\namare → amato (to love → loved)",
+    "notes": "Regular pattern for -are verbs:\nRemove -are and add -ato\n\nExamples:\nmangiare → mangiato (to eat → eaten)",
     "categories": ["verbs", "past-participle", "grammar"],
     "correct": 0,
     "incorrect": 0,

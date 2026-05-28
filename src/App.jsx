@@ -19,6 +19,8 @@ import VerbPatterns from './routes/VerbPatterns.jsx';
 import VerbStats from './routes/VerbStats.jsx';
 import Flashcards from './routes/Flashcards.jsx';
 import FlashcardStats from './routes/FlashcardStats.jsx';
+import VocabWords from './routes/VocabWords.jsx';
+import VocabWordsStats from './routes/VocabWordsStats.jsx';
 import NotFound from './routes/NotFound.jsx';
 
 // __INCLUDE_ADMIN__ is replaced by Vite's `define` with a literal `true` /
@@ -50,6 +52,8 @@ export default function App() {
           <Route path="/verbs/stats" element={<VerbStats />} />
           <Route path="/flashcards" element={<Flashcards />} />
           <Route path="/flashcards/stats" element={<FlashcardStats />} />
+          <Route path="/vocab-words" element={<VocabWords />} />
+          <Route path="/vocab-words/stats" element={<VocabWordsStats />} />
           {Admin ? (
             <Route
               path="/admin"
