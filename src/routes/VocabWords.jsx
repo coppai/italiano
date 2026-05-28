@@ -50,6 +50,7 @@ export default function VocabWords() {
   const stats = useLocalStorageStats(STORAGE_KEY);
 
   const [reversed, setReversed] = useState(false);
+  const [selectedBatch, setSelectedBatch] = useState('current'); // 'current', 'all', or batch number
 
   // Calculate unlocked words (only show words from unlocked batches)
   const unlockedWords = useMemo(() => {
@@ -57,6 +58,20 @@ export default function VocabWords() {
     const maxIndex = unlockedBatches * WORDS_PER_BATCH;
     return words.slice(0, maxIndex);
   }, [words, unlockedBatches]);
+
+  // Get words for selected batch
+  const batchWords = useMemo(() => {
+    if (!words?.length) return [];
+    
+    if (selectedBatch === 'all') {
+      return unlockedWords;
+    }
+    
+    const batchNum = selectedBatch === 'current' ? unlockedBatches : parseInt(selectedBatch, 10);
+    const start = (batchNum - 1) * WORDS_PER_BATCH;
+    const end = batchNum * WORDS_PER_BATCH;
+    return words.slice(start, Math.min(end, unlockedBatches * WORDS_PER_BATCH));
+  }, [words, unlockedWords, selectedBatch, unlockedBatches]);
 
   // Calculate current batch stats
   const currentBatchStats = useMemo(() => {
@@ -93,10 +108,10 @@ export default function VocabWords() {
     }
   }, [currentBatchStats, words, unlockedBatches]);
 
-  // Initial deck from unlocked words
+  // Initial deck from selected batch
   const initialDeck = useMemo(() => {
-    return [...unlockedWords];
-  }, [unlockedWords]);
+    return [...batchWords];
+  }, [batchWords]);
 
   const { deck, setDeck, index, setIndex, flipped, setFlipped } = useDeck(initialDeck);
 
@@ -135,9 +150,23 @@ export default function VocabWords() {
   function resetProgress() {
     if (confirm('Reset all progress and start from batch 1? This will keep your stats but reset unlocked batches.')) {
       setUnlockedBatches(1);
-      setDeck([...words.slice(0, WORDS_PER_BATCH)]);
+      setSelectedBatch('current');
       setIndex(0);
     }
+  }
+
+  function manualUnlockNext() {
+    const totalBatches = Math.ceil(words.length / WORDS_PER_BATCH);
+    if (unlockedBatches >= totalBatches) {
+      alert('All batches are already unlocked!');
+      return;
+    }
+    
+    const nextBatch = unlockedBatches + 1;
+    console.log('Current unlocked:', unlockedBatches, '-> Unlocking:', nextBatch);
+    setUnlockedBatches(nextBatch);
+    setSelectedBatch('current');
+    alert(`Batch ${nextBatch} unlocked! Total batches: ${totalBatches}`);
   }
 
   if (deck.length === 0) {
@@ -152,12 +181,18 @@ export default function VocabWords() {
           totalBatches={totalBatches}
           currentBatchStats={currentBatchStats}
           onReset={resetProgress}
+          onManualUnlock={manualUnlockNext}
+        />
+        <BatchSelector
+          unlockedBatches={unlockedBatches}
+          selectedBatch={selectedBatch}
+          onSelectBatch={setSelectedBatch}
         />
         <div className="completion-message" style={{ textAlign: 'center', padding: 40 }}>
-          <h2>🎉 All unlocked words completed!</h2>
+          <h2>🎉 All words in this batch completed!</h2>
           <p>
-            <button className="btn-secondary" onClick={() => setDeck([...unlockedWords])}>
-              Restart unlocked words
+            <button className="btn-secondary" onClick={() => setDeck([...batchWords])}>
+              Restart this batch
             </button>
           </p>
         </div>
@@ -181,6 +216,13 @@ export default function VocabWords() {
         totalBatches={totalBatches}
         currentBatchStats={currentBatchStats}
         onReset={resetProgress}
+        onManualUnlock={manualUnlockNext}
+      />
+
+      <BatchSelector
+        unlockedBatches={unlockedBatches}
+        selectedBatch={selectedBatch}
+        onSelectBatch={setSelectedBatch}
       />
 
       <FlipDeck
@@ -224,8 +266,8 @@ export default function VocabWords() {
       <div className="controls">
         <button
           className="btn-secondary"
-          onClick={() => { setDeck(weightedShuffle(unlockedWords, w => stats.stats[w.id] || w)); setIndex(0); setFlipped(false); }}
-        >🔀 Shuffle Unlocked</button>
+          onClick={() => { setDeck(weightedShuffle(batchWords, w => stats.stats[w.id] || w)); setIndex(0); setFlipped(false); }}
+        >🔀 Shuffle</button>
         <button
           className="btn-secondary"
           onClick={() => setReversed(r => !r)}
@@ -235,8 +277,59 @@ export default function VocabWords() {
   );
 }
 
+function BatchSelector({ unlockedBatches, selectedBatch, onSelectBatch }) {
+  const batches = Array.from({ length: unlockedBatches }, (_, i) => i + 1);
+  
+  return (
+    <div style={{ 
+      background: 'var(--card-bg)', 
+      border: '1px solid var(--border-color)', 
+      borderRadius: 8, 
+      padding: 15,
+      marginBottom: 20 
+    }}>
+      <div style={{ marginBottom: 10, fontWeight: 'bold' }}>Select Batch to Practice:</div>
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+        <button
+          className={selectedBatch === 'current' ? 'btn-primary' : 'btn-hint'}
+          onClick={() => onSelectBatch('current')}
+          style={selectedBatch === 'current' ? { background: 'var(--primary)', color: 'white' } : {}}
+        >
+          Current Batch ({unlockedBatches})
+        </button>
+        <button
+          className={selectedBatch === 'all' ? 'btn-primary' : 'btn-hint'}
+          onClick={() => onSelectBatch('all')}
+          style={selectedBatch === 'all' ? { background: 'var(--primary)', color: 'white' } : {}}
+        >
+          All Unlocked ({unlockedBatches * WORDS_PER_BATCH} words)
+        </button>
+        {batches.length > 1 && (
+          <div style={{ width: '100%', borderTop: '1px solid var(--border-color)', margin: '8px 0', paddingTop: 8 }}>
+            <div style={{ fontSize: 13, color: '#666', marginBottom: 8 }}>Or review a specific batch:</div>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
+              {batches.map(num => (
+                <button
+                  key={num}
+                  className={selectedBatch === num.toString() ? 'btn-primary' : 'btn-hint'}
+                  onClick={() => onSelectBatch(num.toString())}
+                  style={{
+                    minWidth: 50,
+                    ...(selectedBatch === num.toString() ? { background: 'var(--primary)', color: 'white' } : {})
+                  }}
+                >
+                  Batch {num}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
 
-function ProgressBar({ unlockedBatches, totalBatches, currentBatchStats, onReset }) {
+function ProgressBar({ unlockedBatches, totalBatches, currentBatchStats, onReset, onManualUnlock }) {
   const progressPercent = (unlockedBatches / totalBatches) * 100;
   const accuracy = currentBatchStats.total > 0 
     ? Math.round(currentBatchStats.accuracy * 100) 
@@ -296,7 +389,20 @@ function ProgressBar({ unlockedBatches, totalBatches, currentBatchStats, onReset
         </div>
       </div>
       
-      {attemptsRemaining > 0 && currentBatchStats.total > 0 && (
+      {unlockedBatches < totalBatches && currentBatchStats.total < WORDS_PER_BATCH * 2 && (
+        <div style={{ 
+          marginTop: 15, 
+          padding: 12, 
+          background: '#E3F2FD', 
+          border: '1px solid #90CAF9',
+          borderRadius: 6,
+          fontSize: 14
+        }}>
+          💡 <strong>To unlock Batch {unlockedBatches + 1}:</strong> Practice the current batch at least {WORDS_PER_BATCH * 2} times (you have {currentBatchStats.total}) with 80%+ accuracy.
+        </div>
+      )}
+      
+      {attemptsRemaining > 0 && currentBatchStats.total >= WORDS_PER_BATCH * 2 && accuracy < 80 && (
         <div style={{ 
           marginTop: 15, 
           padding: 12, 
@@ -305,10 +411,42 @@ function ProgressBar({ unlockedBatches, totalBatches, currentBatchStats, onReset
           borderRadius: 6,
           fontSize: 14
         }}>
-          {accuracy >= 80 
-            ? `🎉 Great! Practice ${attemptsRemaining} more times to unlock the next batch`
-            : `Keep practicing! You need ${attemptsRemaining} more attempts and ${80 - accuracy}% more accuracy to unlock batch ${unlockedBatches + 1}`
-          }
+          📈 You've practiced enough ({currentBatchStats.total} times), but need {80 - accuracy}% more accuracy to unlock batch {unlockedBatches + 1}. Current: {accuracy}%
+        </div>
+      )}
+      
+      {currentBatchStats.total >= WORDS_PER_BATCH * 2 && accuracy >= 80 && unlockedBatches < totalBatches && (
+        <div style={{ 
+          marginTop: 15, 
+          padding: 15, 
+          background: 'linear-gradient(135deg, #4CAF50 0%, #66BB6A 100%)', 
+          border: '2px solid #4CAF50',
+          borderRadius: 8,
+          fontSize: 15,
+          color: 'white',
+          fontWeight: 'bold',
+          textAlign: 'center',
+          boxShadow: '0 2px 8px rgba(76, 175, 80, 0.3)'
+        }}>
+          <div style={{ marginBottom: 12 }}>
+            🎉 Excellent! You've mastered this batch!
+          </div>
+          <button 
+            onClick={onManualUnlock}
+            style={{
+              background: 'white',
+              color: '#4CAF50',
+              border: '2px solid white',
+              borderRadius: 6,
+              padding: '10px 24px',
+              fontSize: 16,
+              fontWeight: 'bold',
+              cursor: 'pointer',
+              boxShadow: '0 2px 4px rgba(0,0,0,0.2)'
+            }}
+          >
+            🔓 Unlock Batch {unlockedBatches + 1}
+          </button>
         </div>
       )}
       
@@ -325,10 +463,20 @@ function ProgressBar({ unlockedBatches, totalBatches, currentBatchStats, onReset
         </div>
       )}
       
-      <div style={{ marginTop: 15, textAlign: 'right' }}>
+      <div style={{ marginTop: 15, display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 10 }}>
         <button className="btn-hint" onClick={onReset} style={{ fontSize: 12 }}>
           Reset Progress
         </button>
+        {unlockedBatches < totalBatches && (
+          <button 
+            className="btn-secondary" 
+            onClick={onManualUnlock} 
+            style={{ fontSize: 12 }}
+            title="Unlock next batch immediately"
+          >
+            🔓 Unlock Batch {unlockedBatches + 1}
+          </button>
+        )}
       </div>
     </div>
   );
