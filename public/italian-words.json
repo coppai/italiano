@@ -92,9 +92,9 @@
   },
   {
     "id": "20260527_0008_che",
-    "question": "that / which",
-    "answer": "che",
-    "notes": "Italian: che\nEnglish: that / which\nPart of speech: conj",
+    "question": "Che",
+		"answer": "",
+    "notes": "Che has multiple uses:\n\n1. RELATIVE PRONOUN: 'that / which'\n   Il libro che leggo = The book that I'm reading\n   La ragazza che vedi = The girl (that) you see\n\n2. CONJUNCTION: 'that' (introducing clauses)\n   Credo che sia vero = I think that it's true\n   So che vieni = I know that you're coming\n\n3. INTERROGATIVE: 'what / which' (in questions)\n   Che cosa vuoi? = What do you want?\n   Che libro leggi? = Which book are you reading?\n\nTip: It's the most common connector word in Italian—use it to link clauses or introduce relative phrases.",
     "categories": [
       "vocabulary",
       "conjunctions"
@@ -183,9 +183,9 @@
   },
   {
     "id": "20260527_0015_si",
-    "question": "oneself",
-    "answer": "si",
-    "notes": "Si lava le mani.\n\"He/she washes their hands.\" (literally: washes the hands for oneself)",
+    "question": "Reflexive Pronouns",
+    "answer": "",
+    "notes": "Subject | Pronoun | Meaning | Example\nio (I) | mi | myself | Mi lavo = I wash myself\ntu (you) | ti | yourself | Ti vesti = You dress yourself\nlui/lei (he/she) | si | himself/herself | Si alza = He/she gets up\nLei (you formal) | si | yourself | Si sieda = Sit down (formal)\nnoi (we) | ci | ourselves | Ci prepariamo = We prepare ourselves\nvoi (you plural) | vi | yourselves | Vi ricordate = Do you remember?\nloro (they) | si | themselves | Si chiamano = They call themselves",
     "categories": [
       "vocabulary",
       "pronouns"
@@ -392,8 +392,8 @@
   {
     "id": "20260527_0031_mi",
     "question": "me / myself (possessive)",
-    "answer": "mi",
-    "notes": "Italian: mi\nEnglish: me / myself\nPart of speech: pron",
+    "answer": "mio/mia",
+    "notes": "Questo è il mio libro.\n\"This is my book.\"",
     "categories": [
       "vocabulary",
       "pronouns"
@@ -445,7 +445,7 @@
     "id": "20260527_0035_così",
     "question": "so / like this / in this way",
     "answer": "così",
-    "notes": "È così semplice.\n\"It's so simple.\"",
+    "notes": "Così, come stai?\n\"So, how are you?\"",
     "categories": [
       "vocabulary",
       "adverbs"
@@ -456,9 +456,9 @@
   },
   {
     "id": "20260527_0036_se",
-    "question": "if",
+    "question": "if (conditional)",
     "answer": "se",
-    "notes": "Italian: se\nEnglish: if\nPart of speech: conj",
+    "notes": "Se piove, resto a casa.\n\"If it rains, I stay home.\"",
     "categories": [
       "vocabulary",
       "conjunctions"
@@ -547,9 +547,9 @@
   },
   {
     "id": "20260527_0043_gli",
-    "question": "the (m.pl.) / him",
-    "answer": "gli",
-    "notes": "before masculine plural nouns starting with z, s+consonant, gn, ps, or a vowel",
+    "question": "gli",
+			"answer": "1. Article that appears in front of masculine plural 'the'\n   Gli ragazzi = The boys\n\n2. PRONOUN: 'him' / 'to him'\n   Gli piace = He likes it\n   Gli do un libro = I give him a book",
+    "notes": "",
     "categories": [
       "vocabulary",
       "articles"
@@ -664,9 +664,9 @@
   },
   {
     "id": "20260527_0052_del",
-    "question": "of the (m.)",
+    "question": "of the (m.) (to note ownership or belonging)",
     "answer": "del",
-    "notes": "Del means \"of the\" or \"some\" before masculine singular nouns — for example, voglio del pane means \"I want some bread,\" where del = di + il collapsed into one word.",
+    "notes": "voglio del pane means \"I want some bread,\" where del = di + il collapsed into one word.",
     "categories": [
       "vocabulary",
       "prepositions"
@@ -1225,7 +1225,7 @@
     "id": "20260527_0095_fu",
     "question": "was (past)",
     "answer": "fu",
-    "notes": "Italian: fu\nEnglish: was (past)\nPart of speech: verb",
+    "notes": "past tense of essere.  Fu un bel giorno.\n\"It was a beautiful day.\"",
     "categories": [
       "vocabulary",
       "verbs"

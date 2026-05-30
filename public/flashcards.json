@@ -4488,5 +4488,223 @@
     "correct": 0,
     "incorrect": 0,
     "dateAdded": "2026-05-27"
+  }, 
+	  {
+    "id": "1748131200001piaciuto",
+    "question": "liked / has pleased",
+    "answer": "piaciuto",
+    "notes": "Mi è sempre piaciuto leggere. → I've always liked reading.",
+    "categories": [
+      "verbs",
+      "past_participles"
+    ],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-30"
+  },
+  {
+    "id": "1748131200002ricordo",
+    "question": "I remember / memory",
+    "answer": "ricordo",
+    "notes": "Ricordo di quando ero piccolo. → I remember when I was little.",
+    "categories": [
+      "verbs",
+      "nouns"
+    ],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-30"
+  },
+  {
+    "id": "1748131200003spesso",
+    "question": "often",
+    "answer": "spesso",
+    "notes": "Lo faccio spesso. → I do it often.",
+    "categories": [
+      "adverbs"
+    ],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-30"
+  },
+  {
+    "id": "1748131200004solito",
+    "question": "usually / usual",
+    "answer": "solito",
+    "notes": "Di solito leggo la sera. → Usually I read in the evening.",
+    "categories": [
+      "adjectives",
+      "adverbs"
+    ],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-30"
+  },
+  {
+    "id": "1748131200005portavo",
+    "question": "I was carrying / I wore / I took",
+    "answer": "portavo",
+    "notes": "Lo portavo a casa. → I carried/took it home.",
+    "categories": [
+      "verbs",
+      "imperfect"
+    ],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-30"
+  },
+  {
+    "id": "1748131200006scelto",
+    "question": "I chose / chosen",
+    "answer": "scelto",
+    "notes": "Ho scelto di studiare italiano. → I chose to study Italian.",
+    "categories": [
+      "verbs",
+      "past_participles"
+    ],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-30"
+  },
+  {
+    "id": "1748131200007consigliare",
+    "question": "to advise / to recommend",
+    "answer": "consigliare",
+    "notes": "Pronunciation: kohn-see-LYAH-reh\nTi consiglio di andare. → I advise you to go.\nTe lo consiglio. → I recommend it to you.",
+    "categories": [
+      "verbs",
+      "infinitives"
+    ],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-30"
+  },
+  {
+    "id": "1748131200008rompe",
+    "question": "he/she breaks / it breaks",
+    "answer": "rompe",
+    "notes": "Non rompe niente. → It doesn't break anything.",
+    "categories": [
+      "verbs",
+      "present"
+    ],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-30"
+  },
+  {
+    "id": "1748131200009mentre",
+    "question": "while",
+    "answer": "mentre",
+    "notes": "Mentre il pane si tosta. → While the bread toasts.",
+    "categories": [
+      "conjunctions"
+    ],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-30"
+  },
+  {
+    "id": "1748131200010burro",
+    "question": "butter",
+    "answer": "burro",
+    "notes": "Un poco di burro. → A bit of butter.",
+    "categories": [
+      "nouns",
+      "food"
+    ],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-30"
+  },
+  {
+    "id": "1748131200011sapore",
+    "question": "flavor / taste",
+    "answer": "sapore",
+    "notes": "Che sapore ha? → What does it taste like?",
+    "categories": [
+      "nouns",
+      "food"
+    ],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-30"
+  },
+  {
+    "id": "1748131200012consiglio",
+    "question": "I recommend / I advise",
+    "answer": "consiglio",
+    "notes": "Pronunciation: kohn-SEEL-yoh\nTi consiglio veramente tanto. → I really recommend you a lot.",
+    "categories": [
+      "verbs",
+      "present"
+    ],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-30"
+  },
+  {
+    "id": "1748131200013provare",
+    "question": "to try / to attempt",
+    "answer": "provare",
+    "notes": "Sto provando a leggere. → I am trying to read.",
+    "categories": [
+      "verbs",
+      "infinitives"
+    ],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-30"
+  },
+  {
+    "id": "1748131200014se",
+    "question": "if",
+    "answer": "se",
+    "notes": "Se leggi in italiano. → If you read in Italian.",
+    "categories": [
+      "conjunctions"
+    ],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-30"
+  },
+  {
+    "id": "1748131200015tenere",
+    "question": "to hold",
+    "answer": "tenere",
+    "notes": "Tengo un libro. → I hold/have a book.",
+    "categories": [
+      "verbs",
+      "infinitives"
+    ],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-30"
+  },
+  {
+    "id": "1748131200016aiuto",
+    "question": "a little help",
+    "answer": "un piccolo aiuto",
+    "notes": "Pronunciation: ah-YOO-toh\nMi serve un piccolo aiuto. → I need a little help.",
+    "categories": [
+      "phrases",
+      "nouns"
+    ],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-30"
+  },
+  {
+    "id": "1748131200017avolte",
+    "question": "sometimes",
+    "answer": "a volte",
+    "notes": "A volte vado al cinema. → Sometimes I go to the movies.",
+    "categories": [
+      "adverbs",
+      "phrases"
+    ],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-05-30"
   }
 ]

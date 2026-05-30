@@ -9,6 +9,7 @@ import { weightedShuffle } from '../lib/weightedShuffle.js';
 import { speakItalian } from '../lib/speak.js';
 import { requeueAhead } from '../lib/verbHelpers.js';
 import { seedStatsOnce } from '../lib/seedStats.js';
+import { renderNotes } from '../lib/renderNotes.jsx';
 
 const STORAGE_KEY = 'vocabWordsStats';
 const BATCH_KEY = 'vocabWordsBatch';
@@ -266,7 +267,7 @@ export default function VocabWords() {
           <>
             <div className="flashcard-label">{reversed ? 'English' : 'Italian'}</div>
             <div className="flashcard-content">{reversed ? c.question : c.answer}</div>
-            {c.notes ? <div className="card-notes">{c.notes}</div> : null}
+            {c.notes ? <div className="card-notes">{renderNotes(c.notes)}</div> : null}
             <SelfRateButtons onCorrect={markCorrect} onIncorrect={markIncorrect} labels={{ correct: '✓ Correct', incorrect: '✗ Incorrect' }} />
             <div className="card-stats">✓ {cardStat.correct}  ✗ {cardStat.incorrect}</div>
             <div className="card-actions" style={{ display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap' }}>
