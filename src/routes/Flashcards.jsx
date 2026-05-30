@@ -11,6 +11,7 @@ import { requeueAhead } from '../lib/verbHelpers.js';
 import { seedStatsOnce } from '../lib/seedStats.js';
 
 const STORAGE_KEY = 'flashcardStats';
+const FLAGGED_KEY = 'flashcardsFlagged';
 
 export default function Flashcards() {
   useBodyClass('flashcards-page');
@@ -45,6 +46,29 @@ export default function Flashcards() {
   const [selectedDate, setSelectedDate] = useState('');
   const [reversed, setReversed] = useState(false);
   const [reverseOrder, setReverseOrder] = useState(true);
+  const [showFlaggedOnly, setShowFlaggedOnly] = useState(false);
+
+  // Flagged cards management
+  const [flaggedCards, setFlaggedCards] = useState(() => {
+    const stored = localStorage.getItem(FLAGGED_KEY);
+    return stored ? new Set(JSON.parse(stored)) : new Set();
+  });
+
+  useEffect(() => {
+    localStorage.setItem(FLAGGED_KEY, JSON.stringify(Array.from(flaggedCards)));
+  }, [flaggedCards]);
+
+  function toggleFlag(cardId) {
+    setFlaggedCards(prev => {
+      const next = new Set(prev);
+      if (next.has(cardId)) {
+        next.delete(cardId);
+      } else {
+        next.add(cardId);
+      }
+      return next;
+    });
+  }
 
   // Filtered, shuffled initial deck
   const initialDeck = useMemo(() => {
@@ -53,11 +77,14 @@ export default function Flashcards() {
     if (selectedDate) {
       filtered = filtered.filter(c => c.dateAdded === selectedDate);
     }
+    if (showFlaggedOnly) {
+      filtered = filtered.filter(c => flaggedCards.has(c.id));
+    }
     let result = [...filtered];
     if (reverseOrder) result.reverse();
     return result;
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [cards, selectedDate, reverseOrder]);
+  }, [cards, selectedDate, reverseOrder, showFlaggedOnly, flaggedCards]);
 
   const { deck, setDeck, index, setIndex, flipped, setFlipped } = useDeck(initialDeck);
 
@@ -93,16 +120,21 @@ export default function Flashcards() {
   }
 
   if (deck.length === 0) {
+    const message = showFlaggedOnly 
+      ? 'No flagged cards yet! Flag cards during practice by clicking "🏴 Flag for Review" on the back of any card.'
+      : 'No cards remaining!';
+    
     return (
       <div className="container">
         <div className="header">
           <h1>Italian Flashcards</h1>
         </div>
+        <BackHeader />
         <div className="completion-message" style={{ textAlign: 'center', padding: 40 }}>
-          <h2>🎉 No cards remaining!</h2>
-          {selectedDate && (
+          <h2>🎉 {message}</h2>
+          {(selectedDate || showFlaggedOnly) && (
             <p>
-              <button className="btn-secondary" onClick={() => setSelectedDate('')}>
+              <button className="btn-secondary" onClick={() => { setSelectedDate(''); setShowFlaggedOnly(false); }}>
                 Clear filters
               </button>
             </p>
@@ -119,6 +151,8 @@ export default function Flashcards() {
       <div className="header">
         <h1>Italian Flashcards</h1>
       </div>
+
+      <BackHeader />
 
       <FlipDeck
         key={current?.id || 'empty'}
@@ -140,7 +174,7 @@ export default function Flashcards() {
             {c.notes ? <div className="card-notes">{c.notes}</div> : null}
             <SelfRateButtons onCorrect={markCorrect} onIncorrect={markIncorrect} labels={{ correct: '✓ Correct', incorrect: '✗ Incorrect' }} />
             <div className="card-stats">✓ {cardStat.correct}  ✗ {cardStat.incorrect}</div>
-            <div className="card-actions">
+            <div className="card-actions" style={{ display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap' }}>
               <button
                 className="btn-success"
                 onClick={e => {
@@ -151,6 +185,16 @@ export default function Flashcards() {
                   speakItalian(speak, { rate: 0.9 });
                 }}
               >🔊 Pronounce</button>
+              <button
+                className={flaggedCards.has(c.id) ? 'btn-primary' : 'btn-secondary'}
+                onClick={e => {
+                  e.stopPropagation();
+                  toggleFlag(c.id);
+                }}
+                style={flaggedCards.has(c.id) ? { background: '#FF9800', color: 'white', border: '2px solid #FF9800' } : {}}
+              >
+                {flaggedCards.has(c.id) ? '🚩 Flagged' : '🏴 Flag for Review'}
+              </button>
             </div>
           </>
         )}
@@ -174,6 +218,14 @@ export default function Flashcards() {
           className="btn-secondary"
           onClick={() => setReversed(r => !r)}
         >🔄 {reversed ? 'Normal' : 'Reverse'} Cards</button>
+        <button
+          className={showFlaggedOnly ? 'btn-primary' : 'btn-secondary'}
+          onClick={() => setShowFlaggedOnly(f => !f)}
+          style={showFlaggedOnly ? { background: '#FF9800', color: 'white', border: '2px solid #FF9800' } : {}}
+          disabled={flaggedCards.size === 0}
+        >
+          🚩 Flagged Only ({flaggedCards.size})
+        </button>
       </div>
 			      <div className="filter-section" style={{ flexWrap: 'wrap', gap: 12 }}>
         <input
