@@ -84,7 +84,8 @@ export default function Flashcards() {
     if (reverseOrder) result.reverse();
     return result;
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [cards, selectedDate, reverseOrder, showFlaggedOnly]);
+
+}, [cards, selectedDate, reverseOrder, showFlaggedOnly]);
 
   const { deck, setDeck, index, setIndex, flipped, setFlipped } = useDeck(initialDeck);
 
