@@ -4646,5 +4646,108 @@
     "correct": 0,
     "incorrect": 0,
     "dateAdded": "2026-05-30"
+  },
+	{
+    "id": "1748131200017ride",
+    "question": "ride",
+    "answer": "laughs",
+    "notes": "Pronounced: REE-deh. Third person singular present of ridere (to laugh). Usage: Lei ride sempre dei miei scherzi. → She always laughs at my jokes.",
+    "categories": [
+      "verbs",
+      "present tense"
+    ],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-06-01"
+  },
+  {
+    "id": "1748131200017soggiorno",
+    "question": "soggiorno",
+    "answer": "living room / stay",
+    "notes": "Pronounced: sohd-JOR-noh. Noun - can mean both living room (house room) and a stay/sojourn. Usage: Mi piace il mio soggiorno. → I like my living room. / Abbiamo avuto un bellissimo soggiorno in Italia. → We had a beautiful stay in Italy.",
+    "categories": [
+      "nouns",
+      "home"
+    ],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-06-01"
+  },
+  {
+    "id": "1748131200017sorrido",
+    "question": "sorrido",
+    "answer": "I smile",
+    "notes": "Pronounced: sor-REE-doh. First person singular present of sorridere (to smile). Usage: Sorrido quando vedo i miei amici. → I smile when I see my friends.",
+    "categories": [
+      "verbs",
+      "present tense"
+    ],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-06-01"
+  },
+  {
+    "id": "1748131200017alzo",
+    "question": "alzo",
+    "answer": "I raise / I lift",
+    "notes": "Pronounced: AHL-tzoh. First person singular present of alzare (to raise, lift, stand up). Usage: Alzo la mano per fare una domanda. → I raise my hand to ask a question.",
+    "categories": [
+      "verbs",
+      "present tense"
+    ],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-06-01"
+  },
+  {
+    "id": "1748131200017allaperto",
+    "question": "all'aperto",
+    "answer": "outdoors / in the open air",
+    "notes": "Pronounced: ahl-lah-PER-toh. Prepositional phrase (a + l' + aperto). Usage: Voglio mangiare all'aperto stasera. → I want to eat outdoors tonight. / Mi piace giocare all'aperto con i bambini. → I like playing outside with the kids.",
+    "categories": [
+      "phrases",
+      "prepositions"
+    ],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-06-01"
+  },
+  {
+    "id": "1748131200017daqualche",
+    "question": "da qualche",
+    "answer": "for some (time) / from some",
+    "notes": "Pronounced: dah KWAHL-keh. Phrase typically used with 'tempo' (time) - 'da qualche tempo' = for some time now. Usage: Da qualche tempo non ti vedo. → I haven't seen you for some time. / Vivo qui da qualche anno. → I've been living here for a few years.",
+    "categories": [
+      "phrases",
+      "time expressions"
+    ],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-06-01"
+  },
+  {
+    "id": "1748131200017moltissimo",
+    "question": "moltissimo",
+    "answer": "very much / a lot",
+    "notes": "Pronounced: mol-TEES-see-moh. Adverb - superlative form of molto. Can also be used as adjective (moltissimi/a = very many). Usage: Ti amo moltissimo. → I love you very much. / Mi piace moltissimo questo libro. → I like this book a lot.",
+    "categories": [
+      "adverbs",
+      "intensifiers"
+    ],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-06-01"
+  },
+  {
+    "id": "1748131200017riso",
+    "question": "riso",
+    "answer": "laughter / rice",
+    "notes": "Pronounced: REE-zoh. Noun - has two meanings: laughter (noun from ridere) OR rice (grain). Context determines meaning. Usage (laughter): Il riso era contagioso. → The laughter was contagious. / Usage (rice): Preparo il riso con le verdure. → I'm preparing rice with vegetables.",
+    "categories": [
+      "nouns"
+    ],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-06-01"
   }
 ]
