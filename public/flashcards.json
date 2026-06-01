@@ -4371,20 +4371,10 @@
 },
 {
     "id": "1748131200001chiedendo",
-    "question": "asking / while asking",
-    "answer": "chiedendo",
+    "question": "asking / while asking (I'm asking for a favor)",
+    "answer": "sto chiedendo",
     "notes": "Pronunciation: \nchi → 'kee-eh' \nden → 'DEN' (stressed) \ndo → 'doh'.\nGerund of 'chiedere' (to ask).\n\nSto chiedendo un favore. → I'm asking for a favor.",
     "categories": ["verbs", "gerunds"],
-    "correct": 0,
-    "incorrect": 0,
-    "dateAdded": "2026-05-25"
-},
-{
-    "id": "1748131200002dicevaimperfetto",
-    "question": "imperfetto forms of dire (to say/tell)",
-    "answer": "dicevo, dicevi, diceva, dicevamo, dicevate, dicevano",
-    "notes": "Pronunciation: \ndi → 'dee' \nce → 'CHEH' (stressed for singular forms) \nva → 'VAH' (stressed for plural forms).\n\nImperfetto conjugations:\nio dicevo → I was saying/used to say\ntu dicevi → you were saying/used to say\nlui/lei diceva → he/she was saying/used to say\nnoi dicevamo → we were saying/used to say\nvoi dicevate → you all were saying/used to say\nloro dicevano → they were saying/used to say\n\nDicevo sempre la verità. → I always used to tell the truth.",
-    "categories": ["verbs", "imperfetto"],
     "correct": 0,
     "incorrect": 0,
     "dateAdded": "2026-05-25"
@@ -4410,31 +4400,11 @@
     "dateAdded": "2026-05-26"
   },
   {
-    "id": "1748217600002maiale",
-    "question": "pig",
-    "answer": "il maiale",
-    "notes": "Pronunciation: \nmai → 'MAH-yah' (stressed) \nle → 'leh'.\nMasculine noun. Plural: i maiali.\n\nIl maiale è nel fienile. → The pig is in the barn.",
-    "categories": ["nouns", "animals"],
-    "correct": 0,
-    "incorrect": 0,
-    "dateAdded": "2026-05-26"
-  },
-  {
     "id": "1748217600003volta",
     "question": "time (occurrence)",
     "answer": "la volta",
     "notes": "Pronunciation: \nvol → 'VOHL' (stressed) \nta → 'tah'.\nFeminine noun. Plural: le volte. Used for counting occurrences.\n\nUna volta al giorno. → Once a day.\nQuesta volta vinco io. → This time I win.",
     "categories": ["nouns", "common-words"],
-    "correct": 0,
-    "incorrect": 0,
-    "dateAdded": "2026-05-26"
-  },
-  {
-    "id": "1748217600004sud",
-    "question": "south",
-    "answer": "il sud",
-    "notes": "Pronunciation: \nsud → 'sood' (like English 'mood').\nMasculine noun. Cardinal direction. Invariable (no plural change).\n\nViaggio verso sud. → I'm traveling south.\nIl sud Italia è bellissimo. → Southern Italy is beautiful.",
-    "categories": ["nouns", "directions", "geography"],
     "correct": 0,
     "incorrect": 0,
     "dateAdded": "2026-05-26"
@@ -4564,7 +4534,7 @@
   },
   {
     "id": "1748131200009mentre",
-    "question": "while",
+    "question": "while (while I do something)",
     "answer": "mentre",
     "notes": "Mentre il pane si tosta. → While the bread toasts.",
     "categories": [
