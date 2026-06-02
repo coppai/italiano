@@ -4597,18 +4597,6 @@
     "dateAdded": "2026-05-30"
   },
   {
-    "id": "1748131200014se",
-    "question": "if",
-    "answer": "se",
-    "notes": "Se leggi in italiano. → If you read in Italian.",
-    "categories": [
-      "conjunctions"
-    ],
-    "correct": 0,
-    "incorrect": 0,
-    "dateAdded": "2026-05-30"
-  },
-  {
     "id": "1748131200015tenere",
     "question": "to hold",
     "answer": "tenere",
@@ -4726,5 +4714,65 @@
     "correct": 0,
     "incorrect": 0,
     "dateAdded": "2026-06-01"
+  },
+	{
+    "id": "1748131200017vola",
+    "question": "vola / he/she flies, fly (imperative)",
+    "answer": "vola",
+    "notes": "Pronounced: VO-lah. Verb (3rd person singular present of volare OR imperative form). Meaning: flies/to fly. Usage (present): L'uccello vola alto nel cielo. → The bird flies high in the sky. / Usage (imperative): Vola via! → Fly away!",
+    "categories": ["verbs"],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-06-02"
+  },
+  {
+    "id": "1748131200017magari",
+    "question": "magari / maybe, perhaps, if only",
+    "answer": "magari",
+    "notes": "Pronounced: mah-GAH-ree. Adverb. Expresses possibility, uncertainty, or wishful thinking. Usage (maybe/perhaps): Magari domani avrò più tempo. → Maybe tomorrow I'll have more time. / Usage (if only, expressing desire): Magari potessi stare a casa! → If only I could stay home!",
+    "categories": ["adverbs"],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-06-02"
+  },
+  {
+    "id": "1748131200017nuvole",
+    "question": "nuvole / clouds",
+    "answer": "nuvole",
+    "notes": "Pronounced: NOO-voh-leh. Noun, plural of nuvola (feminine). Meaning: clouds. Usage: Guardo le nuvole bianche nel cielo. → I'm looking at the white clouds in the sky. / Native phrasing: Avere la testa nelle nuvole. → To have one's head in the clouds (to be daydreaming).",
+    "categories": ["nouns"],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-06-02"
+  },
+  {
+    "id": "1748131200017corso",
+    "question": "corso / course, avenue, street",
+    "answer": "corso",
+    "notes": "Pronounced: KOR-soh. Noun (masculine). Meanings: (1) course (academic or sequence), (2) avenue/main street (especially in Italian cities). Usage (course): Seguo un corso di italiano. → I'm taking an Italian course. / Usage (street): Camminiamo lungo il Corso Vittorio. → We're walking along Vittorio Avenue.",
+    "categories": ["nouns"],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-06-02"
+  },
+  {
+    "id": "1748131200017salta",
+    "question": "salta / he/she jumps, jump (imperative)",
+    "answer": "salta",
+    "notes": "Pronounced: SAHL-tah. Verb (3rd person singular present of saltare OR imperative form). Meaning: jumps/to jump. Usage (present): Il bambino salta sulla palla. → The child jumps on the ball. / Usage (imperative): Salta! → Jump! / Native phrasing: Salta alla conclusione. → He/she jumps to the conclusion.",
+    "categories": ["verbs"],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-06-02"
+  },
+  {
+    "id": "1748131200017nuoto",
+    "question": "nuoto / swimming",
+    "answer": "nuoto",
+    "notes": "Pronounced: noo-OH-toh. Noun (masculine). Meaning: swimming (the activity/sport). Usage: Mi piace il nuoto. → I like swimming. / Native phrasing: Fare nuoto. → To go swimming / Lezione di nuoto. → Swimming lesson.",
+    "categories": ["nouns"],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-06-02"
   }
 ]
