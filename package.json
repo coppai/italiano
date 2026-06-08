@@ -4,11 +4,13 @@
   "description": "Italian flashcards web app",
   "main": "server.js",
   "scripts": {
+    "dev": "./scripts/dev.sh",
     "dev:server": "node server.js",
     "dev:client": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "start": "node server.js"
+    "start": "node server.js",
+    "deploy": "./scripts/deploy.sh"
   },
   "engines": {
     "node": ">=18"

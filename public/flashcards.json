@@ -4774,6 +4774,16 @@
     "correct": 0,
     "incorrect": 0,
     "dateAdded": "2026-06-02"
-  }
+  },
+	{
+    "id": "1780704000018insegnare",
+    "question": "to teach (I teach)",
+    "answer": "insegnare",
+    "notes": "Pronounced: een-sen-YAH-reh. Verb (infinitive). Meaning: to teach. Usage: Insegno italiano. → I teach Italian. / Native phrasing: Insegnare a qualcuno. → To teach someone. / Mi piace insegnare. → I like teaching. / Conjugation: io insegno, tu insegni, lui/lei insegna.",
+    "categories": ["verbs"],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-06-08"
+}
 	
 ]
