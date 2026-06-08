@@ -4784,6 +4784,16 @@
     "correct": 0,
     "incorrect": 0,
     "dateAdded": "2026-06-08"
-}
+	},
+	{
+			"id": "1780704000019insegnante",
+			"question": "teacher",
+			"answer": "insegnante",
+			"notes": "Pronounced: een-sen-YAHN-teh. Noun (masculine/feminine). Meaning: teacher. Usage: Sono un insegnante. → I am a teacher. / Native phrasing: L'insegnante di italiano. → The Italian teacher. / Gli insegnanti. → The teachers. / Gender-neutral: works for both male and female teachers.",
+			"categories": ["nouns"],
+			"correct": 0,
+			"incorrect": 0,
+			"dateAdded": "2026-06-08"
+	}
 	
 ]
