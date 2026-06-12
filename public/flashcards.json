@@ -4794,6 +4794,106 @@
 			"correct": 0,
 			"incorrect": 0,
 			"dateAdded": "2026-06-08"
-	}
+	}, 
+    {
+        "id": "1780704000020abbandonata",
+        "question": "abandoned (feminine)",
+        "answer": "abbandonata",
+        "notes": "Pronounced: ahb-bahn-doh-NAH-tah. Adjective (feminine). Meaning: abandoned, deserted. Usage: La casa abbandonata. → The abandoned house. / Si sente abbandonata. → She feels abandoned. / Masculine form: abbandonato. / Plural: abbandonate (f), abbandonati (m).",
+        "categories": ["adjectives"],
+        "correct": 0,
+        "incorrect": 0,
+        "dateAdded": "2026-06-12"
+    },
+    {
+        "id": "1780704000021riparare",
+        "question": "to fix / to repair",
+        "answer": "riparare",
+        "notes": "Pronounced: ree-pah-RAH-reh. Verb (infinitive). Meaning: to fix, to repair, to mend. Usage: Devo riparare la macchina. → I have to fix the car. / Posso riparare il computer. → I can repair the computer. / Lui ripara tutto. → He fixes everything. / Present: riparo, ripari, ripara, ripariamo, riparate, riparano.",
+        "categories": ["verbs"],
+        "correct": 0,
+        "incorrect": 0,
+        "dateAdded": "2026-06-12"
+    },
+    {
+        "id": "1780704000022determinato",
+        "question": "determined (masculine)",
+        "answer": "determinato",
+        "notes": "Pronounced: deh-tehr-mee-NAH-toh. Adjective (masculine). Meaning: determined, resolute. Usage: È molto determinato. → He is very determined. / Un uomo determinato. → A determined man. / Feminine form: determinata. / Plural: determinati (m), determinate (f).",
+        "categories": ["adjectives"],
+        "correct": 0,
+        "incorrect": 0,
+        "dateAdded": "2026-06-12"
+    },
+    {
+        "id": "1780704000023gentilezza",
+        "question": "kindness",
+        "answer": "gentilezza",
+        "notes": "Pronounced: jen-tee-LEHT-tsah. Noun (feminine). Meaning: kindness, courtesy, politeness. Usage: Grazie per la gentilezza. → Thank you for the kindness. / Ha molta gentilezza. → He/she has a lot of kindness. / Per gentilezza. → Please (literally: for kindness). / Article: la gentilezza.",
+        "categories": ["nouns"],
+        "correct": 0,
+        "incorrect": 0,
+        "dateAdded": "2026-06-12"
+    },
+    {
+        "id": "1780704000024insiste",
+        "question": "insists / he/she insists",
+        "answer": "insiste",
+        "notes": "Pronounced: een-SEE-steh. Verb (3rd person singular present of insistere). Meaning: insists, persists. Usage: Lei insiste troppo. → She insists too much. / Lui insiste sulla sua idea. → He insists on his idea. / Infinitive: insistere. / Other forms: insisto, insisti, insistiamo, insistete, insistono.",
+        "categories": ["verbs"],
+        "correct": 0,
+        "incorrect": 0,
+        "dateAdded": "2026-06-12"
+    },
+    {
+        "id": "1780704000025visita",
+        "question": "visits / he/she visits",
+        "answer": "visita",
+        "notes": "Pronounced: vee-ZEE-tah. Verb (3rd person singular present of visitare). Meaning: visits, examines. Usage: Lei visita sua nonna. → She visits her grandmother. / Il dottore visita i pazienti. → The doctor examines the patients. / Infinitive: visitare. / Also a noun: la visita (the visit). / Other forms: visito, visiti, visitiamo, visitate, visitano.",
+        "categories": ["verbs"],
+        "correct": 0,
+        "incorrect": 0,
+        "dateAdded": "2026-06-12"
+    },
+    {
+        "id": "1780704000026piange",
+        "question": "cries / weeps / he/she cries",
+        "answer": "piange",
+        "notes": "Pronounced: PYAHN-jeh. Verb (3rd person singular present of piangere). Meaning: cries, weeps. Usage: Il bambino piange. → The baby cries. / Lei piange sempre. → She always cries. / Perché piangi? → Why are you crying? / Infinitive: piangere. / Other forms: piango, piangi, piangiamo, piangete, piangono.",
+        "categories": ["verbs"],
+        "correct": 0,
+        "incorrect": 0,
+        "dateAdded": "2026-06-12"
+    },
+    {
+        "id": "1780704000027racconta",
+        "question": "tells / recounts / he/she tells",
+        "answer": "racconta",
+        "notes": "Pronounced: rahk-KOHN-tah. Verb (3rd person singular present of raccontare). Meaning: tells, recounts, narrates. Usage: Lei racconta una storia. → She tells a story. / Mi racconta tutto. → He/she tells me everything. / Infinitive: raccontare. / Other forms: racconto, racconti, raccontiamo, raccontate, raccontano.",
+        "categories": ["verbs"],
+        "correct": 0,
+        "incorrect": 0,
+        "dateAdded": "2026-06-12"
+    },
+    {
+        "id": "1780704000028prepara",
+        "question": "prepares / he/she prepares",
+        "answer": "prepara",
+        "notes": "Pronounced: preh-PAH-rah. Verb (3rd person singular present of preparare). Meaning: prepares, gets ready. Usage: Lei prepara la cena. → She prepares dinner. / Si prepara per uscire. → He/she gets ready to go out. / Infinitive: preparare. / Other forms: preparo, prepari, prepariamo, preparate, preparano.",
+        "categories": ["verbs"],
+        "correct": 0,
+        "incorrect": 0,
+        "dateAdded": "2026-06-12"
+    },
+    {
+        "id": "1780704000029imparare",
+        "question": "to learn",
+        "answer": "imparare",
+        "notes": "Pronounced: eem-pah-RAH-reh. Verb (infinitive). Meaning: to learn, to study. Usage: Voglio imparare l'italiano. → I want to learn Italian. / È facile da imparare. → It's easy to learn. / Imparo qualcosa di nuovo ogni giorno. → I learn something new every day. / Present: imparo, impari, impara, impariamo, imparate, imparano.",
+        "categories": ["verbs"],
+        "correct": 0,
+        "incorrect": 0,
+        "dateAdded": "2026-06-12"
+    }
 	
 ]
