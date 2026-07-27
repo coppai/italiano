@@ -4894,6 +4894,106 @@
         "correct": 0,
         "incorrect": 0,
         "dateAdded": "2026-06-12"
-    }
+    },
+		{
+    "id": "1753660800001appenarrivata",
+    "question": "Just arrived (feminine singular)",
+    "answer": "appena arrivata",
+    "notes": "Pronounced: ah-PEH-nah ahr-ree-VAH-tah. Phrase. Meaning: just arrived (for a female subject). Usage: Sono appena arrivata. → I just arrived (said by a woman). / Maria è appena arrivata. → Maria just arrived. / For masculine: appena arrivato. / appena = just/as soon as + past participle of arrivare (to arrive).",
+    "categories": ["phrases"],
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-07-27"
+	},
+	{
+			"id": "1753660800002lasciaremancia",
+			"question": "To leave a tip",
+			"answer": "lasciare la mancia",
+			"notes": "Pronounced: lah-SHAH-reh lah MAHN-chah. Verb phrase. Meaning: to leave a tip (gratuity). Usage: Devo lasciare la mancia? → Should I leave a tip? / Voglio lasciare la mancia. → I want to leave a tip. / Ho lasciato la mancia. → I left a tip. / lasciare = to leave; la mancia = the tip.",
+			"categories": ["verbs", "restaurant"],
+			"correct": 0,
+			"incorrect": 0,
+			"dateAdded": "2026-07-27"
+	},
+	{
+			"id": "1753660800003appena",
+			"question": "Just / as soon as",
+			"answer": "appena",
+			"notes": "Pronounced: ah-PEH-nah. Adverb/Conjunction. Meaning: just (recently), as soon as. Usage: Sono appena arrivato. → I just arrived. / Appena posso, ti chiamo. → As soon as I can, I'll call you. / L'ho visto appena ieri. → I saw him just yesterday. / Used with past participles for recent actions or as a conjunction for time.",
+			"categories": ["adverbs"],
+			"correct": 0,
+			"incorrect": 0,
+			"dateAdded": "2026-07-27"
+	},
+	{
+			"id": "1753660800004sonovenuto",
+			"question": "I came (masculine)",
+			"answer": "sono venuto",
+			"notes": "Pronounced: SOH-noh veh-NOO-toh. Verb phrase (passato prossimo). Meaning: I came/I have come (masculine speaker). Usage: Sono venuto qui per te. → I came here for you. / Sono venuto in treno. → I came by train. / For feminine: sono venuta. / From venire (to come) conjugated with essere + past participle.",
+			"categories": ["verbs"],
+			"correct": 0,
+			"incorrect": 0,
+			"dateAdded": "2026-07-27"
+	},
+	{
+			"id": "1753660800005gia",
+			"question": "Already",
+			"answer": "già",
+			"notes": "Pronounced: JAH. Adverb. Meaning: already, yet. Usage: Ho già mangiato. → I've already eaten. / Sei già qui? → Are you here already? / L'ho già visto. → I've already seen it. / Often used with passato prossimo (present perfect) tense. / Positioned before the past participle.",
+			"categories": ["adverbs"],
+			"correct": 0,
+			"incorrect": 0,
+			"dateAdded": "2026-07-27"
+	},
+	{
+			"id": "1753660800006avetegiamangiato",
+			"question": "Have you (all) already eaten?",
+			"answer": "Avete già mangiato?",
+			"notes": "Pronounced: ah-VEH-teh JAH mahn-JAH-toh. Question phrase (passato prossimo). Meaning: Have you all already eaten? Usage: Restaurant or social setting question. / avete = you (plural) have; già = already; mangiato = eaten (past participle of mangiare). / For singular informal: Hai già mangiato? / For singular formal: Ha già mangiato?",
+			"categories": ["phrases", "restaurant"],
+			"correct": 0,
+			"incorrect": 0,
+			"dateAdded": "2026-07-27"
+	},
+	{
+			"id": "1753660800007hogiamangiato",
+			"question": "I've already eaten",
+			"answer": "Ho già mangiato",
+			"notes": "Pronounced: oh JAH mahn-JAH-toh. Phrase (passato prossimo). Meaning: I've already eaten / I already ate. Usage: Common response when declining food. / Ho già mangiato, grazie. → I've already eaten, thanks. / ho = I have; già = already; mangiato = eaten (past participle). / Passato prossimo with avere as auxiliary verb.",
+			"categories": ["phrases", "restaurant"],
+			"correct": 0,
+			"incorrect": 0,
+			"dateAdded": "2026-07-27"
+	},
+	{
+			"id": "1753660800008sonoarrivatoscorsomese",
+			"question": "I arrived last month",
+			"answer": "Sono arrivato/a lo scorso mese",
+			"notes": "Pronounced: SOH-noh ahr-ree-VAH-toh/tah loh SKOR-soh MEH-zeh. Phrase (passato prossimo). Meaning: I arrived last month. Usage: sono arrivato (masculine) / sono arrivata (feminine); lo scorso mese = last month. / Other time expressions: la scorsa settimana (last week), l'anno scorso (last year). / arrivare uses essere as auxiliary.",
+			"categories": ["phrases"],
+			"correct": 0,
+			"incorrect": 0,
+			"dateAdded": "2026-07-27"
+	},
+	{
+			"id": "1753660800009honoleggiatosettimana",
+			"question": "I rented a car a week ago",
+			"answer": "Ho noleggiato una macchina una settimana fa",
+			"notes": "Pronounced: oh noh-leh-JAH-toh OO-nah MAH-kee-nah OO-nah seh-tee-MAH-nah fah. Phrase (passato prossimo). Meaning: I rented a car a week ago. Usage: noleggiare = to rent/hire; una settimana fa = a week ago. / Other time: un mese fa (a month ago), due giorni fa (two days ago). / noleggiare uses avere as auxiliary.",
+			"categories": ["phrases", "travel"],
+			"correct": 0,
+			"incorrect": 0,
+			"dateAdded": "2026-07-27"
+	},
+	{
+			"id": "1753660800010hogiaprenotatotavolo",
+			"question": "I've already booked a table for two",
+			"answer": "Ho già prenotato un tavolo per due",
+			"notes": "Pronounced: oh JAH preh-noh-TAH-toh oon TAH-voh-loh pehr DOO-eh. Phrase (passato prossimo). Meaning: I've already reserved/booked a table for two. Usage: Common restaurant phrase. / prenotare = to book/reserve; un tavolo = a table; per due = for two. / Other numbers: per tre (for three), per quattro (for four). / prenotare uses avere as auxiliary.",
+			"categories": ["phrases", "restaurant"],
+			"correct": 0,
+			"incorrect": 0,
+			"dateAdded": "2026-07-27"
+	}
 	
 ]
