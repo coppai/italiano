@@ -5228,6 +5228,15 @@
     "correct": 0,
     "incorrect": 0,
     "dateAdded": "2026-08-10"
-  }
+  },
+	{
+		"id": "1786377301411essereimperfettofulltable",
+		"question": "past tense of essere (imperfetto, all forms)",
+		"answer": "ero\neri\nera\neravamo\neravate\nerano",
+		"notes": "Pronounced: EH-roh, EH-ree, EH-rah, eh-rah-VAH-moh, eh-rah-VAH-teh, EH-rah-noh. Full essere conjugation, imperfetto tense. Order: io, tu, lui/lei, noi, voi, loro. Meaning: I was, you were, he/she/it was, we were, you all were, they were.",
+		"correct": 0,
+		"incorrect": 0,
+		"dateAdded": "2026-08-10"
+	}
 	
 ]
