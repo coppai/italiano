@@ -4994,6 +4994,186 @@
 			"correct": 0,
 			"incorrect": 0,
 			"dateAdded": "2026-07-27"
-	}
+	},
+	 {
+    "id": "1786376688063inftfacing",
+    "question": "in front / facing",
+    "answer": "Davanti",
+    "notes": "Pronounced: dah-VAHN-tee. Preposition/adverb. Meaning: in front (of), facing. Usage: 'davanti a' = in front of. / Opposite: dietro (behind).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-08-10"
+  },
+  {
+    "id": "1786376688073longpluraladj",
+    "question": "long (plural)",
+    "answer": "Lunghi",
+    "notes": "Pronounced: LOON-ghee. Adjective, masculine plural of 'lungo'. Meaning: long. Usage: capelli lunghi (long hair). / Feminine plural: lunghe.",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-08-10"
+  },
+  {
+    "id": "1786376688083somepluralindef",
+    "question": "some",
+    "answer": "Alcuni",
+    "notes": "Pronounced: al-KOO-nee. Indefinite adjective/pronoun, masculine plural. Meaning: some, a few. Usage: alcuni libri (some books). / Feminine plural: alcune.",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-08-10"
+  },
+  {
+    "id": "1786376688093bottombackgroundfund",
+    "question": "bottom / background / fund",
+    "answer": "Fondo",
+    "notes": "Pronounced: FOHN-doh. Noun, masculine. Meaning: bottom, background, or fund (as in a financial fund). Usage: in fondo (at the bottom / basically); sfondo is a related word for 'background'.",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-08-10"
+  },
+  {
+    "id": "1786376688103tocloseverb",
+    "question": "to close",
+    "answer": "Chiudere",
+    "notes": "Pronounced: kee-OO-deh-reh. Verb, -ere infinitive. Meaning: to close, shut. Usage: irregular past participle: chiuso. Uses avere as auxiliary.",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-08-10"
+  },
+  {
+    "id": "1786376688113areyousurefemale",
+    "question": "Are you sure? (to a female)",
+    "answer": "Sei sicura",
+    "notes": "Pronounced: SEH-ee see-KOO-rah. Phrase. Meaning: are you sure (addressing a female). Usage: 'sicura' agrees with feminine subject; to a male: sei sicuro.",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-08-10"
+  },
+  {
+    "id": "1786376688123sofanoun",
+    "question": "sofa",
+    "answer": "Divano",
+    "notes": "Pronounced: dee-VAH-noh. Noun, masculine. Meaning: sofa, couch. Usage: sul divano (on the sofa).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-08-10"
+  },
+  {
+    "id": "1786376688133appearanceiwait",
+    "question": "appearance / I wait",
+    "answer": "Aspetto",
+    "notes": "Pronounced: as-PEHT-toh. Noun (masculine, meaning appearance/look) or verb (io form of aspettare, to wait). Usage: 'un buon aspetto' (a good appearance) vs 'io aspetto' (I wait/am waiting).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-08-10"
+  },
+  {
+    "id": "1786376688143runescapesimperative",
+    "question": "run! / (he/she) escapes",
+    "answer": "Scappa",
+    "notes": "Pronounced: SKAHP-pah. Verb form of scappare (to escape/run away). Meaning: imperative 'run!' (tu form) or 3rd person singular 'he/she escapes/runs off'.",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-08-10"
+  },
+  {
+    "id": "1786376688153floorplansoftly",
+    "question": "floor / plan / softly, slowly",
+    "answer": "Piano",
+    "notes": "Pronounced: PYAH-noh. Noun (masculine: floor/level of a building, or plan) or adverb (softly, slowly, quietly). Usage: primo piano (first floor); piano piano (little by little); also means 'piano' the instrument.",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-08-10"
+  },
+  {
+    "id": "1786376688163youallarevoiform",
+    "question": "you all are / stay",
+    "answer": "State",
+    "notes": "Pronounced: STAH-teh. Verb, voi (2nd person plural) form of essere (to be, informal 'how are you all') or stare (to stay/be). Usage: come state? (how are you all?).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-08-10"
+  },
+  {
+    "id": "1786376688173iwaslatemale",
+    "question": "I was late (male speaker)",
+    "answer": "Sono stato in ritardo",
+    "notes": "Pronounced: SOH-noh STAH-toh een ree-TAR-doh. Phrase (passato prossimo of essere). Meaning: I was late (masculine subject). Usage: female speaker would say 'sono stata in ritardo'. / essere uses essere as its own auxiliary.",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-08-10"
+  },
+  {
+    "id": "1786376688183statepastpartmasc",
+    "question": "state / status / been (masc. singular)",
+    "answer": "Stato",
+    "notes": "Pronounced: STAH-toh. Noun (masculine: state, status, or nation/country) or past participle of essere/stare (masculine singular: 'been'). Usage: lo Stato (the State/government); sono stato (I have been).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-08-10"
+  },
+  {
+    "id": "1786376688193beenpastpartfem",
+    "question": "been (fem. singular)",
+    "answer": "Stata",
+    "notes": "Pronounced: STAH-tah. Past participle of essere/stare, feminine singular. Meaning: been. Usage: sono stata (I have been, feminine speaker).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-08-10"
+  },
+  {
+    "id": "1786376688203statespastpartmascpl",
+    "question": "states / been (masc. plural)",
+    "answer": "Stati",
+    "notes": "Pronounced: STAH-tee. Noun (masculine plural: states/countries) or past participle of essere/stare (masc. plural: 'been'). Usage: gli Stati Uniti (the United States).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-08-10"
+  },
+  {
+    "id": "1786376688213ihavebeenmale",
+    "question": "I have been / I was (male speaker)",
+    "answer": "sono stato",
+    "notes": "Pronounced: SOH-noh STAH-toh. Passato prossimo of essere, io form (masculine). Meaning: I have been / I was. Usage: female speaker: sono stata.",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-08-10"
+  },
+  {
+    "id": "1786376688223iwasimperfect",
+    "question": "I was",
+    "answer": "Ero",
+    "notes": "Pronounced: EH-roh. Verb, io form of essere in imperfetto (imperfect tense). Meaning: I was (ongoing/descriptive past). Usage: ero stanco (I was tired).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-08-10"
+  },
+  {
+    "id": "1786376688233youwerelateimperfect",
+    "question": "You were late",
+    "answer": "Eri in ritardo",
+    "notes": "Pronounced: EH-ree een ree-TAR-doh. Verb, tu form of essere in imperfetto. Meaning: you were late. Usage: informal 'you' subject.",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-08-10"
+  },
+  {
+    "id": "1786376688243hewaslateimperfect",
+    "question": "He/she/it was late",
+    "answer": "Era in ritardo",
+    "notes": "Pronounced: EH-rah een ree-TAR-doh. Verb, lui/lei form of essere in imperfetto. Meaning: he/she/it was late.",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-08-10"
+  },
+  {
+    "id": "1786376688253reallytruly",
+    "question": "really / truly",
+    "answer": "Davvero",
+    "notes": "Pronounced: dahv-VEH-roh. Adverb. Meaning: really, truly, indeed. Usage: 'Davvero?' (Really?); often used to express surprise or emphasize a statement.",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-08-10"
+  }
 	
 ]
