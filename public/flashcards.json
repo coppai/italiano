@@ -5230,49 +5230,49 @@
     "dateAdded": "2026-08-10"
   },
 	{
-		"id": "1786377301411essereimperfettofulltable",
-		"question": "past tense of essere (imperfetto, all forms)",
-		"answer": "ero\neri\nera\neravamo\neravate\nerano",
-		"notes": "Pronounced: EH-roh, EH-ree, EH-rah, eh-rah-VAH-moh, eh-rah-VAH-teh, EH-rah-noh. Full essere conjugation, imperfetto tense. Order: io, tu, lui/lei, noi, voi, loro. Meaning: I was, you were, he/she/it was, we were, you all were, they were.",
-		"correct": 0,
-		"incorrect": 0,
-		"dateAdded": "2026-08-10"
+    "id": "1786377301411essereimperfettofulltable",
+    "question": "past tense of essere for an ongoing state, like 'I was tired' (all forms: io/tu/lui/noi/voi/loro)",
+    "answer": "ero (I was) - 'ero stanco'\neri (you were) - 'eri stanco'\nera (he/she/it was) - 'era stanco'\neravamo (we were) - 'eravamo stanchi'\neravate (you all were) - 'eravate stanchi'\nerano (they were) - 'erano stanchi'",
+    "notes": "Pronounced: EH-roh, EH-ree, EH-rah, eh-rah-VAH-moh, eh-rah-VAH-teh, EH-rah-noh. Full essere conjugation, imperfetto tense. Order: io, tu, lui/lei, noi, voi, loro. Meaning: I was, you were, he/she/it was, we were, you all were, they were.",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-08-10"
 	},
-	 {
-    "id": "1786377561064esserepastparticipleforms",
-    "question": "past participle of essere (all agreement forms)",
-    "answer": "stato\nstata\nstati\nstate",
-    "notes": "Pronounced: STAH-toh, STAH-tah, STAH-tee, STAH-teh. Past participle of essere, used in passato prossimo (e.g. sono stato/a). Agrees in gender/number with the subject, not person. Order: masc. sing., fem. sing., masc. pl., fem. pl. Meaning: been (all forms).",
-    "correct": 0,
-    "incorrect": 0,
-    "dateAdded": "2026-08-10"
-  },
-  {
-    "id": "1786377792732statoparticiplemascsing",
-    "question": "past participle of essere (masc. singular)",
-    "answer": "Stato",
-    "notes": "Pronounced: STAH-toh. Past participle of essere, masculine singular. Meaning: been. Usage: (io/tu/lui) sono/sei/e stato - agrees with a masculine singular subject. Also a noun meaning 'state/status/country'.",
-    "correct": 0,
-    "incorrect": 0,
-    "dateAdded": "2026-08-10"
-  },
-  {
-    "id": "1786377792733statiparticiplemascpl",
-    "question": "past participle of essere (masc. plural)",
-    "answer": "Stati",
-    "notes": "Pronounced: STAH-tee. Past participle of essere, masculine plural. Meaning: been. Usage: (noi/voi/loro) siamo/siete/sono stati - agrees with a masculine (or mixed-gender) plural subject. Also a noun meaning 'states/countries', e.g. gli Stati Uniti.",
-    "correct": 0,
-    "incorrect": 0,
-    "dateAdded": "2026-08-10"
-  },
-  {
-    "id": "1786377792734erovsstatodifference",
-    "question": "difference between ero and stato",
-    "answer": "Ero = imperfetto (describes an ongoing state/background condition). Stato = past participle used with sono/sei/e (passato prossimo, a completed event).",
-    "notes": "Ero: imperfetto tense, io form of essere. Describes a state or ongoing situation, no clear start/end - e.g. ero stanco (I was tired). / Stato: past participle of essere, paired with auxiliary sono/sei/e/etc. to form passato prossimo, reporting a completed/specific event - e.g. sono stato in ritardo (I was late, one instance). / Mental trick: imperfetto sets the scene (background), passato prossimo reports what happened (foreground).",
-    "correct": 0,
-    "incorrect": 0,
-    "dateAdded": "2026-08-10"
-  }
+	{
+			"id": "1786377561064esserepastparticipleforms",
+			"question": "how do you say 'been' in Italian, like 'I have been tired' (all agreement forms: masc./fem., sing./pl.)",
+			"answer": "stato (masc. sing.) - 'sono stato stanco'\nstata (fem. sing.) - 'sono stata stanca'\nstati (masc. pl.) - 'siamo stati stanchi'\nstate (fem. pl.) - 'siamo state stanche'",
+			"notes": "Pronounced: STAH-toh, STAH-tah, STAH-tee, STAH-teh. Past participle of essere, used in passato prossimo (e.g. sono stato/a). Agrees in gender/number with the subject, not person. Order: masc. sing., fem. sing., masc. pl., fem. pl. Meaning: been (all forms).",
+			"correct": 0,
+			"incorrect": 0,
+			"dateAdded": "2026-08-10"
+	},
+	{
+			"id": "1786377792732statoparticiplemascsing",
+			"question": "how do you say 'been' for a single man, like 'I have been late' (sono/sei/e + ___)?",
+			"answer": "Stato - 'I have been late' = 'sono stato in ritardo'",
+			"notes": "Pronounced: STAH-toh. Past participle of essere, masculine singular. Meaning: been. Usage: (io/tu/lui) sono/sei/e stato - agrees with a masculine singular subject. Also a noun meaning 'state/status/country'.",
+			"correct": 0,
+			"incorrect": 0,
+			"dateAdded": "2026-08-10"
+	},
+	{
+			"id": "1786377792733statiparticiplemascpl",
+			"question": "how do you say 'been' for a masculine/mixed group, like 'we have been lucky' (siamo/siete/sono + ___)?",
+			"answer": "Stati - 'we have been lucky' = 'siamo stati fortunati'",
+			"notes": "Pronounced: STAH-tee. This is the 'been' form of essere used for masculine or mixed-gender plural groups. Usage: (noi/voi/loro) siamo/siete/sono stati - e.g. 'siamo stati fortunati' (we've been lucky, group of men/mixed). Also a noun meaning 'states/countries', e.g. gli Stati Uniti.",
+			"correct": 0,
+			"incorrect": 0,
+			"dateAdded": "2026-08-10"
+	},
+	{
+			"id": "1786377792734erovsstatodifference",
+			"question": "difference between ero and stato",
+			"answer": "Ero describes an ongoing state in the past, with no clear start or end (e.g. 'Ero stanco' = 'I was tired' - a background feeling). Stato describes one specific, completed event (e.g. 'Sono stato in ritardo' = 'I was late' - a single instance that happened and ended).",
+			"notes": "Ero: imperfetto tense, io form of essere. Describes a state or ongoing situation, no clear start/end - e.g. ero stanco (I was tired). / Stato: past participle of essere, paired with auxiliary sono/sei/e/etc. to form passato prossimo, reporting a completed/specific event - e.g. sono stato in ritardo (I was late, one instance). / Mental trick: imperfetto sets the scene (background), passato prossimo reports what happened (foreground).",
+			"correct": 0,
+			"incorrect": 0,
+			"dateAdded": "2026-08-10"
+	}
 	
 ]
