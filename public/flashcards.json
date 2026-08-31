@@ -5219,6 +5219,60 @@
     "correct": 0,
     "incorrect": 0,
     "dateAdded": "2026-08-31"
+  },
+	{
+    "id": "1786377109523spesso",
+    "question": "often",
+    "answer": "Spesso",
+    "notes": "Pronounced: SPEHS-soh. Adverb of frequency. Meaning: often. Usage: vado spesso al parco (I often go to the park).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-08-31"
+  },
+  {
+    "id": "1786377109524laghetto",
+    "question": "small lake / pond",
+    "answer": "Laghetto",
+    "notes": "Pronounced: lah-GHET-toh. Noun, masculine, diminutive of lago. Meaning: small lake, pond. Usage: i bambini giocano vicino al laghetto (the kids play near the pond).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-08-31"
+  },
+  {
+    "id": "1786377109525mentre",
+    "question": "while",
+    "answer": "Mentre",
+    "notes": "Pronounced: MEN-treh. Conjunction. Meaning: while. Usage: mentre cucinavo, lui guardava la TV (while I was cooking, he was watching TV).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-08-31"
+  },
+  {
+    "id": "1786377109526orgoglioso",
+    "question": "proud",
+    "answer": "Orgoglioso",
+    "notes": "Pronounced: or-goh-LYOH-zoh. Adjective, masculine singular (orgogliosa = feminine). Meaning: proud. Usage: sono orgoglioso di te (I am proud of you).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-08-31"
+  },
+  {
+    "id": "1786377109527calcioimportante",
+    "question": "important soccer match / important soccer",
+    "answer": "Calcio importante",
+    "notes": "Pronounced: KAHL-choh eem-por-TAHN-teh. Noun + adjective. Meaning: important soccer/match. Usage: stasera c'è una partita di calcio importante (tonight there's an important soccer match).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-08-31"
+  },
+  {
+    "id": "1786377109528piano",
+    "question": "slowly / softly / plan",
+    "answer": "Piano",
+    "notes": "Pronounced: pee-AH-noh. Adverb (slowly/softly) or noun (plan/floor). Meaning: slowly, or plan. Usage: parla piano, per favore (speak slowly, please).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-08-31"
   }
 	
 ]
