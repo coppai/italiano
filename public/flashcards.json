@@ -5273,6 +5273,60 @@
     "correct": 0,
     "incorrect": 0,
     "dateAdded": "2026-08-31"
+  }, 
+	{
+    "id": "1786377109529nessunproblema",
+    "question": "no problem",
+    "answer": "Nessun problema",
+    "notes": "Pronounced: nes-SOON proh-BLEH-mah. Set phrase. Meaning: no problem. Usage: nessun problema, ci vediamo domani (no problem, see you tomorrow).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-08-31"
+  },
+  {
+    "id": "1786377109530spiegospiegarepresenteio",
+    "question": "I explain",
+    "answer": "Spiego",
+    "notes": "Pronounced: spee-EH-goh. Spiegare, presente, io form. Meaning: I explain. Usage: ti spiego tutto dopo (I'll explain everything to you later).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-08-31"
+  },
+  {
+    "id": "1786377109531li",
+    "question": "them (masc. direct object pronoun)",
+    "answer": "Li",
+    "notes": "Pronounced: lee. Direct object pronoun, masculine plural. Meaning: them. Usage: li vedo domani (I see them tomorrow).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-08-31"
+  },
+  {
+    "id": "1786377109532monete",
+    "question": "coins",
+    "answer": "Monete",
+    "notes": "Pronounced: moh-NEH-teh. Noun, feminine plural (singular: moneta). Meaning: coins. Usage: ho poche monete nel portafoglio (I have few coins in my wallet).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-08-31"
+  },
+  {
+    "id": "1786377109533poi",
+    "question": "then / afterward",
+    "answer": "Poi",
+    "notes": "Pronounced: poy. Adverb. Meaning: then, afterward. Usage: prima mangiamo, poi usciamo (first we eat, then we go out).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-08-31"
+  },
+  {
+    "id": "1786377109534metterlo",
+    "question": "to put it (masc.)",
+    "answer": "Metterlo",
+    "notes": "Pronounced: MET-ter-loh. Mettere + lo (direct object pronoun attached to infinitive). Meaning: to put it. Usage: devo metterlo sul tavolo (I have to put it on the table).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-08-31"
   }
 	
 ]
