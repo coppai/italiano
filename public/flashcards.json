@@ -5327,6 +5327,81 @@
     "correct": 0,
     "incorrect": 0,
     "dateAdded": "2026-08-31"
+  },
+	{
+    "id": "1786377109535giusto",
+    "question": "right / correct",
+    "answer": "Giusto",
+    "notes": "Pronounced: joo-STO. Adjective. Meaning: right, correct. Usage: hai fatto la scelta giusta (you made the right choice).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-08-31"
+  },
+
+	{
+    "id": "1786377109536segua",
+    "question": "follow (subjunctive)",
+    "answer": "Segua",
+    "notes": "Pronounced: SEH-gwah. Subjunctive form of seguire, third person singular. Meaning: (that he/she/it) follows. Usage: spero che lui segua le istruzioni (I hope that he follows the instructions).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-08-31"
+  },
+	{
+    "id": "1786377109537volta",
+    "question": "time / occasion",
+    "answer": "Volta",
+    "notes": "Pronounced: VOHL-tah. Noun, feminine singular. Meaning: time, occasion. Usage: la prima volta che l'ho visto (the first time I saw him).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-08-31"
+  },
+	{
+    "id": "1786377109538volo",
+    "question": "flight",
+    "answer": "Volo",
+    "notes": "Pronounced: VOH-loh. Noun, masculine singular. Meaning: flight. Usage: il volo per Roma è alle otto (the flight to Rome is at eight).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-08-31"
+  },
+	{
+    "id": "1786377109539salire",
+    "question": "to go up / to climb",
+    "answer": "Salire",
+    "notes": "Pronounced: sah-LEE-reh. Verb. Meaning: to go up, to climb. Usage: devo salire le scale (I have to go up the stairs).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-08-31"
+  },
+	{
+    "id": "1786377109540mezz'ora",
+    "question": "half an hour",
+    "answer": "Mezz'ora",
+    "notes": "Pronounced: METZ-zoh-rah. Noun, feminine singular. Meaning: half an hour. Usage: ci vediamo tra mezz'ora (we'll see each other in half an hour).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-08-31"
+  },
+	{
+    "id": "1786377109541aspettare",
+    "question": "to wait",
+    "answer": "Aspettare",
+    "notes": "Pronounced: ahs-peht-TAH-reh. Verb. Meaning: to wait. Usage: devo aspettare il bus (I have to wait for the bus).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-08-31"
   }
+	
+	
+
+
+
+
+
+	
+
+	
+
 	
 ]
