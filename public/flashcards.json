@@ -5391,17 +5391,32 @@
     "correct": 0,
     "incorrect": 0,
     "dateAdded": "2026-08-31"
+  },
+	{
+    "id": "1786377109542ottimo",
+    "question": "excellent / very good",
+    "answer": "Ottimo",
+    "notes": "Pronounced: OHT-tee-moh. Adjective. Meaning: excellent, very good. Usage: il lavoro che hai fatto è ottimo (the work you did is excellent).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-08-31"
+  },
+	{
+    "id": "1786377109543unposto",
+    "question": "a place / a seat",
+    "answer": "Un posto",
+    "notes": "Pronounced: oon POH-stoh. Noun, masculine singular. Meaning: a place, a seat. Usage: c'è un posto libero per me? (is there a free seat for me?).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-08-31"
+  },
+	{
+    "id": "1786377109544seguire",
+    "question": "to follow / to attend",
+    "answer": "Seguire",
+    "notes": "Pronounced: seh-GWEE-reh. Verb. Meaning: to follow, to attend. Usage: seguo un corso di italiano (I attend an Italian course).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-08-31"
   }
-	
-	
-
-
-
-
-
-	
-
-	
-
-	
 ]
