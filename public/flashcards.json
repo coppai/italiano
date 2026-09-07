@@ -5285,7 +5285,7 @@
   },
   {
     "id": "1786377109530spiegospiegarepresenteio",
-    "question": "I explain",
+    "question": "I explain - what is the infinitive",
     "answer": "Spiego",
     "notes": "Pronounced: spee-EH-goh. Spiegare, presente, io form. Meaning: I explain. Usage: ti spiego tutto dopo (I'll explain everything to you later).",
     "correct": 0,
@@ -5418,5 +5418,51 @@
     "correct": 0,
     "incorrect": 0,
     "dateAdded": "2026-08-31"
+  }, 
+	{
+    "id": "1786377109545genitori",
+    "question": "parents",
+    "answer": "Genitori",
+    "notes": "Pronounced: jeh-nee-TOH-ree. Noun, masculine plural. Meaning: parents. Usage: i miei genitori vivono a Roma (my parents live in Rome).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-08-31"
+  }, 
+	{
+    "id": "1786377109546lunghi",
+    "question": "long",
+    "answer": "Lunghi",
+    "notes": "Pronounced: LOON-ghee. Adjective. Meaning: long. Usage: i capelli lunghi (long hair).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-08-31"
+  }, 
+	{
+    "id": "1786377109547stesso",
+    "question": "same",
+    "answer": "Stesso",
+    "notes": "Pronounced: STEH-soh. Adjective. Meaning: same. Usage: lo stesso problema (the same problem).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-08-31"
+  }, 
+	{
+    "id": "1786377109548miei",
+    "question": "my (plural masculine) My books",
+    "answer": "Miei",
+    "notes": "Pronounced: MY-eh. Possessive adjective, masculine plural. i miei libri (my books).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-08-31"
+  }, 
+	{
+    "id": "1786377109549pochi",
+    "question": "few / a few",
+    "answer": "Pochi",
+    "notes": "Pronounced: POH-kee. Adjective. Meaning: few, a few. Usage: ho pochi amici (I have few friends).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-08-31"
   }
+	
 ]
