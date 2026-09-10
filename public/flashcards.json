@@ -5472,6 +5472,114 @@
     "correct": 0,
     "incorrect": 0,
     "dateAdded": "2026-08-31"
+  },
+  {
+    "id": "1757501401550proprio",
+    "question": "own / exactly, precisely",
+    "answer": "Proprio",
+    "notes": "Pronounced: PRO-pryo. Adjective/Adverb. Meaning: own (possessive) or exactly/really (intensifier). Usage: il mio proprio libro (my own book); è proprio vero (it's really true).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-09-10"
+  },
+  {
+    "id": "1757501401551pieno",
+    "question": "full",
+    "answer": "Pieno",
+    "notes": "Pronounced: PYEH-no. Adjective. Meaning: full. Usage: L'autobus è sempre molto pieno a quest'ora (The bus is always very full at this hour).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-09-10"
+  },
+  {
+    "id": "1757501401552salire",
+    "question": "to go up / to climb / to get on (a vehicle)",
+    "answer": "Salire",
+    "notes": "Pronounced: sah-LEE-reh. Verb (irregular, -ire). Meaning: to go up, climb, or board a vehicle. Usage: puoi salire nel retro del camion (you can get in the back of the truck); saliamo in ascensore (we go up in the elevator).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-09-10"
+  },
+  {
+    "id": "1757501401553confrontare",
+    "question": "to compare",
+    "answer": "Confrontare",
+    "notes": "Pronounced: kon-fron-TAH-reh. Verb (-are). Meaning: to compare. Usage: possiamo confrontare i due posti (we can compare the two places).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-09-10"
+  },
+  {
+    "id": "1757501401554pisolino",
+    "question": "nap, little snooze",
+    "answer": "Pisolino",
+    "notes": "Pronounced: pee-zoh-LEE-no. Noun, masculine. Meaning: a nap. Usage: faccio un pisolino (I take a nap).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-09-10"
+  },
+  {
+    "id": "1757501401555scommettere",
+    "question": "to bet",
+    "answer": "Scommettere",
+    "notes": "Pronounced: skom-MET-teh-reh. Verb (irregular, -ere). Meaning: to bet. Usage: Scommetto che sarà molto preoccupata! (I bet she'll be very worried!) — 'scommetto' is the io form.",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-09-10"
+  },
+  {
+    "id": "1757501401556sorridendo",
+    "question": "smiling (while smiling)",
+    "answer": "Sorridendo",
+    "notes": "Pronounced: sor-ree-DEN-do. Gerund of 'sorridere' (to smile). Meaning: smiling, while smiling. Usage: dice Giulia sorridendo (Giulia says, smiling).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-09-10"
+  },
+  {
+    "id": "1757501401557camion",
+    "question": "truck",
+    "answer": "Camion",
+    "notes": "Pronounced: KAH-myon. Noun, masculine, invariable (same singular/plural). Meaning: truck. Usage: caricare delle casse su un camion (loading crates onto a truck).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-09-10"
+  },
+  {
+    "id": "1757501401558pochissime",
+    "question": "very few",
+    "answer": "Pochissime",
+    "notes": "Pronounced: po-KEES-see-meh. Adjective, superlative of 'poco', feminine plural. Meaning: very few. Usage: Armando mi ha parlato di suo padre pochissime volte (Armando has spoken to me about his father very few times).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-09-10"
+  },
+  {
+    "id": "1757501401559incontrati",
+    "question": "met (each other)",
+    "answer": "Incontrati",
+    "notes": "Pronounced: een-kon-TRAH-tee. Past participle of 'incontrarsi' (to meet each other), reflexive/reciprocal verb. Usage: non si sono mai incontrati (they've never met each other).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-09-10"
+  },
+  {
+    "id": "1757501401560indirizzo",
+    "question": "address",
+    "answer": "Indirizzo",
+    "notes": "Pronounced: een-dee-REET-tso. Noun, masculine. Meaning: address. Usage: L'anziano ha l'indirizzo di Armando (The old man has Armando's address).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-09-10"
+  },
+  {
+    "id": "1757501401561verso",
+    "question": "toward",
+    "answer": "Verso",
+    "notes": "Pronounced: VEHR-so. Preposition. Meaning: toward. Usage: andiamo verso la pizzeria (we go toward the pizzeria).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-09-10"
   }
 	
 	
