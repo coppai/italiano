@@ -5580,7 +5580,95 @@
     "correct": 0,
     "incorrect": 0,
     "dateAdded": "2026-09-10"
+  },
+  {
+    "id": "1757501401583caricare",
+    "question": "to load/upload",
+    "answer": "Caricare",
+    "notes": "Pronounced: kah-ree-KAH-reh. Verb (regular, -are). Meaning: to load. Usage: caricare delle casse su un camion (loading crates onto a truck).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-09-10"
+  },
+{
+    "id": "1757606401001devoancora",
+    "question": "I still have to / I still need to",
+    "answer": "Devo ancora",
+    "notes": "Pronounced: DEH-vo AN-ko-rah. Dovere (irregular) + ancora. Usage: devo ancora finire i compiti (I still have to finish my homework).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-09-11"
+  },
+  {
+    "id": "1757606401002manca",
+    "question": "is missing / is lacking",
+    "answer": "Manca",
+    "notes": "Pronounced: MAHN-kah. Verb mancare (regular, -are), 3rd person singular. Usage: manca il sale (the salt is missing/we need salt). Also used idiomatically: mi manchi (I miss you).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-09-11"
+  },
+  {
+    "id": "1757606401003puoifarlo",
+    "question": "you can do it",
+    "answer": "Puoi farlo",
+    "notes": "Pronounced: PWOY FAR-lo. Potere (irregular) + fare + lo. Usage: se ci provi, puoi farlo (if you try, you can do it).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-09-11"
+  },
+  {
+    "id": "1757606401004serve",
+    "question": "is needed / is necessary",
+    "answer": "Serve",
+    "notes": "Pronounced: SEHR-veh. Verb servire (regular, -ire), 3rd person singular. Usage: serve tempo per imparare (time is needed to learn). Also: a cosa serve? (what's it for?).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-09-11"
+  },
+  {
+    "id": "1757606401005leggero",
+    "question": "light (weight)",
+    "answer": "Leggero",
+    "notes": "Pronounced: leh-JEH-ro. Adjective, masc. singular (fem: leggera). Usage: uno zaino leggero (a light backpack). Opposite of pesante (heavy).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-09-11"
+  },
+  {
+    "id": "1757606401006spese",
+    "question": "expenses / shopping",
+    "answer": "Spese",
+    "notes": "Pronounced: SPEH-zeh. Noun, feminine plural (singular: spesa). Usage: le spese mensili (monthly expenses); fare la spesa (to go grocery shopping).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-09-11"
+  },
+  {
+    "id": "1757606401007comprese",
+    "question": "included",
+    "answer": "Comprese",
+    "notes": "Pronounced: kohm-PREH-zeh. Past participle of comprendere, fem. plural (masc: compresi). Usage: tasse comprese (taxes included); colazione compresa nel prezzo.",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-09-11"
+  },
+  {
+    "id": "1757606401008fretta",
+    "question": "hurry / rush",
+    "answer": "Fretta",
+    "notes": "Pronounced: FREHT-tah. Noun, feminine. Usage: ho fretta (I'm in a hurry); non c'è fretta (there's no rush); di fretta (in a hurry, adverbially).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-09-11"
+  },
+  {
+    "id": "1757606401009quasi",
+    "question": "almost / nearly",
+    "answer": "Quasi",
+    "notes": "Pronounced: KWAH-zee. Adverb. Usage: sono quasi le sei (it's almost six o'clock); ho quasi finito (I've almost finished).",
+    "correct": 0,
+    "incorrect": 0,
+    "dateAdded": "2026-09-11"
   }
-	
-	
 ]
